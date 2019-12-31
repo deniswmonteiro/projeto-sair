@@ -1,0 +1,22 @@
+.introducao-interno {
+  background: $light-green;
+  padding: 15px 30px;
+
+  .bg-pattern {
+    // background: url("../img/bg-pattern.svg") no-repeat right,
+    //             url("../img/bg-pattern.svg") no-repeat left;
+    // padding: 21px 0;
+
+    .introducao-titulo {
+      padding-top: 10px;
+
+      span {
+        margin-top: 15px
+      }
+    
+      h1 {
+        @include font(48);
+      }
+    }
+  }
+}

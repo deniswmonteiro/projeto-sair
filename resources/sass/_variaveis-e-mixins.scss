@@ -1,0 +1,54 @@
+// cores
+$green: #5d7;           // 
+$light-green: #9fa;     // fundo da introdução
+$dark-green: #193;      // fundo da barra de rodapé
+$orange: #f82;          // destaques da barra de menu
+$light-orange: #fa6;    // separadores
+$dark-orange: #d60;     // links
+$red: #f32;             // fundo dos botões
+$dark-red: #e21;        // aviso
+$grey: #c1d6c8;         // fundo da barra de menu
+$light-grey: #f7faf8;   // texto claro
+$dark-grey: #18211a;    // texto escuro
+
+$default-font: Quicksand, Arial, Helvetica, sans-serif;
+
+// conversão de px para em
+@function em($size, $context: 16) {
+  @return $size / $context + em;
+}
+
+@mixin font($size) {
+  font-family: $default-font;
+  color: $dark-grey;
+
+  @if $size == 14 {
+    font-size: em(14);
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  @if $size == 16 {
+    font-size: em(16);
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  @if $size == 24 {
+    font-size: em(24);
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  @else if $size == 36 {
+    font-size: em(36);
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  @else if $size == 48 {
+    font-size: em(48);
+    line-height: 1.2;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,579 @@
+body, p, a, h1, h2, h3, h5, li {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #18211a;
+}
+
+body h1, p h1, a h1, h1 h1, h2 h1, h3 h1, h5 h1, li h1 {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 2.25em;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+body h3, p h3, a h3, h1 h3, h2 h3, h3 h3, h5 h3, li h3 {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 1.5em;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+body .form .btn-form-senha-modal, p .form .btn-form-senha-modal, a .form .btn-form-senha-modal, h1 .form .btn-form-senha-modal, h2 .form .btn-form-senha-modal, h3 .form .btn-form-senha-modal, h5 .form .btn-form-senha-modal, li .form .btn-form-senha-modal {
+  background: #5d7;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  outline: none;
+  color: #18211a;
+}
+
+body .form i, p .form i, a .form i, h1 .form i, h2 .form i, h3 .form i, h5 .form i, li .form i {
+  color: #18211a;
+}
+
+body .btn a, p .btn a, a .btn a, h1 .btn a, h2 .btn a, h3 .btn a, h5 .btn a, li .btn a {
+  transition: .4s;
+  font-weight: 700;
+}
+
+body .btn a.btn-entrar, body .btn a.btn-enviar, body .btn a.btn-cadastrar, p .btn a.btn-entrar, p .btn a.btn-enviar, p .btn a.btn-cadastrar, a .btn a.btn-entrar, a .btn a.btn-enviar, a .btn a.btn-cadastrar, h1 .btn a.btn-entrar, h1 .btn a.btn-enviar, h1 .btn a.btn-cadastrar, h2 .btn a.btn-entrar, h2 .btn a.btn-enviar, h2 .btn a.btn-cadastrar, h3 .btn a.btn-entrar, h3 .btn a.btn-enviar, h3 .btn a.btn-cadastrar, h5 .btn a.btn-entrar, h5 .btn a.btn-enviar, h5 .btn a.btn-cadastrar, li .btn a.btn-entrar, li .btn a.btn-enviar, li .btn a.btn-cadastrar {
+  background: #193;
+  color: #f7faf8;
+}
+
+body .btn a.btn-entrar:hover, body .btn a.btn-enviar:hover, body .btn a.btn-cadastrar:hover, p .btn a.btn-entrar:hover, p .btn a.btn-enviar:hover, p .btn a.btn-cadastrar:hover, a .btn a.btn-entrar:hover, a .btn a.btn-enviar:hover, a .btn a.btn-cadastrar:hover, h1 .btn a.btn-entrar:hover, h1 .btn a.btn-enviar:hover, h1 .btn a.btn-cadastrar:hover, h2 .btn a.btn-entrar:hover, h2 .btn a.btn-enviar:hover, h2 .btn a.btn-cadastrar:hover, h3 .btn a.btn-entrar:hover, h3 .btn a.btn-enviar:hover, h3 .btn a.btn-cadastrar:hover, h5 .btn a.btn-entrar:hover, h5 .btn a.btn-enviar:hover, h5 .btn a.btn-cadastrar:hover, li .btn a.btn-entrar:hover, li .btn a.btn-enviar:hover, li .btn a.btn-cadastrar:hover {
+  color: #18211a;
+  box-shadow: 0px 0px 0px 3px #18211a;
+}
+
+body .btn a.btn-cancelar, p .btn a.btn-cancelar, a .btn a.btn-cancelar, h1 .btn a.btn-cancelar, h2 .btn a.btn-cancelar, h3 .btn a.btn-cancelar, h5 .btn a.btn-cancelar, li .btn a.btn-cancelar {
+  background: #f32;
+  color: #f7faf8;
+  margin-right: 10px;
+}
+
+body .btn a.btn-cancelar:hover, p .btn a.btn-cancelar:hover, a .btn a.btn-cancelar:hover, h1 .btn a.btn-cancelar:hover, h2 .btn a.btn-cancelar:hover, h3 .btn a.btn-cancelar:hover, h5 .btn a.btn-cancelar:hover, li .btn a.btn-cancelar:hover {
+  color: #18211a;
+  box-shadow: 0px 0px 0px 3px #18211a;
+}
+
+@media screen and (max-width: 639px) {
+  .introducao .navbar .logo-cabecalho {
+    margin: 0 auto;
+  }
+}
+
+.introducao .navbar .ativo {
+  display: none;
+}
+
+.introducao .navbar .menu li {
+  margin-left: 15px;
+}
+
+.introducao .navbar .menu li a {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: 500;
+  padding: 5px 8px;
+  min-height: 1px;
+  display: block;
+  /* 'after' do link ativo */
+}
+
+.introducao .navbar .menu li a::after {
+  content: '';
+  display: block;
+  background: #f82;
+  height: 2px;
+  width: 0;
+  transition: .4s;
+}
+
+.introducao .navbar .menu li a:hover::after {
+  width: 100%;
+}
+
+.introducao .navbar .menu li .btn-login {
+  margin-left: 10px;
+  background: #f82;
+  color: #f7faf8;
+  transition: .4s;
+  display: flex;
+}
+
+.introducao .navbar .menu li .btn-login:hover {
+  color: #18211a;
+  box-shadow: 0px 0px 0px 3px #18211a;
+}
+
+.introducao .navbar .menu li .btn-login i {
+  margin-left: 10px;
+}
+
+.introducao .icone-predio {
+  margin-right: 120px;
+  opacity: .6;
+}
+
+@media screen and (max-width: 959px) {
+  .navbar {
+    padding: 10px 15px 10px 0;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1199px) {
+  .navbar {
+    padding: 10px 30px 10px 15px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .navbar {
+    padding: 10px 40px 10px 25px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar {
+    padding: 10px 80px 10px 65px;
+  }
+}
+
+.navbar.navbar-interno {
+  background: #c1d6c8 !important;
+}
+
+@media screen and (max-width: 639px) {
+  .navbar.navbar-interno .logo-cabecalho {
+    margin: 0 auto;
+  }
+}
+
+.navbar.navbar-interno .ativo {
+  display: none;
+}
+
+.navbar.navbar-interno .menu li {
+  margin-left: 15px;
+}
+
+.navbar.navbar-interno .menu li a {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: 500;
+  padding: 5px 8px;
+  min-height: 1px;
+  display: block;
+  /* 'after' do link ativo */
+}
+
+.navbar.navbar-interno .menu li a::after {
+  content: '';
+  display: block;
+  background: #f82;
+  height: 2px;
+  width: 0;
+  transition: .4s;
+}
+
+.navbar.navbar-interno .menu li a:hover::after {
+  width: 100%;
+}
+
+.navbar.navbar-interno .menu li .btn-login {
+  margin-left: 10px;
+  background: #f82;
+  color: #f7faf8;
+  transition: .4s;
+  display: flex;
+}
+
+.navbar.navbar-interno .menu li .btn-login:hover {
+  color: #18211a;
+  box-shadow: 0px 0px 0px 3px #18211a;
+}
+
+.navbar.navbar-interno .menu li .btn-login i {
+  margin-left: 10px;
+}
+
+.btn-menu-mobile a, .btn-menu-mobile span {
+  color: #18211a;
+}
+
+.btn-menu-mobile a {
+  padding: 0 10px 0 0;
+}
+
+.menu-mobile {
+  background: #f7faf8;
+}
+
+.menu-mobile .divisor {
+  border-top: 1px solid rgba(17, 153, 51, 0.1);
+}
+
+.menu-mobile li {
+  width: 270px;
+  margin-left: -20px;
+  padding: 6px 0 6px 20px;
+}
+
+.menu-mobile li i {
+  margin-right: 10px;
+}
+
+.menu-mobile li a {
+  color: #18211a;
+}
+
+.modal, .modal-header, .modal-footer {
+  background: #f7faf8;
+}
+
+.modal label, .modal input, .modal input:focus {
+  color: #18211a;
+}
+
+.modal input {
+  outline: none;
+  border-color: #c1d6c8;
+}
+
+.modal input:focus {
+  border-color: #5d7;
+}
+
+.modal.modal-login span:first-of-type::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  background: #fa6;
+  display: inline-block;
+  margin: 0 5px 2px 10px;
+}
+
+.modal.modal-login span a {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 0.875em;
+  line-height: 1.4;
+  font-weight: 500;
+  text-decoration: none;
+  color: #193;
+  transition: .4s;
+  text-transform: initial;
+  padding: 0;
+}
+
+.modal.modal-login span a:hover {
+  color: #5d7;
+}
+
+.modal.modal-recuperar-senha .modal-footer a:last-of-type {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 0.875em;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #d60;
+  text-transform: initial;
+  transition: .4s;
+}
+
+.modal.modal-recuperar-senha .modal-footer a:last-of-type:hover {
+  color: #fa6;
+}
+
+.modal.modal-notificacao i {
+  color: #5d7;
+}
+
+.modal.modal-notificacao p {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.introducao-interno {
+  background: #9fa;
+  padding: 15px 30px;
+}
+
+.introducao-interno .bg-pattern .introducao-titulo {
+  padding-top: 10px;
+}
+
+.introducao-interno .bg-pattern .introducao-titulo span {
+  margin-top: 15px;
+}
+
+.introducao-interno .bg-pattern .introducao-titulo h1 {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 3em;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.cadastro .card-cadastro {
+  background: #f7faf8;
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.cadastro .card-cadastro .form label, .cadastro .card-cadastro .form input, .cadastro .card-cadastro .form input:focus {
+  color: #18211a;
+}
+
+.cadastro .card-cadastro .form input {
+  outline: none;
+  border-color: #c1d6c8;
+  border-radius: 5px;
+}
+
+.cadastro .card-cadastro .form input:focus {
+  border-color: #5d7;
+}
+
+.cadastro .card-cadastro .form .aviso {
+  margin: 20px 0 40px 0;
+  color: #e21;
+}
+
+.andar h3 {
+  margin-bottom: 0px;
+}
+
+.andar .bg-badge {
+  background: #193;
+  font-weight: 700;
+}
+
+.andar .legenda {
+  margin-top: 10px;
+}
+
+.andar .legenda li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.andar .legenda li a {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 0.875em;
+  line-height: 1.4;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.andar .legenda li a:hover {
+  color: #f82;
+  transition: .3s;
+}
+
+.andar .legenda li a span {
+  margin-right: 0px;
+}
+
+.salas h1::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 3px;
+  background: #fa6;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.salas .img-sala {
+  text-align: center;
+}
+
+.salas .img-sala .img-lampada, .salas .img-sala .img-arcondicionado {
+  margin-top: 20px;
+}
+
+.salas .img-sala .icones-lampada, .salas .img-sala .icones-arcondicionado {
+  height: 22px;
+  width: 22px;
+  background: #e21;
+  color: #f7faf8;
+  font-weight: 700;
+  text-align: center;
+  font-style: normal;
+  border-radius: 50%;
+}
+
+.salas [data-click] {
+  border-radius: 5px;
+}
+
+.salas [data-click].active {
+  background: #5d7;
+  color: #f7faf8;
+}
+
+.salas [data-target] {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(-50px, 0, 0);
+  position: absolute;
+  top: 0;
+}
+
+.salas [data-target].active {
+  opacity: 1;
+  visibility: visible;
+  transition: .3s;
+  position: relative;
+  top: auto;
+  transform: translate3d(0px, 0, 0);
+}
+
+.salas .interruptor {
+  margin-top: 60px;
+}
+
+.salas .interruptor h5 {
+  margin-bottom: 10px;
+}
+
+.salas .interruptor h5:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.salas .interruptor .switch {
+  position: relative;
+  display: inline-block;
+  height: 24px;
+  width: 40px;
+}
+
+.salas .interruptor .switch .switch-slider {
+  background-color: rgba(0, 0, 0, 0.22);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 500px;
+  bottom: 0;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: .2s;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.07);
+}
+
+.salas .interruptor .switch .switch-slider::before {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 2px;
+  bottom: 4px;
+  border-radius: 50%;
+  transition-property: transform, box-shadow;
+  transition-duration: .2s;
+}
+
+.salas .interruptor .switch .switch-slider.switch-on-off {
+  background-color: #f32;
+}
+
+.salas .interruptor .switch input:checked + .switch-slider:before {
+  transform: translateX(20px);
+}
+
+.salas .interruptor .switch input:checked + .switch-slider.switch-on-off {
+  background-color: #5d7 !important;
+}
+
+.rodape .dados {
+  background: #18211a;
+  color: #f7faf8;
+  padding: 40px 0;
+}
+
+.rodape .dados .contatos h3::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 3px;
+  background: #fa6;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.rodape .dados .contatos h3, .rodape .dados .contatos ul li, .rodape .dados .contatos span {
+  color: #f7faf8;
+}
+
+.rodape .dados .contatos span {
+  font-weight: 700;
+}
+
+.rodape .dados .logo-rodape {
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 640px) {
+  .rodape .dados .logo-rodape {
+    padding-top: 0;
+    text-align: center;
+  }
+}
+
+.rodape .copyright {
+  background: #193;
+  padding: 15px 0;
+}
+
+.rodape .copyright p {
+  color: #f7faf8;
+}
+
+.andares h1 {
+  margin-bottom: 30px;
+}
+
+.andares h1::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 3px;
+  background: #fa6;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.andares a {
+  display: block;
+}
+
+.andares .card-andar {
+  background: #f7faf8 no-repeat;
+  border: 1px solid #9fa;
+  cursor: pointer;
+}
+
+.andares .card-andar:hover {
+  background-color: #f7faf8;
+}

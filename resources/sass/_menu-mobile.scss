@@ -1,0 +1,31 @@
+.btn-menu-mobile {
+  a, span {
+    color: $dark-grey;
+  }
+
+  a {
+    padding: 0 10px 0 0;
+  }
+}
+
+.menu-mobile {
+  background: $light-grey;
+
+  .divisor {
+    border-top: 1px solid rgba(17, 153, 51, .1);
+  }
+
+  li {
+    width: 270px;
+    margin-left: -20px;
+    padding: 6px 0 6px 20px;
+    
+    i {
+      margin-right: 10px;
+    }
+  
+    a {
+      color: $dark-grey;
+    }
+  }
+}

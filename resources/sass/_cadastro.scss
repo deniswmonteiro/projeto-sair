@@ -1,0 +1,29 @@
+.cadastro {
+  .card-cadastro {
+    background: $light-grey;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 30px;
+
+    .form {
+      label, input, input:focus {
+        color: $dark-grey;
+      }
+    
+      input {
+        outline: none;
+        border-color: $grey;
+        border-radius: 5px;
+    
+        &:focus {
+          border-color: $green;
+        }
+      }
+
+      .aviso {
+        margin: 20px 0 40px 0;
+        color: $dark-red;
+      }
+    }
+  }
+}
