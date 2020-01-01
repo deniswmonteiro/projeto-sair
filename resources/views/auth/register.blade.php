@@ -1,7 +1,8 @@
 @extends('layouts.app', ['paginaAtual' => 'Cadastro'])
 
 @section('conteudo')
-<div class="container">
+  @include('layouts.menu')
+	<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

@@ -1,4 +1,11 @@
-body, p, a, h1, h2, h3, h5, li {
+body,
+p,
+a,
+h1,
+h2,
+h3,
+h5,
+li {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
   color: #18211a;
   font-size: 1em;
@@ -7,7 +14,14 @@ body, p, a, h1, h2, h3, h5, li {
   color: #18211a;
 }
 
-body h1, p h1, a h1, h1 h1, h2 h1, h3 h1, h5 h1, li h1 {
+body h1,
+p h1,
+a h1,
+h1 h1,
+h2 h1,
+h3 h1,
+h5 h1,
+li h1 {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
   color: #18211a;
   font-size: 2.25em;
@@ -15,7 +29,14 @@ body h1, p h1, a h1, h1 h1, h2 h1, h3 h1, h5 h1, li h1 {
   font-weight: 500;
 }
 
-body h3, p h3, a h3, h1 h3, h2 h3, h3 h3, h5 h3, li h3 {
+body h3,
+p h3,
+a h3,
+h1 h3,
+h2 h3,
+h3 h3,
+h5 h3,
+li h3 {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
   color: #18211a;
   font-size: 1.5em;
@@ -23,7 +44,14 @@ body h3, p h3, a h3, h1 h3, h2 h3, h3 h3, h5 h3, li h3 {
   font-weight: 500;
 }
 
-body .form .btn-form-senha-modal, p .form .btn-form-senha-modal, a .form .btn-form-senha-modal, h1 .form .btn-form-senha-modal, h2 .form .btn-form-senha-modal, h3 .form .btn-form-senha-modal, h5 .form .btn-form-senha-modal, li .form .btn-form-senha-modal {
+body .form .btn-form-senha-modal,
+p .form .btn-form-senha-modal,
+a .form .btn-form-senha-modal,
+h1 .form .btn-form-senha-modal,
+h2 .form .btn-form-senha-modal,
+h3 .form .btn-form-senha-modal,
+h5 .form .btn-form-senha-modal,
+li .form .btn-form-senha-modal {
   background: #5d7;
   border: none;
   cursor: pointer;
@@ -32,32 +60,103 @@ body .form .btn-form-senha-modal, p .form .btn-form-senha-modal, a .form .btn-fo
   color: #18211a;
 }
 
-body .form i, p .form i, a .form i, h1 .form i, h2 .form i, h3 .form i, h5 .form i, li .form i {
+body .form i,
+p .form i,
+a .form i,
+h1 .form i,
+h2 .form i,
+h3 .form i,
+h5 .form i,
+li .form i {
   color: #18211a;
 }
 
-body .btn a, p .btn a, a .btn a, h1 .btn a, h2 .btn a, h3 .btn a, h5 .btn a, li .btn a {
-  transition: .4s;
+body .btn a,
+p .btn a,
+a .btn a,
+h1 .btn a,
+h2 .btn a,
+h3 .btn a,
+h5 .btn a,
+li .btn a {
+  margin-top: 30px;
+  transition: 0.4s;
   font-weight: 700;
 }
 
-body .btn a.btn-entrar, body .btn a.btn-enviar, body .btn a.btn-cadastrar, p .btn a.btn-entrar, p .btn a.btn-enviar, p .btn a.btn-cadastrar, a .btn a.btn-entrar, a .btn a.btn-enviar, a .btn a.btn-cadastrar, h1 .btn a.btn-entrar, h1 .btn a.btn-enviar, h1 .btn a.btn-cadastrar, h2 .btn a.btn-entrar, h2 .btn a.btn-enviar, h2 .btn a.btn-cadastrar, h3 .btn a.btn-entrar, h3 .btn a.btn-enviar, h3 .btn a.btn-cadastrar, h5 .btn a.btn-entrar, h5 .btn a.btn-enviar, h5 .btn a.btn-cadastrar, li .btn a.btn-entrar, li .btn a.btn-enviar, li .btn a.btn-cadastrar {
+body .btn a.btn-entrar, body .btn a.btn-enviar, body .btn a.btn-cadastrar,
+p .btn a.btn-entrar,
+p .btn a.btn-enviar,
+p .btn a.btn-cadastrar,
+a .btn a.btn-entrar,
+a .btn a.btn-enviar,
+a .btn a.btn-cadastrar,
+h1 .btn a.btn-entrar,
+h1 .btn a.btn-enviar,
+h1 .btn a.btn-cadastrar,
+h2 .btn a.btn-entrar,
+h2 .btn a.btn-enviar,
+h2 .btn a.btn-cadastrar,
+h3 .btn a.btn-entrar,
+h3 .btn a.btn-enviar,
+h3 .btn a.btn-cadastrar,
+h5 .btn a.btn-entrar,
+h5 .btn a.btn-enviar,
+h5 .btn a.btn-cadastrar,
+li .btn a.btn-entrar,
+li .btn a.btn-enviar,
+li .btn a.btn-cadastrar {
   background: #193;
   color: #f7faf8;
 }
 
-body .btn a.btn-entrar:hover, body .btn a.btn-enviar:hover, body .btn a.btn-cadastrar:hover, p .btn a.btn-entrar:hover, p .btn a.btn-enviar:hover, p .btn a.btn-cadastrar:hover, a .btn a.btn-entrar:hover, a .btn a.btn-enviar:hover, a .btn a.btn-cadastrar:hover, h1 .btn a.btn-entrar:hover, h1 .btn a.btn-enviar:hover, h1 .btn a.btn-cadastrar:hover, h2 .btn a.btn-entrar:hover, h2 .btn a.btn-enviar:hover, h2 .btn a.btn-cadastrar:hover, h3 .btn a.btn-entrar:hover, h3 .btn a.btn-enviar:hover, h3 .btn a.btn-cadastrar:hover, h5 .btn a.btn-entrar:hover, h5 .btn a.btn-enviar:hover, h5 .btn a.btn-cadastrar:hover, li .btn a.btn-entrar:hover, li .btn a.btn-enviar:hover, li .btn a.btn-cadastrar:hover {
+body .btn a.btn-entrar:hover, body .btn a.btn-enviar:hover, body .btn a.btn-cadastrar:hover,
+p .btn a.btn-entrar:hover,
+p .btn a.btn-enviar:hover,
+p .btn a.btn-cadastrar:hover,
+a .btn a.btn-entrar:hover,
+a .btn a.btn-enviar:hover,
+a .btn a.btn-cadastrar:hover,
+h1 .btn a.btn-entrar:hover,
+h1 .btn a.btn-enviar:hover,
+h1 .btn a.btn-cadastrar:hover,
+h2 .btn a.btn-entrar:hover,
+h2 .btn a.btn-enviar:hover,
+h2 .btn a.btn-cadastrar:hover,
+h3 .btn a.btn-entrar:hover,
+h3 .btn a.btn-enviar:hover,
+h3 .btn a.btn-cadastrar:hover,
+h5 .btn a.btn-entrar:hover,
+h5 .btn a.btn-enviar:hover,
+h5 .btn a.btn-cadastrar:hover,
+li .btn a.btn-entrar:hover,
+li .btn a.btn-enviar:hover,
+li .btn a.btn-cadastrar:hover {
   color: #18211a;
   box-shadow: 0px 0px 0px 3px #18211a;
 }
 
-body .btn a.btn-cancelar, p .btn a.btn-cancelar, a .btn a.btn-cancelar, h1 .btn a.btn-cancelar, h2 .btn a.btn-cancelar, h3 .btn a.btn-cancelar, h5 .btn a.btn-cancelar, li .btn a.btn-cancelar {
+body .btn a.btn-cancelar,
+p .btn a.btn-cancelar,
+a .btn a.btn-cancelar,
+h1 .btn a.btn-cancelar,
+h2 .btn a.btn-cancelar,
+h3 .btn a.btn-cancelar,
+h5 .btn a.btn-cancelar,
+li .btn a.btn-cancelar {
   background: #f32;
   color: #f7faf8;
   margin-right: 10px;
 }
 
-body .btn a.btn-cancelar:hover, p .btn a.btn-cancelar:hover, a .btn a.btn-cancelar:hover, h1 .btn a.btn-cancelar:hover, h2 .btn a.btn-cancelar:hover, h3 .btn a.btn-cancelar:hover, h5 .btn a.btn-cancelar:hover, li .btn a.btn-cancelar:hover {
+body .btn a.btn-cancelar:hover,
+p .btn a.btn-cancelar:hover,
+a .btn a.btn-cancelar:hover,
+h1 .btn a.btn-cancelar:hover,
+h2 .btn a.btn-cancelar:hover,
+h3 .btn a.btn-cancelar:hover,
+h5 .btn a.btn-cancelar:hover,
+li .btn a.btn-cancelar:hover {
   color: #18211a;
   box-shadow: 0px 0px 0px 3px #18211a;
 }
@@ -171,19 +270,19 @@ body .btn a.btn-cancelar:hover, p .btn a.btn-cancelar:hover, a .btn a.btn-cancel
   font-size: 1em;
   line-height: 1.4;
   font-weight: 500;
-  padding: 5px 8px;
+  padding: 8px 13px;
   min-height: 1px;
   display: block;
   /* 'after' do link ativo */
 }
 
 .navbar.navbar-interno .menu li a::after {
-  content: '';
+  content: "";
   display: block;
   background: #f82;
   height: 2px;
   width: 0;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .navbar.navbar-interno .menu li a:hover::after {
@@ -194,7 +293,7 @@ body .btn a.btn-cancelar:hover, p .btn a.btn-cancelar:hover, a .btn a.btn-cancel
   margin-left: 10px;
   background: #f82;
   color: #f7faf8;
-  transition: .4s;
+  transition: 0.4s;
   display: flex;
 }
 
@@ -237,11 +336,16 @@ body .btn a.btn-cancelar:hover, p .btn a.btn-cancelar:hover, a .btn a.btn-cancel
   color: #18211a;
 }
 
-.modal, .modal-header, .modal-footer {
+.modal {
   background: #f7faf8;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
-.modal label, .modal input, .modal input:focus {
+.modal label,
+.modal input,
+.modal input:focus {
   color: #18211a;
 }
 
@@ -254,7 +358,7 @@ body .btn a.btn-cancelar:hover, p .btn a.btn-cancelar:hover, a .btn a.btn-cancel
   border-color: #5d7;
 }
 
-.modal.modal-login span:first-of-type::after {
+.modal span:first-of-type::after {
   content: "";
   width: 5px;
   height: 5px;
@@ -264,50 +368,21 @@ body .btn a.btn-cancelar:hover, p .btn a.btn-cancelar:hover, a .btn a.btn-cancel
   margin: 0 5px 2px 10px;
 }
 
-.modal.modal-login span a {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a;
-  font-size: 0.875em;
-  line-height: 1.4;
-  font-weight: 500;
-  text-decoration: none;
-  color: #193;
-  transition: .4s;
-  text-transform: initial;
-  padding: 0;
-}
-
-.modal.modal-login span a:hover {
-  color: #5d7;
-}
-
-.modal.modal-recuperar-senha .modal-footer a:last-of-type {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a;
-  font-size: 0.875em;
-  line-height: 1.4;
-  font-weight: 500;
-  color: #d60;
-  text-transform: initial;
-  transition: .4s;
-}
-
-.modal.modal-recuperar-senha .modal-footer a:last-of-type:hover {
-  color: #fa6;
-}
-
-.modal.modal-notificacao i {
-  color: #5d7;
-}
-
-.modal.modal-notificacao p {
+.modal span a {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
   color: #18211a;
   font-size: 1em;
   line-height: 1.4;
   font-weight: 500;
-  margin-bottom: 0;
-  margin-top: 0;
+  text-decoration: none;
+  color: #193;
+  transition: 0.4s;
+  text-transform: initial;
+  padding: 0;
+}
+
+.modal span a:hover {
+  color: #5d7;
 }
 
 .introducao-interno {

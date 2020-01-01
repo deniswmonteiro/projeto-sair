@@ -1,53 +1,63 @@
-body, p, a, h1, h2, h3, h5, li {
-  @include font(16);
-  color: $dark-grey;
+body,
+p,
+a,
+h1,
+h2,
+h3,
+h5,
+li {
+    @include font(16);
+    color: $dark-grey;
 
-  h1 {
-    @include font(36);
-  }
-
-  h3 {
-    @include font(24);
-  }
-
-  .form {
-    .btn-form-senha-modal {
-      background: $green;
-      border: none;
-      cursor: pointer;
-      border-radius: 0 5px 5px 0;
-      outline: none;
-      color: $dark-grey;
+    h1 {
+        @include font(36);
     }
 
-    i {
-      color: $dark-grey;
-    }
-  }
-
-  .btn a {
-    transition: .4s;
-    font-weight: 700;
-
-    &.btn-entrar, &.btn-enviar, &.btn-cadastrar {
-      background: $dark-green;
-      color: $light-grey;
-
-      &:hover {
-        color: $dark-grey;
-        box-shadow: 0px 0px 0px 3px $dark-grey;
-      }
+    h3 {
+        @include font(24);
     }
 
-    &.btn-cancelar {
-      background: $red;
-      color: $light-grey;
-      margin-right: 10px;
+    .form {
+        .btn-form-senha-modal {
+            background: $green;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            outline: none;
+            color: $dark-grey;
+        }
 
-      &:hover {
-        color: $dark-grey;
-        box-shadow: 0px 0px 0px 3px $dark-grey;
-      }
+        i {
+            color: $dark-grey;
+        }
     }
-  }
+
+    .btn a {
+        margin-top: 30px;
+        transition: 0.4s;
+        font-weight: 700;
+
+        &.btn-entrar,
+        &.btn-enviar,
+        &.btn-cadastrar {
+            background: $dark-green;
+            color: $light-grey;
+
+            &:hover {
+                color: $dark-grey;
+                box-shadow: 0px 0px 0px 3px $dark-grey;
+            }
+        }
+
+        &.btn-cancelar {
+            background: $red;
+            color: $light-grey;
+            margin-right: 10px;
+
+            &:hover {
+                color: $dark-grey;
+                box-shadow: 0px 0px 0px 3px $dark-grey;
+            }
+        }
+    }
 }
