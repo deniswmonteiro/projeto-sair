@@ -3,38 +3,48 @@
     <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #offcanvas-push" uk-navbar-toggle-icon data-btn-mobile href="#"></a>
     <span class="uk-text-small uk-hidden@s">MENU</span>
   </div>
-  <div class="uk-navbar-left logo-cabecalho">
-    <a href="/" class="uk-navbar-item uk-logo">
-      <img src="{{asset('../img/logo.svg')}}" alt="Logo do site">
-    </a>
-  </div>
-  <div class="uk-navbar-right uk-visible@s">
-    <ul class="uk-navbar-nav menu">
-      @if(Route::has('login'))
-        @auth
-          <li><a href="sobre.php">Sobre</a></li>
-          <li><a href="usuarios.php">Usuários</a></li>
-          <li>
-            <a class="nav-link" onclick="event.preventDefault(); document.querySelector('form.logout').submit()">Logout</a>
-            <form action="{{route('logout')}}" class="logout" method="post" style="display:none;">
-              @csrf
-            </form>                          
-          </li>
+  
+  @if($menu == "login" || $menu == "cadastrar-se")
+    <div class="uk-navbar uk-margin-auto logo-cabecalho">
+      <a href="/" class="uk-navbar-item uk-logo">
+        <img src="{{asset('../img/logo.svg')}}" alt="Logo do site">
+      </a>
+    </div>
 
-        @else
-          <li>
-            <a class="uk-button uk-border-rounded btn-login" href="{{route('login')}}">Login</a>
-          </li>
-
-          @if(Route::has('register'))
+  @else
+    <div class="uk-navbar-left logo-cabecalho">
+      <a href="/" class="uk-navbar-item uk-logo">
+        <img src="{{asset('../img/logo.svg')}}" alt="Logo do site">
+      </a>
+    </div>
+    <div class="uk-navbar-right uk-visible@s">
+      <ul class="uk-navbar-nav menu">
+        @if(Route::has('login'))
+          @auth
+            <li><a href="sobre.php">Sobre</a></li>
+            <li><a href="usuarios.php">Usuários</a></li>
             <li>
-              <a class="uk-button uk-border-rounded" href="{{ route('register') }}">Cadastrar-se</a>
+              <a class="nav-link" onclick="event.preventDefault(); document.querySelector('form.logout').submit()">Logout</a>
+              <form action="{{route('logout')}}" class="logout" method="post" style="display:none;">
+                @csrf
+              </form>                          
             </li>
-          @endif
-        @endauth
-      @endif
-    </ul>
-  </div>
+
+          @else
+            <li>
+              <a class="uk-button uk-border-rounded btn-login" href="{{route('login')}}">Login</a>
+            </li>
+
+            @if(Route::has('register'))
+              <li>
+                <a class="uk-button uk-border-rounded" href="{{route('register')}}">Cadastrar-se</a>
+              </li>
+            @endif
+          @endauth
+        @endif
+      </ul>
+    </div>
+  @endif
 </nav>
 
 <!-- MENU MOBILE    -->

@@ -1,22 +1,22 @@
-.introducao-interno {
-  background: $light-green;
-  padding: 15px 30px;
+.introducao {
+    background: $light-green;
+    padding: 15px 30px;
 
-  .bg-pattern {
-    // background: url("../img/bg-pattern.svg") no-repeat right,
-    //             url("../img/bg-pattern.svg") no-repeat left;
-    // padding: 21px 0;
+    .bg-pattern {
+        // background: url("../img/bg-pattern.svg") no-repeat right,
+        //             url("../img/bg-pattern.svg") no-repeat left;
+        // padding: 21px 0;
 
-    .introducao-titulo {
-      padding-top: 10px;
+        .introducao-titulo {
+            padding-top: 10px;
 
-      span {
-        margin-top: 15px
-      }
-    
-      h1 {
-        @include font(48);
-      }
+            span {
+                margin-top: 15px;
+            }
+
+            h1 {
+                @include font(48);
+            }
+        }
     }
-  }
 }

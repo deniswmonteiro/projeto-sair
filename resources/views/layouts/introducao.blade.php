@@ -1,4 +1,4 @@
-<section class="introducao-interno">
+<section class="introducao">
   <div class="bg-pattern">
     <div class="uk-container">
       <div class="uk-text-center introducao-titulo">

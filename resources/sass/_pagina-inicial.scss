@@ -1,29 +1,29 @@
 .andares {
-  h1 {
-    margin-bottom: 30px;
-  
-    &::after {
-      content: "";
-      display: block;
-      width: 90px;
-      height: 3px;
-      background: $light-orange;
-      margin-top: 10px;
-      border-radius: 5px;
+    h1 {
+        margin-bottom: 30px;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            background: $light-orange;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
     }
-  }
 
-  a {
-    display: block;
-  }
-
-  .card-andar {
-    background: $light-grey no-repeat;
-    border: 1px solid $light-green;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $light-grey;
+    a {
+        display: block;
     }
-  }
+
+    .card-andar {
+        background: $light-grey no-repeat;
+        border: 1px solid $light-green;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $light-grey;
+        }
+    }
 }

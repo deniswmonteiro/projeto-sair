@@ -1,29 +1,47 @@
 .cadastro {
-  .card-cadastro {
-    background: $light-grey;
-    max-width: 990px;
-    margin: 0 auto;
-    padding: 30px;
+    .card-cadastro {
+        background: $light-grey;
+        max-width: 990px;
+        margin: 0 auto;
+        padding: 30px;
 
-    .form {
-      label, input, input:focus {
-        color: $dark-grey;
-      }
-    
-      input {
-        outline: none;
-        border-color: $grey;
-        border-radius: 5px;
-    
-        &:focus {
-          border-color: $green;
+        .form {
+            label,
+            input,
+            input:focus {
+                color: $dark-grey;
+            }
+
+            input,
+            select {
+                outline: none;
+                border-color: $grey;
+                border-radius: 5px;
+
+                &:focus {
+                    border-color: $green;
+                }
+            }
+
+            .aviso {
+                color: $dark-red;
+            }
+
+            .btn {
+                .link-voltar-login {
+                    @include font(16);
+                    text-decoration: none;
+                    color: $dark-green !important;
+                    transition: 0.4s;
+                    text-transform: initial;
+                    padding: 8px 13px;
+                    margin-right: 20px;
+
+                    &:hover {
+                        color: $green !important;
+                    }
+                }
+            }
         }
-      }
-
-      .aviso {
-        margin: 20px 0 40px 0;
-        color: $dark-red;
-      }
     }
-  }
 }

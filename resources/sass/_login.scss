@@ -1,0 +1,73 @@
+.login {
+    .card-login {
+        background: $light-grey;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        label,
+        input,
+        input:focus {
+            color: $dark-grey;
+        }
+
+        input {
+            outline: none;
+            border-color: $grey;
+
+            &:focus {
+                border-color: $green;
+            }
+        }
+
+        span {
+            &:first-of-type::after {
+                content: "";
+                width: 5px;
+                height: 5px;
+                border-radius: 5px;
+                background: $light-orange;
+                display: inline-block;
+                margin: 0 5px 2px 10px;
+            }
+
+            a {
+                @include font(16);
+                text-decoration: none;
+                color: $dark-green;
+                transition: 0.4s;
+                text-transform: initial;
+                padding: 0;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+
+//     &.modal-recuperar-senha {
+//         .modal-footer a:last-of-type {
+//             @include font(14);
+//             color: $dark-orange;
+//             text-transform: initial;
+//             transition: 0.4s;
+
+//             &:hover {
+//                 color: $light-orange;
+//             }
+//         }
+//     }
+
+//     &.modal-notificacao {
+//         i {
+//             color: $green;
+//         }
+
+//         p {
+//             @include font(16);
+//             margin-bottom: 0;
+//             margin-top: 0;
+//         }
+//     }
+// }

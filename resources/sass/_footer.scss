@@ -1,45 +1,47 @@
 .rodape {
-  .dados {
-    background: $dark-grey;
-    color: $light-grey;
-    padding: 40px 0;
+    .dados {
+        background: $dark-grey;
+        color: $light-grey;
+        padding: 40px 0;
 
-    .contatos h3 {
-      &::after {
-        content: "";
-        display: block;
-        width: 90px;
-        height: 3px;
-        background: $light-orange;
-        margin-top: 10px;
-        border-radius: 5px;
-      }
+        .contatos h3 {
+            &::after {
+                content: "";
+                display: block;
+                width: 90px;
+                height: 3px;
+                background: $light-orange;
+                margin-top: 10px;
+                border-radius: 5px;
+            }
+        }
+
+        .contatos h3,
+        .contatos ul li,
+        .contatos span {
+            color: $light-grey;
+        }
+
+        .contatos span {
+            font-weight: 700;
+        }
+
+        .logo-rodape {
+            padding-top: 50px;
+
+            @media screen and (max-width: 640px) {
+                padding-top: 0;
+                text-align: center;
+            }
+        }
     }
 
-    .contatos h3, .contatos ul li, .contatos span {
-      color: $light-grey;
+    .copyright {
+        background: $dark-green;
+        padding: 15px 0;
+
+        p {
+            color: $light-grey;
+        }
     }
-
-    .contatos span {
-      font-weight: 700;
-    }
-
-    .logo-rodape {
-      padding-top: 50px;
-
-      @media screen and (max-width: 640px) {
-        padding-top: 0;
-        text-align: center;
-      }
-    }
-  }
-
-  .copyright {
-    background: $dark-green;
-    padding: 15px 0;
-
-    p {
-      color: $light-grey;
-    }
-  }
 }

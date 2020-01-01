@@ -1,7 +1,7 @@
 @extends("layouts.app", ["paginaAtual" => "2º Andar"])
 
 @section("conteudo")
-  @include("layouts.menu")
+  @include("layouts.menu", ["menu" => "2º andar"])
   @include("layouts.introducao", ["iconeIntroducao" => "ico-local", "textoIntroducao" => "2º Andar", "paginaAtual" => "Salas"])
   
   <section class="uk-section andar">

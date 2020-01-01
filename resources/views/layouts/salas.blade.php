@@ -1,7 +1,7 @@
-@extends("layouts.app")
+@extends("layouts.app", ["paginaAtual" => $sala_nome])
 
 @section("conteudo")
-  @include("layouts.menu")
+  @include("layouts.menu", ["menu" => "salas"])
   @include("layouts.introducao")
   
   <section class="uk-section salas" data-group>
