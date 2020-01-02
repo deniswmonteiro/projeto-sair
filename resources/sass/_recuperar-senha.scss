@@ -1,0 +1,60 @@
+.recuperar-senha {
+    .card-recuperar-senha {
+        background: $light-grey;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 30px;
+
+        .alerta-logado {
+            h4 {
+                @include font(16);
+                color: $orange;
+                font-size: 1.125em;
+            }
+
+            .link-voltar-home {
+                @include font(16);
+                color: $dark-green !important;
+                transition: 0.4s;
+                margin-top: 20px;
+
+                &:hover {
+                    color: $green !important;
+                }
+            }
+        }
+
+        .form {
+            input {
+                outline: none;
+                border-color: $grey;
+
+                &:focus {
+                    border-color: $green;
+                }
+            }
+
+            label,
+            input,
+            input:focus {
+                color: $dark-grey;
+            }
+
+            .btn {
+                .link-voltar-login {
+                    @include font(16);
+                    text-decoration: none;
+                    color: $dark-green !important;
+                    transition: 0.4s;
+                    text-transform: initial;
+                    padding: 8px 13px;
+                    margin-left: 20px;
+
+                    &:hover {
+                        color: $green !important;
+                    }
+                }
+            }
+        }
+    }
+}

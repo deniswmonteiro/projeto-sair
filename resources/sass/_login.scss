@@ -1,14 +1,9 @@
 .login {
     .card-login {
         background: $light-grey;
-        max-width: 600px;
+        max-width: 500px;
         margin: 0 auto;
         padding: 30px;
-        label,
-        input,
-        input:focus {
-            color: $dark-grey;
-        }
 
         input {
             outline: none;
@@ -17,6 +12,12 @@
             &:focus {
                 border-color: $green;
             }
+        }
+
+        label,
+        input,
+        input:focus {
+            color: $dark-grey;
         }
 
         span {
@@ -45,19 +46,6 @@
         }
     }
 }
-
-//     &.modal-recuperar-senha {
-//         .modal-footer a:last-of-type {
-//             @include font(14);
-//             color: $dark-orange;
-//             text-transform: initial;
-//             transition: 0.4s;
-
-//             &:hover {
-//                 color: $light-orange;
-//             }
-//         }
-//     }
 
 //     &.modal-notificacao {
 //         i {

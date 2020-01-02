@@ -5,7 +5,7 @@
 	<section class="uk-section login">
     <div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body card-login">
-				<h1>Fazer login</h1>
+				<h1>Fazer Login</h1>
 				<form method="post" action="{{route('login')}}" class="uk-form-stacked form">
 					@csrf
 					<div class="uk-margin">
@@ -42,7 +42,7 @@
 					<div class="uk-margin">
 						<span>
 							@if(Route::has('password.request'))
-								<a class="uk-button" href="{{route('password.request')}}" uk-toggle="target: #modal-recuperar-senha">Esqueceu a senha?</a>
+								<a class="uk-button" href="{{route('password.request')}}">Esqueceu a senha?</a>
 							@endif
 						</span>
 						<span>

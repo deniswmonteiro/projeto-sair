@@ -1,47 +1,53 @@
-@extends('layouts.app', ['paginaAtual' => 'Redefinir Senha'])
+@extends("layouts.app", ["paginaAtual" => "Recuperar Senha"])
 
-@section('conteudo')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+@section("conteudo")
+	@include("layouts.menu", ["menu" => "recuperar-senha"])
+	<section class="uk-section recuperar-senha">
+  	<div class="uk-container">
+			<div class="uk-card uk-card-default uk-card-body card-recuperar-senha">
+				@auth
+					<div class="alerta-logado">
+						<div class="uk-alert-warning uk-card-default uk-card-body uk-animation-shake" uk-alert>
+							<h4 class="uk-text-center">Você já está logado(a) como {{auth()->user()->name}}!</h4>
+						</div>
+						<div class="uk-text-left uk-border-rounded uk-flex">
+							<a href="{{route('home')}}" class="uk-link-reset link-voltar-home">
+								{{__('Voltar para a página inicial')}}
+							</a>
+						</div>
+					</div>
+				@endauth
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+				@guest
+					<h1>Recuperar Senha</h1>
+					<form class="uk-form-stacked form" method="post" action="{{route('password.email')}}">
+						@csrf
+						<div class="uk-margin">
+							<label class="uk-form-label" for="form-recuperar-email">
+								{{ __('Informe o email cadastrado') }}
+							</label>
+							<div class="uk-form-controls">
+								<input id="form-recuperar-email" type="email" class="uk-input uk-border-rounded @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+								@error('email')
+									<span class="invalid-feedback" role="alert">
+										<strong>{{$message}}</strong>
+									</span>
+								@enderror
+							</div>
+						</div>
+						<div class="uk-text-left uk-border-rounded modal-footer btn">
+							<a href="#" class="uk-button uk-border-rounded btn-enviar">
+								{{__('Enviar solicitação')}}
+							</a>
+							<a href="{{route('login')}}" class="uk-button uk-link-reset link-voltar-login">
+								{{__('Voltar para o login')}}
+							</a>
+						</div>
+					</form>
+				@endguest
+      </div>
+  	</div>
+	</section>
 
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+	<script src="{{asset('../js/recuperar-senha.js')}}"></script>
 @endsection

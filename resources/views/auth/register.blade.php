@@ -1,7 +1,7 @@
 @extends("layouts.app", ["paginaAtual" => "Cadastrar-se"])
 
 @section("conteudo")
-	@include("layouts.menu", ["menu" => "cadastrar-se"])
+	@include("layouts.menu", ["menu" => "cadastro"])
 		<section class="uk-section cadastro">
 		<div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body card-cadastro">
@@ -10,9 +10,9 @@
 					@csrf
 					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
 						<div>
-							<label class="uk-form-label form" for="cadastro-nome">{{__('Nome Completo *')}}</label>
+							<label class="uk-form-label form" for="form-cadastro-nome">{{__('Nome Completo *')}}</label>
 							<div class="uk-form-controls">
-								<input id="cadastro-nome" type="text" class="uk-input @error('name') is-invalid @enderror" name="name" value="{{old('name')}}" required autocomplete="name" autofocus>
+								<input id="form-cadastro-nome" type="text" class="uk-input @error('name') is-invalid @enderror" name="name" value="{{old('name')}}" required autocomplete="name" autofocus>
 								@error('name')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{$message}}</strong>
@@ -21,17 +21,17 @@
 							</div>
 						</div>
 						<div>
-							<label class="uk-form-label" for="cadastro-cpf">{{__('CPF *')}}</label>
+							<label class="uk-form-label" for="form-cadastro-cpf">{{__('CPF *')}}</label>
 							<div class="uk-form-controls">
-								<input class="uk-input" id="cadastro-cpf" type="text" placeholder="Somente os números">
+								<input class="uk-input" id="form-cadastro-cpf" type="text" placeholder="Somente os números">
 							</div>
 						</div>
 					</div>
 					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
 						<div>
-							<label class="uk-form-label" for="cadastro-email">{{__('Email *')}}</label>
+							<label class="uk-form-label" for="form-cadastro-email">{{__('Email *')}}</label>
 							<div class="uk-form-controls">
-								<input id="cadastro-email" type="email" class="uk-input @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autocomplete="email">
+								<input id="form-cadastro-email" type="email" class="uk-input @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autocomplete="email">
 								@error('email')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{$message}}</strong>
@@ -40,11 +40,11 @@
 							</div>
 						</div>
 						<div>
-							<label class="uk-form-label" for="cadastro-sala-lab">
+							<label class="uk-form-label" for="form-cadastro-sala-lab">
 								{{__('Sala/Laboratório *')}}
 							</label>
 							<div class="uk-form-controls">
-								<select class="uk-select" id="cadastro-sala-lab">
+								<select class="uk-select" id="form-cadastro-sala-lab">
 									<option value="" disabled selected>Escolha uma opção</option>
 									<option value="labmotriz">LabMotriz</option>
 									<option value="lcad">LCAD</option>
@@ -54,15 +54,15 @@
 					</div>
 					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
 						<div>
-							<label class="uk-form-label" for="cadastro-usuario">{{__('Usuário *')}}</label>
+							<label class="uk-form-label" for="form-cadastro-usuario">{{__('Usuário *')}}</label>
 							<div class="uk-form-controls">
-								<input class="uk-input" id="cadastro-usuario" type="text" placeholder="Mínimo de 6 caracteres">
+								<input class="uk-input" id="form-cadastro-usuario" type="text" placeholder="Mínimo de 6 caracteres">
 							</div>
 						</div>
 						<div>
-							<label class="uk-form-label" for="cadastro-senha">{{__('Senha *')}}</label>
+							<label class="uk-form-label" for="form-cadastro-senha">{{__('Senha *')}}</label>
 							<div class="uk-form-controls uk-inline uk-display-block">
-								<input id="cadastro-senha" type="password" class="uk-input @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Mínimo de 8 caracteres">
+								<input id="form-cadastro-senha" type="password" class="uk-input @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Mínimo de 8 caracteres">
 								@error('password')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{$message}}</strong>
@@ -73,10 +73,10 @@
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
 					<div class="uk-text-left uk-border-rounded uk-flex btn">
+						<a href="#" class="uk-button uk-border-rounded btn-cadastrar">{{__('Cadastrar')}}</a>
 						<a href="{{route('login')}}" class="uk-link-reset link-voltar-login">
 							{{__('Voltar para o login')}}
 						</a>
-						<a href="#" class="uk-button uk-border-rounded btn-cadastrar">{{__('Cadastrar')}}</a>
 					</div>
 				</form>
 			</div>

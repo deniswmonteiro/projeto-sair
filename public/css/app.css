@@ -1,10 +1,6 @@
 body,
 p,
 a,
-h1,
-h2,
-h3,
-h5,
 li {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
   color: #18211a;
@@ -17,10 +13,6 @@ li {
 body h1,
 p h1,
 a h1,
-h1 h1,
-h2 h1,
-h3 h1,
-h5 h1,
 li h1 {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
   color: #18211a;
@@ -32,10 +24,6 @@ li h1 {
 body h3,
 p h3,
 a h3,
-h1 h3,
-h2 h3,
-h3 h3,
-h5 h3,
 li h3 {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
   color: #18211a;
@@ -47,10 +35,6 @@ li h3 {
 body .form .btn-form-senha-modal,
 p .form .btn-form-senha-modal,
 a .form .btn-form-senha-modal,
-h1 .form .btn-form-senha-modal,
-h2 .form .btn-form-senha-modal,
-h3 .form .btn-form-senha-modal,
-h5 .form .btn-form-senha-modal,
 li .form .btn-form-senha-modal {
   background: #5d7;
   border: none;
@@ -63,10 +47,6 @@ li .form .btn-form-senha-modal {
 body .form i,
 p .form i,
 a .form i,
-h1 .form i,
-h2 .form i,
-h3 .form i,
-h5 .form i,
 li .form i {
   color: #18211a;
 }
@@ -74,10 +54,6 @@ li .form i {
 body .btn a,
 p .btn a,
 a .btn a,
-h1 .btn a,
-h2 .btn a,
-h3 .btn a,
-h5 .btn a,
 li .btn a {
   margin-top: 30px;
   transition: 0.4s;
@@ -91,18 +67,6 @@ p .btn a.btn-cadastrar,
 a .btn a.btn-entrar,
 a .btn a.btn-enviar,
 a .btn a.btn-cadastrar,
-h1 .btn a.btn-entrar,
-h1 .btn a.btn-enviar,
-h1 .btn a.btn-cadastrar,
-h2 .btn a.btn-entrar,
-h2 .btn a.btn-enviar,
-h2 .btn a.btn-cadastrar,
-h3 .btn a.btn-entrar,
-h3 .btn a.btn-enviar,
-h3 .btn a.btn-cadastrar,
-h5 .btn a.btn-entrar,
-h5 .btn a.btn-enviar,
-h5 .btn a.btn-cadastrar,
 li .btn a.btn-entrar,
 li .btn a.btn-enviar,
 li .btn a.btn-cadastrar {
@@ -117,18 +81,6 @@ p .btn a.btn-cadastrar:hover,
 a .btn a.btn-entrar:hover,
 a .btn a.btn-enviar:hover,
 a .btn a.btn-cadastrar:hover,
-h1 .btn a.btn-entrar:hover,
-h1 .btn a.btn-enviar:hover,
-h1 .btn a.btn-cadastrar:hover,
-h2 .btn a.btn-entrar:hover,
-h2 .btn a.btn-enviar:hover,
-h2 .btn a.btn-cadastrar:hover,
-h3 .btn a.btn-entrar:hover,
-h3 .btn a.btn-enviar:hover,
-h3 .btn a.btn-cadastrar:hover,
-h5 .btn a.btn-entrar:hover,
-h5 .btn a.btn-enviar:hover,
-h5 .btn a.btn-cadastrar:hover,
 li .btn a.btn-entrar:hover,
 li .btn a.btn-enviar:hover,
 li .btn a.btn-cadastrar:hover {
@@ -139,10 +91,6 @@ li .btn a.btn-cadastrar:hover {
 body .btn a.btn-cancelar,
 p .btn a.btn-cancelar,
 a .btn a.btn-cancelar,
-h1 .btn a.btn-cancelar,
-h2 .btn a.btn-cancelar,
-h3 .btn a.btn-cancelar,
-h5 .btn a.btn-cancelar,
 li .btn a.btn-cancelar {
   background: #f32;
   color: #f7faf8;
@@ -152,10 +100,6 @@ li .btn a.btn-cancelar {
 body .btn a.btn-cancelar:hover,
 p .btn a.btn-cancelar:hover,
 a .btn a.btn-cancelar:hover,
-h1 .btn a.btn-cancelar:hover,
-h2 .btn a.btn-cancelar:hover,
-h3 .btn a.btn-cancelar:hover,
-h5 .btn a.btn-cancelar:hover,
 li .btn a.btn-cancelar:hover {
   color: #18211a;
   box-shadow: 0px 0px 0px 3px #18211a;
@@ -339,15 +283,9 @@ li .btn a.btn-cancelar:hover {
 
 .login .card-login {
   background: #f7faf8;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 30px;
-}
-
-.login .card-login label,
-.login .card-login input,
-.login .card-login input:focus {
-  color: #18211a;
 }
 
 .login .card-login input {
@@ -357,6 +295,12 @@ li .btn a.btn-cancelar:hover {
 
 .login .card-login input:focus {
   border-color: #5d7;
+}
+
+.login .card-login label,
+.login .card-login input,
+.login .card-login input:focus {
+  color: #18211a;
 }
 
 .login .card-login span:first-of-type::after {
@@ -384,27 +328,6 @@ li .btn a.btn-cancelar:hover {
 
 .login .card-login span a:hover {
   color: #5d7;
-}
-
-.introducao {
-  background: #9fa;
-  padding: 15px 30px;
-}
-
-.introducao .bg-pattern .introducao-titulo {
-  padding-top: 10px;
-}
-
-.introducao .bg-pattern .introducao-titulo span {
-  margin-top: 15px;
-}
-
-.introducao .bg-pattern .introducao-titulo h1 {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a;
-  font-size: 3em;
-  line-height: 1.2;
-  font-weight: 500;
 }
 
 .cadastro .card-cadastro {
@@ -442,16 +365,100 @@ li .btn a.btn-cancelar:hover {
   font-size: 1em;
   line-height: 1.4;
   font-weight: 500;
+  color: #193 !important;
+  transition: 0.4s;
+  padding: 8px 13px;
+  margin-left: 20px;
+}
+
+.cadastro .card-cadastro .form .btn .link-voltar-login:hover {
+  color: #5d7 !important;
+}
+
+.recuperar-senha .card-recuperar-senha {
+  background: #f7faf8;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.recuperar-senha .card-recuperar-senha .alerta-logado h4 {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #f82;
+  font-size: 1.125em;
+}
+
+.recuperar-senha .card-recuperar-senha .alerta-logado .link-voltar-home {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #193 !important;
+  transition: 0.4s;
+  margin-top: 20px;
+}
+
+.recuperar-senha .card-recuperar-senha .alerta-logado .link-voltar-home:hover {
+  color: #5d7 !important;
+}
+
+.recuperar-senha .card-recuperar-senha .form input {
+  outline: none;
+  border-color: #c1d6c8;
+}
+
+.recuperar-senha .card-recuperar-senha .form input:focus {
+  border-color: #5d7;
+}
+
+.recuperar-senha .card-recuperar-senha .form label,
+.recuperar-senha .card-recuperar-senha .form input,
+.recuperar-senha .card-recuperar-senha .form input:focus {
+  color: #18211a;
+}
+
+.recuperar-senha .card-recuperar-senha .form .btn .link-voltar-login {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: 500;
   text-decoration: none;
   color: #193 !important;
   transition: 0.4s;
   text-transform: initial;
   padding: 8px 13px;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
-.cadastro .card-cadastro .form .btn .link-voltar-login:hover {
+.recuperar-senha .card-recuperar-senha .form .btn .link-voltar-login:hover {
   color: #5d7 !important;
+}
+
+.introducao {
+  background: #9fa;
+  padding: 15px 30px;
+}
+
+.introducao .bg-pattern .introducao-titulo {
+  padding-top: 10px;
+}
+
+.introducao .bg-pattern .introducao-titulo span {
+  margin-top: 15px;
+}
+
+.introducao .bg-pattern .introducao-titulo h1 {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 3em;
+  line-height: 1.2;
+  font-weight: 500;
 }
 
 .andar h3 {
