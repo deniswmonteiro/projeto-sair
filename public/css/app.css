@@ -55,7 +55,8 @@ body .btn a,
 p .btn a,
 a .btn a,
 li .btn a {
-  margin-top: 30px;
+  display: inline-block;
+  margin-top: 20px;
   transition: 0.4s;
   font-weight: 700;
 }
@@ -330,6 +331,10 @@ li .btn a.btn-cancelar:hover {
   color: #5d7;
 }
 
+.login .card-login .check-lembrar-senha {
+  border-radius: 4px;
+}
+
 .cadastro .card-cadastro {
   background: #f7faf8;
   max-width: 990px;
@@ -365,14 +370,14 @@ li .btn a.btn-cancelar:hover {
   font-size: 1em;
   line-height: 1.4;
   font-weight: 500;
-  color: #193 !important;
+  color: #d60 !important;
   transition: 0.4s;
   padding: 8px 13px;
   margin-left: 20px;
 }
 
 .cadastro .card-cadastro .form .btn .link-voltar-login:hover {
-  color: #5d7 !important;
+  color: #f82 !important;
 }
 
 .recuperar-senha .card-recuperar-senha {
@@ -429,7 +434,7 @@ li .btn a.btn-cancelar:hover {
   line-height: 1.4;
   font-weight: 500;
   text-decoration: none;
-  color: #193 !important;
+  color: #d60 !important;
   transition: 0.4s;
   text-transform: initial;
   padding: 8px 13px;
@@ -437,7 +442,7 @@ li .btn a.btn-cancelar:hover {
 }
 
 .recuperar-senha .card-recuperar-senha .form .btn .link-voltar-login:hover {
-  color: #5d7 !important;
+  color: #f82 !important;
 }
 
 .introducao {
@@ -679,9 +684,21 @@ li .btn a.btn-cancelar:hover {
 .andares .card-andar {
   background: #f7faf8 no-repeat;
   border: 1px solid #9fa;
-  cursor: pointer;
+  padding: 30px;
 }
 
 .andares .card-andar:hover {
   background-color: #f7faf8;
+}
+
+.andares .card-andar h3 {
+  font-weight: 700;
+}
+
+.andares .card-andar .img-bg-andar {
+  margin: 10px 0;
+}
+
+.andares .card-andar .img-bg-andar:last-of-type {
+  height: 290px;
 }

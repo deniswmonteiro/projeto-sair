@@ -35,7 +35,7 @@
 					</div>
 					<div class="uk-margin">
 						<label for="form-login-lembrar-senha" class="">
-							<input class="uk-checkbox" type="checkbox" name="remember" id="form-login-lembrar-senha" {{old('remember') ? 'checked' : ''}}>
+							<input class="uk-checkbox check-lembrar-senha" type="checkbox" name="remember" id="form-login-lembrar-senha" {{old('remember') ? 'checked' : ''}}>
 							{{__('Lembrar senha')}}
 						</label>
 					</div>

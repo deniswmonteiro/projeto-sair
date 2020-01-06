@@ -20,10 +20,22 @@
     .card-andar {
         background: $light-grey no-repeat;
         border: 1px solid $light-green;
-        cursor: pointer;
+        padding: 30px;
 
         &:hover {
             background-color: $light-grey;
+        }
+
+        h3 {
+            font-weight: 700;
+        }
+
+        .img-bg-andar {
+            margin: 10px 0;
+
+            &:last-of-type {
+                height: 290px;
+            }
         }
     }
 }

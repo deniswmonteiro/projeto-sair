@@ -28,31 +28,34 @@ li {
         }
     }
 
-    .btn a {
-        margin-top: 30px;
-        transition: 0.4s;
-        font-weight: 700;
+    .btn {
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.4s;
+            font-weight: 700;
 
-        &.btn-entrar,
-        &.btn-enviar,
-        &.btn-cadastrar {
-            background: $dark-green;
-            color: $light-grey;
+            &.btn-entrar,
+            &.btn-enviar,
+            &.btn-cadastrar {
+                background: $dark-green;
+                color: $light-grey;
 
-            &:hover {
-                color: $dark-grey;
-                box-shadow: 0px 0px 0px 3px $dark-grey;
+                &:hover {
+                    color: $dark-grey;
+                    box-shadow: 0px 0px 0px 3px $dark-grey;
+                }
             }
-        }
 
-        &.btn-cancelar {
-            background: $red;
-            color: $light-grey;
-            margin-right: 10px;
+            &.btn-cancelar {
+                background: $red;
+                color: $light-grey;
+                margin-right: 10px;
 
-            &:hover {
-                color: $dark-grey;
-                box-shadow: 0px 0px 0px 3px $dark-grey;
+                &:hover {
+                    color: $dark-grey;
+                    box-shadow: 0px 0px 0px 3px $dark-grey;
+                }
             }
         }
     }

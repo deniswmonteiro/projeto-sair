@@ -24,7 +24,7 @@
             <li><a href="sobre.php">Sobre</a></li>
             <li><a href="usuarios.php">Usuários</a></li>
             <li>
-              <a class="nav-link" onclick="event.preventDefault(); document.querySelector('form.logout').submit()">Logout</a>
+              <a class="nav-link" onclick="event.preventDefault(); document.querySelector('form.logout').submit()">Sair</a>
               <form action="{{route('logout')}}" class="logout" method="post" style="display:none;">
                 @csrf
               </form>                          

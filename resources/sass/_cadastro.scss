@@ -30,13 +30,13 @@
             .btn {
                 .link-voltar-login {
                     @include font(16);
-                    color: $dark-green !important;
+                    color: $dark-orange !important;
                     transition: 0.4s;
                     padding: 8px 13px;
                     margin-left: 20px;
 
                     &:hover {
-                        color: $green !important;
+                        color: $orange !important;
                     }
                 }
             }

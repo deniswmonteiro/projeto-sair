@@ -1,11 +1,12 @@
-@extends("layouts.app", ["paginaAtual" => "Cadastrar-se"])
+@extends("layouts.app", ["paginaAtual" => "Cadastro"])
 
 @section("conteudo")
 	@include("layouts.menu", ["menu" => "cadastro"])
-		<section class="uk-section cadastro">
+	@include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "solicite acesso", "paginaAtual" => "Cadastro"])
+
+	<section class="uk-section cadastro">
 		<div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body card-cadastro">
-				<h1>Cadastrar-se</h1>
 				<form class="uk-form-stacked form" action="{{route('register')}}" method="post">
 					@csrf
 					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
