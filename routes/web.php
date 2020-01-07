@@ -19,4 +19,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('segundoandar', 'SegundoAndarController');
 });
 
+
+Route::resource('usuario', 'UsuarioController');
+
 Auth::routes();

@@ -24,7 +24,12 @@
 						<div>
 							<label class="uk-form-label" for="form-cadastro-cpf">{{__('CPF *')}}</label>
 							<div class="uk-form-controls">
-								<input class="uk-input" id="form-cadastro-cpf" type="text" placeholder="Somente os números">
+								<input class="uk-input @error('cpf') is-invalid @enderror" name="cpf" value="{{old('cpf')}}" id="form-cadastro-cpf" type="text" placeholder="Somente os números" required autocomplete="cpf">
+								@error('cpf')
+									<span class="invalid-feedback" role="alert">
+										<strong>{{$message}}</strong>
+									</span>
+								@enderror
 							</div>
 						</div>
 					</div>
@@ -57,7 +62,12 @@
 						<div>
 							<label class="uk-form-label" for="form-cadastro-usuario">{{__('Usuário *')}}</label>
 							<div class="uk-form-controls">
-								<input class="uk-input" id="form-cadastro-usuario" type="text" placeholder="Mínimo de 6 caracteres">
+								<input class="uk-input @error('user') is-invalid @enderror" name="user" value="{{old('user')}}" id="form-cadastro-usuario" type="text" placeholder="Mínimo de 6 caracteres" required autocomplete="user">
+								@error('user')
+									<span class="invalid-feedback" role="alert">
+										<strong>{{$message}}</strong>
+									</span>
+								@enderror
 							</div>
 						</div>
 						<div>

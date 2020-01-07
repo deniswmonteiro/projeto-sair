@@ -28,7 +28,7 @@ class SalasPrimeiroAndarCollectionSeeder extends Seeder
         
         \projetoautomacao\SalasPrimeiroAndar::create([
             'id_sala' => 2,
-            'sala_nome' => 'Lab. de Computação',
+            'sala_nome' => 'Lab. de Simulação e Instalação Elétrica',
             'sala_localizacao' => [40, 8],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 2,

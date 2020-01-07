@@ -130,8 +130,31 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        // 'attribute-name' => [
+        //     'rule-name' => 'custom-message',
+        // ],
+
+        'cpf' => [
+            'integer' => 'Digite somente os números!',
+            'numeric' => 'O máximo permitido são 11 caracteres.',
+            'required' => 'Este campo é obrigatório!',
+            'unique' => 'Este CPF já está sendo utilizado.',
+        ],
+
+        'email' => [
+            'unique' => 'Este email já está sendo utilizado.',
+            'required' => 'Este campo é obrigatório!',
+        ],
+
+        'user' => [
+            'string' => 'O mínimo permitido são 6 caracteres.',
+            'unique' => 'Este usuário já está sendo utilizado.',
+            'required' => 'Este campo é obrigatório!',
+        ],
+
+        'password' => [
+            'password' => 'A senha está incorreta.',
+            'required' => 'Este campo é obrigatório!',
         ],
     ],
 
@@ -146,6 +169,8 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'cpf' => 'CPF'
+    ],
 
 ];
