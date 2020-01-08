@@ -21,3 +21,5 @@ Route::group(['middleware' => ['auth']], function() {
 });
 
 Auth::routes();
+
+Route::resource('email', 'Admin\EmailController');

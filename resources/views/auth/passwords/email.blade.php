@@ -20,7 +20,7 @@
 
 				@guest
 					<h1>Recuperar Senha</h1>
-					<form class="uk-form-stacked form" method="post" action="{{route('password.email')}}">
+					<form class="uk-form-stacked form" method="post" action="{{route('email.store')}}">
 						@csrf
 						<div class="uk-margin">
 							<label class="uk-form-label" for="form-recuperar-email">
