@@ -1,20 +1,19 @@
 <?php
 
-namespace projetoautomacao\Http\Controllers\Admin;
+namespace projetoautomacao\Http\Controllers;
 
 use Illuminate\Http\Request;
-use projetoautomacao\Http\Controllers\Controller;
-use projetoautomacao\User;
+use projetoautomacao\Cadastro;
 
-class UsuarioController extends Controller
+class CadastroController extends Controller
 {
-    private $usuario;
+    private $cadastro;
 
-	public function __construct(Users $usuario) 
+	public function __construct(Cadastro $cadastro)
 	{
-		$this->usuario = $usuario;
-	}
-
+		$this->cadastro = $cadastro;
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -22,7 +21,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        //
+        return view('cadastro');
     }
 
     /**
@@ -43,7 +42,9 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        dd($data);
+        return redirect()->route('home');
     }
 
     /**

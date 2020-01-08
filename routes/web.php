@@ -12,14 +12,12 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::resource('/cadastro', 'CadastroController');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('terreo', 'TerreoController');
     Route::resource('primeiroandar', 'PrimeiroAndarController');
     Route::resource('segundoandar', 'SegundoAndarController');
 });
-
-
-Route::resource('usuario', 'UsuarioController');
 
 Auth::routes();

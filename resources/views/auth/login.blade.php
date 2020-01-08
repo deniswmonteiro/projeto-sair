@@ -46,7 +46,7 @@
 							@endif
 						</span>
 						<span>
-							<a class="uk-button" href="{{route('register')}}">Cadastrar-se</a>
+							<a class="uk-button" href="{{route('cadastro.index')}}">Cadastrar-se</a>
 						</span>
 					</div>
 					<div class="uk-text-left uk-border-rounded btn">
