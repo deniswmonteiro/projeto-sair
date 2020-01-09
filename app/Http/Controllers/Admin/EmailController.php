@@ -7,6 +7,7 @@ use projetoautomacao\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\Mail;
 use projetoautomacao\Mail\SendMailUser;
+use projetoautomacao\User;
 
 class EmailController extends Controller
 {
@@ -38,8 +39,11 @@ class EmailController extends Controller
      */
     public function store(Request $request)
     {
-        $name = 'Denis';
-        Mail::to('deniswmonteiro@gmail.com')->send(new SendMailUser($name));
+        $data = $request->all('email');
+        //dd($data);
+        $id = 1;
+        $user = User::where('id', $id)->first();
+        Mail::to($data)->send(new SendMailUser($user));
         return 'Email was sent';
     }
 

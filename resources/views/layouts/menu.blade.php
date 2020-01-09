@@ -37,7 +37,7 @@
 
             @if(Route::has('register'))
               <li>
-                <a class="uk-button uk-border-rounded" href="{{route('register')}}">Cadastrar-se</a>
+                <a class="uk-button uk-border-rounded" href="{{route('cadastro.index')}}">Cadastrar-se</a>
               </li>
             @endif
           @endauth

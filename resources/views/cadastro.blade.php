@@ -47,7 +47,7 @@
 						</div>
 						<div>
 							<label class="uk-form-label" for="form-cadastro-sala-lab">
-								{{__('Sala/Laboratório *')}}
+								{{__('Laboratório *')}}
 							</label>
 							<div class="uk-form-controls">
 								<select class="uk-select" id="form-cadastro-sala-lab">
@@ -55,30 +55,6 @@
 									<option value="labmotriz">LabMotriz</option>
 									<option value="lcad">LCAD</option>
 								</select>
-							</div>
-						</div>
-					</div>
-					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
-						<div>
-							<label class="uk-form-label" for="form-cadastro-usuario">{{__('Usuário *')}}</label>
-							<div class="uk-form-controls">
-								<input class="uk-input @error('user') is-invalid @enderror" name="user" value="{{old('user')}}" id="form-cadastro-usuario" type="text" placeholder="Mínimo de 6 caracteres" required autocomplete="user">
-								@error('user')
-									<span class="invalid-feedback" role="alert">
-										<strong>{{$message}}</strong>
-									</span>
-								@enderror
-							</div>
-						</div>
-						<div>
-							<label class="uk-form-label" for="form-cadastro-senha">{{__('Senha *')}}</label>
-							<div class="uk-form-controls uk-inline uk-display-block">
-								<input id="form-cadastro-senha" type="password" class="uk-input @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Mínimo de 8 caracteres">
-								@error('password')
-									<span class="invalid-feedback" role="alert">
-										<strong>{{$message}}</strong>
-									</span>
-								@enderror
 							</div>
 						</div>
 					</div>

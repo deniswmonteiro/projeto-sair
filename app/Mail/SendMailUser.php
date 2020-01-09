@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use projetoautomacao\User;
 
 class SendMailUser extends Mailable
 {
@@ -33,7 +34,7 @@ class SendMailUser extends Mailable
                 ->markdown('emails.test-markdown')
                 ->with([
                     'user'     => $this->user,
-                    'url'     => route('email.store'),
+                    'url'     => route('login'),
                 ]);
     }
 }
