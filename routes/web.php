@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::resource('/cadastro', 'CadastroController');
+Route::resource('/cadastro', 'SolicitarCadastroController');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('terreo', 'TerreoController');

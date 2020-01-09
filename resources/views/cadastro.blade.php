@@ -13,8 +13,8 @@
 						<div>
 							<label class="uk-form-label form" for="form-cadastro-nome">{{__('Nome Completo *')}}</label>
 							<div class="uk-form-controls">
-								<input id="form-cadastro-nome" type="text" class="uk-input @error('name') is-invalid @enderror" name="name" value="{{old('name')}}" required autocomplete="name" autofocus>
-								@error('name')
+								<input id="form-cadastro-nome" type="text" class="uk-input @error('nome') is-invalid @enderror" name="nome" value="{{old('nome')}}" required autocomplete="nome" autofocus>
+								@error('nome')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
@@ -50,7 +50,7 @@
 								{{__('Laboratório *')}}
 							</label>
 							<div class="uk-form-controls">
-								<select class="uk-select" id="form-cadastro-sala-lab">
+								<select class="uk-select" id="form-cadastro-sala-lab" name="laboratorio">
 									<option value="" disabled selected>Escolha uma opção</option>
 									<option value="labmotriz">LabMotriz</option>
 									<option value="lcad">LCAD</option>
