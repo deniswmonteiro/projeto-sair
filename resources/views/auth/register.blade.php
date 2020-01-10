@@ -7,7 +7,7 @@
 	<section class="uk-section cadastro">
 		<div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body card-cadastro">
-				<form class="uk-form-stacked form" action="{{route('register')}}" method="post">
+				<form class="uk-form-stacked form" action="{{route('usuarios.cadastro')}}" method="post">
 					@csrf
 					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
 						<div>
@@ -84,7 +84,7 @@
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
 					<div class="uk-text-left uk-border-rounded uk-flex btn">
-						<a href="{{route('usuario')}}" class="uk-button uk-border-rounded btn-cancelar">
+						<a href="{{route('usuarios.index')}}" class="uk-button uk-border-rounded btn-cancelar">
 							{{__('Cancelar')}}
 						</a>
 						<a href="#" class="uk-button uk-border-rounded btn-cadastrar">{{__('Cadastrar')}}</a>

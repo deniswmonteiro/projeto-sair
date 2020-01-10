@@ -20,6 +20,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('segundoandar', 'SegundoAndarController');
 });
 
+Route::get('usuarios/cadastro', 'Auth\RegisterController@showRegistrationForm')->name('usuarios.form');
+Route::post('usuarios/cadastro', 'Auth\RegisterController@register')->name('usuarios.cadastro');
+
 Auth::routes();
 
 Route::resource('usuarios', 'Admin\UsuarioController');

@@ -2,7 +2,7 @@
 
 @section("conteudo")
   @include("layouts.menu", ["menu" => "usuarios"])
-  @include("layouts.introducao", ["iconeIntroducao" => "ico-local", "textoIntroducao" => "gerenciamento de usuários", "paginaAtual" => "Usuários"])
+  @include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "gerenciar usuários", "paginaAtual" => "Usuários"])
   
   <section class="uk-section andar">
     <div class="uk-container">
@@ -11,45 +11,43 @@
           <a href="" class="uk-search-icon-flip" uk-search-icon></a>
           <input class="uk-search-input" type="search" placeholder="Procurar usuário">
         </form>
-        <a href="{{route('register')}}" class="uk-button">Adicionar usuário</a>
+        <a href="{{route('usuarios.form')}}" class="uk-button">Adicionar usuário</a>
         <a href="" class="uk-button">Solicitações pendentes</a>
       </div>
       <div class="uk-overflow-auto">
-        <table class="uk-table uk-table-hover uk-table-divider uk-table-responsive">
+        <table class="uk-table uk-table-hover uk-table-responsive uk-table-middle uk-table-striped">
           <thead>
             <tr>
               <th>Nome</th>
               <th>Email</th>
+              <th>Usuário</th>
               <th>Laboratório</th>
               <th>Ações</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Data1</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
+              <td>Admin</td>
+              <td>admin@admin</td>
+              <td>administrador</td>
+              <td>LCAD</td>
               <td>
-                <a href="" class="uk-button uk-border-rounded btn-atualizar">Atualizar</a>
-                <a href="" class="uk-button uk-border-rounded btn-remover">Remover</a>
+                <div>
+                  <a href="" class="uk-button uk-button-default uk-border-rounded btn-atualizar">Atualizar</a>
+                  <a href="" class="uk-button uk-button-default uk-border-rounded uk-margin-left btn-remover">Remover</a>
+                </div>
               </td>
             </tr>
             <tr>
-              <td>Data2</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
+              <td>Denis William Matos Monteiro</td>
+              <td>deniswmonteiro@gmail.com</td>
+              <td>denism</td>
+              <td>LabMotriz</td>
               <td>
-                <a href="" class="uk-button uk-border-rounded btn-atualizar">Atualizar</a>
-                <a href="" class="uk-button uk-border-rounded btn-remover">Remover</a>
-              </td>
-            </tr>
-            <tr>
-              <td>Data3</td>
-              <td>Table Data</td>
-              <td>Table Data</td>
-              <td>
-                <a href="" class="uk-button uk-border-rounded btn-atualizar">Atualizar</a>
-                <a href="" class="uk-button uk-border-rounded btn-remover">Remover</a>
+                <div>
+                  <a href="" class="uk-button uk-button-default uk-border-rounded btn-atualizar">Atualizar</a>
+                  <a href="" class="uk-button uk-button-default uk-border-rounded uk-margin-left btn-remover">Remover</a>
+                </div>
               </td>
             </tr>
           </tbody>

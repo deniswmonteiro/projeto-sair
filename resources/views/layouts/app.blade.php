@@ -49,7 +49,7 @@
           <div uk-grid>
             <div class="uk-margin-auto">
               <p>
-                CEAMAZON &copy; 2019 &ndash; Todos os direitos reservados
+                CEAMAZON &copy; {{date('Y')}} &ndash; Todos os direitos reservados
               </p>
             </div>
           </div>
