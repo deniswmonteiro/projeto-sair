@@ -16,9 +16,9 @@ class CreateCollectionSolicitarCadastro extends Migration
         Schema::create('solicitar_cadastro', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->string('nome');
-            $table->string('cpf');
-            $table->string('email');
+            $table->string('nome')->unique();
+            $table->string('cpf')->unique();
+            $table->string('email')->unique();
             $table->string('laboratorio');
 
             $table->timestamps();

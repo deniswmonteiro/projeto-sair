@@ -134,6 +134,10 @@ return [
         //     'rule-name' => 'custom-message',
         // ],
 
+        'nome' => [
+            'required' => 'Este campo é obrigatório!',
+        ],
+
         'cpf' => [
             'integer' => 'Digite somente os números!',
             'numeric' => 'O máximo permitido são 11 caracteres.',

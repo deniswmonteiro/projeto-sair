@@ -5,7 +5,7 @@ namespace projetoautomacao\Http\Controllers;
 use Illuminate\Http\Request;
 use projetoautomacao\SolicitarCadastro;
 
-use Illuminate\Support\Facades\Validator;
+//use Illuminate\Support\Facades\Validator;
 
 class SolicitarCadastroController extends Controller
 {
@@ -37,16 +37,23 @@ class SolicitarCadastroController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'cpf' => ['required', 'integer', 'max:99999999999'],
-            'email' => ['required', 'string', 'email', 'max:255'],
-        ]);
+        // $data = $request->all();
+        // Validator::make($data, [
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'cpf' => ['required', 'integer', 'max:99999999999'],
+        //     'email' => ['required', 'string', 'email', 'max:255'],
+        // ]);
 
-        dd($data);
-        
-        return SolicitarCadastro::create($data);
+        // dd($data);
+
+        $data = $request->validate([
+            'nome' => 'required|string|max:255',
+            'cpf' => 'required|integer|max:99999999999|unique:solicitar_cadastro',
+            'email' => 'required|string|max:255|unique:solicitar_cadastro',
+        ]);
+        SolicitarCadastro::create($data);
+        flash('Solicitação feita com sucesso! Aguarde liberação do administrador.')->success();
+        return redirect()->route('home');
     }
 
     /**
