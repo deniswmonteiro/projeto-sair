@@ -3,6 +3,7 @@
 namespace projetoautomacao\Http\Controllers;
 
 use Illuminate\Http\Request;
+use projetoautomacao\Http\Controllers\Controller;
 use projetoautomacao\SalasTerreo;
 
 class TerreoController extends Controller

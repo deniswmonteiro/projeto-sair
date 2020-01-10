@@ -1,8 +1,8 @@
-@extends("layouts.app", ["paginaAtual" => "Cadastro"])
+@extends("layouts.app", ["paginaAtual" => "Cadastrar Usuário"])
 
 @section("conteudo")
-	@include("layouts.menu", ["menu" => "cadastro"])
-	@include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "solicite acesso", "paginaAtual" => "Cadastro"])
+	@include("layouts.menu", ["menu" => "cadastrar_usario"])
+	@include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "adicionar usuário", "paginaAtual" => "Usuário"])
 
 	<section class="uk-section cadastro">
 		<div class="uk-container">
@@ -84,10 +84,10 @@
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
 					<div class="uk-text-left uk-border-rounded uk-flex btn">
-						<a href="#" class="uk-button uk-border-rounded btn-cadastrar">{{__('Cadastrar')}}</a>
-						<a href="{{route('login')}}" class="uk-link-reset link-voltar-login">
-							{{__('Voltar para o login')}}
+						<a href="{{route('usuario')}}" class="uk-button uk-border-rounded btn-cancelar">
+							{{__('Cancelar')}}
 						</a>
+						<a href="#" class="uk-button uk-border-rounded btn-cadastrar">{{__('Cadastrar')}}</a>
 					</div>
 				</form>
 			</div>

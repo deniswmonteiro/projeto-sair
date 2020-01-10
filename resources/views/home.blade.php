@@ -2,11 +2,11 @@
 
 @section("conteudo")
   @include("layouts.menu", ["menu" => "home"])
+  <div class="uk-text-center alerta-sucesso">
+    @include('flash::message')
+  </div>
   <section class="uk-section andares">
     <div class="uk-container">
-      <div>
-        <p>@include('flash::message')</p>
-      </div>
       <h1>Andares</h1>
       <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
         <div>

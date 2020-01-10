@@ -663,6 +663,14 @@ li .btn a.btn-cancelar:hover {
   color: #f7faf8;
 }
 
+.alerta-sucesso .alert {
+  padding: 15px;
+  color: #f7faf8;
+  background-color: #193;
+  border-color: #9fa;
+  font-size: 1.125em;
+}
+
 .andares h1 {
   margin-bottom: 30px;
 }

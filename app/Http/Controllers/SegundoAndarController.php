@@ -3,6 +3,7 @@
 namespace projetoautomacao\Http\Controllers;
 
 use Illuminate\Http\Request;
+use projetoautomacao\Http\Controllers\Controller;
 use projetoautomacao\SalasSegundoAndar;
 
 class SegundoAndarController extends Controller
