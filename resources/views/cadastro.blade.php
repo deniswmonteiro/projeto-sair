@@ -9,7 +9,7 @@
 			<div class="uk-card uk-card-default uk-card-body card-cadastro">
 				<form class="uk-form-stacked form" action="{{route('cadastro.store')}}" method="post">
 					@csrf
-					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
+					<div class="uk-child-width-1-3@s uk-margin" uk-grid>
 						<div>
 							<label class="uk-form-label form" for="form-cadastro-nome">{{__('Nome Completo *')}}</label>
 							<div class="uk-form-controls">
@@ -32,13 +32,24 @@
 								@enderror
 							</div>
 						</div>
-					</div>
-					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
 						<div>
 							<label class="uk-form-label" for="form-cadastro-email">{{__('Email *')}}</label>
 							<div class="uk-form-controls">
 								<input id="form-cadastro-email" type="email" class="uk-input @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autocomplete="email">
 								@error('email')
+									<span class="invalid-feedback" role="alert">
+										<strong>{{$message}}</strong>
+									</span>
+								@enderror
+							</div>
+						</div>
+					</div>
+					<div class="uk-child-width-1-3@s uk-margin" uk-grid>
+						<div>
+							<label class="uk-form-label" for="form-cadastro-usuario">{{__('Usuário *')}}</label>
+							<div class="uk-form-controls">
+								<input id="form-cadastro-usuario" type="text" class="uk-input @error('usuario') is-invalid @enderror" name="usuario" value="{{old('usuario')}}" required autocomplete="usuario" placeholder="Mínimo de 6 caracteres">
+								@error('usuario')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{$message}}</strong>
 									</span>

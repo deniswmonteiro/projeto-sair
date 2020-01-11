@@ -19,6 +19,7 @@ class CreateCollectionSolicitarCadastro extends Migration
             $table->string('nome')->unique();
             $table->string('cpf')->unique();
             $table->string('email')->unique();
+            $table->string('usuario')->unique();
             $table->string('laboratorio');
 
             $table->timestamps();

@@ -6,9 +6,6 @@
   
   <section class="uk-section andar">
     <div class="uk-container">
-      <div>
-        
-      </div>
       <div class="uk-margin-large-bottom">
         <form class="uk-search uk-search-default">
           <a href="" class="uk-search-icon-flip" uk-search-icon></a>
@@ -29,9 +26,10 @@
             </tr>
           </thead>
           <tbody>
+            @foreach($usuarios as $usuario)
             <tr>
-              <td>Admin</td>
-              <td>admin@admin</td>
+              <td>{{$usuario->nome}}</td>
+              <td>{{$usuario->email}}</td>
               <td>administrador</td>
               <td>LCAD</td>
               <td>
@@ -41,18 +39,7 @@
                 </div>
               </td>
             </tr>
-            <tr>
-              <td>Denis William Matos Monteiro</td>
-              <td>deniswmonteiro@gmail.com</td>
-              <td>denism</td>
-              <td>LabMotriz</td>
-              <td>
-                <div>
-                  <a href="" class="uk-button uk-button-default uk-border-rounded btn-atualizar">Atualizar</a>
-                  <a href="" class="uk-button uk-button-default uk-border-rounded uk-margin-left btn-remover">Remover</a>
-                </div>
-              </td>
-            </tr>
+            @endforeach
           </tbody>
         </table>
       </div>

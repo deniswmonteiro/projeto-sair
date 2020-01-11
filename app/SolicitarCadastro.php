@@ -10,7 +10,7 @@ class SolicitarCadastro extends Eloquent
     protected $connection = 'mongodb';
     protected $collection = 'solicitar_cadastro';
     protected $fillable = [
-        'nome', 'cpf', 'email', 'laboratorio'
+        'nome', 'cpf', 'email', 'usuario', 'laboratorio'
     ];
     protected $guarded = ['id'];
 }
