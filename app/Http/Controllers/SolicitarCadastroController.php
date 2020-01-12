@@ -50,7 +50,8 @@ class SolicitarCadastroController extends Controller
             'nome' => 'required|string|max:255',
             'cpf' => 'required|cpf|unique:solicitar_cadastro',
             'email' => 'required|string|max:255|unique:solicitar_cadastro',
-            'usuario' => 'required|string|min:6|unique:solicitar_cadastro'
+            'usuario' => 'required|string|min:6|unique:solicitar_cadastro',
+            'laboratorio' => 'required|string'
         ]);
         SolicitarCadastro::create($data);
         flash('Solicitação feita com sucesso! Aguarde liberação do administrador.')->success();

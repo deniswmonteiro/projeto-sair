@@ -30,8 +30,8 @@
             <tr>
               <td>{{$usuario->nome}}</td>
               <td>{{$usuario->email}}</td>
-              <td>administrador</td>
-              <td>LCAD</td>
+              <td>{{$usuario->usuario}}</td>
+              <td>{{$usuario->laboratorio}}</td>
               <td>
                 <div>
                   <a href="" class="uk-button uk-button-default uk-border-rounded btn-atualizar">Atualizar</a>

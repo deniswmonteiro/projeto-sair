@@ -55,6 +55,7 @@ class RegisterController extends Controller
             'nome' => ['required', 'string', 'max:255'],
             'cpf' => ['required', 'cpf', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'laboratorio' => ['required', 'string'],
             'usuario' => ['required', 'string', 'min:6', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
         ]);
@@ -72,6 +73,7 @@ class RegisterController extends Controller
             'nome' => $data['nome'],
             'cpf' => $data['cpf'],
             'email' => $data['email'],
+            'laboratorio' => $data['laboratorio'],
             'usuario' => $data['usuario'],
             'password' => Hash::make($data['password']),
         ]);

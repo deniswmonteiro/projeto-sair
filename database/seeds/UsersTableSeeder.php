@@ -12,9 +12,10 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         \projetoautomacao\User::create([
-            'nome' => 'administrador',
+            'nome' => 'Administrador',
             'cpf' => '99999999999',
             'email' => 'administrador@admin',
+            'laboratorio' => 'LabMotriz',
             'usuario' => 'administrador',
             'password' => Hash::make('99999999999')
         ]);

@@ -63,8 +63,9 @@
 							<div class="uk-form-controls">
 								<select class="uk-select" id="form-cadastro-sala-lab" name="laboratorio">
 									<option value="" disabled selected>Escolha uma opção</option>
-									<option value="labmotriz">LabMotriz</option>
-									<option value="lcad">LCAD</option>
+									<option value="LabMotriz">LabMotriz</option>
+									<option value="LCaD">LCAD</option>
+									<option value="LabQuali">LabQuali</option>
 								</select>
 							</div>
 						</div>
