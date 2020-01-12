@@ -50,12 +50,17 @@
 								{{__('Sala/Laboratório *')}}
 							</label>
 							<div class="uk-form-controls">
-								<select class="uk-select" id="form-cadastro-sala-lab">
+								<select class="uk-select" id="form-cadastro-sala-lab" @error('laboratorio') is-invalid @enderror" name="laboratorio" value="{{old('laboratorio')}}" required autocomplete="laboratorio">
 									<option value="" disabled selected>Escolha uma opção</option>
 									<option value="LabMotriz">LabMotriz</option>
 									<option value="LCAD">LCAD</option>
 									<option value="LabQuali">LabQuali</option>
 								</select>
+								@error('laboratorio')
+									<span class="invalid-feedback" role="alert">
+										<strong>{{$message}}</strong>
+									</span>
+								@enderror
 							</div>
 						</div>
 					</div>

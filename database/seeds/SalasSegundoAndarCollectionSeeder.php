@@ -42,7 +42,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         ]);
         
         \projetoautomacao\SalasSegundoAndar::create([
-            'id_sala' => 1,
+            'id_sala' => 3,
             'sala_nome' => 'Sala Prof. 2',
             'sala_localizacao' => [33, 14],
             'qtd_circ_lampada' => 2,

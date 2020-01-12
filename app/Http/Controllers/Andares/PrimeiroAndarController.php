@@ -1,18 +1,18 @@
 <?php
 
-namespace projetoautomacao\Http\Controllers;
+namespace projetoautomacao\Http\Controllers\Andares;
 
 use Illuminate\Http\Request;
 use projetoautomacao\Http\Controllers\Controller;
-use projetoautomacao\SalasSegundoAndar;
+use projetoautomacao\SalasPrimeiroAndar;
 
-class SegundoAndarController extends Controller
+class PrimeiroAndarController extends Controller
 {
-	private $segundoAndar;
+	private $primeiroAndar;
 
-	public function __construct(SalasSegundoAndar $segundoAndar) 
+	public function __construct(SalasPrimeiroAndar $primeiroAndar)
 	{
-		$this->segundoAndar = $segundoAndar;
+		$this->primeiroAndar = $primeiroAndar;
 	}
 
 	/**
@@ -22,8 +22,8 @@ class SegundoAndarController extends Controller
 	 */
 	public function index()
 	{
-		$salas = $this->segundoAndar->all(['sala_nome', 'id_sala', 'sala_localizacao']);
-		return view('segundoandar', compact('salas'));
+		$salas = $this->primeiroAndar->all(['sala_nome', 'id_sala', 'sala_localizacao']);
+		return view('andares/primeiroandar', compact('salas'));
 	}
 
 	/**
@@ -55,8 +55,8 @@ class SegundoAndarController extends Controller
 	 */
 	public function show($id)
 	{
-		$sala = $this->segundoAndar->all();
-		return view('salas-segundo-andar', [
+		$sala = $this->primeiroAndar->all();
+		return view('salas-primeiro-andar', [
 			'sala_id' => $id,
 			'sala_nome' => $sala[--$id]->sala_nome,
 			'qtd_circ_lampada' => $sala[$id]->qtd_circ_lampada,
@@ -64,7 +64,9 @@ class SegundoAndarController extends Controller
 			'coord_circ_lampadas1' => collect($sala[$id]->coord_circ_lampadas)->get('lampadas1'),
 			'coord_circ_lampadas2' => collect($sala[$id]->coord_circ_lampadas)->get('lampadas2'),
 			'coord_circ_lampadas3' => collect($sala[$id]->coord_circ_lampadas)->get('lampadas3'),
-			'coord_arcondicionado1' => collect($sala[$id]->coord_arcondicionado)->get('arcondicionado1')
+			'coord_circ_lampadas4' => collect($sala[$id]->coord_circ_lampadas)->get('lampadas4'),
+			'coord_arcondicionado1' => collect($sala[$id]->coord_arcondicionado)->get('arcondicionado1'),
+			'coord_arcondicionado2' => collect($sala[$id]->coord_arcondicionado)->get('arcondicionado2')
 		]);
 	}
 

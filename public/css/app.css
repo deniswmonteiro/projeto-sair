@@ -234,6 +234,10 @@ li .btn a.btn-cancelar:hover {
   width: 100%;
 }
 
+.navbar.navbar-interno .menu li a.active::after {
+  width: 100%;
+}
+
 .navbar.navbar-interno .menu li .btn-login {
   margin-left: 10px;
   background: #f82;

@@ -139,7 +139,6 @@ return [
         ],
 
         'cpf' => [
-            'integer' => 'Digite somente os números!',
             'numeric' => 'O máximo permitido são 11 caracteres.',
             'required' => 'Este campo é obrigatório!',
             'unique' => 'Este CPF já está sendo utilizado.',
@@ -147,6 +146,10 @@ return [
 
         'email' => [
             'unique' => 'Este email já está sendo utilizado.',
+            'required' => 'Este campo é obrigatório!',
+        ],
+
+        'laboratorio' => [
             'required' => 'Este campo é obrigatório!',
         ],
 

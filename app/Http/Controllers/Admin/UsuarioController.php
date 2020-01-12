@@ -23,7 +23,7 @@ class UsuarioController extends Controller
     public function index()
     {
         $usuarios = $this->usuario->all(['nome', 'email', 'usuario', 'laboratorio']);
-        return view('usuarios', compact('usuarios'));
+        return view('admin/usuarios', compact('usuarios'));
     }
 
     /**

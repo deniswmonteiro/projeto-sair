@@ -17,9 +17,12 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::resource('/cadastro', 'SolicitarCadastroController');
 
 Route::group(['middleware' => ['auth']], function() {
-    Route::resource('terreo', 'TerreoController');
-    Route::resource('primeiroandar', 'PrimeiroAndarController');
-    Route::resource('segundoandar', 'SegundoAndarController');
+    Route::namespace('Andares')->group(function() {
+        Route::resource('terreo', 'TerreoController');
+        Route::resource('primeiroandar', 'PrimeiroAndarController');
+        Route::resource('segundoandar', 'SegundoAndarController');
+    });
+    
     Route::get('usuarios/cadastro', 'Auth\RegisterController@showRegistrationForm')->name('usuarios.form');
     Route::post('usuarios/cadastro', 'Auth\RegisterController@register')->name('usuarios.cadastro');
     Route::resource('usuarios', 'Admin\UsuarioController');

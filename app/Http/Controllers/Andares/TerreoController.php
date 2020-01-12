@@ -1,6 +1,6 @@
 <?php
 
-namespace projetoautomacao\Http\Controllers;
+namespace projetoautomacao\Http\Controllers\Andares;
 
 use Illuminate\Http\Request;
 use projetoautomacao\Http\Controllers\Controller;
@@ -23,7 +23,7 @@ class TerreoController extends Controller
 	public function index()
 	{
 		$salas = $this->terreo->all(['sala_nome', 'id_sala', 'sala_localizacao']);
-		return view('terreo', compact('salas'));
+		return view('andares/terreo', compact('salas'));
 	}
 
 	/**
