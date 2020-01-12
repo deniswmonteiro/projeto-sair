@@ -37,15 +37,6 @@ class SolicitarCadastroController extends Controller
      */
     public function store(Request $request)
     {
-        // $data = $request->all();
-        // Validator::make($data, [
-        //     'name' => ['required', 'string', 'max:255'],
-        //     'cpf' => ['required', 'integer', 'max:99999999999'],
-        //     'email' => ['required', 'string', 'email', 'max:255'],
-        // ]);
-
-        // dd($data);
-
         $data = $request->validate([
             'nome' => 'required|string|max:255',
             'cpf' => 'required|cpf|unique:solicitar_cadastro',

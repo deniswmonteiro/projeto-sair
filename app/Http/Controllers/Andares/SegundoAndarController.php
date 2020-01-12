@@ -56,7 +56,7 @@ class SegundoAndarController extends Controller
 	public function show($id)
 	{
 		$sala = $this->segundoAndar->all();
-		return view('salas-segundo-andar', [
+		return view('andares/salas/salas-segundo-andar', [
 			'sala_id' => $id,
 			'sala_nome' => $sala[--$id]->sala_nome,
 			'qtd_circ_lampada' => $sala[$id]->qtd_circ_lampada,

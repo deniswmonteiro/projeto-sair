@@ -56,7 +56,7 @@ class TerreoController extends Controller
 	public function show($id)
 	{
 		$salas = $this->terreo->all();
-		return view('salas-terreo', [
+		return view('andares/salas/salas-terreo', [
 			'sala_id' => $id,
 			'sala_nome' => $salas[--$id]->sala_nome,
 			'qtd_circ_lampada' => $salas[$id]->qtd_circ_lampada,

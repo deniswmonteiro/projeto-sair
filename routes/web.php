@@ -14,7 +14,7 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::resource('/cadastro', 'SolicitarCadastroController');
+Route::resource('cadastro', 'SolicitarCadastroController');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::namespace('Andares')->group(function() {
@@ -22,10 +22,15 @@ Route::group(['middleware' => ['auth']], function() {
         Route::resource('primeiroandar', 'PrimeiroAndarController');
         Route::resource('segundoandar', 'SegundoAndarController');
     });
-    
-    Route::get('usuarios/cadastro', 'Auth\RegisterController@showRegistrationForm')->name('usuarios.form');
-    Route::post('usuarios/cadastro', 'Auth\RegisterController@register')->name('usuarios.cadastro');
-    Route::resource('usuarios', 'Admin\UsuarioController');
+
+    Route::prefix('usuarios')->namespace('Auth')->name('usuarios.')->group(function() {
+        Route::get('cadastro', 'RegisterController@showRegistrationForm')->name('form');
+        Route::post('cadastro', 'RegisterController@register')->name('cadastro');
+    });
+
+    Route::namespace('Admin')->group(function() {
+        Route::resource('usuarios', 'UsuarioController');
+    });
 });
 
 Route::resource('email', 'Admin\EmailController');
