@@ -7,12 +7,14 @@
   <section class="uk-section andar">
     <div class="uk-container">
       <div class="uk-margin-large-bottom">
-        <form class="uk-search uk-search-default">
+        <form class="uk-search uk-search-default uk-margin-medium-right form">
           <a href="" class="uk-search-icon-flip" uk-search-icon></a>
           <input class="uk-search-input" type="search" placeholder="Procurar usuário">
         </form>
-        <a href="{{route('usuarios.form')}}" class="uk-button">{{__('Adicionar usuário')}}</a>
-        <a href="{{route('gerenciarsolicitacoes.index')}}" class="uk-button">{{__('Solicitações pendentes')}}</a>
+        <div class="uk-display-inline-block btn">
+          <a href="{{route('usuarios.form')}}" class="uk-button uk-margin-right btn-confirmar">{{__('Adicionar usuário')}}</a>
+          <a href="{{route('gerenciarsolicitacoes.index')}}" class="uk-button btn-solicitacao">{{__('Solicitações pendentes')}}</a>
+          </div>
       </div>
       <div class="uk-overflow-auto">
         <table class="uk-table uk-table-hover uk-table-responsive uk-table-middle uk-table-striped">
@@ -33,14 +35,14 @@
               <td>{{$usuario->categoria}}</td>
               <td>{{$usuario->laboratorio}}</td>
               <td>
-                <div>
-                  <a href="{{route('usuarios.editar', ['usuario' => $usuario->id])}}" class="uk-button uk-button-default uk-border-rounded btn-atualizar">
+                <div class="btn">
+                  <a href="{{route('usuarios.editar', ['usuario' => $usuario->id])}}" class="uk-button btn-confirmar">
                     {{__('Atualizar')}}
                   </a>
-                  <form action="{{route('usuarios.destroy', ['usuario' => $usuario->id])}}" method="post">
+                  <form action="{{route('usuarios.destroy', ['usuario' => $usuario->id])}}" method="post" class="uk-display-inline-block">
                     @csrf
                     @method("delete")
-                    <button type="submit" class="uk-button uk-button-default uk-border-rounded uk-margin-left btn-remover">{{__('Remover')}}</button>
+                    <button type="submit" class="uk-button uk-margin-left btn-cancelar">{{__('Remover')}}</button>
                   </form>
                 </div>
               </td>

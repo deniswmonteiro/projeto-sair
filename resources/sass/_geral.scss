@@ -12,8 +12,33 @@ li {
     h3 {
         @include font(24);
     }
+}
 
+body {
     .form {
+        label, input, input:focus {
+            color: $dark-grey;
+        }
+
+        input, select {
+            outline: none;
+            border-color: $grey;
+            border-radius: 4px;
+
+            &:focus {
+                border-color: $green;
+            }
+        }
+
+        input[type="search"]:focus {
+            width: 210px;
+        }
+
+        .aviso {
+            color: $dark-red;
+        }
+
+        /* icone de mostrar/esconder senha */
         .btn-form-senha-modal {
             background: $green;
             border: none;
@@ -31,32 +56,56 @@ li {
     .btn {
         a {
             display: inline-block;
-            margin-top: 20px;
             transition: 0.4s;
             font-weight: 700;
+            color: $light-grey;
+            border-radius: 4px;
 
-            &.btn-entrar,
-            &.btn-enviar,
-            &.btn-cadastrar {
+            &:hover {
+                color: $dark-grey;
+                box-shadow: 0px 0px 0px 3px $dark-grey;
+            }
+
+            &.btn-confirmar {
                 background: $dark-green;
-                color: $light-grey;
-
-                &:hover {
-                    color: $dark-grey;
-                    box-shadow: 0px 0px 0px 3px $dark-grey;
-                }
+                margin-right: 20px;
             }
 
             &.btn-cancelar {
                 background: $red;
-                color: $light-grey;
-                margin-right: 10px;
+            }
 
-                &:hover {
-                    color: $dark-grey;
-                    box-shadow: 0px 0px 0px 3px $dark-grey;
+            &.btn-solicitacao {
+                background: $dark-orange;
+            }
+
+            &.link-voltar-login {
+                @include font(16);
+                color: $dark-orange !important;
+                padding: 8px 13px;
+
+                &.inicial {
+                    text-transform: initial;
                 }
+            }
+        }
+
+        button {
+            display: inline-block;
+            transition: 0.4s;
+            font-weight: 700;
+            color: $light-grey;
+            border-radius: 4px;
+
+            &:hover {
+                color: $dark-grey;
+                box-shadow: 0px 0px 0px 3px $dark-grey;
+            }
+
+            &.btn-cancelar {
+                background: $red;
             }
         }
     }
 }
+

@@ -23,38 +23,5 @@
                 }
             }
         }
-
-        .form {
-            input {
-                outline: none;
-                border-color: $grey;
-
-                &:focus {
-                    border-color: $green;
-                }
-            }
-
-            label,
-            input,
-            input:focus {
-                color: $dark-grey;
-            }
-
-            .btn {
-                .link-voltar-login {
-                    @include font(16);
-                    text-decoration: none;
-                    color: $dark-orange !important;
-                    transition: 0.4s;
-                    text-transform: initial;
-                    padding: 8px 13px;
-                    margin-left: 20px;
-
-                    &:hover {
-                        color: $orange !important;
-                    }
-                }
-            }
-        }
     }
 }

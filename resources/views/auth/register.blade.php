@@ -47,7 +47,7 @@
 					<div class="uk-child-width-1-3@s uk-margin" uk-grid>
 						<div>
 							<label class="uk-form-label" for="form-cadastro-sala-lab">
-								{{__('Sala/Laboratório *')}}
+								{{__('Laboratório *')}}
 							</label>
 							<div class="uk-form-controls">
 								<select class="uk-select" id="form-cadastro-sala-lab" @error('laboratorio') is-invalid @enderror" name="laboratorio" value="{{old('laboratorio')}}" required autocomplete="laboratorio">
@@ -106,11 +106,11 @@
 						</div>
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
-					<div class="uk-text-left uk-border-rounded uk-flex btn">
-						<a href="{{route('usuarios.index')}}" class="uk-button uk-border-rounded btn-cancelar">
+					<div class="uk-text-left btn">
+						<a href="{{route('usuarios.index')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>
-						<a href="#" class="uk-button uk-border-rounded btn-cadastrar">{{__('Cadastrar')}}</a>
+						<a href="#" class="uk-button btn-confirmar">{{__('Cadastrar')}}</a>
 					</div>
 				</form>
 			</div>

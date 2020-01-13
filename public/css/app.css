@@ -32,10 +32,33 @@ li h3 {
   font-weight: 500;
 }
 
-body .form .btn-form-senha-modal,
-p .form .btn-form-senha-modal,
-a .form .btn-form-senha-modal,
-li .form .btn-form-senha-modal {
+body .form {
+  /* icone de mostrar/esconder senha */
+}
+
+body .form label, body .form input, body .form input:focus {
+  color: #18211a;
+}
+
+body .form input, body .form select {
+  outline: none;
+  border-color: #c1d6c8;
+  border-radius: 4px;
+}
+
+body .form input:focus, body .form select:focus {
+  border-color: #5d7;
+}
+
+body .form .form > input[type="search"]:focus {
+  width: 210px;
+}
+
+body .form .aviso {
+  color: #e21;
+}
+
+body .form .btn-form-senha-modal {
   background: #5d7;
   border: none;
   cursor: pointer;
@@ -44,66 +67,65 @@ li .form .btn-form-senha-modal {
   color: #18211a;
 }
 
-body .form i,
-p .form i,
-a .form i,
-li .form i {
+body .form i {
   color: #18211a;
 }
 
-body .btn a,
-p .btn a,
-a .btn a,
-li .btn a {
+body .btn a {
   display: inline-block;
-  margin-top: 20px;
   transition: 0.4s;
   font-weight: 700;
+  color: #f7faf8;
+  border-radius: 4px;
 }
 
-body .btn a.btn-entrar, body .btn a.btn-enviar, body .btn a.btn-cadastrar,
-p .btn a.btn-entrar,
-p .btn a.btn-enviar,
-p .btn a.btn-cadastrar,
-a .btn a.btn-entrar,
-a .btn a.btn-enviar,
-a .btn a.btn-cadastrar,
-li .btn a.btn-entrar,
-li .btn a.btn-enviar,
-li .btn a.btn-cadastrar {
+body .btn a:hover {
+  color: #18211a;
+  box-shadow: 0px 0px 0px 3px #18211a;
+}
+
+body .btn a.btn-confirmar {
   background: #193;
-  color: #f7faf8;
+  margin-right: 20px;
 }
 
-body .btn a.btn-entrar:hover, body .btn a.btn-enviar:hover, body .btn a.btn-cadastrar:hover,
-p .btn a.btn-entrar:hover,
-p .btn a.btn-enviar:hover,
-p .btn a.btn-cadastrar:hover,
-a .btn a.btn-entrar:hover,
-a .btn a.btn-enviar:hover,
-a .btn a.btn-cadastrar:hover,
-li .btn a.btn-entrar:hover,
-li .btn a.btn-enviar:hover,
-li .btn a.btn-cadastrar:hover {
-  color: #18211a;
-  box-shadow: 0px 0px 0px 3px #18211a;
-}
-
-body .btn a.btn-cancelar,
-p .btn a.btn-cancelar,
-a .btn a.btn-cancelar,
-li .btn a.btn-cancelar {
+body .btn a.btn-cancelar {
   background: #f32;
-  color: #f7faf8;
-  margin-right: 10px;
 }
 
-body .btn a.btn-cancelar:hover,
-p .btn a.btn-cancelar:hover,
-a .btn a.btn-cancelar:hover,
-li .btn a.btn-cancelar:hover {
+body .btn a.btn-solicitacao {
+  background: #d60;
+}
+
+body .btn a.link-voltar-login {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 1em;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #d60 !important;
+  padding: 8px 13px;
+}
+
+body .btn a.link-voltar-login.inicial {
+  text-transform: initial;
+}
+
+body .btn button {
+  display: inline-block;
+  transition: 0.4s;
+  font-weight: 700;
+  color: #f7faf8;
+  border-radius: 4px;
+}
+
+body .btn button:hover {
   color: #18211a;
   box-shadow: 0px 0px 0px 3px #18211a;
+}
+
+body .btn button.btn-cancelar {
+  background: #f32;
 }
 
 @media screen and (max-width: 639px) {
@@ -346,44 +368,6 @@ li .btn a.btn-cancelar:hover {
   padding: 30px;
 }
 
-.cadastro .card-cadastro .form label,
-.cadastro .card-cadastro .form input,
-.cadastro .card-cadastro .form input:focus {
-  color: #18211a;
-}
-
-.cadastro .card-cadastro .form input,
-.cadastro .card-cadastro .form select {
-  outline: none;
-  border-color: #c1d6c8;
-  border-radius: 5px;
-}
-
-.cadastro .card-cadastro .form input:focus,
-.cadastro .card-cadastro .form select:focus {
-  border-color: #5d7;
-}
-
-.cadastro .card-cadastro .form .aviso {
-  color: #e21;
-}
-
-.cadastro .card-cadastro .form .btn .link-voltar-login {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a;
-  font-size: 1em;
-  line-height: 1.4;
-  font-weight: 500;
-  color: #d60 !important;
-  transition: 0.4s;
-  padding: 8px 13px;
-  margin-left: 20px;
-}
-
-.cadastro .card-cadastro .form .btn .link-voltar-login:hover {
-  color: #f82 !important;
-}
-
 .recuperar-senha .card-recuperar-senha {
   background: #f7faf8;
   max-width: 500px;
@@ -414,39 +398,6 @@ li .btn a.btn-cancelar:hover {
 
 .recuperar-senha .card-recuperar-senha .alerta-logado .link-voltar-home:hover {
   color: #5d7 !important;
-}
-
-.recuperar-senha .card-recuperar-senha .form input {
-  outline: none;
-  border-color: #c1d6c8;
-}
-
-.recuperar-senha .card-recuperar-senha .form input:focus {
-  border-color: #5d7;
-}
-
-.recuperar-senha .card-recuperar-senha .form label,
-.recuperar-senha .card-recuperar-senha .form input,
-.recuperar-senha .card-recuperar-senha .form input:focus {
-  color: #18211a;
-}
-
-.recuperar-senha .card-recuperar-senha .form .btn .link-voltar-login {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a;
-  font-size: 1em;
-  line-height: 1.4;
-  font-weight: 500;
-  text-decoration: none;
-  color: #d60 !important;
-  transition: 0.4s;
-  text-transform: initial;
-  padding: 8px 13px;
-  margin-left: 20px;
-}
-
-.recuperar-senha .card-recuperar-senha .form .btn .link-voltar-login:hover {
-  color: #f82 !important;
 }
 
 .introducao {
@@ -708,7 +659,7 @@ li .btn a.btn-cancelar:hover {
 }
 
 .andares .card-andar .img-bg-andar {
-  margin: 10px 0;
+  margin: 10px 0 30px 0;
 }
 
 .andares .card-andar .img-bg-andar:last-of-type {

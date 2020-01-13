@@ -49,11 +49,11 @@
 							<a class="uk-button" href="{{route('cadastro.index')}}">Cadastrar-se</a>
 						</span>
 					</div>
-					<div class="uk-text-left uk-border-rounded btn">
-						<a href="{{route('home')}}" class="uk-button uk-border-rounded btn-cancelar">
+					<div class="uk-text-left btn">
+						<a href="{{route('home')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>
-						<a href="#" class="uk-button uk-border-rounded btn-entrar">{{__('Entrar')}}</a>
+						<a href="#" class="uk-button btn-confirmar">{{__('Entrar')}}</a>
 					</div>
 				</form>
 			</div>

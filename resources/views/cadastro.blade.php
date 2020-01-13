@@ -61,18 +61,23 @@
 								{{__('Laboratório *')}}
 							</label>
 							<div class="uk-form-controls">
-								<select class="uk-select" id="form-cadastro-sala-lab" name="laboratorio">
+								<select class="uk-select" id="form-cadastro-sala-lab" @error('laboratorio') is-invalid @enderror" name="laboratorio" value="{{old('laboratorio')}}" required autocomplete="laboratorio">
 									<option value="" disabled selected>Escolha uma opção</option>
 									<option value="LabMotriz">LabMotriz</option>
 									<option value="LCAD">LCAD</option>
 									<option value="LabQuali">LabQuali</option>
 								</select>
+								@error('laboratorio')
+									<span class="invalid-feedback" role="alert">
+										<strong>{{$message}}</strong>
+									</span>
+								@enderror
 							</div>
 						</div>
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
 					<div class="uk-text-left uk-border-rounded uk-flex btn">
-						<a href="#" class="uk-button uk-border-rounded btn-cadastrar">{{__('Cadastrar')}}</a>
+						<a href="#" class="uk-button uk-border-rounded btn-confirmar">{{__('Cadastrar')}}</a>
 						<a href="{{route('login')}}" class="uk-link-reset link-voltar-login">
 							{{__('Voltar para o login')}}
 						</a>

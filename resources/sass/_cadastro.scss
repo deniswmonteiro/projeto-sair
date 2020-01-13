@@ -4,42 +4,5 @@
         max-width: 990px;
         margin: 0 auto;
         padding: 30px;
-
-        .form {
-            label,
-            input,
-            input:focus {
-                color: $dark-grey;
-            }
-
-            input,
-            select {
-                outline: none;
-                border-color: $grey;
-                border-radius: 5px;
-
-                &:focus {
-                    border-color: $green;
-                }
-            }
-
-            .aviso {
-                color: $dark-red;
-            }
-
-            .btn {
-                .link-voltar-login {
-                    @include font(16);
-                    color: $dark-orange !important;
-                    transition: 0.4s;
-                    padding: 8px 13px;
-                    margin-left: 20px;
-
-                    &:hover {
-                        color: $orange !important;
-                    }
-                }
-            }
-        }
     }
 }

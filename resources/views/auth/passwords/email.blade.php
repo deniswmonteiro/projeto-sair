@@ -10,7 +10,7 @@
 						<div class="uk-alert-warning uk-card-default uk-card-body uk-animation-shake" uk-alert>
 							<h4 class="uk-text-center">Você já está logado(a) como {{auth()->user()->name}}!</h4>
 						</div>
-						<div class="uk-text-left uk-border-rounded uk-flex">
+						<div class="uk-text-left uk-flex">
 							<a href="{{route('home')}}" class="uk-link-reset link-voltar-home">
 								{{__('Voltar para a página inicial')}}
 							</a>
@@ -27,7 +27,7 @@
 								{{ __('Informe o email cadastrado') }}
 							</label>
 							<div class="uk-form-controls">
-								<input id="form-recuperar-email" type="email" class="uk-input uk-border-rounded @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+								<input id="form-recuperar-email" type="email" class="uk-input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 								@error('email')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{$message}}</strong>
@@ -35,11 +35,11 @@
 								@enderror
 							</div>
 						</div>
-						<div class="uk-text-left uk-border-rounded modal-footer btn">
-							<a href="#" class="uk-button uk-border-rounded btn-enviar">
+						<div class="uk-text-left modal-footer btn">
+							<a href="#" class="uk-button btn-confirmar">
 								{{__('Enviar solicitação')}}
 							</a>
-							<a href="{{route('login')}}" class="uk-button uk-link-reset link-voltar-login">
+							<a href="{{route('login')}}" class="uk-button uk-link-reset link-voltar-login inicial">
 								{{__('Voltar para o login')}}
 							</a>
 						</div>

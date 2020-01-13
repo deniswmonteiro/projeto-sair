@@ -9,11 +9,13 @@
       <div>
       </div>
       <div class="uk-margin-large-bottom">
-        <form class="uk-search uk-search-default">
+        <form class="uk-search uk-search-default uk-width-medium uk-margin-medium-right form">
           <a href="" class="uk-search-icon-flip" uk-search-icon></a>
           <input class="uk-search-input" type="search" placeholder="Procurar usuário">
         </form>
-        <a href="{{route('usuarios.index')}}" class="uk-button">{{__('Voltar')}}</a>
+        <div class="uk-display-inline-block btn">
+          <a href="{{route('usuarios.index')}}" class="uk-button btn-cancelar">{{__('Voltar')}}</a>
+        </div>
       </div>
       <div class="uk-overflow-auto">
         <table class="uk-table uk-table-hover uk-table-responsive uk-table-middle uk-table-striped">

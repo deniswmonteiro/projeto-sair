@@ -107,11 +107,11 @@
 						</div>
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
-					<div class="uk-text-left uk-border-rounded uk-flex btn">
-						<a href="{{route('usuarios.index')}}" class="uk-button uk-border-rounded btn-cancelar">
+					<div class="uk-text-left uk-flex btn">
+						<a href="{{route('usuarios.index')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>
-						<a href="#" class="uk-button uk-border-rounded btn-atualizar">{{__('Atualizar')}}</a>
+						<a href="#" class="uk-button btn-confirmar">{{__('Atualizar')}}</a>
 					</div>
 				</form>
 			</div>

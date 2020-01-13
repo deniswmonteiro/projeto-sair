@@ -13,6 +13,7 @@
 //     });
 // })();
 
+/** notificação */
 $("div.alert")
     .not(".alert-important")
     .delay(3000)

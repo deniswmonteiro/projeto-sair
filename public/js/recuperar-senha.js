@@ -1,4 +1,4 @@
-const btnlogin = document.querySelector(".btn-enviar");
+const btnlogin = document.querySelector(".btn-confirmar");
 const form = document.querySelector("form.form");
 
 btnlogin.addEventListener("click", e => {

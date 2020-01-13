@@ -1,4 +1,4 @@
-const btnlogin = document.querySelector(".btn-entrar");
+const btnlogin = document.querySelector(".btn-confirmar");
 const form = document.querySelector("form.form");
 
 btnlogin.addEventListener("click", e => {
@@ -11,7 +11,7 @@ inputForm.forEach(input => {
     input.addEventListener("keyup", e => {
         if (e.keyCode === 13) {
             e.preventDefault();
-            document.querySelector(".btn-entrar").click();
+            document.querySelector(".btn-confirmar").click();
         }
     });
 });

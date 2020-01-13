@@ -1,4 +1,4 @@
-const btnAtualizar = document.querySelector(".btn-atualizar");
+const btnAtualizar = document.querySelector(".btn-confirmar");
 const form = document.querySelector("form.form");
 
 btnAtualizar.addEventListener("click", e => {
@@ -11,7 +11,7 @@ inputForm.forEach(input => {
     input.addEventListener("keyup", e => {
         if (e.keyCode === 13) {
             e.preventDefault();
-            document.querySelector(".btn-atualizar").click();
+            document.querySelector(".btn-confirmar").click();
         }
     });
 });

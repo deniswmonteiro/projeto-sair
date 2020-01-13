@@ -14,7 +14,7 @@
             <h3 class="uk-card-title">Térreo</h3>
             <img src="{{asset('../img/bg-terreo.svg')}}" class="img-bg-andar" alt="Planta do Térreo">
             <div class="btn">
-              <a href="{{route('terreo.index')}}" class="uk-button uk-border-rounded btn-entrar">
+              <a href="{{route('terreo.index')}}" class="uk-button btn-confirmar">
                 {{__('Mostrar salas')}}
               </a>
             </div>
@@ -25,7 +25,7 @@
             <h3 class="uk-card-title">1º Andar</h3>
             <img src="{{asset('../img/bg-primeiro-andar.svg')}}" class="img-bg-andar" alt="Planta do 1º Andar">
             <div class="btn">
-              <a href="{{route('primeiroandar.index')}}" class="uk-button uk-border-rounded btn-entrar">
+              <a href="{{route('primeiroandar.index')}}" class="uk-button btn-confirmar">
                 {{__('Mostrar salas')}}
               </a>
             </div>
@@ -36,7 +36,7 @@
             <h3 class="uk-card-title">2º Andar</h3>
             <img src="{{asset('../img/bg-segundo-andar.svg')}}" class="img-bg-andar" alt="Planta do 2º Andar">
             <div class="btn">
-              <a href="{{route('segundoandar.index')}}" class="uk-button uk-border-rounded btn-entrar">
+              <a href="{{route('segundoandar.index')}}" class="uk-button btn-confirmar">
                 {{__('Mostrar salas')}}
               </a>
             </div>
