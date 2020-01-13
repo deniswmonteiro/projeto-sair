@@ -36,9 +36,13 @@
                 <td>{{$solicitacao->usuario}}</td>
                 <td>{{$solicitacao->laboratorio}}</td>
                 <td>
-                  <div>
-                    <a href="" class="uk-button uk-button-default uk-border-rounded btn-visualizar">{{__('Visualizar')}}</a>
-                    <a href="" class="uk-button uk-button-default uk-border-rounded uk-margin-left btn-remover">{{__('Remover')}}</a>
+                  <div class="btn">
+                    <a href="{{route('gerenciarsolicitacoes.visualizar', ['gerenciarsolicitacao' => $solicitacao->id])}}" class="uk-button btn-confirmar">{{__('Visualizar')}}</a>
+                    <form action="{{route('gerenciarsolicitacoes.destroy', ['gerenciarsolicitaco' => $solicitacao->id])}}" method="post" class="uk-display-inline-block">
+                      @csrf
+                      @method("delete")
+                      <button type="submit" class="uk-button uk-margin-left btn-cancelar">{{__('Remover')}}</button>
+                  </form>
                   </div>
                 </td>
               </tr>

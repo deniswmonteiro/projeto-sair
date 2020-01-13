@@ -54,11 +54,11 @@
 							<div class="uk-form-controls">
 								<select class="uk-select" id="form-atualizar-sala-lab" @error('laboratorio') is-invalid @enderror" name="laboratorio" value="{{$usuarios->laboratorio}}" required autocomplete="laboratorio">
 									<option value="" disabled>Escolha uma opção</option>
+									<option value="LabMotriz" @if($usuarios->laboratorio === 'LabMotriz') selected @endif>
+                    LabMotriz
+                  </option>
 									<option value="LCAD" @if($usuarios->laboratorio === 'LCAD') selected @endif>
                     LCAD
-                  </option>
-                  <option value="LabMotriz" @if($usuarios->laboratorio === 'LabMotriz') selected @endif>
-                    LabMotriz
                   </option>
 									<option value="LabQuali" @if($usuarios->laboratorio === 'LabQuali') selected @endif>
                     LabQuali
@@ -107,7 +107,7 @@
 						</div>
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
-					<div class="uk-text-left uk-flex btn">
+					<div class="btn">
 						<a href="{{route('usuarios.index')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>

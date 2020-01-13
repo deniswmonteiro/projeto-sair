@@ -67,7 +67,7 @@ class UsuarioController extends Controller
     public function edit($usuario)
     {
         $usuarios = $this->usuario->findOrFail($usuario);
-        return view('admin/usuarios/editar', compact('usuarios'));
+        return view('admin/usuarios/editarusuario', compact('usuarios'));
     }
 
     /**

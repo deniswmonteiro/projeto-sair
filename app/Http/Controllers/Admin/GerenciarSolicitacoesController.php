@@ -8,11 +8,11 @@ use projetoautomacao\SolicitarCadastro;
 
 class GerenciarSolicitacoesController extends Controller
 {
-    private $solicitacoes;
+    private $solicitacao;
 
-	public function __construct(SolicitarCadastro $solicitacoes) 
+	public function __construct(SolicitarCadastro $solicitacao) 
 	{
-		$this->solicitacoes = $solicitacoes;
+		$this->solicitacao = $solicitacao;
     }
 
     /**
@@ -22,7 +22,7 @@ class GerenciarSolicitacoesController extends Controller
      */
     public function index()
     {
-        $solicitacoes = $this->solicitacoes->all();
+        $solicitacoes = $this->solicitacao->all();
         return view('admin/gerenciarsolicitacoes', compact('solicitacoes'));
     }
 
@@ -61,12 +61,13 @@ class GerenciarSolicitacoesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $solicitacao
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($solicitacao)
     {
-        //
+        $solicitacoes = $this->solicitacao->findOrFail($solicitacao);
+        return view('admin/solicitacoes/editarsolicitacao', compact('solicitacoes'));
     }
 
     /**
@@ -84,11 +85,13 @@ class GerenciarSolicitacoesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $solicitacao
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($solicitacao)
     {
-        //
+        $solicitacao = $this->solicitacao::find($solicitacao);
+        $solicitacao->delete();
+        return redirect()->route('gerenciarsolicitacoes.index');
     }
 }

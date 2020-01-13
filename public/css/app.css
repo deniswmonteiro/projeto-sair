@@ -50,7 +50,7 @@ body .form input:focus, body .form select:focus {
   border-color: #5d7;
 }
 
-body .form .form > input[type="search"]:focus {
+body .form input[type="search"]:focus {
   width: 210px;
 }
 
