@@ -9,7 +9,7 @@
 			<div class="uk-card uk-card-default uk-card-body card-cadastro">
 				<form class="uk-form-stacked form" action="{{route('usuarios.cadastro')}}" method="post">
 					@csrf
-					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
+					<div class="uk-child-width-1-3@s uk-margin" uk-grid>
 						<div>
 							<label class="uk-form-label form" for="form-cadastro-nome">{{__('Nome Completo *')}}</label>
 							<div class="uk-form-controls">
@@ -32,8 +32,6 @@
 								@enderror
 							</div>
 						</div>
-					</div>
-					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
 						<div>
 							<label class="uk-form-label" for="form-cadastro-email">{{__('Email *')}}</label>
 							<div class="uk-form-controls">
@@ -45,6 +43,8 @@
 								@enderror
 							</div>
 						</div>
+					</div>
+					<div class="uk-child-width-1-3@s uk-margin" uk-grid>
 						<div>
 							<label class="uk-form-label" for="form-cadastro-sala-lab">
 								{{__('Sala/Laboratório *')}}
@@ -63,8 +63,6 @@
 								@enderror
 							</div>
 						</div>
-					</div>
-					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
 						<div>
 							<label class="uk-form-label" for="form-cadastro-usuario">{{__('Usuário *')}}</label>
 							<div class="uk-form-controls">
@@ -81,6 +79,25 @@
 							<div class="uk-form-controls uk-inline uk-display-block">
 								<input id="form-cadastro-senha" type="password" class="uk-input @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Mínimo de 8 caracteres">
 								@error('password')
+									<span class="invalid-feedback" role="alert">
+										<strong>{{$message}}</strong>
+									</span>
+								@enderror
+							</div>
+						</div>
+					</div>
+					<div class="uk-child-width-1-3@s uk-margin" uk-grid>
+						<div>
+							<label class="uk-form-label" for="form-atualizar-usuario">
+								{{__('Categoria *')}}
+							</label>
+							<div class="uk-form-controls">
+								<select class="uk-select" id="form-atualizar-usuario" @error('categoria') is-invalid @enderror" name="categoria" value="{{old('categoria')}}" required autocomplete="categoria">
+									<option value="" selected disabled>Escolha uma opção</option>
+									<option value="CEAMAZON">CEAMAZON</option>
+									<option value="ADMINISTRADOR">ADMINISTRADOR</option>
+								</select>
+								@error('categoria')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{$message}}</strong>
 									</span>

@@ -22,7 +22,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $usuarios = $this->usuario->all(['nome', 'email', 'usuario', 'laboratorio']);
+        $usuarios = $this->usuario->all(['nome', 'email', 'categoria', 'laboratorio']);
         return view('admin/usuarios', compact('usuarios'));
     }
 
@@ -88,11 +88,13 @@ class UsuarioController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($usuario)
     {
-        //
+        $usuario = $this->usuario::find($usuario);
+        $usuario->delete();
+        return redirect()->route('usuarios.index');
     }
 }

@@ -16,6 +16,7 @@ class UsersTableSeeder extends Seeder
             'cpf' => '99999999999',
             'email' => 'administrador@admin',
             'laboratorio' => 'LabMotriz',
+            'categoria' => 'ADMINISTRADOR',
             'usuario' => 'administrador',
             'password' => Hash::make('99999999999')
         ]);

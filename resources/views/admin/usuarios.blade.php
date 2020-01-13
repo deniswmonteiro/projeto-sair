@@ -20,7 +20,7 @@
             <tr>
               <th>Nome</th>
               <th>Email</th>
-              <th>Usuário</th>
+              <th>Categoria</th>
               <th>Laboratório</th>
               <th>Ações</th>
             </tr>
@@ -30,14 +30,18 @@
             <tr>
               <td>{{$usuario->nome}}</td>
               <td>{{$usuario->email}}</td>
-              <td>{{$usuario->usuario}}</td>
+              <td>{{$usuario->categoria}}</td>
               <td>{{$usuario->laboratorio}}</td>
               <td>
                 <div>
                   <a href="{{route('usuarios.editar', ['usuario' => $usuario->id])}}" class="uk-button uk-button-default uk-border-rounded btn-atualizar">
                     {{__('Atualizar')}}
                   </a>
-                  <a href="" class="uk-button uk-button-default uk-border-rounded uk-margin-left btn-remover">{{__('Remover')}}</a>
+                  <form action="{{route('usuarios.destroy', ['usuario' => $usuario->id])}}" method="post">
+                    @csrf
+                    @method("delete")
+                    <button type="submit" class="uk-button uk-button-default uk-border-rounded uk-margin-left btn-remover">{{__('Remover')}}</button>
+                  </form>
                 </div>
               </td>
             </tr>

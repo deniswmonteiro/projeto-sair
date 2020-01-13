@@ -153,6 +153,10 @@ return [
             'required' => 'Este campo é obrigatório!',
         ],
 
+        'categoria' => [
+            'required' => 'Este campo é obrigatório!',
+        ],
+
         'usuario' => [
             'string' => 'O mínimo permitido são 6 caracteres.',
             'unique' => 'Este usuário já está sendo utilizado.',
