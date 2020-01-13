@@ -4,17 +4,17 @@ namespace projetoautomacao\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use projetoautomacao\Http\Controllers\Controller;
-use projetoautomacao\User;
+use projetoautomacao\SolicitarCadastro;
 
-class UsuarioController extends Controller
+class GerenciarSolicitacoesController extends Controller
 {
-    private $usuario;
+    private $solicitacoes;
 
-	public function __construct(User $usuario) 
+	public function __construct(SolicitarCadastro $solicitacoes) 
 	{
-		$this->usuario = $usuario;
+		$this->solicitacoes = $solicitacoes;
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -22,8 +22,8 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $usuarios = $this->usuario->all(['nome', 'email', 'usuario', 'laboratorio']);
-        return view('admin/usuarios', compact('usuarios'));
+        $solicitacoes = $this->solicitacoes->all();
+        return view('admin/gerenciarsolicitacoes', compact('solicitacoes'));
     }
 
     /**
@@ -61,28 +61,24 @@ class UsuarioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $usuario
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($usuario)
+    public function edit($id)
     {
-        $usuarios = $this->usuario->findOrFail($usuario);
-        return view('admin/usuarios/editar', compact('usuarios'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $usuario
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $usuario)
+    public function update(Request $request, $id)
     {
-        $data = $request->all();
-        $usuario = $this->usuario::findOrFail($usuario);
-        $usuario->update($data);
-        return redirect()->route('usuarios.index');
+        //
     }
 
     /**

@@ -43,5 +43,5 @@
     </div>
   </section>
 
-  <script src="{{asset('../js/sala.js')}}"></script>
+  <script src="{{asset('/js/sala.js')}}"></script>
 @endsection

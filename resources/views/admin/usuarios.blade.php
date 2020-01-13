@@ -11,8 +11,8 @@
           <a href="" class="uk-search-icon-flip" uk-search-icon></a>
           <input class="uk-search-input" type="search" placeholder="Procurar usuário">
         </form>
-        <a href="{{route('usuarios.form')}}" class="uk-button">Adicionar usuário</a>
-        <a href="" class="uk-button">Solicitações pendentes</a>
+        <a href="{{route('usuarios.form')}}" class="uk-button">{{__('Adicionar usuário')}}</a>
+        <a href="{{route('gerenciarsolicitacoes.index')}}" class="uk-button">{{__('Solicitações pendentes')}}</a>
       </div>
       <div class="uk-overflow-auto">
         <table class="uk-table uk-table-hover uk-table-responsive uk-table-middle uk-table-striped">
@@ -34,8 +34,10 @@
               <td>{{$usuario->laboratorio}}</td>
               <td>
                 <div>
-                  <a href="" class="uk-button uk-button-default uk-border-rounded btn-atualizar">Atualizar</a>
-                  <a href="" class="uk-button uk-button-default uk-border-rounded uk-margin-left btn-remover">Remover</a>
+                  <a href="{{route('usuarios.editar', ['usuario' => $usuario->id])}}" class="uk-button uk-button-default uk-border-rounded btn-atualizar">
+                    {{__('Atualizar')}}
+                  </a>
+                  <a href="" class="uk-button uk-button-default uk-border-rounded uk-margin-left btn-remover">{{__('Remover')}}</a>
                 </div>
               </td>
             </tr>

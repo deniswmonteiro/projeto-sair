@@ -60,5 +60,5 @@
 		</div>
 	</section>
 
-	<script src="{{asset('../js/login.js')}}"></script>
+	<script src="{{asset('/js/login.js')}}"></script>
 @endsection

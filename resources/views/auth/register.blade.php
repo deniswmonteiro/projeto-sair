@@ -100,5 +100,5 @@
 		</div>
 	</section>
 
-	<script src="{{asset('../js/cadastro.js')}}"></script>
+	<script src="{{asset('/js/cadastro.js')}}"></script>
 @endsection

@@ -8,7 +8,7 @@
     <div class="uk-container">
       <div class="uk-text-center">
         <div class="uk-inline">
-          <img src="{{asset('../img/terreo.svg')}}">
+          <img src="{{asset('/img/terreo.svg')}}">
           @foreach($salas as $sala)
             <a class="uk-position-absolute uk-transform-center" style="left: {{$sala->sala_localizacao[0]}}%; top: {{$sala->sala_localizacao[1]}}%" href="{{route('terreo.show', ['terreo'=>$sala->id_sala])}}">
               <span class="uk-badge bg-badge" uk-tooltip="{{$sala->sala_nome}}">{{$sala->id_sala}}</span>

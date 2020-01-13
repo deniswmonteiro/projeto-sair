@@ -29,6 +29,8 @@ Route::group(['middleware' => ['auth']], function() {
     });
 
     Route::namespace('Admin')->group(function() {
+        Route::resource('usuarios/gerenciarsolicitacoes', 'GerenciarSolicitacoesController');
+        Route::get('usuarios/atualizar/{usuario}', 'UsuarioController@edit')->name('usuarios.editar');
         Route::resource('usuarios', 'UsuarioController');
     });
 });
