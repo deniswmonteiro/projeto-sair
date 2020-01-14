@@ -6,6 +6,11 @@
   
   <section class="uk-section andar">
     <div class="uk-container">
+      <div class="btn">
+        <a href="{{route('home')}}" class="btn-cancelar link-voltar">
+          <i class="material-icons-round">arrow_back</i>
+        </a>
+      </div>
       <div class="uk-text-center">
         <div class="uk-inline">
           <img src="{{asset('/img/terreo.svg')}}">

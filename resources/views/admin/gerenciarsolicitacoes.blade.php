@@ -1,8 +1,8 @@
 @extends("layouts.app", ["paginaAtual" => "Gerenciar Solicitações"])
 
 @section("conteudo")
-  @include("layouts.menu", ["menu" => "solicitacoes"])
-  @include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "gerenciar solicitações", "paginaAtual" => "Solicitações de Cadastro"])
+  @include("layouts.menu", ["menu" => "gerenciar-solicitacoes"])
+  @include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "gerencie solicitações de cadastro", "paginaAtual" => "Solicitação de Cadastro"])
   
   <section class="uk-section andar">
     <div class="uk-container">

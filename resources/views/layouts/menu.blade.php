@@ -26,10 +26,21 @@
               <a href="{{route('usuarios.index')}}" class="@if(request()->is('usuarios')) active @endif">Usuários</a>
             </li>
             <li>
-              <a class="nav-link" onclick="event.preventDefault(); document.querySelector('form.logout').submit()">Sair</a>
-              <form action="{{route('logout')}}" class="logout" method="post" style="display:none;">
-                @csrf
-              </form>                          
+              <a href="#modal-sair" uk-toggle>Sair</a>
+              <div id="modal-sair" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body">
+                  <h3 class="uk-modal-title">Deseja realmente sair?</h3>
+                  <div class="uk-text-right uk-margin-remove-bottom btn">
+                    <button class="uk-button uk-modal-close uk-margin-small-right btn-cancelar" type="button">
+                      Cancelar
+                    </button>
+                    <a class="uk-button" onclick="event.preventDefault(); document.querySelector('form.logout').submit()">Confirmar</a>
+                    <form action="{{route('logout')}}" class="logout" method="post" style="display:none;">
+                        @csrf
+                    </form> 
+                  </div>
+                </div>
+              </div>                      
             </li>
 
           @else

@@ -15,6 +15,16 @@ li {
 }
 
 body {
+    .alerta-sucesso {
+        .alert {
+            padding: 15px;
+            color: $light-grey;
+            background-color: $dark-green;
+            border-color: $light-green;
+            font-size: 1.125em;
+        }
+    }
+    
     .form {
         label, input, input:focus {
             color: $dark-grey;
@@ -28,10 +38,6 @@ body {
             &:focus {
                 border-color: $green;
             }
-        }
-
-        input[type="search"]:focus {
-            width: 210px;
         }
 
         .aviso {
@@ -86,6 +92,17 @@ body {
 
                 &.inicial {
                     text-transform: initial;
+                }
+            }
+
+            &.link-voltar {
+                position: absolute;
+                top: 272px;
+                padding: 10px;
+                border-radius: 50%;
+
+                i {
+                    vertical-align: middle;
                 }
             }
         }

@@ -1,13 +1,18 @@
 @extends("layouts.app", ["paginaAtual" => "1º Andar"])
 
 @section("conteudo")
-  @include("layouts.menu", ["menu" => "1º andar"])
+  @include("layouts.menu", ["menu" => "primeiro-andar"])
   @include("layouts.introducao", ["iconeIntroducao" => "ico-local", "textoIntroducao" => "1º andar", "paginaAtual" => "Salas"])
 
   <section class="uk-section andar">
     <div class="uk-container">
+      <div class="btn">
+        <a href="{{route('home')}}" class="btn-cancelar link-voltar">
+          <i class="material-icons-round">arrow_back</i>
+        </a>
+      </div>
       <div class="uk-text-center">
-        <div class="uk-inline uk-dark">
+        <div class="uk-inline">
           <img src="{{asset('img/primeiro-andar.svg')}}">
           @foreach($salas as $sala)
             <a class="uk-position-absolute uk-transform-center" style="left: {{$sala->sala_localizacao[0]}}%; top: {{$sala->sala_localizacao[1]}}%" href="{{route('primeiroandar.show', ['primeiroandar'=>$sala->id_sala])}}">

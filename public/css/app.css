@@ -32,6 +32,14 @@ li h3 {
   font-weight: 500;
 }
 
+body .alerta-sucesso .alert {
+  padding: 15px;
+  color: #f7faf8;
+  background-color: #193;
+  border-color: #9fa;
+  font-size: 1.125em;
+}
+
 body .form {
   /* icone de mostrar/esconder senha */
 }
@@ -48,10 +56,6 @@ body .form input, body .form select {
 
 body .form input:focus, body .form select:focus {
   border-color: #5d7;
-}
-
-body .form input[type="search"]:focus {
-  width: 210px;
 }
 
 body .form .aviso {
@@ -109,6 +113,17 @@ body .btn a.link-voltar-login {
 
 body .btn a.link-voltar-login.inicial {
   text-transform: initial;
+}
+
+body .btn a.link-voltar {
+  position: absolute;
+  top: 272px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+body .btn a.link-voltar i {
+  vertical-align: middle;
 }
 
 body .btn button {
@@ -616,14 +631,6 @@ body .btn button.btn-cancelar {
 
 .rodape .copyright p {
   color: #f7faf8;
-}
-
-.alerta-sucesso .alert {
-  padding: 15px;
-  color: #f7faf8;
-  background-color: #193;
-  border-color: #9fa;
-  font-size: 1.125em;
 }
 
 .andares h1 {

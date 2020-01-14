@@ -2,9 +2,6 @@
 
 @section("conteudo")
   @include("layouts.menu", ["menu" => "home"])
-  <div class="uk-text-center alerta-sucesso">
-    @include('flash::message')
-  </div>
   <section class="uk-section andares">
     <div class="uk-container">
       <h1>Andares</h1>
@@ -45,6 +42,4 @@
       </div>
     </div>
   </section>
-
-  <script src="{{asset('/js/home.js')}}"></script>
 @endsection

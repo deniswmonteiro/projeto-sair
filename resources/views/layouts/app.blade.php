@@ -12,6 +12,9 @@
     <script src="{{asset('/js/jquery-3.4.1.min.js')}}"></script>
   </head>
   <body>
+    <div class="uk-text-center alerta-sucesso">
+      @include('flash::message')
+    </div>
     @yield("conteudo")
 
     <footer class="rodape">

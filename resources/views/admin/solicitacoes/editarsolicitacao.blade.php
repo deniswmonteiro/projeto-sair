@@ -1,8 +1,8 @@
-@extends("layouts.app", ["paginaAtual" => "Gerenciar Solicitação"])
+@extends("layouts.app", ["paginaAtual" => "Editar Solicitação"])
 
 @section("conteudo")
-	@include("layouts.menu", ["menu" => "gerenciarsolicitacao"])
-	@include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "gerencie solicitação de cadastro", "paginaAtual" => "Usuário"])
+	@include("layouts.menu", ["menu" => "editar-solicitacao"])
+	@include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "confirme dados de solicitação", "paginaAtual" => "Solicitação de Cadastro"])
 
 	<section class="uk-section cadastro">
 		<div class="uk-container">
@@ -112,7 +112,7 @@
 						</div>
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
-					<div class="btn">
+					<div class="uk-margin-medium-top btn">
 						<a href="{{route('gerenciarsolicitacoes.index')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>

@@ -92,6 +92,7 @@ class GerenciarSolicitacoesController extends Controller
     {
         $solicitacao = $this->solicitacao::find($solicitacao);
         $solicitacao->delete();
+        flash('Solicitação removida com sucesso')->success();
         return redirect()->route('gerenciarsolicitacoes.index');
     }
 }

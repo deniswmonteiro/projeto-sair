@@ -70,6 +70,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        flash('Cadastro realizado com sucesso!')->success();
         return User::create([
             'nome' => $data['nome'],
             'cpf' => $data['cpf'],

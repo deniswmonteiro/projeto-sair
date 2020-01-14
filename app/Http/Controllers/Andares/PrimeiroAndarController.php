@@ -57,6 +57,7 @@ class PrimeiroAndarController extends Controller
 	{
 		$sala = $this->primeiroAndar->all();
 		return view('andares/salas/salas-primeiro-andar', [
+			'andar' => 'primeiroandar',
 			'sala_id' => $id,
 			'sala_nome' => $sala[--$id]->sala_nome,
 			'qtd_circ_lampada' => $sala[$id]->qtd_circ_lampada,

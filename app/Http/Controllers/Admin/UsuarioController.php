@@ -82,6 +82,7 @@ class UsuarioController extends Controller
         $data = $request->all();
         $usuario = $this->usuario::findOrFail($usuario);
         $usuario->update($data);
+        flash('Dados atualizados com sucesso!')->success();
         return redirect()->route('usuarios.index');
     }
 
@@ -95,6 +96,7 @@ class UsuarioController extends Controller
     {
         $usuario = $this->usuario::find($usuario);
         $usuario->delete();
+        flash('Usuário(a) removido do sistema')->success();
         return redirect()->route('usuarios.index');
     }
 }

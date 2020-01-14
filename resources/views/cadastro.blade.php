@@ -76,8 +76,8 @@
 						</div>
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
-					<div class="uk-text-left uk-border-rounded uk-flex btn">
-						<a href="#" class="uk-button uk-border-rounded btn-confirmar">{{__('Cadastrar')}}</a>
+					<div class="uk-margin-medium-top btn">
+						<a href="#" class="uk-button btn-confirmar">{{__('Cadastrar')}}</a>
 						<a href="{{route('login')}}" class="uk-link-reset link-voltar-login">
 							{{__('Voltar para o login')}}
 						</a>
@@ -86,6 +86,4 @@
 			</div>
 		</div>
 	</section>
-
-	<script src="{{asset('/js/cadastro.js')}}"></script>
 @endsection

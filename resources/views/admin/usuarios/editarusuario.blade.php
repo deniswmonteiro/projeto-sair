@@ -1,8 +1,8 @@
-@extends("layouts.app", ["paginaAtual" => "Atualizar Dados"])
+@extends("layouts.app", ["paginaAtual" => "Editar Usuário"])
 
 @section("conteudo")
-  @include("layouts.menu", ["menu" => "atualizarDados"])
-  @include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "atualize os dados", "paginaAtual" => "Usuários"])
+  @include("layouts.menu", ["menu" => "editar-usuario"])
+  @include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "atualize os dados de usuário", "paginaAtual" => "Usuários"])
 
 
   <section class="uk-section cadastro">
@@ -107,7 +107,7 @@
 						</div>
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
-					<div class="btn">
+					<div class="uk-margin-medium-top btn">
 						<a href="{{route('usuarios.index')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>
@@ -117,6 +117,4 @@
 			</div>
 		</div>
 	</section>
-
-  <script src="{{asset('/js/atualizar.js')}}"></script>
 @endsection

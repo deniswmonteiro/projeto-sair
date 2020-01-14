@@ -1,11 +1,16 @@
 @extends("layouts.app", ["paginaAtual" => "2º Andar"])
 
 @section("conteudo")
-  @include("layouts.menu", ["menu" => "2º andar"])
+  @include("layouts.menu", ["menu" => "seugndo-andar"])
   @include("layouts.introducao", ["iconeIntroducao" => "ico-local", "textoIntroducao" => "2º Andar", "paginaAtual" => "Salas"])
   
   <section class="uk-section andar">
     <div class="uk-container">
+      <div class="btn">
+        <a href="{{route('home')}}" class="btn-cancelar link-voltar">
+          <i class="material-icons-round">arrow_back</i>
+        </a>
+      </div>
       <div class="uk-text-center">
         <div class="uk-inline uk-dark">
           <img src="{{asset('/img/segundo-andar.svg')}}">
