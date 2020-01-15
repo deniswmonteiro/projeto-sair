@@ -40,11 +40,11 @@ class EmailController extends Controller
     public function store(Request $request)
     {
         $data = $request->all('email');
-        //dd($data);
         $id = 1;
         $user = User::where('id', $id)->first();
         Mail::to($data)->send(new SendMailUser($user));
-        return 'Email was sent';
+        flash('Solicitação enviada! Aguarde retorno do administrador')->success();
+        return redirect()->route('home');
     }
 
     /**

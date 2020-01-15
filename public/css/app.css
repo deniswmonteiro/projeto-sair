@@ -32,12 +32,20 @@ li h3 {
   font-weight: 500;
 }
 
-body .alerta-sucesso .alert {
+body .notificacao-alerta .alert {
   padding: 15px;
   color: #f7faf8;
+  font-size: 1.125em;
+}
+
+body .notificacao-alerta .alert.alert-success {
   background-color: #193;
   border-color: #9fa;
-  font-size: 1.125em;
+}
+
+body .notificacao-alerta .alert.alert-warning {
+  background-color: #d60;
+  border-color: #fa6;
 }
 
 body .form {

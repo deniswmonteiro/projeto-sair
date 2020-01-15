@@ -12,7 +12,7 @@
     <script src="{{asset('/js/jquery-3.4.1.min.js')}}"></script>
   </head>
   <body>
-    <div class="uk-text-center alerta-sucesso">
+    <div class="uk-text-center notificacao-alerta">
       @include('flash::message')
     </div>
     @yield("conteudo")

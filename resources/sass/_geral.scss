@@ -15,13 +15,21 @@ li {
 }
 
 body {
-    .alerta-sucesso {
+    .notificacao-alerta {
         .alert {
             padding: 15px;
             color: $light-grey;
-            background-color: $dark-green;
-            border-color: $light-green;
             font-size: 1.125em;
+
+            &.alert-success {
+                background-color: $dark-green;
+                border-color: $light-green;
+            }
+    
+            &.alert-warning {
+                background-color: $dark-orange;
+                border-color: $light-orange;
+            }
         }
     }
     

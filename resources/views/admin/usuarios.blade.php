@@ -12,7 +12,7 @@
           <input class="uk-search-input" type="search" placeholder="Procurar usuário">
         </form>
         <div class="uk-display-inline-block btn">
-          <a href="{{route('usuarios.form')}}" class="uk-button uk-margin-right btn-confirmar">{{__('Adicionar usuário')}}</a>
+          <a href="{{route('usuarios.form')}}" class="uk-button uk-margin-right btn-acao">{{__('Adicionar usuário')}}</a>
           <a href="{{route('gerenciarsolicitacoes.index')}}" class="uk-button btn-solicitacao">{{__('Solicitações pendentes')}}</a>
           </div>
       </div>
@@ -36,7 +36,7 @@
               <td>{{$usuario->laboratorio}}</td>
               <td>
                 <div class="btn">
-                  <a href="{{route('usuarios.editar', ['usuario' => $usuario->id])}}" class="uk-button btn-confirmar">
+                  <a href="{{route('usuarios.editar', ['usuario' => $usuario->id])}}" class="uk-button btn-acao">
                     {{__('Atualizar')}}
                   </a>
                   <form action="{{route('usuarios.destroy', ['usuario' => $usuario->id])}}" method="post" class="uk-display-inline-block">

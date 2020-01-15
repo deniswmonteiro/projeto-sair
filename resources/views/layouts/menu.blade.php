@@ -24,25 +24,12 @@
             <li><a href="sobre.php">Sobre</a></li>
             @if(Auth::user()->categoria === 'ADMINISTRADOR')
             <li>
-              <a href="{{route('usuarios.index')}}" class="@if(request()->is('usuarios') || request()->is('usuarios/gerenciarsolicitacoes' || request()->is('usuarios/gerenciarsolicitacoes/visualizar'))) active @endif">Usuários</a>
+              <a href="{{route('usuarios.index')}}" class="@if(request()->is('usuarios') || request()->is('usuarios/gerenciarsolicitacoes')) active @endif">Usuários</a>
             </li>
             @endif
             <li>
               <a href="#modal-sair" uk-toggle>Sair</a>
-              <div id="modal-sair" uk-modal>
-                <div class="uk-modal-dialog uk-modal-body">
-                  <h3 class="uk-modal-title">Deseja realmente sair?</h3>
-                  <div class="uk-text-right uk-margin-remove-bottom btn">
-                    <button class="uk-button uk-modal-close uk-margin-small-right btn-cancelar" type="button">
-                      Cancelar
-                    </button>
-                    <a class="uk-button btn-modal-confirmar" onclick="event.preventDefault(); document.querySelector('form.logout').submit()">Confirmar</a>
-                    <form action="{{route('logout')}}" class="logout" method="post" style="display:none;">
-                        @csrf
-                    </form>
-                  </div>
-                </div>
-              </div>                      
+              @include('components.modal', ['id' => 'modal-sair', 'texto' => 'Deseja realmente sair?'])                    
             </li>
 
           @else
