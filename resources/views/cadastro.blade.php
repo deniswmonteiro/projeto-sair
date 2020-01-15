@@ -77,7 +77,9 @@
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
 					<div class="uk-margin-medium-top btn">
-						<a href="#" class="uk-button btn-confirmar">{{__('Cadastrar')}}</a>
+						<a href="#" class="uk-button uk-margin-small-right btn-confirmar">
+							{{__('Cadastrar')}}
+						</a>
 						<a href="{{route('login')}}" class="uk-link-reset link-voltar-login">
 							{{__('Voltar para o login')}}
 						</a>

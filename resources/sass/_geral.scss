@@ -72,9 +72,8 @@ body {
                 box-shadow: 0px 0px 0px 3px $dark-grey;
             }
 
-            &.btn-confirmar {
+            &.btn-confirmar, &.btn-modal-confirmar, &.btn-acao {
                 background: $dark-green;
-                margin-right: 20px;
             }
 
             &.btn-cancelar {

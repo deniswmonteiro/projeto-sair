@@ -36,7 +36,7 @@
 							</div>
 						</div>
 						<div class="uk-text-left modal-footer btn">
-							<a href="#" class="uk-button btn-confirmar">
+							<a href="#" class="uk-button uk-margin-small-right btn-confirmar">
 								{{__('Enviar solicitação')}}
 							</a>
 							<a href="{{route('login')}}" class="uk-button uk-link-reset link-voltar-login inicial">

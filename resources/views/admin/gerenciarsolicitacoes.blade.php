@@ -37,7 +37,7 @@
                 <td>{{$solicitacao->laboratorio}}</td>
                 <td>
                   <div class="btn">
-                    <a href="{{route('gerenciarsolicitacoes.visualizar', ['gerenciarsolicitacao' => $solicitacao->id])}}" class="uk-button btn-confirmar">{{__('Visualizar')}}</a>
+                    <a href="{{route('gerenciarsolicitacoes.visualizar', ['gerenciarsolicitacao' => $solicitacao->id])}}" class="uk-button btn-acao">{{__('Visualizar')}}</a>
                     <form action="{{route('gerenciarsolicitacoes.destroy', ['gerenciarsolicitaco' => $solicitacao->id])}}" method="post" class="uk-display-inline-block">
                       @csrf
                       @method("delete")
