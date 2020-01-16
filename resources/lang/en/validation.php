@@ -135,37 +135,37 @@ return [
         // ],
 
         'nome' => [
-            'required' => 'Este campo é obrigatório!',
+            'required' => 'O nome é obrigatório!',
         ],
 
         'cpf' => [
             'numeric' => 'O máximo permitido são 11 caracteres.',
-            'required' => 'Este campo é obrigatório!',
+            'required' => 'O CPF é obrigatório!',
             'unique' => 'Este CPF já está sendo utilizado.',
         ],
 
         'email' => [
             'unique' => 'Este email já está sendo utilizado.',
-            'required' => 'Este campo é obrigatório!',
+            'required' => 'O email é obrigatório!',
         ],
 
         'laboratorio' => [
-            'required' => 'Este campo é obrigatório!',
+            'required' => 'O laboratório é obrigatório!',
         ],
 
         'categoria' => [
-            'required' => 'Este campo é obrigatório!',
+            'required' => 'A categoria é obrigatória!',
         ],
 
         'usuario' => [
             'string' => 'O mínimo permitido são 6 caracteres.',
             'unique' => 'Este usuário já está sendo utilizado.',
-            'required' => 'Este campo é obrigatório!',
+            'required' => 'O usuário é obrigatório!',
         ],
 
         'password' => [
             'password' => 'A senha está incorreta.',
-            'required' => 'Este campo é obrigatório!',
+            'required' => 'A senha é obrigatória!',
         ],
     ],
 

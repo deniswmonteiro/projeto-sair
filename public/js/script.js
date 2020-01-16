@@ -45,7 +45,7 @@ const senhaModal = document.querySelectorAll(".btn-mostra-senha-modal");
 const iconeSenha = document.querySelectorAll("[data-icone-senha-modal]");
 
 iconeSenha.forEach(icone => {
-    icone.setAttribute("src", "../img/ico-esconde.svg");
+    icone.setAttribute("src", "/img/ico-esconde.svg");
 });
 
 senhaModal.forEach(btn => {
@@ -54,11 +54,11 @@ senhaModal.forEach(btn => {
 
         if (btn.classList.contains("btn-mostra-senha-modal")) {
             iconeSenha.forEach(icone => {
-                icone.setAttribute("src", "../img/ico-esconde.svg");
+                icone.setAttribute("src", "/img/ico-esconde.svg");
             });
         } else {
             iconeSenha.forEach(icone => {
-                icone.setAttribute("src", "../img/ico-mostra.svg");
+                icone.setAttribute("src", "/img/ico-mostra.svg");
             });
         }
     });
@@ -72,13 +72,13 @@ $("div.alert")
     .fadeOut(350);
 
 /** adicionar evento de click aos links */
-const btnConfirmar = document.querySelector(".btn-confirmar");
-const form = document.querySelector("form.form");
+// const btnConfirmar = document.querySelector(".btn-confirmar");
+// const form = document.querySelector("form.form");
 
-btnConfirmar.addEventListener("click", e => {
-    e.preventDefault();
-    form.submit();
-});
+// btnConfirmar.addEventListener("click", e => {
+//     e.preventDefault();
+//     form.submit();
+// });
 
 /** adiciona evento de click em botão a partir de um input */
 const inputForm = document.querySelectorAll("input");

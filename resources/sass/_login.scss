@@ -20,7 +20,7 @@
             color: $dark-grey;
         }
 
-        span {
+        span.acoes-login {
             &:first-of-type::after {
                 content: "";
                 width: 5px;

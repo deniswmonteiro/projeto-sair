@@ -6,14 +6,14 @@
     <div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body card-login">
 				<h1>Fazer Login</h1>
-				<form method="post" action="{{route('login')}}" class="uk-form-stacked form">
+				<form method="post" action="{{route('login')}}" class="uk-form-stacked login">
 					@csrf
 					<div class="uk-margin">
 						<label class="uk-form-label" for="form-login-email">{{__("Email")}}</label>
 						<div class="uk-form-controls">
 							<input id="form-login-email" type="email" class="uk-input uk-border-rounded @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autocomplete="email" autofocus>
 							@error('email')
-								<span class="invalid-feedback error-email" role="alert">
+								<span class="uk-text-danger" role="alert">
 									<strong>{{$message}}</strong>
 								</span>
 							@enderror
@@ -27,7 +27,7 @@
 								</button>
 								<input id="form-login-senha" type="password" class="uk-input uk-border-rounded @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" data-senha>
 								@error('password')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -40,12 +40,12 @@
 						</label>
 					</div>
 					<div class="uk-margin">
-						<span>
+						<span class="acoes-login">
 							@if(Route::has('password.request'))
 								<a class="uk-button" href="{{route('password.request')}}">Esqueceu a senha?</a>
 							@endif
 						</span>
-						<span>
+						<span class="acoes-login">
 							<a class="uk-button" href="{{route('cadastro.index')}}">Cadastrar-se</a>
 						</span>
 					</div>
@@ -53,7 +53,7 @@
 						<a href="{{route('home')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>
-						<a href="#" class="uk-button btn-confirmar">{{__('Entrar')}}</a>
+						<a href="#" class="uk-button btn-confirmar" onclick="event.preventDefault(); document.querySelector('form.login').submit()">{{__('Entrar')}}</a>
 					</div>
 				</form>
 			</div>

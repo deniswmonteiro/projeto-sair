@@ -48,29 +48,29 @@ body .notificacao-alerta .alert.alert-warning {
   border-color: #fa6;
 }
 
-body .form {
+body form {
   /* icone de mostrar/esconder senha */
 }
 
-body .form label, body .form input, body .form input:focus {
+body form label, body form input, body form input:focus {
   color: #18211a;
 }
 
-body .form input, body .form select {
+body form input, body form select {
   outline: none;
   border-color: #c1d6c8;
   border-radius: 4px;
 }
 
-body .form input:focus, body .form select:focus {
+body form input:focus, body form select:focus {
   border-color: #5d7;
 }
 
-body .form .aviso {
+body form .aviso {
   color: #e21;
 }
 
-body .form .btn-form-senha-modal {
+body form .btn-form-senha-modal {
   background: #5d7;
   border: none;
   cursor: pointer;
@@ -79,7 +79,7 @@ body .form .btn-form-senha-modal {
   color: #18211a;
 }
 
-body .form i {
+body form i {
   color: #18211a;
 }
 
@@ -352,7 +352,7 @@ body .btn button.btn-cancelar {
   color: #18211a;
 }
 
-.login .card-login span:first-of-type::after {
+.login .card-login span.acoes-login:first-of-type::after {
   content: "";
   width: 5px;
   height: 5px;
@@ -362,7 +362,7 @@ body .btn button.btn-cancelar {
   margin: 0 5px 2px 10px;
 }
 
-.login .card-login span a {
+.login .card-login span.acoes-login a {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
   color: #18211a;
   font-size: 1em;
@@ -375,7 +375,7 @@ body .btn button.btn-cancelar {
   padding: 0;
 }
 
-.login .card-login span a:hover {
+.login .card-login span.acoes-login a:hover {
   color: #5d7;
 }
 
