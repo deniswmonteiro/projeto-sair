@@ -57,7 +57,7 @@ class TerreoController extends Controller
 	{
 		$salas = $this->terreo->all();
 		// dd($salas);	
-		return view('andares/salas/salas-terreo', [
+		return view('andares/salas/salasterreo', [
 			'andar' => 'terreo',
 			'sala_id' => $id,
 			'sala_nome' => $salas[--$id]->sala_nome,

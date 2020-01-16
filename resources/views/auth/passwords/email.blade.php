@@ -48,6 +48,4 @@
       </div>
   	</div>
 	</section>
-
-	<script src="{{asset('../js/recuperar-senha.js')}}"></script>
 @endsection

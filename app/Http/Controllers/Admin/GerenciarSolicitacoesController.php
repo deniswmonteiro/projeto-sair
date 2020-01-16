@@ -23,7 +23,7 @@ class GerenciarSolicitacoesController extends Controller
     public function index()
     {
         $solicitacoes = $this->solicitacao->all();
-        return view('admin/gerenciarsolicitacoes', compact('solicitacoes'));
+        return view('admin/solicitacoes/gerenciarsolicitacoes', compact('solicitacoes'));
     }
 
     /**

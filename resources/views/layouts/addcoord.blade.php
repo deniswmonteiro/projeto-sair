@@ -7,9 +7,9 @@
 @endif
 
 @for($i = 1; $i <= $qtd_lampadas; $i++)
-  @include("layouts.mostra-lampada", ["lampadas" => "lampadas".$i])
+  @include("layouts.mostralampada", ["lampadas" => "lampadas".$i])
 @endfor
 
 @for($j = 1; $j <= $qtd_arcondicionados; $j++)
-  @include("layouts.mostra-arcondicionado", ["arcondicionado" => "arcondicionado".$j])
+  @include("layouts.mostraarcondicionado", ["arcondicionado" => "arcondicionado".$j])
 @endfor

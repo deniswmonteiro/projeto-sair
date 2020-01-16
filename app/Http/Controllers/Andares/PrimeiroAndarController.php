@@ -56,7 +56,7 @@ class PrimeiroAndarController extends Controller
 	public function show($id)
 	{
 		$sala = $this->primeiroAndar->all();
-		return view('andares/salas/salas-primeiro-andar', [
+		return view('andares/salas/salasprimeiroandar', [
 			'andar' => 'primeiroandar',
 			'sala_id' => $id,
 			'sala_nome' => $sala[--$id]->sala_nome,

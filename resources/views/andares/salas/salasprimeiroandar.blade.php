@@ -5,7 +5,7 @@
     @case(1)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "lab-conforto-ambiental", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
@@ -14,7 +14,7 @@
     @case(2)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "lab-computacao", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
@@ -23,7 +23,7 @@
     @case(3)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "lab-qualidade-energia", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
@@ -32,7 +32,7 @@
     @case(4)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "lab-sistemas-motrizes", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
@@ -41,7 +41,7 @@
     @case(5)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "circulacao", "qtd_imgs" => 1, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
@@ -50,7 +50,7 @@
       @case(6)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "hall", "qtd_imgs" => 1, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
@@ -59,7 +59,7 @@
     @case(7)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "banheiro-masculino", "qtd_imgs" => 1, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
@@ -68,7 +68,7 @@
     @case(8)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "banheiro-feminino", "qtd_imgs" => 1, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
@@ -77,7 +77,7 @@
     @case(9)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "banheiro-pne", "qtd_imgs" => 1, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
@@ -86,7 +86,7 @@
     @case(10)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "escada", "qtd_imgs" => 1, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
@@ -95,7 +95,7 @@
     @case(11)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "sala-reuniao", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
@@ -104,7 +104,7 @@
     @case(12)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "sala-aula-1", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
@@ -113,7 +113,7 @@
     @case(13)
       <div>
         <div class="uk-inline">
-          @include("layouts.add-coord", [
+          @include("layouts.addcord", [
             "andar" => "primeiro_andar", "local" => "sala-aula-2", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
