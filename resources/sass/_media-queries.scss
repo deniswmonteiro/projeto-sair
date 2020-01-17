@@ -9,19 +9,25 @@ $s-device: 640px;
         }
     }
 
-    @if $size == l {
+    @else if $size == l {
         @media screen and (max-width: #{$l-device - 1}) {
             @content;
         }
-    } @else if $size == m {
+    } 
+    
+    @else if $size == m {
         @media screen and (min-width: #{$s-device}) and (max-width: #{$l-device - 1}) {
             @content;
         }
-    } @else if $size == s {
+    }
+    
+    @else if $size == s {
         @media screen and (max-width: #{$m-device - 1}) {
             @content;
         }
-    } @else if $size == xs {
+    }
+    
+    @else if $size == xs {
         @media screen and (max-width: #{$s-device - 1}) {
             @content;
         }

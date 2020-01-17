@@ -1,66 +1,59 @@
-.introducao {
-    .navbar {
-        .logo-cabecalho {
-            @include device(xs) {
-                margin: 0 auto;
-            }
+.navbar {
+    .logo-cabecalho {
+        @include device(xs) {
+            margin: 0 auto;
         }
 
-        .ativo {
-            display: none;
-        }
-
-        .menu {
-            li {
-                margin-left: 15px;
-
-                a {
-                    @include font(16);
-                    padding: 5px 8px;
-                    min-height: 1px;
-                    display: block;
-
-                    &::after {
-                        content: "";
-                        display: block;
-                        background: $orange;
-                        height: 2px;
-                        width: 0;
-                        transition: 0.4s;
-                    }
-
-                    &:hover::after {
-                        width: 100%;
-                    }
-
-                    /* 'after' do link ativo */
-                    // &.active::after {
-                    //   width: 100%;
-                    // }
-                }
-
-                .btn-login {
-                    margin-left: 10px;
-                    background: $orange;
-                    color: $light-grey;
-                    transition: 0.4s;
-                    display: flex;
-
-                    &:hover {
-                        color: $dark-grey;
-                        box-shadow: 0px 0px 0px 3px $dark-grey;
-                    }
-
-                    i {
-                        margin-left: 10px;
-                    }
-                }
-            }
+        a {
+            padding-left: 0;
+            padding-right: 55px;
         }
     }
 
-    .icone-predio {
-        margin-right: 120px;
-        opacity: 0.6;
+    .ativo {
+        display: none;
+    }
+
+    .menu {
+        li {
+            margin-left: 15px;
+
+            a {
+                @include font(16);
+                padding: 5px 8px;
+                min-height: 1px;
+                display: block;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    background: $orange;
+                    height: 2px;
+                    width: 0;
+                    transition: 0.4s;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+
+            .btn-login {
+                margin-left: 10px;
+                background: $orange;
+                color: $light-grey;
+                transition: 0.4s;
+                display: flex;
+
+                &:hover {
+                    color: $dark-grey;
+                    box-shadow: 0px 0px 0px 3px $dark-grey;
+                }
+
+                i {
+                    margin-left: 10px;
+                }
+            }
+        }
     }
 }

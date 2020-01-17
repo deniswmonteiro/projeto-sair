@@ -4,7 +4,7 @@
   @include("layouts.menu", ["menu" => "usuarios"])
   @include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "gerencie usuários", "paginaAtual" => "Usuários"])
   
-  <section class="uk-section andar">
+  <section class="uk-section usuarios">
     <div class="uk-container">
       <div class="uk-margin-large-bottom">
         <form class="uk-search uk-search-default uk-margin-medium-right form uk-width-medium">
@@ -36,13 +36,13 @@
               <td>{{$usuario->laboratorio}}</td>
               <td>
                 <div class="btn">
-                  <a href="{{route('usuarios.editar', ['usuario' => $usuario->id])}}" class="uk-button btn-acao">
+                  <a href="{{route('usuarios.editar', ['usuario' => $usuario->id])}}" class="uk-button uk-margin-right btn-acao">
                     {{__('Atualizar')}}
                   </a>
                   <form action="{{route('usuarios.destroy', ['usuario' => $usuario->id])}}" method="post" class="uk-display-inline-block">
                     @csrf
                     @method("delete")
-                    <button type="submit" class="uk-button uk-margin-left btn-cancelar">{{__('Remover')}}</button>
+                    <button type="submit" class="uk-button btn-cancelar">{{__('Remover')}}</button>
                   </form>
                 </div>
               </td>

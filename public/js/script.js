@@ -13,20 +13,6 @@
     });
 })();
 
-/* links do menu mobile para outras páginas */
-(function linksMenuMobile() {
-    const linksMenu = document.querySelectorAll("[data-link]");
-    linksMenu.forEach(link => {
-        link.addEventListener("click", () => {
-            if (link.dataset.link === "sobre") {
-                window.location.href = "../sobre.php";
-            } else if (link.dataset.link === "login") {
-                window.location.href = "#";
-            }
-        });
-    });
-})();
-
 /* mostra a senha que o usuário digitou */
 function mostraSenha() {
     const tiposInput = document.querySelectorAll("[data-senha]");
@@ -72,13 +58,13 @@ $("div.alert")
     .fadeOut(350);
 
 /** adicionar evento de click aos links */
-// const btnConfirmar = document.querySelector(".btn-confirmar");
-// const form = document.querySelector("form.form");
+const btnConfirmar = document.querySelector(".btn-confirmar");
+const form = document.querySelector("form.form");
 
-// btnConfirmar.addEventListener("click", e => {
-//     e.preventDefault();
-//     form.submit();
-// });
+btnConfirmar.addEventListener("click", e => {
+    e.preventDefault();
+    form.submit();
+});
 
 /** adiciona evento de click em botão a partir de um input */
 const inputForm = document.querySelectorAll("input");

@@ -1,0 +1,19 @@
+.usuarios {
+  @media screen and (max-width: 868px) {
+    .btn {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 494px) {
+    .btn-solicitacao {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 340px) {
+    .btn-cancelar {
+      margin-top: 20px;
+    }
+  }
+}

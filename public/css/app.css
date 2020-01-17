@@ -71,6 +71,7 @@ body form .aviso {
 }
 
 body form .btn-form-senha-modal {
+  height: 40px;
   background: #5d7;
   border: none;
   cursor: pointer;
@@ -151,20 +152,25 @@ body .btn button.btn-cancelar {
 }
 
 @media screen and (max-width: 639px) {
-  .introducao .navbar .logo-cabecalho {
+  .navbar .logo-cabecalho {
     margin: 0 auto;
   }
 }
 
-.introducao .navbar .ativo {
+.navbar .logo-cabecalho a {
+  padding-left: 0;
+  padding-right: 55px;
+}
+
+.navbar .ativo {
   display: none;
 }
 
-.introducao .navbar .menu li {
+.navbar .menu li {
   margin-left: 15px;
 }
 
-.introducao .navbar .menu li a {
+.navbar .menu li a {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
   color: #18211a;
   font-size: 1em;
@@ -173,10 +179,9 @@ body .btn button.btn-cancelar {
   padding: 5px 8px;
   min-height: 1px;
   display: block;
-  /* 'after' do link ativo */
 }
 
-.introducao .navbar .menu li a::after {
+.navbar .menu li a::after {
   content: "";
   display: block;
   background: #f82;
@@ -185,11 +190,11 @@ body .btn button.btn-cancelar {
   transition: 0.4s;
 }
 
-.introducao .navbar .menu li a:hover::after {
+.navbar .menu li a:hover::after {
   width: 100%;
 }
 
-.introducao .navbar .menu li .btn-login {
+.navbar .menu li .btn-login {
   margin-left: 10px;
   background: #f82;
   color: #f7faf8;
@@ -197,18 +202,13 @@ body .btn button.btn-cancelar {
   display: flex;
 }
 
-.introducao .navbar .menu li .btn-login:hover {
+.navbar .menu li .btn-login:hover {
   color: #18211a;
   box-shadow: 0px 0px 0px 3px #18211a;
 }
 
-.introducao .navbar .menu li .btn-login i {
+.navbar .menu li .btn-login i {
   margin-left: 10px;
-}
-
-.introducao .icone-predio {
-  margin-right: 120px;
-  opacity: 0.6;
 }
 
 @media screen and (max-width: 959px) {
@@ -328,6 +328,10 @@ body .btn button.btn-cancelar {
 
 .menu-mobile li a {
   color: #18211a;
+}
+
+.menu-mobile li a:visited {
+  color: inherit;
 }
 
 .login .card-login {
@@ -594,6 +598,24 @@ body .btn button.btn-cancelar {
   background-color: #5d7 !important;
 }
 
+@media screen and (max-width: 868px) {
+  .usuarios .btn {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 494px) {
+  .usuarios .btn-solicitacao {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .usuarios .btn-cancelar {
+    margin-top: 20px;
+  }
+}
+
 .rodape .dados {
   background: #18211a;
   color: #f7faf8;
@@ -678,4 +700,15 @@ body .btn button.btn-cancelar {
 
 .andares .card-andar .img-bg-andar:last-of-type {
   height: 290px;
+}
+
+@media screen and (min-width: 1200px) {
+  .andares ul li:not(.uk-active) {
+    opacity: 40%;
+    transition: .4s;
+  }
+}
+
+.andares .controle-slide {
+  color: #f82;
 }

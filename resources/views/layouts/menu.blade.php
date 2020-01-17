@@ -6,14 +6,14 @@
   
   @if($menu == "login" || $menu == "cadastro" || $menu == "recuperar-senha")
     <div class="uk-navbar uk-margin-auto logo-cabecalho">
-      <a href="/" class="uk-navbar-item uk-logo">
+      <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
         <img src="{{asset('/img/logo.svg')}}" alt="Logo do site">
       </a>
     </div>
 
   @else
     <div class="uk-navbar-left logo-cabecalho">
-      <a href="/" class="uk-navbar-item uk-logo">
+      <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
         <img src="{{asset('/img/logo.svg')}}" alt="Logo do site">
       </a>
     </div>
@@ -50,9 +50,9 @@
 </nav>
 
 <!-- MENU MOBILE    -->
-<div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
+<div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" data-menu-mobile>
   <div class="uk-offcanvas-bar menu-mobile">
-    <a class="uk-navbar-item uk-logo uk-width-1-2 uk-align-center uk-margin-small" href=".">
+    <a class="uk-navbar-item uk-logo uk-width-1-2 uk-align-center uk-margin-small" href="{{route('home')}}">
       <img src="{{asset('/img/logo.svg')}}" alt="Logo do site">
     </a>
     <hr class="divisor">
@@ -70,13 +70,14 @@
             </li>
           @endif
           <li class="uk-flex uk-flex-middle">
+              <i class="material-icons-round">exit_to_app</i>
               <a href="#modal-sair" uk-toggle>Sair</a>
               @include('components.modal', ['id' => 'modal-sair', 'texto' => 'Deseja realmente sair?'])                    
             </li>
 
           @else
             <li class="uk-flex uk-flex-middle">
-              <i class="material-icons-round">exit_to_app</i>
+              <i class="material-icons-round">input</i>
               <a href="{{route('login')}}">Login</a>
             </li>            
 

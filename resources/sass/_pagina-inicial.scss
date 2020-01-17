@@ -38,4 +38,15 @@
             }
         }
     }
+
+    ul li:not(.uk-active) {
+        @include device(xl) {
+            opacity: 40%;
+            transition: .4s;
+        }
+    }
+
+    .controle-slide {
+        color: $orange;
+    }
 }
