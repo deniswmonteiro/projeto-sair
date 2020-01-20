@@ -616,6 +616,11 @@ body .btn button.btn-cancelar {
   }
 }
 
+.usuarios table th {
+  color: #18211a;
+  font-weight: bold;
+}
+
 .rodape .dados {
   background: #18211a;
   color: #f7faf8;
