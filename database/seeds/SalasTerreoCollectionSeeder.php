@@ -81,7 +81,7 @@ class SalasTerreoCollectionSeeder extends Seeder
         \projetoautomacao\SalasTerreo::create([
             'id_sala' => 5,
             'sala_nome' => 'Circulação',
-            'sala_localizacao' => [47, 26],
+            'sala_localizacao' => [65, 17.5],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [
@@ -179,7 +179,7 @@ class SalasTerreoCollectionSeeder extends Seeder
         \projetoautomacao\SalasTerreo::create([
             'id_sala' => 13,
             'sala_nome' => 'Escada',
-            'sala_localizacao' => [51, 42],
+            'sala_localizacao' => [51, 41.5],
             'qtd_circ_lampada' => 1,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [
@@ -190,7 +190,7 @@ class SalasTerreoCollectionSeeder extends Seeder
         \projetoautomacao\SalasTerreo::create([
             'id_sala' => 14,
             'sala_nome' => 'Diretoria',
-            'sala_localizacao' => [45, 51],
+            'sala_localizacao' => [45, 50],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 1,
             'coord_circ_lampadas' => [
@@ -205,7 +205,7 @@ class SalasTerreoCollectionSeeder extends Seeder
         \projetoautomacao\SalasTerreo::create([
             'id_sala' => 15,
             'sala_nome' => 'Secretaria',
-            'sala_localizacao' => [45, 57],
+            'sala_localizacao' => [45, 56],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 1,
             'coord_circ_lampadas' => [
@@ -220,7 +220,7 @@ class SalasTerreoCollectionSeeder extends Seeder
         \projetoautomacao\SalasTerreo::create([
             'id_sala' => 16,
             'sala_nome' => 'Recepção',
-            'sala_localizacao' => [46, 63],
+            'sala_localizacao' => [46, 62],
             'qtd_circ_lampada' => 1,
             'qtd_arcondicionado' => 1,
             'coord_circ_lampadas' => [

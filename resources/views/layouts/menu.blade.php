@@ -21,7 +21,7 @@
       <ul class="uk-navbar-nav menu">
         @if(Route::has('login'))
           @auth
-            <li><a href="sobre.php">Sobre</a></li>
+            <li><a href="#">Sobre</a></li>
             @if(Auth::user()->categoria === 'ADMINISTRADOR')
             <li>
               <a href="{{route('usuarios.index')}}" class="@if(request()->is('usuarios') || request()->is('usuarios/gerenciarsolicitacoes')) active @endif">Usuários</a>
@@ -61,7 +61,7 @@
         @auth
           <li class="uk-flex uk-flex-middle">
             <i class="material-icons-round">info</i>
-            <a href="sobre.html">Sobre</a>
+            <a href="#">Sobre</a>
           </li>
           @if(Auth::user()->categoria === 'ADMINISTRADOR')
             <li class="uk-flex uk-flex-middle">

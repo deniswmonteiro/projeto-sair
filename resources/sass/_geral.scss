@@ -34,14 +34,13 @@ body {
     }
     
     form {
-        label, input, input:focus {
-            color: $dark-grey;
+        label, input, input:focus, select {
+            color: $dark-grey !important;
         }
 
-        input, select {
+        input, select, .uk-search-input {
             outline: none;
             border-color: $grey;
-            border-radius: 4px;
 
             &:focus {
                 border-color: $green;
@@ -108,6 +107,10 @@ body {
                 top: 272px;
                 padding: 10px;
                 border-radius: 50%;
+
+                @include device(xs) {
+                    top: 258px;
+                }
 
                 i {
                     vertical-align: middle;

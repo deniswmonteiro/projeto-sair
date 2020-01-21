@@ -1,0 +1,13 @@
+.solicitacao {
+  @media screen and (max-width: 487px) {
+    .btn {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 344px) {
+    .btn-cancelar {
+      margin-top: 20px;
+    }
+  }
+}

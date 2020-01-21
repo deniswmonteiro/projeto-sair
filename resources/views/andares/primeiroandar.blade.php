@@ -11,7 +11,7 @@
           <i class="material-icons-round">arrow_back</i>
         </a>
       </div>
-      <div class="uk-text-center">
+      <div class="uk-text-center mapa-andar">
         <div class="uk-inline">
           <img src="{{asset('img/primeiro-andar.svg')}}">
           @foreach($salas as $sala)

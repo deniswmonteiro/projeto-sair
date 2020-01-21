@@ -52,17 +52,16 @@ body form {
   /* icone de mostrar/esconder senha */
 }
 
-body form label, body form input, body form input:focus {
-  color: #18211a;
+body form label, body form input, body form input:focus, body form select {
+  color: #18211a !important;
 }
 
-body form input, body form select {
+body form input, body form select, body form .uk-search-input {
   outline: none;
   border-color: #c1d6c8;
-  border-radius: 4px;
 }
 
-body form input:focus, body form select:focus {
+body form input:focus, body form select:focus, body form .uk-search-input:focus {
   border-color: #5d7;
 }
 
@@ -128,6 +127,12 @@ body .btn a.link-voltar {
   top: 272px;
   padding: 10px;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 639px) {
+  body .btn a.link-voltar {
+    top: 258px;
+  }
 }
 
 body .btn a.link-voltar i {
@@ -328,6 +333,7 @@ body .btn button.btn-cancelar {
 
 .menu-mobile li a {
   color: #18211a;
+  padding-right: 100px;
 }
 
 .menu-mobile li a:visited {
@@ -447,8 +453,30 @@ body .btn button.btn-cancelar {
   font-weight: 500;
 }
 
+@media screen and (max-width: 639px) {
+  .introducao .bg-pattern .introducao-titulo h1 {
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    color: #18211a;
+    font-size: 2.25em;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+}
+
 .andar h3 {
   margin-bottom: 0px;
+}
+
+@media screen and (max-width: 959px) {
+  .andar .mapa-andar .bg-badge {
+    font-family: Quicksand, Arial, Helvetica, sans-serif;
+    color: #18211a;
+    font-size: 0.875em;
+    line-height: 1.4;
+    font-weight: 500;
+    background: none;
+    color: #f82;
+  }
 }
 
 .andar .bg-badge {
@@ -619,6 +647,18 @@ body .btn button.btn-cancelar {
 .usuarios table th {
   color: #18211a;
   font-weight: bold;
+}
+
+@media screen and (max-width: 487px) {
+  .solicitacao .btn {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 344px) {
+  .solicitacao .btn-cancelar {
+    margin-top: 20px;
+  }
 }
 
 .rodape .dados {

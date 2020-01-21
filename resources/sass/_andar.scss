@@ -3,6 +3,16 @@
         margin-bottom: 0px;
     }
 
+    .mapa-andar {
+        .bg-badge {
+            @include device(s) {
+                @include font(14);
+                background: none;
+                color: $orange;
+            }
+        }
+    }
+
     .bg-badge {
         background: $dark-green;
         font-weight: 700;

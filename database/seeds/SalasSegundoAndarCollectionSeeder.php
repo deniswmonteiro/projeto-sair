@@ -14,7 +14,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 1,
             'sala_nome' => 'Oficina',
-            'sala_localizacao' => [9, 20.5],
+            'sala_localizacao' => [12, 20.5],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 1,
             'coord_circ_lampadas' => [
@@ -29,7 +29,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 2,
             'sala_nome' => 'Sala Prof. 1',
-            'sala_localizacao' => [23, 14],
+            'sala_localizacao' => [25, 14],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 1,
             'coord_circ_lampadas' => [
@@ -44,7 +44,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 3,
             'sala_nome' => 'Sala Prof. 2',
-            'sala_localizacao' => [33, 14],
+            'sala_localizacao' => [35, 14],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 1,
             'coord_circ_lampadas' => [
@@ -59,7 +59,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 4,
             'sala_nome' => 'Sala Prof. 3',
-            'sala_localizacao' => [43, 14],
+            'sala_localizacao' => [45, 14],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 1,
             'coord_circ_lampadas' => [
@@ -74,7 +74,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 5,
             'sala_nome' => 'Sala Prof. 4',
-            'sala_localizacao' => [53, 14],
+            'sala_localizacao' => [55, 14],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 1,
             'coord_circ_lampadas' => [
@@ -89,7 +89,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 6,
             'sala_nome' => 'Sala Prof. 5',
-            'sala_localizacao' => [63, 14],
+            'sala_localizacao' => [65, 14],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 1,
             'coord_circ_lampadas' => [
@@ -104,7 +104,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 7,
             'sala_nome' => 'Sala Prof. 6',
-            'sala_localizacao' => [73, 14],
+            'sala_localizacao' => [75, 14],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [
@@ -131,7 +131,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 9,
             'sala_nome' => 'Circulação',
-            'sala_localizacao' => [28, 52],
+            'sala_localizacao' => [30, 52],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [
@@ -143,7 +143,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 10,
             'sala_nome' => 'Hall',
-            'sala_localizacao' => [22.5, 86],
+            'sala_localizacao' => [24.5, 86],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [
@@ -155,7 +155,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 11,
             'sala_nome' => 'Banheiro Masculino',
-            'sala_localizacao' => [5, 78],
+            'sala_localizacao' => [7, 78],
             'qtd_circ_lampada' => 1,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [
@@ -166,7 +166,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 12,
             'sala_nome' => 'Banheiro Feminino',
-            'sala_localizacao' => [5, 94],
+            'sala_localizacao' => [7, 94],
             'qtd_circ_lampada' => 1,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [
@@ -177,7 +177,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 13,
             'sala_nome' => 'Banheiro PNE',
-            'sala_localizacao' => [10, 86],
+            'sala_localizacao' => [13, 86],
             'qtd_circ_lampada' => 1,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [
@@ -188,7 +188,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 14,
             'sala_nome' => 'Escada',
-            'sala_localizacao' => [35, 87],
+            'sala_localizacao' => [37, 87],
             'qtd_circ_lampada' => 1,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [

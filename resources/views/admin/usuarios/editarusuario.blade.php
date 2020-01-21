@@ -15,7 +15,7 @@
 						<div>
 							<label class="uk-form-label form" for="form-atualizar-nome">{{__('Nome Completo *')}}</label>
 							<div class="uk-form-controls">
-								<input id="form-atualizar-nome" type="text" class="uk-input @error('nome') is-invalid @enderror" name="nome" value="{{$usuarios->nome}}" required autocomplete="nome" autofocus>
+								<input id="form-atualizar-nome" type="text" class="uk-input uk-border-rounded @error('nome') is-invalid @enderror" name="nome" value="{{$usuarios->nome}}" required autocomplete="nome" autofocus>
 								@error('nome')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{$message}}</strong>
@@ -26,7 +26,7 @@
 						<div>
 							<label class="uk-form-label" for="form-atualizar-cpf">{{__('CPF *')}}</label>
 							<div class="uk-form-controls">
-								<input class="uk-input @error('cpf') is-invalid @enderror" name="cpf" value="{{$usuarios->cpf}}" id="form-atualizar-cpf" type="text" placeholder="Somente os números" required autocomplete="cpf">
+								<input class="uk-input uk-border-rounded @error('cpf') is-invalid @enderror" name="cpf" value="{{$usuarios->cpf}}" id="form-atualizar-cpf" type="text" placeholder="Somente os números" required autocomplete="cpf">
 								@error('cpf')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{$message}}</strong>
@@ -39,7 +39,7 @@
 						<div>
 							<label class="uk-form-label" for="form-atualizar-email">{{__('Email *')}}</label>
 							<div class="uk-form-controls">
-								<input id="form-atualizar-email" type="email" class="uk-input @error('email') is-invalid @enderror" name="email" value="{{$usuarios->email}}" required autocomplete="email">
+								<input id="form-atualizar-email" type="email" class="uk-input uk-border-rounded @error('email') is-invalid @enderror" name="email" value="{{$usuarios->email}}" required autocomplete="email">
 								@error('email')
 									<span class="invalid-feedback" role="alert">
 										<strong>{{$message}}</strong>
@@ -49,10 +49,10 @@
 						</div>
 						<div>
 							<label class="uk-form-label" for="form-atualizar-sala-lab">
-								{{__('Sala/Laboratório *')}}
+								{{__('Laboratório *')}}
 							</label>
 							<div class="uk-form-controls">
-								<select class="uk-select" id="form-atualizar-sala-lab" @error('laboratorio') is-invalid @enderror" name="laboratorio" value="{{$usuarios->laboratorio}}" required autocomplete="laboratorio">
+								<select class="uk-select uk-border-rounded" id="form-atualizar-sala-lab" @error('laboratorio') is-invalid @enderror" name="laboratorio" value="{{$usuarios->laboratorio}}" required autocomplete="laboratorio">
 									<option value="" disabled>Escolha uma opção</option>
 									<option value="LabMotriz" @if($usuarios->laboratorio === 'LabMotriz') selected @endif>
                     LabMotriz
@@ -89,7 +89,7 @@
 								{{__('Categoria *')}}
 							</label>
 							<div class="uk-form-controls">
-								<select class="uk-select" id="form-atualizar-usuario" @error('categoria') is-invalid @enderror" name="categoria" value="{{$usuarios->categoria}}" required autocomplete="categoria">
+								<select class="uk-select uk-border-rounded" id="form-atualizar-usuario" @error('categoria') is-invalid @enderror" name="categoria" value="{{$usuarios->categoria}}" required autocomplete="categoria">
 									<option value="" disabled>Escolha uma opção</option>
 									<option value="CEAMAZON" @if($usuarios->categoria === 'CEAMAZON') selected @endif>
                     CEAMAZON

@@ -16,6 +16,10 @@
 
             h1 {
                 @include font(48);
+
+                @include device(xs) {
+                    @include font(36);
+                }
             }
         }
     }
