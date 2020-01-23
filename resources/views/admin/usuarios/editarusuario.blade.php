@@ -4,7 +4,6 @@
   @include("layouts.menu", ["menu" => "editar-usuario"])
   @include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "atualize os dados de usuário", "paginaAtual" => "Usuários"])
 
-
   <section class="uk-section cadastro">
 		<div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body card-cadastro">
@@ -17,7 +16,7 @@
 							<div class="uk-form-controls">
 								<input id="form-atualizar-nome" type="text" class="uk-input uk-border-rounded @error('nome') is-invalid @enderror" name="nome" value="{{$usuarios->nome}}" required autocomplete="nome" autofocus>
 								@error('nome')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -28,7 +27,7 @@
 							<div class="uk-form-controls">
 								<input class="uk-input uk-border-rounded @error('cpf') is-invalid @enderror" name="cpf" value="{{$usuarios->cpf}}" id="form-atualizar-cpf" type="text" placeholder="Somente os números" required autocomplete="cpf">
 								@error('cpf')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -41,7 +40,7 @@
 							<div class="uk-form-controls">
 								<input id="form-atualizar-email" type="email" class="uk-input uk-border-rounded @error('email') is-invalid @enderror" name="email" value="{{$usuarios->email}}" required autocomplete="email">
 								@error('email')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -65,7 +64,7 @@
                   </option>
 								</select>
 								@error('laboratorio')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -78,7 +77,7 @@
 							<div class="uk-form-controls">
 								<input class="uk-input @error('usuario') is-invalid @enderror" name="usuario" value="{{$usuarios->usuario}}" id="form-atualizar-usuario" type="text" placeholder="Mínimo de 6 caracteres" required autocomplete="usuario">
 								@error('usuario')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -99,7 +98,7 @@
                   </option>
 								</select>
 								@error('categoria')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror

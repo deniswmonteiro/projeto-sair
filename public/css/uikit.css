@@ -6072,7 +6072,7 @@ ul.uk-nav-sub {
   color: #f7faf8;
   font-size: 12px;
   font-weight: 700;
-  text-align: center;  /* modified */
+  text-align: left;
 }
 /* Show */
 .uk-tooltip.uk-active {

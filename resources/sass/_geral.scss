@@ -43,8 +43,12 @@ body {
             border-color: $grey;
 
             &:focus {
-                border-color: $green;
+                border-color: $green !important;
             }
+        }
+
+        .uk-text-danger {
+            @include font(14);
         }
 
         .aviso {
@@ -68,6 +72,12 @@ body {
     }
 
     .btn {
+        .uk-button {
+            @include device(xs) {
+                padding: 0 10px;
+            }
+        }
+        
         a {
             display: inline-block;
             transition: 0.4s;

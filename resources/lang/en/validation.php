@@ -135,18 +135,19 @@ return [
         // ],
 
         'nome' => [
-            'required' => 'O nome é obrigatório!',
+            'required' => 'O :attribute é obrigatório!',
         ],
 
         'cpf' => [
             'numeric' => 'O máximo permitido são 11 caracteres.',
-            'required' => 'O CPF é obrigatório!',
-            'unique' => 'Este CPF já está sendo utilizado.',
+            'required' => 'O :attribute é obrigatório!',
+            'unique' => 'Este :attribute já está sendo utilizado.',
         ],
 
         'email' => [
-            'unique' => 'Este email já está sendo utilizado.',
-            'required' => 'O email é obrigatório!',
+            'unique' => 'Este :attribute já está sendo utilizado.',
+            'required' => 'O :attribute é obrigatório!',
+            'regex' => 'O formato de :attribute é inválido.',
         ],
 
         'laboratorio' => [
@@ -154,18 +155,23 @@ return [
         ],
 
         'categoria' => [
-            'required' => 'A categoria é obrigatória!',
+            'required' => 'A :attribute é obrigatória!',
         ],
 
         'usuario' => [
-            'string' => 'O mínimo permitido são 6 caracteres.',
-            'unique' => 'Este usuário já está sendo utilizado.',
-            'required' => 'O usuário é obrigatório!',
+            'min' => 'O mínimo permitido são :min caracteres.',
+            'max' => 'O máximo permitido são :max caracteres.',
+            'unique' => 'Este :attribute já está sendo utilizado.',
+            'required' => 'O :attribute é obrigatório!',
+            'regex' => 'O formato de :attribute é inválido.',
         ],
 
         'password' => [
             'password' => 'A senha está incorreta.',
             'required' => 'A senha é obrigatória!',
+            'min' => 'O mínimo permitido são :min caracteres.',
+            'max' => 'O máximo permitido são :max caracteres.',
+            'regex' => 'O formato de :attribute é inválido.',
         ],
     ],
 

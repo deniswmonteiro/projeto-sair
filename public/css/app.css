@@ -62,7 +62,15 @@ body form input, body form select, body form .uk-search-input {
 }
 
 body form input:focus, body form select:focus, body form .uk-search-input:focus {
-  border-color: #5d7;
+  border-color: #5d7 !important;
+}
+
+body form .uk-text-danger {
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 0.875em;
+  line-height: 1.4;
+  font-weight: 500;
 }
 
 body form .aviso {
@@ -81,6 +89,12 @@ body form .btn-form-senha-modal {
 
 body form i {
   color: #18211a;
+}
+
+@media screen and (max-width: 639px) {
+  body .btn .uk-button {
+    padding: 0 10px;
+  }
 }
 
 body .btn a {
@@ -322,9 +336,14 @@ body .btn button.btn-cancelar {
 }
 
 .menu-mobile li {
-  width: 270px;
+  width: 240px;
   margin-left: -20px;
   padding: 6px 0 6px 20px;
+}
+
+.menu-mobile li.active {
+  background: #9fa;
+  border-radius: 0 10px 10px 0;
 }
 
 .menu-mobile li i {

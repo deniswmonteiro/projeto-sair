@@ -64,9 +64,9 @@
             <a href="#">Sobre</a>
           </li>
           @if(Auth::user()->categoria === 'ADMINISTRADOR')
-            <li class="uk-flex uk-flex-middle">
+            <li class="uk-flex uk-flex-middle @if(request()->is('usuarios') || request()->is('usuarios/gerenciarsolicitacoes')) active @endif">
               <i class="material-icons-round">supervised_user_circle</i>
-              <a href="{{route('usuarios.index')}}" class="@if(request()->is('usuarios') || request()->is('usuarios/gerenciarsolicitacoes')) active @endif">Usuários</a>
+              <a href="{{route('usuarios.index')}}">Usuários</a>
             </li>
           @endif
           <li class="uk-flex uk-flex-middle">
@@ -76,13 +76,13 @@
             </li>
 
           @else
-            <li class="uk-flex uk-flex-middle">
+            <li class="uk-flex uk-flex-middle @if(request()->is('login')) active @endif">
               <i class="material-icons-round">input</i>
               <a href="{{route('login')}}">Login</a>
             </li>            
 
             @if(Route::has('register'))
-              <li class="uk-flex uk-flex-middle">
+              <li class="uk-flex uk-flex-middle @if(request()->is('cadastro')) active @endif">
                 <i class="material-icons-round">assignment</i>
                 <a href="{{route('cadastro.index')}}">Cadastrar-se</a>
               </li>

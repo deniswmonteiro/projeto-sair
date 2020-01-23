@@ -15,7 +15,7 @@
 							<div class="uk-form-controls">
 								<input id="form-cadastro-nome" type="text" class="uk-input uk-border-rounded @error('nome') is-invalid @enderror" name="nome" value="{{old('nome')}}" required autocomplete="nome" autofocus>
 								@error('nome')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -26,7 +26,7 @@
 							<div class="uk-form-controls">
 								<input class="uk-input uk-border-rounded @error('cpf') is-invalid @enderror" name="cpf" value="{{old('cpf')}}" id="form-cadastro-cpf" type="text" placeholder="Somente os números" required autocomplete="cpf">
 								@error('cpf')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -37,7 +37,7 @@
 							<div class="uk-form-controls">
 								<input id="form-cadastro-email" type="email" class="uk-input uk-border-rounded @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autocomplete="email">
 								@error('email')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -57,7 +57,7 @@
 									<option value="LabQuali">LabQuali</option>
 								</select>
 								@error('laboratorio')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -68,7 +68,7 @@
 							<div class="uk-form-controls">
 								<input class="uk-input uk-border-rounded @error('usuario') is-invalid @enderror" name="usuario" value="{{old('usuario')}}" id="form-cadastro-usuario" type="text" placeholder="Mínimo de 6 caracteres" required autocomplete="usuario">
 								@error('usuario')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -77,9 +77,9 @@
 						<div>
 							<label class="uk-form-label" for="form-cadastro-senha">{{__('Senha *')}}</label>
 							<div class="uk-form-controls uk-inline uk-display-block">
-								<input id="form-cadastro-senha" type="password" class="uk-input uk-border-rounded @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Mínimo de 8 caracteres">
+								<input id="form-cadastro-senha" type="password" class="uk-input uk-border-rounded @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Mínimo de 8 caracteres" uk-tooltip="title:Pelo menos uma letra maiuscula<br>Pelo menos um caractere especial (@#$%); pos:bottom-left">
 								@error('password')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -98,7 +98,7 @@
 									<option value="ADMINISTRADOR">ADMINISTRADOR</option>
 								</select>
 								@error('categoria')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror

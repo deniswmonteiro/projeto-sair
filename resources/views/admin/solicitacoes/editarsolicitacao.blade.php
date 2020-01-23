@@ -4,7 +4,7 @@
 	@include("layouts.menu", ["menu" => "editar-solicitacao"])
 	@include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "confirme dados de solicitação", "paginaAtual" => "Solicitação de Cadastro"])
 
-	<section class="uk-section cadastro">
+	<section class="uk-section">
 		<div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body card-cadastro">
 				<form class="uk-form-stacked form" action="{{route('usuarios.cadastro')}}" method="post">
@@ -15,7 +15,7 @@
 							<div class="uk-form-controls">
 								<input id="form-cadastro-nome" type="text" class="uk-input uk-border-rounded @error('nome') is-invalid @enderror" name="nome" value="{{$solicitacoes->nome}}" required autocomplete="nome" autofocus>
 								@error('nome')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -26,7 +26,7 @@
 							<div class="uk-form-controls">
 								<input class="uk-input uk-border-rounded @error('cpf') is-invalid @enderror" name="cpf" value="{{$solicitacoes->cpf}}" id="form-cadastro-cpf" type="text" placeholder="Somente os números" required autocomplete="cpf">
 								@error('cpf')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -37,7 +37,7 @@
 							<div class="uk-form-controls">
 								<input id="form-cadastro-email" type="email" class="uk-input uk-border-rounded @error('email') is-invalid @enderror" name="email" value="{{$solicitacoes->email}}" required autocomplete="email">
 								@error('email')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -63,7 +63,7 @@
 									</option>
 								</select>
 								@error('laboratorio')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -74,7 +74,7 @@
 							<div class="uk-form-controls">
 								<input class="uk-input uk-border-rounded @error('usuario') is-invalid @enderror" name="usuario" value="{{$solicitacoes->usuario}}" id="form-cadastro-usuario" type="text" placeholder="Mínimo de 6 caracteres" required autocomplete="usuario">
 								@error('usuario')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -85,7 +85,7 @@
 							<div class="uk-form-controls uk-inline uk-display-block">
 								<input id="form-cadastro-senha" type="password" class="uk-input uk-border-rounded @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Utilizar CPF">
 								@error('password')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror
@@ -104,7 +104,7 @@
 									<option value="ADMINISTRADOR">ADMINISTRADOR</option>
 								</select>
 								@error('categoria')
-									<span class="invalid-feedback" role="alert">
+									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
 								@enderror

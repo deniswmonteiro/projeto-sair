@@ -17,9 +17,14 @@
     }
 
     li {
-        width: 270px;
+        width: 240px;
         margin-left: -20px;
         padding: 6px 0 6px 20px;
+
+        &.active {
+            background: $light-green;
+            border-radius: 0 10px 10px 0;
+        }
 
         i {
             margin-right: 10px;
