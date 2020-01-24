@@ -22,7 +22,8 @@
         padding: 6px 0 6px 20px;
 
         &.active {
-            background: $light-green;
+            background: rgba(17, 153, 51, 0.1);
+            color: $dark-green;
             border-radius: 0 10px 10px 0;
         }
 

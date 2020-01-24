@@ -342,7 +342,8 @@ body .btn button.btn-cancelar {
 }
 
 .menu-mobile li.active {
-  background: #9fa;
+  background: rgba(17, 153, 51, 0.1);
+  color: #193;
   border-radius: 0 10px 10px 0;
 }
 
