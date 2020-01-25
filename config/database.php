@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Str;
 
+$DATABASE_URL=parse_url('mongodb+srv://denismonteiro:ep10806702@clusterprojetoautomacao-sn33g.mongodb.net/projetoautomacao?retryWrites=true&w=majority');
+
 return [
 
     /*
@@ -36,7 +38,7 @@ return [
     'connections' => [
         'mongodb' => [
             'driver'   => 'mongodb',
-            'host'     => env('MONGO_DB_HOST', 'mongodb+srv://denismonteiro:ep10806702@clusterprojetoautomacao-sn33g.mongodb.net/projetoautomacao?retryWrites=true&w=majority'),
+            'host'     => env('MONGO_DB_HOST', $DATABASE_URL),
             'port'     => env('MONGO_DB_PORT', 27017),
             'database' => env('MONGO_DB_DATABASE', 'projetoautomacao'),
             'username' => env('MONGO_DB_USERNAME', 'denismonteiro'),
