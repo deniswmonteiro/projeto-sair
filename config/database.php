@@ -48,7 +48,7 @@ return [
             // 'database' => 'heroku_06wk9pfg',
 
             'driver' => 'mongodb',
-            'dsn'=>'mongodb://denismonteiro:ep10806702@clusterprojetoautomacao-sn33g.mongodb.net/projetoautomacao?retryWrites=false',
+            'dsn'=>'mongodb://denismonteiro:ep10806702@clusterprojetoautomacao-shard-00-00-sn33g.mongodb.net:27017,clusterprojetoautomacao-shard-00-01-sn33g.mongodb.net:27017,clusterprojetoautomacao-shard-00-02-sn33g.mongodb.net:27017/test?ssl=true&replicaSet=ClusterProjetoAutomacao-shard-0&authSource=admin&retryWrites=true&w=majority',
             'database' => 'projetoautomacao',
         ],
 
