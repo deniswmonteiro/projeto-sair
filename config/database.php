@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-$DATABASE_URL=parse_url('mongodb://heroku_06wk9pfg:5oeq98qdti51pj67kteqajh55c@ds151202.mlab.com:51202/heroku_06wk9pfg');
+// $DATABASE_URL=parse_url('mongodb://heroku_06wk9pfg:5oeq98qdti51pj67kteqajh55c@ds151202.mlab.com:51202/heroku_06wk9pfg');
 
 return [
 
