@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Str;
 
-// $DATABASE_URL=parse_url('mongodb://heroku_06wk9pfg:5oeq98qdti51pj67kteqajh55c@ds151202.mlab.com:51202/heroku_06wk9pfg');
-
 return [
 
     /*
@@ -45,9 +43,13 @@ return [
             // 'password' => env('MONGO_DB_PASSWORD', 'ep10806702'),
             // 'options'  => []
 
+            // 'driver' => 'mongodb',
+            // 'dsn'=>'mongodb://denismonteiro:ep10806702@ds151202.mlab.com:51202/heroku_06wk9pfg?retryWrites=false',
+            // 'database' => 'heroku_06wk9pfg',
+
             'driver' => 'mongodb',
-            'dsn'=>'mongodb://denismonteiro:ep10806702@ds151202.mlab.com:51202/heroku_06wk9pfg?retryWrites=false',
-            'database' => 'heroku_06wk9pfg',
+            'dsn'=>'mongodb+srv://denismonteiro:ep10806702@clusterprojetoautomacao-sn33g.mongodb.net/test?retryWrites=true&w=majority',
+            'database' => 'projetoautomacao',
         ],
 
         'sqlite' => [
