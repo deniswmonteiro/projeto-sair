@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-// $DATABASE_URL=parse_url('mongodb+srv://denismonteiro:ep10806702@clusterprojetoautomacao-sn33g.mongodb.net/projetoautomacao?retryWrites=true&w=majority');
+$DATABASE_URL=parse_url('mongodb+srv://clusterprojetoautomacao-sn33g.mongodb.net/projetoautomacao');
 
 return [
 
