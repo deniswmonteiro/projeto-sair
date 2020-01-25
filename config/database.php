@@ -43,13 +43,9 @@ return [
             // 'password' => env('MONGO_DB_PASSWORD', 'ep10806702'),
             // 'options'  => []
 
-            // 'driver' => 'mongodb',
-            // 'dsn'=>'mongodb://denismonteiro:ep10806702@ds151202.mlab.com:51202/heroku_06wk9pfg?retryWrites=false',
-            // 'database' => 'heroku_06wk9pfg',
-
             'driver' => 'mongodb',
-            'dsn'=>'mongodb://denismonteiro:ep10806702@clusterprojetoautomacao-shard-00-00-sn33g.mongodb.net:27017,clusterprojetoautomacao-shard-00-01-sn33g.mongodb.net:27017,clusterprojetoautomacao-shard-00-02-sn33g.mongodb.net:27017/test?ssl=true&replicaSet=ClusterProjetoAutomacao-shard-0&authSource=admin&retryWrites=true&w=majority',
-            'database' => 'projetoautomacao',
+            'dsn'=>'mongodb://denismonteiro:ep10806702@ds151202.mlab.com:51202/heroku_06wk9pfg?retryWrites=false',
+            'database' => 'heroku_06wk9pfg',
         ],
 
         'sqlite' => [
