@@ -38,7 +38,7 @@ return [
     'connections' => [
         'mongodb' => [
             'driver'   => 'mongodb',
-            'host'     => env('MONGO_DB_HOST', 'mongodb://heroku_06wk9pfg:5oeq98qdti51pj67kteqajh55c@ds151202.mlab.com:51202/heroku_06wk9pfg'),
+            'host'     => env('MONGO_DB_HOST', 'mongodb://denismonteiro:ep10806702@ds151202.mlab.com:51202/heroku_06wk9pfg'),
             'port'     => env('MONGO_DB_PORT', 27017),
             'database' => env('MONGO_DB_DATABASE', 'projetoautomacao'),
             'username' => env('MONGO_DB_USERNAME', 'denismonteiro'),
