@@ -15,6 +15,11 @@ li {
 }
 
 body {
+    img {
+        display: block;
+        max-width: 100%;
+    }
+    
     .notificacao-alerta {
         .alert {
             padding: 15px;

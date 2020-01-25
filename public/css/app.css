@@ -32,6 +32,11 @@ li h3 {
   font-weight: 500;
 }
 
+body img {
+  display: block;
+  max-width: 100%;
+}
+
 body .notificacao-alerta .alert {
   padding: 15px;
   color: #f7faf8;
