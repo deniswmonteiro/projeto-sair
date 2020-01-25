@@ -33,6 +33,7 @@ li h3 {
 }
 
 body img {
+  display: inline-block;
   max-width: 100%;
 }
 
