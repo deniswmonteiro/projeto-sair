@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f28c85bfe3d261e4afeed3dfadbc93b",
+    "content-hash": "0c1cc6ad9dbcfa4146c96c4c3e5e9e09",
     "packages": [
         {
             "name": "andrey-helldar/laravel-app",
@@ -652,16 +652,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v6.11.0",
+            "version": "v6.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "17af23842c259edcfd8c5b9e6a7c86596e040034"
+                "reference": "8e189a8dee7ff76bf50acb7e80aa1a36afaf54d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/17af23842c259edcfd8c5b9e6a7c86596e040034",
-                "reference": "17af23842c259edcfd8c5b9e6a7c86596e040034",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/8e189a8dee7ff76bf50acb7e80aa1a36afaf54d4",
+                "reference": "8e189a8dee7ff76bf50acb7e80aa1a36afaf54d4",
                 "shasum": ""
             },
             "require": {
@@ -736,7 +736,7 @@
                 "moontoast/math": "^1.1",
                 "orchestra/testbench-core": "^4.0",
                 "pda/pheanstalk": "^4.0",
-                "phpunit/phpunit": "^8.4|^9.0",
+                "phpunit/phpunit": "^7.5.15|^8.4|^9.0",
                 "predis/predis": "^1.1.1",
                 "symfony/cache": "^4.3.4"
             },
@@ -795,7 +795,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-01-14T15:12:09+00:00"
+            "time": "2020-01-21T15:10:03+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -3524,16 +3524,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "1.15.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "c3cb2e85cf65917c50e519d64d879c5634336715"
+                "reference": "37f094775814b68d0c6cc8b8ff3c3be243f20725"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/c3cb2e85cf65917c50e519d64d879c5634336715",
-                "reference": "c3cb2e85cf65917c50e519d64d879c5634336715",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/37f094775814b68d0c6cc8b8ff3c3be243f20725",
+                "reference": "37f094775814b68d0c6cc8b8ff3c3be243f20725",
                 "shasum": ""
             },
             "require": {
@@ -3560,7 +3560,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "v2.x-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -3591,7 +3591,7 @@
                 "laravel",
                 "page"
             ],
-            "time": "2020-01-21T07:56:45+00:00"
+            "time": "2020-01-21T17:46:02+00:00"
         },
         {
             "name": "facade/ignition-contracts",
@@ -3795,6 +3795,50 @@
                 "test"
             ],
             "time": "2016-01-20T08:20:44+00:00"
+        },
+        {
+            "name": "heroku/heroku-buildpack-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heroku/heroku-buildpack-php.git",
+                "reference": "0750e81ae47e53a59e1ca2a7139a72b1f2e7ed49"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/0750e81ae47e53a59e1ca2a7139a72b1f2e7ed49",
+                "reference": "0750e81ae47e53a59e1ca2a7139a72b1f2e7ed49",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/heroku-hhvm-apache2",
+                "bin/heroku-hhvm-nginx",
+                "bin/heroku-php-apache2",
+                "bin/heroku-php-nginx"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Zuelke",
+                    "email": "dz@heroku.com"
+                }
+            ],
+            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
+            "homepage": "https://github.com/heroku/heroku-buildpack-php",
+            "keywords": [
+                "apache",
+                "apache2",
+                "foreman",
+                "heroku",
+                "hhvm",
+                "nginx",
+                "php"
+            ],
+            "time": "2020-01-23T22:12:30+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -5398,7 +5442,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "heroku/heroku-buildpack-php": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
