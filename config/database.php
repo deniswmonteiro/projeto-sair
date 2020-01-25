@@ -46,7 +46,7 @@ return [
             // 'options'  => []
 
             'driver' => 'mongodb',
-            'dsn'=>'mongodb://denismonteiro:ep10806702@ds151202.mlab.com:51202/heroku_06wk9pfg',
+            'dsn'=>'mongodb://denismonteiro:ep10806702@ds151202.mlab.com:51202/heroku_06wk9pfg?retryWrites=false',
             'database' => 'heroku_06wk9pfg',
         ],
 
