@@ -4,9 +4,9 @@
 	@include("layouts.menu", ["menu" => "editar-solicitacao"])
 	@include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "confirme dados de solicitação", "paginaAtual" => "Solicitação de Cadastro"])
 
-	<section class="uk-section">
+	<section class="uk-section solicitacao">
 		<div class="uk-container">
-			<div class="uk-card uk-card-default uk-card-body card-cadastro">
+			<div class="uk-card uk-card-default uk-card-body card-editar-solicitacao">
 				<form class="uk-form-stacked form" action="{{route('usuarios.cadastro')}}" method="post">
 					@csrf
 					<div class="uk-child-width-1-3@s uk-margin" uk-grid>

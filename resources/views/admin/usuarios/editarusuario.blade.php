@@ -4,9 +4,9 @@
   @include("layouts.menu", ["menu" => "editar-usuario"])
   @include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "atualize os dados de usuário", "paginaAtual" => "Usuários"])
 
-  <section class="uk-section cadastro">
+  <section class="uk-section usuarios">
 		<div class="uk-container">
-			<div class="uk-card uk-card-default uk-card-body card-cadastro">
+			<div class="uk-card uk-card-default uk-card-body card-editar-usuario">
 				<form class="uk-form-stacked form" action="{{route('usuarios.update', ["usuario" => $usuarios->id])}}" method="post">
           @csrf
           @method("put")
@@ -84,11 +84,11 @@
 							</div>
 						</div>
             <div>
-							<label class="uk-form-label" for="form-atualizar-usuario">
+							<label class="uk-form-label" for="form-atualizar-categoria">
 								{{__('Categoria *')}}
 							</label>
 							<div class="uk-form-controls">
-								<select class="uk-select uk-border-rounded" id="form-atualizar-usuario" @error('categoria') is-invalid @enderror" name="categoria" value="{{$usuarios->categoria}}" required autocomplete="categoria">
+								<select class="uk-select uk-border-rounded" id="form-atualizar-categoria" @error('categoria') is-invalid @enderror" name="categoria" value="{{$usuarios->categoria}}" required autocomplete="categoria">
 									<option value="" disabled>Escolha uma opção</option>
 									<option value="CEAMAZON" @if($usuarios->categoria === 'CEAMAZON') selected @endif>
                     CEAMAZON

@@ -17,6 +17,7 @@ li {
 body {
     img {
         display: block;
+        margin: 0 auto;
     }
 
     .notificacao-alerta {
@@ -29,20 +30,34 @@ body {
                 background-color: $dark-green;
                 border-color: $light-green;
             }
-    
+
             &.alert-warning {
                 background-color: $dark-orange;
                 border-color: $light-orange;
             }
         }
     }
-    
+
+    .card-cadastro,
+    .card-editar-usuario,
+    .card-editar-solicitacao {
+        background: $light-grey;
+        max-width: 990px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+
     form {
-        label, input, input:focus, select {
+        label,
+        input,
+        input:focus,
+        select {
             color: $dark-grey !important;
         }
 
-        input, select, .uk-search-input {
+        input,
+        select,
+        .uk-search-input {
             outline: none;
             border-color: $grey;
 
@@ -78,10 +93,10 @@ body {
     .btn {
         .uk-button {
             @include device(xs) {
-                padding: 0 10px;
+                padding: 0 20px;
             }
         }
-        
+
         a {
             display: inline-block;
             transition: 0.4s;
@@ -94,7 +109,9 @@ body {
                 box-shadow: 0px 0px 0px 3px $dark-grey;
             }
 
-            &.btn-confirmar, &.btn-modal-confirmar, &.btn-acao {
+            &.btn-confirmar,
+            &.btn-modal-confirmar,
+            &.btn-acao {
                 background: $dark-green;
             }
 
@@ -150,4 +167,3 @@ body {
         }
     }
 }
-

@@ -34,6 +34,7 @@ li h3 {
 
 body img {
   display: block;
+  margin: 0 auto;
 }
 
 body .notificacao-alerta .alert {
@@ -52,20 +53,36 @@ body .notificacao-alerta .alert.alert-warning {
   border-color: #fa6;
 }
 
+body .card-cadastro,
+body .card-editar-usuario,
+body .card-editar-solicitacao {
+  background: #f7faf8;
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
 body form {
   /* icone de mostrar/esconder senha */
 }
 
-body form label, body form input, body form input:focus, body form select {
+body form label,
+body form input,
+body form input:focus,
+body form select {
   color: #18211a !important;
 }
 
-body form input, body form select, body form .uk-search-input {
+body form input,
+body form select,
+body form .uk-search-input {
   outline: none;
   border-color: #c1d6c8;
 }
 
-body form input:focus, body form select:focus, body form .uk-search-input:focus {
+body form input:focus,
+body form select:focus,
+body form .uk-search-input:focus {
   border-color: #5d7 !important;
 }
 
@@ -97,7 +114,7 @@ body form i {
 
 @media screen and (max-width: 639px) {
   body .btn .uk-button {
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 
@@ -417,13 +434,6 @@ body .btn button.btn-cancelar {
   border-radius: 4px;
 }
 
-.cadastro .card-cadastro {
-  background: #f7faf8;
-  max-width: 990px;
-  margin: 0 auto;
-  padding: 30px;
-}
-
 .recuperar-senha .card-recuperar-senha {
   background: #f7faf8;
   max-width: 500px;
@@ -654,19 +664,31 @@ body .btn button.btn-cancelar {
   background-color: #5d7 !important;
 }
 
+@media screen and (max-width: 990px) {
+  .usuarios .uk-button {
+    padding: 0 20px;
+  }
+}
+
 @media screen and (max-width: 868px) {
   .usuarios .btn {
     margin-top: 20px;
   }
 }
 
-@media screen and (max-width: 494px) {
+@media screen and (max-width: 454px) {
   .usuarios .btn-solicitacao {
     margin-top: 20px;
   }
 }
 
 @media screen and (max-width: 340px) {
+  .usuarios .btn-confirmar {
+    margin-top: 20px !important;
+  }
+}
+
+@media screen and (max-width: 260px) {
   .usuarios .btn-cancelar {
     margin-top: 20px;
   }
@@ -768,7 +790,7 @@ body .btn button.btn-cancelar {
 }
 
 .andares .card-andar .img-bg-andar {
-  margin: 10px 0 30px 0;
+  margin: 40px auto;
 }
 
 .andares .card-andar .img-bg-andar:last-of-type {
@@ -778,7 +800,7 @@ body .btn button.btn-cancelar {
 @media screen and (min-width: 1200px) {
   .andares ul li:not(.uk-active) {
     opacity: 40%;
-    transition: .4s;
+    transition: 0.4s;
   }
 }
 

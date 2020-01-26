@@ -44,7 +44,6 @@ return [
             // 'options'  => []
 
             'driver' => 'mongodb',
-            // 'dsn'=>'mongodb://denismonteiro:ep10806702@ds139334.mlab.com:39334/projetoautomacao?retryWrites=false',
             'dsn' => 'mongodb+srv://denismonteiro:ep10806702@clusterprojetoautomacao-5yayv.mongodb.net/projetoautomacao?retryWrites=true&w=majority',
             'database' => 'projetoautomacao',
         ],
