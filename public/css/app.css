@@ -34,7 +34,6 @@ li h3 {
 
 body img {
   display: block;
-  max-width: 100%;
 }
 
 body .notificacao-alerta .alert {
@@ -464,6 +463,10 @@ body .btn button.btn-cancelar {
 
 .introducao .bg-pattern .introducao-titulo {
   padding-top: 10px;
+}
+
+.introducao .bg-pattern .introducao-titulo img {
+  margin: 0 auto;
 }
 
 .introducao .bg-pattern .introducao-titulo span {
