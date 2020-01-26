@@ -434,6 +434,12 @@ body .btn button.btn-cancelar {
   border-radius: 4px;
 }
 
+@media screen and (max-width: 392px) {
+  .cadastro .link-voltar-login {
+    margin-top: 20px;
+  }
+}
+
 .recuperar-senha .card-recuperar-senha {
   background: #f7faf8;
   max-width: 500px;
