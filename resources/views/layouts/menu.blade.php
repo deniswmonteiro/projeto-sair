@@ -86,7 +86,7 @@
             <li class="@if(request()->is('login')) active @endif">
               <a href="{{route('login')}}">
                 <i class="material-icons-round">input</i>
-                Login
+                
               </a>
             </li>            
 
