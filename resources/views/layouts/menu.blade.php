@@ -56,7 +56,7 @@
       <img src="{{asset('/img/logo.svg')}}" alt="Logo do site">
     </a>
     <hr class="divisor">
-    <ul>
+    <ul uk-nav>
       @if(Route::has('login'))
         @auth
           <li>
