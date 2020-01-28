@@ -373,11 +373,7 @@ body .btn button.btn-cancelar {
   padding: 5px 100px 5px 20px;
 }
 
-.menu-mobile li a:visited {
-  color: inherit;
-}
-
-.menu-mobile li a:active {
+.menu-mobile li a:visited, .menu-mobile li a:active {
   color: inherit;
 }
 

@@ -31,10 +31,7 @@
             display: flex;
             padding: 5px 100px 5px 20px;
 
-            &:visited {
-                color: inherit;
-            }
-
+            &:visited,
             &:active {
                 color: inherit;
             }

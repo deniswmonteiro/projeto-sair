@@ -92,20 +92,6 @@
                 </a>
               </li>
             @endif
-
-                
-
-            {{-- <li class="uk-flex uk-flex-middle @if(request()->is('login')) active @endif">
-              <i class="material-icons-round">input</i>
-              <a href="{{route('login')}}">Login</a>
-            </li>            
-
-            @if(Route::has('register'))
-              <li class="uk-flex uk-flex-middle @if(request()->is('cadastro')) active @endif">
-                <i class="material-icons-round">assignment</i>
-                <a href="{{route('cadastro.index')}}">Cadastrar-se</a>
-              </li>
-            @endif --}}
           @endauth
         @endif
     </ul>
