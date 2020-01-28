@@ -369,7 +369,7 @@ body .btn button.btn-cancelar {
 }
 
 .menu-mobile li a {
-  display: flex !important;
+  display: inline-flex !important;
   color: #18211a;
   padding: 5px 100px 5px 20px;
 }
