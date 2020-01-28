@@ -368,17 +368,18 @@ body .btn button.btn-cancelar {
   border-radius: 0 10px 10px 0;
 }
 
-.menu-mobile li i {
-  margin-right: 10px;
-}
-
 .menu-mobile li a {
+  display: flex !important;
   color: #18211a;
   padding-right: 100px;
 }
 
 .menu-mobile li a:visited {
   color: inherit;
+}
+
+.menu-mobile li a i {
+  margin-right: 10px;
 }
 
 .login .card-login {

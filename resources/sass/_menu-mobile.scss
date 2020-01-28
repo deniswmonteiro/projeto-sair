@@ -27,16 +27,17 @@
             border-radius: 0 10px 10px 0;
         }
 
-        i {
-            margin-right: 10px;
-        }
-
         a {
+            display: flex !important;
             color: $dark-grey;
             padding-right: 100px;
 
             &:visited {
-              color: inherit;
+                color: inherit;
+            }
+
+            i {
+                margin-right: 10px;
             }
         }
     }

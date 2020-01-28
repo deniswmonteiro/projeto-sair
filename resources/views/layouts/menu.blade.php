@@ -60,31 +60,42 @@
       @if(Route::has('login'))
         @auth
           <li class="uk-flex uk-flex-middle">
-            <i class="material-icons-round">info</i>
-            <a href="#">Sobre</a>
+            <a href="#">
+              <i class="material-icons-round">info</i>
+              Sobre
+            </a>
           </li>
           @if(Auth::user()->categoria === 'ADMINISTRADOR')
-            <li class="uk-flex uk-flex-middle @if(request()->is('usuarios') || request()->is('usuarios/gerenciarsolicitacoes')) active @endif">
-              <i class="material-icons-round">supervised_user_circle</i>
-              <a href="{{route('usuarios.index')}}">Usuários</a>
+            <li class="@if(request()->is('usuarios') || request()->is('usuarios/gerenciarsolicitacoes')) active @endif">
+              <a href="{{route('usuarios.index')}}">
+                <i class="material-icons-round">supervised_user_circle</i>
+                Usuários
+              </a>
             </li>
           @endif
           <li class="uk-flex uk-flex-middle">
+            <a href="#modal-sair" uk-toggle>
               <i class="material-icons-round">exit_to_app</i>
-              <a href="#modal-sair" uk-toggle>Sair</a>
-              @include('components.modal', ['id' => 'modal-sair', 'texto' => 'Deseja realmente sair?'])                    
-            </li>
+              Sair
+            </a>
+            @include('components.modal', 
+              ['id' => 'modal-sair', 'texto' => 'Deseja realmente sair?'])
+          </li>
 
           @else
-            <li class="uk-flex uk-flex-middle @if(request()->is('login')) active @endif">
-              <i class="material-icons-round">input</i>
-              <a href="{{route('login')}}">Login</a>
+            <li class="@if(request()->is('login')) active @endif">
+              <a href="{{route('login')}}">
+                <i class="material-icons-round">input</i>
+                Login
+              </a>
             </li>            
 
             @if(Route::has('register'))
-              <li class="uk-flex uk-flex-middle @if(request()->is('cadastro')) active @endif">
-                <i class="material-icons-round">assignment</i>
-                <a href="{{route('cadastro.index')}}">Cadastrar-se</a>
+              <li class="@if(request()->is('cadastro')) active @endif">
+                <a href="{{route('cadastro.index')}}">
+                  <i class="material-icons-round">assignment</i>
+                  Cadastrar-se
+                </a>
               </li>
             @endif
           @endauth
