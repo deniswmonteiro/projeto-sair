@@ -349,7 +349,7 @@ body .btn button.btn-cancelar {
 }
 
 .menu-mobile {
-  background: #f7faf8;
+  background: red;
 }
 
 .menu-mobile .divisor {
@@ -369,6 +369,9 @@ body .btn button.btn-cancelar {
 }
 
 .menu-mobile li a {
+  display: flex;
+  font-size: 16px;
+  background-color: green;
   color: #18211a;
   padding: 5px 100px 5px 0;
 }
@@ -381,7 +384,7 @@ body .btn button.btn-cancelar {
   color: inherit;
 }
 
-.menu-mobile li i {
+.menu-mobile li a i {
   margin-right: 10px;
 }
 
