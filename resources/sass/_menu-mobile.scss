@@ -19,7 +19,7 @@
     li {
         width: 240px;
         margin-left: -20px;
-        padding: 6px 0;
+        padding: 6px 0 6px 20px;
 
         &.active {
             background: rgba(17, 153, 51, 0.1);
@@ -29,7 +29,7 @@
 
         a {
             color: $dark-grey;
-            padding: 5px 100px 5px 20px;
+            padding: 5px 100px 5px 0;
 
             &:visited {
                 color: inherit;

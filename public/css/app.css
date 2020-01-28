@@ -359,7 +359,7 @@ body .btn button.btn-cancelar {
 .menu-mobile li {
   width: 240px;
   margin-left: -20px;
-  padding: 6px 0;
+  padding: 6px 0 6px 20px;
 }
 
 .menu-mobile li.active {
@@ -370,7 +370,7 @@ body .btn button.btn-cancelar {
 
 .menu-mobile li a {
   color: #18211a;
-  padding: 5px 100px 5px 20px;
+  padding: 5px 100px 5px 0;
 }
 
 .menu-mobile li a:visited {
