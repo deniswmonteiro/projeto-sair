@@ -357,6 +357,8 @@ body .btn button.btn-cancelar {
 }
 
 .menu-mobile li {
+  display: flex;
+  align-items: center;
   width: 260px;
   margin-left: -20px;
   padding: 6px 0;
@@ -369,7 +371,7 @@ body .btn button.btn-cancelar {
 }
 
 .menu-mobile li a {
-  display: inline-flex !important;
+  display: inline-flex;
   color: #18211a;
   padding: 5px 100px 5px 20px;
 }
@@ -382,7 +384,7 @@ body .btn button.btn-cancelar {
   color: inherit;
 }
 
-.menu-mobile li a i {
+.menu-mobile li i {
   margin-right: 10px;
 }
 
