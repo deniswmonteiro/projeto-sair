@@ -56,7 +56,7 @@
       <img src="{{asset('/img/logo.svg')}}" alt="Logo do site">
     </a>
     <hr class="divisor">
-    <ul class="uk-tab-left" uk-tab>
+    <ul>
       @if(Route::has('login'))
         @auth
           <li>
@@ -77,9 +77,22 @@
           </li>
 
           @else
-            <li class="active"><a href="#">Left</a></li>
-            <li><a href="#"><i class="material-icons-round">input</i>Item</a></li>
-            <li><a href="#">Item</a></li>
+            <li class="@if(request()->is('login')) active @endif">
+              <a href="{{route('login')}}">
+                <i class="material-icons-round">input</i>
+                Login
+              </a>
+            </li>
+
+            @if(Route::has('register'))
+              <li @if(request()->is('cadastro')) active @endif">
+                <a href="{{route('cadastro.index')}}">
+                  <i class="material-icons-round">assignment</i>
+                  Cadastrar-se
+                </a>
+              </li>
+            @endif
+
                 
 
             {{-- <li class="uk-flex uk-flex-middle @if(request()->is('login')) active @endif">
