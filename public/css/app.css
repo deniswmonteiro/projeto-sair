@@ -3,7 +3,7 @@ p,
 a,
 li {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
+  color: #18211a;
   font-size: 1em;
   line-height: 1.4;
   font-weight: 500;
@@ -15,7 +15,7 @@ p h1,
 a h1,
 li h1 {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
+  color: #18211a;
   font-size: 2.25em;
   line-height: 1.2;
   font-weight: 500;
@@ -26,7 +26,7 @@ p h3,
 a h3,
 li h3 {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
+  color: #18211a;
   font-size: 1.5em;
   line-height: 1.4;
   font-weight: 500;
@@ -88,7 +88,7 @@ body form .uk-search-input:focus {
 
 body form .uk-text-danger {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
+  color: #18211a;
   font-size: 0.875em;
   line-height: 1.4;
   font-weight: 500;
@@ -145,7 +145,7 @@ body .btn a.btn-solicitacao {
 
 body .btn a.link-voltar-login {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
+  color: #18211a;
   font-size: 1em;
   line-height: 1.4;
   font-weight: 500;
@@ -212,7 +212,7 @@ body .btn button.btn-cancelar {
 
 .navbar .menu li a {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
+  color: #18211a;
   font-size: 1em;
   line-height: 1.4;
   font-weight: 500;
@@ -295,7 +295,7 @@ body .btn button.btn-cancelar {
 
 .navbar.navbar-interno .menu li a {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
+  color: #18211a;
   font-size: 1em;
   line-height: 1.4;
   font-weight: 500;
@@ -357,9 +357,9 @@ body .btn button.btn-cancelar {
 }
 
 .menu-mobile li {
-  width: 240px;
+  width: 260px;
   margin-left: -20px;
-  padding: 6px 0 6px 20px;
+  padding: 6px 0;
 }
 
 .menu-mobile li.active {
@@ -369,14 +369,8 @@ body .btn button.btn-cancelar {
 }
 
 .menu-mobile li a {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
-  font-size: 1em;
-  line-height: 1.4;
-  font-weight: 500;
   display: flex;
-  padding: 5px 100px 5px 0;
-  border-bottom: none !important;
+  padding: 5px 100px 5px 20px;
 }
 
 .menu-mobile li a:visited {
@@ -425,7 +419,7 @@ body .btn button.btn-cancelar {
 
 .login .card-login span.acoes-login a {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
+  color: #18211a;
   font-size: 1em;
   line-height: 1.4;
   font-weight: 500;
@@ -459,7 +453,7 @@ body .btn button.btn-cancelar {
 
 .recuperar-senha .card-recuperar-senha .alerta-logado h4 {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
+  color: #18211a;
   font-size: 1em;
   line-height: 1.4;
   font-weight: 500;
@@ -469,7 +463,7 @@ body .btn button.btn-cancelar {
 
 .recuperar-senha .card-recuperar-senha .alerta-logado .link-voltar-home {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
+  color: #18211a;
   font-size: 1em;
   line-height: 1.4;
   font-weight: 500;
@@ -501,7 +495,7 @@ body .btn button.btn-cancelar {
 
 .introducao .bg-pattern .introducao-titulo h1 {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
+  color: #18211a;
   font-size: 3em;
   line-height: 1.2;
   font-weight: 500;
@@ -510,7 +504,7 @@ body .btn button.btn-cancelar {
 @media screen and (max-width: 639px) {
   .introducao .bg-pattern .introducao-titulo h1 {
     font-family: Quicksand, Arial, Helvetica, sans-serif;
-    color: #18211a !important;
+    color: #18211a;
     font-size: 2.25em;
     line-height: 1.2;
     font-weight: 500;
@@ -524,7 +518,7 @@ body .btn button.btn-cancelar {
 @media screen and (max-width: 959px) {
   .andar .mapa-andar .bg-badge {
     font-family: Quicksand, Arial, Helvetica, sans-serif;
-    color: #18211a !important;
+    color: #18211a;
     font-size: 0.875em;
     line-height: 1.4;
     font-weight: 500;
@@ -549,7 +543,7 @@ body .btn button.btn-cancelar {
 
 .andar .legenda li a {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a !important;
+  color: #18211a;
   font-size: 0.875em;
   line-height: 1.4;
   font-weight: 500;

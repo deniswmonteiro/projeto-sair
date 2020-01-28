@@ -85,7 +85,7 @@
             </li>
 
             @if(Route::has('register'))
-              <li @if(request()->is('cadastro')) active @endif">
+              <li class="@if(request()->is('cadastro')) active @endif">
                 <a href="{{route('cadastro.index')}}">
                   <i class="material-icons-round">assignment</i>
                   Cadastrar-se
