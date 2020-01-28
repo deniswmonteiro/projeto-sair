@@ -17,9 +17,7 @@
     }
 
     li {
-        display: flex;
-        align-items: center;
-        width: 260px;
+        width: 240px;
         margin-left: -20px;
         padding: 6px 0;
 
@@ -30,7 +28,6 @@
         }
 
         a {
-            display: inline-flex;
             color: $dark-grey;
             padding: 5px 100px 5px 20px;
 
