@@ -10,7 +10,7 @@
 }
 
 .menu-mobile {
-    background: red;
+    background: $light-grey;
 
     .divisor {
         border-top: 1px solid rgba(17, 153, 51, 0.1);
@@ -28,11 +28,10 @@
         }
 
         a {
+            @include font(16);
             display: flex;
-            font-size: 16px;
-            background-color: green;
-            color: $dark-grey;
             padding: 5px 100px 5px 0;
+            border-bottom: none !important;
 
             &:visited {
                 color: inherit;

@@ -20,7 +20,7 @@ $default-font: Quicksand, Arial, Helvetica, sans-serif;
 
 @mixin font($size) {
     font-family: $default-font;
-    color: $dark-grey;
+    color: $dark-grey !important;
 
     @if $size == 14 {
         font-size: em(14);

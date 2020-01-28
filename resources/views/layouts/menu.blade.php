@@ -77,9 +77,9 @@
           </li>
 
           @else
-                  <li class="uk-active"><a href="#">Left</a></li>
-                  <li><a href="#"><i class="material-icons-round">input</i>Item</a></li>
-                  <li><a href="#">Item</a></li>
+            <li class="active"><a href="#">Left</a></li>
+            <li><a href="#"><i class="material-icons-round">input</i>Item</a></li>
+            <li><a href="#">Item</a></li>
                 
 
             {{-- <li class="uk-flex uk-flex-middle @if(request()->is('login')) active @endif">
