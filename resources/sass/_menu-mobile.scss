@@ -17,9 +17,9 @@
     }
 
     li {
-        width: 240px;
+        width: 260px;
         margin-left: -20px;
-        padding: 6px 0 6px 20px;
+        padding: 6px 0;
 
         &.active {
             background: rgba(17, 153, 51, 0.1);
@@ -30,9 +30,13 @@
         a {
             display: flex !important;
             color: $dark-grey;
-            padding-right: 100px;
+            padding: 5px 100px 5px 20px;
 
             &:visited {
+                color: inherit;
+            }
+
+            &:active {
                 color: inherit;
             }
 
