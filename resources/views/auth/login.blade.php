@@ -49,11 +49,11 @@
 							<a class="uk-button" href="{{route('cadastro.index')}}">Cadastrar-se</a>
 						</span>
 					</div>
-					<div class="uk-text-left btn">
+					<div class="uk-text-left uk-flex btn">
+						<a href="#" class="uk-button btn-confirmar uk-flex-last@s" onclick="event.preventDefault(); document.querySelector('form.login').submit()">{{__('Entrar')}}</a>
 						<a href="{{route('home')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>
-						<a href="#" class="uk-button btn-confirmar" onclick="event.preventDefault(); document.querySelector('form.login').submit()">{{__('Entrar')}}</a>
 					</div>
 				</form>
 			</div>

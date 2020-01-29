@@ -121,6 +121,12 @@ body form i {
 }
 
 @media screen and (max-width: 639px) {
+  body .btn {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 639px) {
   body .btn .uk-button {
     padding: 0 20px;
   }
@@ -143,8 +149,22 @@ body .btn a.btn-confirmar, body .btn a.btn-modal-confirmar, body .btn a.btn-acao
   background: #193;
 }
 
+@media screen and (max-width: 639px) {
+  body .btn a.btn-confirmar, body .btn a.btn-modal-confirmar, body .btn a.btn-acao {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
 body .btn a.btn-cancelar {
   background: #f32;
+}
+
+@media screen and (max-width: 639px) {
+  body .btn a.btn-cancelar {
+    display: block;
+    margin-right: 0 !important;
+  }
 }
 
 body .btn a.btn-solicitacao {

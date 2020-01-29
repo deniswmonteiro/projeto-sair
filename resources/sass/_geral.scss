@@ -95,6 +95,10 @@ body {
     }
 
     .btn {
+        @include device(xs) {
+            display: block !important;
+        }
+
         .uk-button {
             @include device(xs) {
                 padding: 0 20px;
@@ -117,10 +121,20 @@ body {
             &.btn-modal-confirmar,
             &.btn-acao {
                 background: $dark-green;
+
+                @include device(xs) {
+                    display: block;
+                    margin-bottom: 20px;
+                }
             }
 
             &.btn-cancelar {
                 background: $red;
+
+                @include device(xs) {
+                    display: block;
+                    margin-right: 0 !important;
+                }
             }
 
             &.btn-solicitacao {
