@@ -4,7 +4,7 @@
 	@include("layouts.menu", ["menu" => "login"])
 	<section class="uk-section login">
     <div class="uk-container">
-			<div class="uk-card uk-card-default uk-card-body card-login">
+			<div class="uk-card uk-card-default uk-card-body bg-card-form">
 				<h1>Fazer Login</h1>
 				<form method="post" action="{{route('login')}}" class="uk-form-stacked login">
 					@csrf
@@ -39,7 +39,7 @@
 							{{__('Lembrar senha')}}
 						</label>
 					</div>
-					<div class="uk-margin">
+					<div class="uk-margin-medium">
 						<span class="acoes-login">
 							@if(Route::has('password.request'))
 								<a class="uk-button" href="{{route('password.request')}}">Esqueceu a senha?</a>
@@ -49,7 +49,7 @@
 							<a class="uk-button" href="{{route('cadastro.index')}}">Cadastrar-se</a>
 						</span>
 					</div>
-					<div class="uk-text-left uk-flex btn">
+					<div class="uk-flex btn">
 						<a href="#" class="uk-button btn-confirmar uk-flex-last@s" onclick="event.preventDefault(); document.querySelector('form.login').submit()">{{__('Entrar')}}</a>
 						<a href="{{route('home')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}

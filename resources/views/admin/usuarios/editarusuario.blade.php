@@ -6,7 +6,7 @@
 
   <section class="uk-section usuarios">
 		<div class="uk-container">
-			<div class="uk-card uk-card-default uk-card-body card-editar-usuario">
+			<div class="uk-card uk-card-default uk-card-body bg-card-form">
 				<form class="uk-form-stacked form" action="{{route('usuarios.update', ["usuario" => $usuarios->id])}}" method="post">
           @csrf
           @method("put")

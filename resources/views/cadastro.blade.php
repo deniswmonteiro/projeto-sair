@@ -6,7 +6,7 @@
 
 	<section class="uk-section cadastro">
 		<div class="uk-container">
-			<div class="uk-card uk-card-default uk-card-body card-cadastro">
+			<div class="uk-card uk-card-default uk-card-body bg-card-form">
 				<form class="uk-form-stacked cadastro" action="{{route('cadastro.store')}}" method="post">
 					@csrf
 					<div class="uk-child-width-1-3@s uk-margin" uk-grid>
@@ -76,7 +76,7 @@
 						</div>
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
-					<div class="uk-margin-medium-top btn">
+					<div class="btn">
 						<a href="#" class="uk-button uk-margin-small-right btn-confirmar" onclick="event.preventDefault(); document.querySelector('form.cadastro').submit()">
 							{{__('Cadastrar')}}
 						</a>

@@ -38,9 +38,7 @@ body {
         }
     }
 
-    .card-cadastro,
-    .card-editar-usuario,
-    .card-editar-solicitacao {
+    .bg-card-form {
         background: $light-grey;
         max-width: 990px;
         margin: 0 auto;
@@ -49,120 +47,143 @@ body {
         @include device(xs) {
             padding: 20px;
         }
-    }
 
-    form {
-        label,
-        input,
-        input:focus,
-        select {
-            color: $dark-grey !important;
-        }
-
-        input,
-        select,
-        .uk-search-input {
-            outline: none;
-            border-color: $grey;
-
-            &:focus {
-                border-color: $green !important;
+        form {
+            label,
+            input,
+            input:focus,
+            select {
+                color: $dark-grey !important;
             }
-        }
 
-        .uk-text-danger {
-            @include font(14);
-        }
+            input,
+            select,
+            .uk-search-input {
+                outline: none;
+                border-color: $grey;
 
-        .aviso {
-            color: $dark-red;
-        }
-
-        /* icone de mostrar/esconder senha */
-        .btn-form-senha-modal {
-            height: 40px;
-            background: $green;
-            border: none;
-            cursor: pointer;
-            border-radius: 0 5px 5px 0;
-            outline: none;
-            color: $dark-grey;
-        }
-
-        i {
-            color: $dark-grey;
-        }
-    }
-
-    .btn {
-        @include device(xs) {
-            display: block !important;
-        }
-
-        .uk-button {
-            @include device(xs) {
-                padding: 0 20px;
+                &:focus {
+                    border-color: $green !important;
+                }
             }
-        }
 
-        a {
-            display: inline-block;
-            transition: 0.4s;
-            font-weight: 700;
-            color: $light-grey;
-            border-radius: 4px;
+            .uk-text-danger {
+                @include font(14);
+            }
 
-            &:hover {
+            .aviso {
+                color: $dark-red;
+            }
+
+            /* icone de mostrar/esconder senha */
+            .btn-form-senha-modal {
+                height: 40px;
+                background: $green;
+                border: none;
+                cursor: pointer;
+                border-radius: 0 5px 5px 0;
+                outline: none;
                 color: $dark-grey;
-                box-shadow: 0px 0px 0px 3px $dark-grey;
             }
 
-            &.btn-confirmar,
-            &.btn-modal-confirmar,
-            &.btn-acao {
-                background: $dark-green;
+            i {
+                color: $dark-grey;
+            }
+        }
+
+        .btn {
+            margin-top: 40px;
+
+            @include device(xs) {
+                display: block !important;
+            }
+
+            a {
+                display: inline-block;
+                transition: 0.4s;
+                font-weight: 700;
+                color: $light-grey;
+                border-radius: 4px;
 
                 @include device(xs) {
-                    display: block;
-                    margin-bottom: 20px;
-                }
-            }
-
-            &.btn-cancelar {
-                background: $red;
-
-                @include device(xs) {
-                    display: block;
-                    margin-right: 0 !important;
-                }
-            }
-
-            &.btn-solicitacao {
-                background: $dark-orange;
-            }
-
-            &.link-voltar-login {
-                @include font(16);
-                color: $dark-orange !important;
-                padding: 8px 13px;
-
-                &.inicial {
-                    text-transform: initial;
-                }
-            }
-
-            &.link-voltar {
-                position: absolute;
-                top: 272px;
-                padding: 10px;
-                border-radius: 50%;
-
-                @include device(xs) {
-                    top: 258px;
+                    padding: 0 20px;
                 }
 
-                i {
-                    vertical-align: middle;
+                &:hover {
+                    color: $dark-grey;
+                    box-shadow: 0px 0px 0px 3px $dark-grey;
+                }
+
+                &.btn-confirmar,
+                &.btn-modal-confirmar,
+                &.btn-acao {
+                    background: $dark-green;
+
+                    @include device(xs) {
+                        display: block;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                &.btn-cancelar {
+                    background: $red;
+
+                    @include device(xs) {
+                        display: block;
+                        margin-right: 0 !important;
+                    }
+                }
+
+                &.btn-solicitacao {
+                    background: $dark-orange;
+                }
+
+                &.link-voltar-login {
+                    @include font(16);
+                    color: $dark-orange !important;
+                    padding: 8px 13px;
+
+                    @include device(xs) {
+                        padding: 0;
+
+                        &::before {
+                            content: "⟵";
+                            color: $dark-orange;
+                            animation: seta 0.5s ease-in 0s infinite alternate;
+                            position: relative;
+                            margin-left: 30px;
+                            margin-right: -20px;
+                        }
+
+                        @keyframes seta {
+                            from {
+                                right: 30px;
+                            }
+
+                            to {
+                                right: 20px;
+                            }
+                        }
+                    }
+
+                    &.inicial {
+                        text-transform: initial;
+                    }
+                }
+
+                &.link-voltar {
+                    position: absolute;
+                    top: 272px;
+                    padding: 10px;
+                    border-radius: 50%;
+
+                    @include device(xs) {
+                        top: 258px;
+                    }
+
+                    i {
+                        vertical-align: middle;
+                    }
                 }
             }
         }

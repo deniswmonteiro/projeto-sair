@@ -1,24 +1,6 @@
 .login {
-    .card-login {
-        background: $light-grey;
+    .bg-card-form {
         max-width: 500px;
-        margin: 0 auto;
-        padding: 30px;
-
-        input {
-            outline: none;
-            border-color: $grey;
-
-            &:focus {
-                border-color: $green;
-            }
-        }
-
-        label,
-        input,
-        input:focus {
-            color: $dark-grey;
-        }
 
         span.acoes-login {
             &:first-of-type::after {
@@ -50,16 +32,3 @@
         }
     }
 }
-
-//     &.modal-notificacao {
-//         i {
-//             color: $green;
-//         }
-
-//         p {
-//             @include font(16);
-//             margin-bottom: 0;
-//             margin-top: 0;
-//         }
-//     }
-// }
