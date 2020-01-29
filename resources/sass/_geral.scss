@@ -147,6 +147,10 @@ body {
                     @include device(xs) {
                         padding: 10px 0;
 
+                        &:hover {
+                            box-shadow: none;
+                        }
+
                         &::before {
                             content: "⟵";
                             color: $dark-orange;

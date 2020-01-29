@@ -187,6 +187,9 @@ body .bg-card-form .btn a.link-voltar-login {
   body .bg-card-form .btn a.link-voltar-login {
     padding: 10px 0;
   }
+  body .bg-card-form .btn a.link-voltar-login:hover {
+    box-shadow: none;
+  }
   body .bg-card-form .btn a.link-voltar-login::before {
     content: "⟵";
     color: #d60;
