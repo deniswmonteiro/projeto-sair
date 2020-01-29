@@ -59,16 +59,13 @@ body .bg-card-form {
   max-width: 990px;
   margin: 0 auto;
   padding: 30px;
+  /* icone de mostrar/esconder senha */
 }
 
 @media screen and (max-width: 639px) {
   body .bg-card-form {
     padding: 20px;
   }
-}
-
-body .bg-card-form form {
-  /* icone de mostrar/esconder senha */
 }
 
 body .bg-card-form form label,
@@ -103,7 +100,7 @@ body .bg-card-form form .aviso {
   color: #e21;
 }
 
-body .bg-card-form form .btn-form-senha-modal {
+body .bg-card-form .btn-form-senha-modal {
   height: 40px;
   background: #5d7;
   border: none;
@@ -113,21 +110,21 @@ body .bg-card-form form .btn-form-senha-modal {
   color: #18211a;
 }
 
-body .bg-card-form form i {
+body .bg-card-form i {
   color: #18211a;
 }
 
-body .bg-card-form .btn {
+body .btn {
   margin-top: 40px;
 }
 
 @media screen and (max-width: 639px) {
-  body .bg-card-form .btn {
+  body .btn {
     display: block !important;
   }
 }
 
-body .bg-card-form .btn a {
+body .btn a {
   display: inline-block;
   transition: 0.4s;
   font-weight: 700;
@@ -136,44 +133,44 @@ body .bg-card-form .btn a {
 }
 
 @media screen and (max-width: 639px) {
-  body .bg-card-form .btn a {
+  body .btn a {
     padding: 0 20px;
   }
 }
 
-body .bg-card-form .btn a:hover {
+body .btn a:hover {
   color: #18211a;
   box-shadow: 0px 0px 0px 3px #18211a;
 }
 
-body .bg-card-form .btn a.btn-confirmar, body .bg-card-form .btn a.btn-modal-confirmar, body .bg-card-form .btn a.btn-acao {
+body .btn a.btn-confirmar, body .btn a.btn-modal-confirmar, body .btn a.btn-acao {
   background: #193;
 }
 
 @media screen and (max-width: 639px) {
-  body .bg-card-form .btn a.btn-confirmar, body .bg-card-form .btn a.btn-modal-confirmar, body .bg-card-form .btn a.btn-acao {
+  body .btn a.btn-confirmar, body .btn a.btn-modal-confirmar, body .btn a.btn-acao {
     display: block;
     margin-bottom: 20px;
     margin-right: 0 !important;
   }
 }
 
-body .bg-card-form .btn a.btn-cancelar {
+body .btn a.btn-cancelar {
   background: #f32;
 }
 
 @media screen and (max-width: 639px) {
-  body .bg-card-form .btn a.btn-cancelar {
+  body .btn a.btn-cancelar {
     display: block;
     margin-right: 0 !important;
   }
 }
 
-body .bg-card-form .btn a.btn-solicitacao {
+body .btn a.btn-solicitacao {
   background: #d60;
 }
 
-body .bg-card-form .btn a.link-voltar-login {
+body .btn a.link-voltar-login {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
   color: #18211a;
   font-size: 1em;
@@ -184,13 +181,13 @@ body .bg-card-form .btn a.link-voltar-login {
 }
 
 @media screen and (max-width: 639px) {
-  body .bg-card-form .btn a.link-voltar-login {
+  body .btn a.link-voltar-login {
     padding: 10px 0;
   }
-  body .bg-card-form .btn a.link-voltar-login:hover {
+  body .btn a.link-voltar-login:hover {
     box-shadow: none;
   }
-  body .bg-card-form .btn a.link-voltar-login::before {
+  body .btn a.link-voltar-login::before {
     content: "⟵";
     color: #d60;
     animation: seta 0.5s ease-in 0s infinite alternate;
@@ -208,11 +205,11 @@ body .bg-card-form .btn a.link-voltar-login {
   }
 }
 
-body .bg-card-form .btn a.link-voltar-login.inicial {
+body .btn a.link-voltar-login.inicial {
   text-transform: initial;
 }
 
-body .bg-card-form .btn a.link-voltar {
+body .btn a.link-voltar {
   position: absolute;
   top: 272px;
   padding: 10px;
@@ -220,16 +217,16 @@ body .bg-card-form .btn a.link-voltar {
 }
 
 @media screen and (max-width: 639px) {
-  body .bg-card-form .btn a.link-voltar {
+  body .btn a.link-voltar {
     top: 258px;
   }
 }
 
-body .bg-card-form .btn a.link-voltar i {
+body .btn a.link-voltar i {
   vertical-align: middle;
 }
 
-body .bg-card-form button {
+body button {
   display: inline-block;
   transition: 0.4s;
   font-weight: 700;
@@ -237,12 +234,12 @@ body .bg-card-form button {
   border-radius: 4px;
 }
 
-body .bg-card-form button:hover {
+body button:hover {
   color: #18211a;
   box-shadow: 0px 0px 0px 3px #18211a;
 }
 
-body .bg-card-form button.btn-cancelar {
+body button.btn-cancelar {
   background: #f32;
 }
 
