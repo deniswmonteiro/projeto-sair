@@ -715,7 +715,11 @@ body button.btn-cancelar {
 }
 
 .modal h3 {
-  font-size: 24px;
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+  color: #18211a;
+  font-size: 1.5em;
+  line-height: 1.4;
+  font-weight: 500;
 }
 
 .rodape .dados {
