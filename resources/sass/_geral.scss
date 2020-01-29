@@ -126,7 +126,7 @@ body {
             &.link-voltar-login {
                 @include font(16);
                 color: $dark-orange !important;
-                padding: 8px 10px;
+                padding: 8px;
 
                 &.inicial {
                     text-transform: initial;
