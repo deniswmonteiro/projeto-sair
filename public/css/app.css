@@ -421,6 +421,7 @@ body button.btn-cancelar {
 }
 
 .menu-mobile li a {
+  color: #18211a;
   display: flex;
   padding: 5px 100px 5px 20px;
 }
@@ -466,38 +467,6 @@ body button.btn-cancelar {
 
 .login .bg-card-form .check-lembrar-senha {
   border-radius: 4px;
-}
-
-.recuperar-senha .card-recuperar-senha {
-  background: #f7faf8;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 30px;
-}
-
-.recuperar-senha .card-recuperar-senha .alerta-logado h4 {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a;
-  font-size: 1em;
-  line-height: 1.4;
-  font-weight: 500;
-  color: #f82;
-  font-size: 1.125em;
-}
-
-.recuperar-senha .card-recuperar-senha .alerta-logado .link-voltar-home {
-  font-family: Quicksand, Arial, Helvetica, sans-serif;
-  color: #18211a;
-  font-size: 1em;
-  line-height: 1.4;
-  font-weight: 500;
-  color: #193 !important;
-  transition: 0.4s;
-  margin-top: 20px;
-}
-
-.recuperar-senha .card-recuperar-senha .alerta-logado .link-voltar-home:hover {
-  color: #5d7 !important;
 }
 
 .introducao {
@@ -743,6 +712,10 @@ body button.btn-cancelar {
   .solicitacao .btn-cancelar {
     margin-top: 20px;
   }
+}
+
+.modal h3 {
+  font-size: 24px;
 }
 
 .rodape .dados {

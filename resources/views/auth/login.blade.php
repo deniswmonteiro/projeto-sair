@@ -50,7 +50,7 @@
 						</span>
 					</div>
 					<div class="uk-flex btn">
-						<a href="#" class="uk-button btn-confirmar uk-flex-last@s" onclick="event.preventDefault(); document.querySelector('form.login').submit()">{{__('Entrar')}}</a>
+						<a href="#" class="uk-button uk-flex-last@s btn-confirmar" onclick="event.preventDefault(); document.querySelector('form.login').submit()">{{__('Entrar')}}</a>
 						<a href="{{route('home')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>

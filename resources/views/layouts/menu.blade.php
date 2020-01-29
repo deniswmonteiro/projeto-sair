@@ -60,18 +60,23 @@
       @if(Route::has('login'))
         @auth
           <li>
-            <i class="material-icons-round">info</i>
-            <a href="#">Sobre</a>
+            <a href="#">
+              <i class="material-icons-round">info</i>
+              Sobre
+            </a>
           </li>
           @if(Auth::user()->categoria === 'ADMINISTRADOR')
-            <li class="uk-flex uk-flex-middle @if(request()->is('usuarios') || request()->is('usuarios/gerenciarsolicitacoes')) active @endif">
-              <i class="material-icons-round">supervised_user_circle</i>
-              <a href="{{route('usuarios.index')}}">Usuários</a>
+            <li class=" @if(request()->is('usuarios') || request()->is('usuarios/gerenciarsolicitacoes')) active @endif">
+              <a href="{{route('usuarios.index')}}">
+                <i class="material-icons-round">supervised_user_circle</i>
+                Usuários</a>
             </li>
           @endif
-          <li class="uk-flex uk-flex-middle">
-            <i class="material-icons-round">exit_to_app</i>
-            <a href="#modal-sair" uk-toggle>Sair</a>
+          <li>
+            <a href="#modal-sair" uk-toggle>
+              <i class="material-icons-round">exit_to_app</i>
+              Sair
+            </a>
             @include('components.modal', 
               ['id' => 'modal-sair', 'texto' => 'Deseja realmente sair?'])
           </li>
