@@ -77,7 +77,7 @@
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
 					<div class="btn">
-						<a href="#" class="uk-button uk-margin-small-right btn-confirmar" onclick="event.preventDefault(); document.querySelector('form.cadastro').submit()">
+						<a href="#" class="uk-button uk-margin-right btn-confirmar" onclick="event.preventDefault(); document.querySelector('form.cadastro').submit()">
 							{{__('Cadastrar')}}
 						</a>
 						<a href="{{route('login')}}" class="uk-link-reset link-voltar-login">

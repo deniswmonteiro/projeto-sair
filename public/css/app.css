@@ -154,6 +154,7 @@ body .bg-card-form .btn a.btn-confirmar, body .bg-card-form .btn a.btn-modal-con
   body .bg-card-form .btn a.btn-confirmar, body .bg-card-form .btn a.btn-modal-confirmar, body .bg-card-form .btn a.btn-acao {
     display: block;
     margin-bottom: 20px;
+    margin-right: 0 !important;
   }
 }
 
@@ -184,7 +185,7 @@ body .bg-card-form .btn a.link-voltar-login {
 
 @media screen and (max-width: 639px) {
   body .bg-card-form .btn a.link-voltar-login {
-    padding: 0;
+    padding: 10px 0;
   }
   body .bg-card-form .btn a.link-voltar-login::before {
     content: "⟵";
