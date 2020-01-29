@@ -45,6 +45,10 @@ body {
         max-width: 990px;
         margin: 0 auto;
         padding: 30px;
+
+        @include device(xs) {
+            padding: 20px;
+        }
     }
 
     form {
@@ -126,7 +130,7 @@ body {
             &.link-voltar-login {
                 @include font(16);
                 color: $dark-orange !important;
-                padding: 8px;
+                padding: 8px 13px;
 
                 &.inicial {
                     text-transform: initial;
