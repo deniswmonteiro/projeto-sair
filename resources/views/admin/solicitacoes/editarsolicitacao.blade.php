@@ -112,11 +112,11 @@
 						</div>
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
-					<div class="uk-margin-medium-top btn">
+					<div class="uk-flex btn">
+						<a href="#" class="uk-button uk-flex-last@s btn-confirmar">{{__('Cadastrar')}}</a>
 						<a href="{{route('gerenciarsolicitacoes.index')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>
-						<a href="#" class="uk-button btn-confirmar">{{__('Cadastrar')}}</a>
 					</div>
 				</form>
 			</div>

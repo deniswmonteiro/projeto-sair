@@ -11,7 +11,7 @@
           <a href="" class="uk-search-icon-flip" uk-search-icon></a>
           <input class="uk-search-input uk-border-rounded" type="search" placeholder="Procurar usuário">
         </form>
-        <div class="uk-display-inline-block btn">
+        <div class="uk-display-inline-block btn btn-usuarios-acao">
           <a href="{{route('usuarios.index')}}" class="uk-button btn-cancelar">{{__('Voltar')}}</a>
         </div>
       </div>
@@ -34,12 +34,12 @@
                 <td>{{$solicitacao->usuario}}</td>
                 <td>{{$solicitacao->laboratorio}}</td>
                 <td>
-                  <div class="btn">
+                  <div class="uk-flex-button btn">
                     <a href="{{route('gerenciarsolicitacoes.visualizar', ['gerenciarsolicitacao' => $solicitacao->id])}}" class="uk-button uk-margin-right btn-acao">{{__('Visualizar')}}</a>
-                    <form action="{{route('gerenciarsolicitacoes.destroy', ['gerenciarsolicitaco' => $solicitacao->id])}}" method="post" class="uk-display-inline-block">
+                    <form action="{{route('gerenciarsolicitacoes.destroy', ['gerenciarsolicitaco' => $solicitacao->id])}}" method="post" class="uk-display-inline-block form-btn-submit">
                       @csrf
                       @method("delete")
-                      <button type="submit" class="uk-button btn-cancelar">{{__('Remover')}}</button>
+                      <button type="submit" class="uk-button uk-width-1-1 btn-cancelar">{{__('Remover')}}</button>
                   </form>
                   </div>
                 </td>

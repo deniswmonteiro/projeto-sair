@@ -1,8 +1,19 @@
 .usuarios {
-    .btn {
-        margin-top: 0;
+    table {
+        th {
+            color: $dark-grey;
+            font-weight: bold;
+        }
 
+        .btn {
+            margin-top: 0;
+        }
+    }
+
+    .btn {
         &.btn-usuarios-acao {
+            margin-top: 0;
+
             @media screen and (max-width: 868px) {
                 margin-top: 20px;
             }
@@ -14,10 +25,5 @@
                 padding: 0 20px;
             }
         }
-    }
-
-    table th {
-        color: $dark-grey;
-        font-weight: bold;
     }
 }

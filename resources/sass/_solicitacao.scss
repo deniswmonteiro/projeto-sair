@@ -1,13 +1,29 @@
 .solicitacao {
-    @media screen and (max-width: 487px) {
+    table {
+        th {
+            color: $dark-grey;
+            font-weight: bold;
+        }
+
         .btn {
-            margin-top: 20px;
+            margin-top: 0;
         }
     }
 
-    @media screen and (max-width: 344px) {
-        .btn-cancelar {
-            margin-top: 20px;
+    .btn {
+        &.btn-usuarios-acao {
+            margin-top: 0;
+
+            @media screen and (max-width: 868px) {
+                margin-top: 20px;
+            }
+        }
+
+        @media screen and (max-width: 990px) {
+            .btn-acao,
+            .btn-cancelar {
+                padding: 0 20px;
+            }
         }
     }
 }

@@ -679,7 +679,16 @@ body .btn .form-btn-submit button.btn-cancelar {
   background-color: #5d7 !important;
 }
 
-.usuarios .btn {
+.usuarios table th {
+  color: #18211a;
+  font-weight: bold;
+}
+
+.usuarios table .btn {
+  margin-top: 0;
+}
+
+.usuarios .btn.btn-usuarios-acao {
   margin-top: 0;
 }
 
@@ -696,20 +705,29 @@ body .btn .form-btn-submit button.btn-cancelar {
   }
 }
 
-.usuarios table th {
+.solicitacao table th {
   color: #18211a;
   font-weight: bold;
 }
 
-@media screen and (max-width: 487px) {
-  .solicitacao .btn {
+.solicitacao table .btn {
+  margin-top: 0;
+}
+
+.solicitacao .btn.btn-usuarios-acao {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 868px) {
+  .solicitacao .btn.btn-usuarios-acao {
     margin-top: 20px;
   }
 }
 
-@media screen and (max-width: 344px) {
-  .solicitacao .btn-cancelar {
-    margin-top: 20px;
+@media screen and (max-width: 990px) {
+  .solicitacao .btn .btn-acao,
+  .solicitacao .btn .btn-cancelar {
+    padding: 0 20px;
   }
 }
 
