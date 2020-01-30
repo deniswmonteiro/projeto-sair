@@ -11,7 +11,7 @@
           <a href="" class="uk-search-icon-flip" uk-search-icon></a>
           <input class="uk-search-input uk-border-rounded" type="search" placeholder="Procurar usuário">
         </form>
-        <div class="uk-display-inline-block btn">
+        <div class="uk-display-inline-block btn btn-usuarios-acao">
           <a href="{{route('usuarios.form')}}" class="uk-button uk-margin-right btn-acao">{{__('Adicionar usuário')}}</a>
           <a href="{{route('gerenciarsolicitacoes.index')}}" class="uk-button btn-solicitacao">{{__('Solicitações pendentes')}}</a>
           </div>
@@ -35,14 +35,14 @@
               <td>{{$usuario->categoria}}</td>
               <td>{{$usuario->laboratorio}}</td>
               <td>
-                <div class="btn">
+                <div class="uk-flex-button btn">
                   <a href="{{route('usuarios.editar', ['usuario' => $usuario->id])}}" class="uk-button uk-margin-right btn-acao">
                     {{__('Atualizar')}}
                   </a>
-                  <form action="{{route('usuarios.destroy', ['usuario' => $usuario->id])}}" method="post" class="uk-display-inline-block">
+                  <form action="{{route('usuarios.destroy', ['usuario' => $usuario->id])}}" method="post" class="uk-display-inline-block form-btn-submit">
                     @csrf
                     @method("delete")
-                    <button type="submit" class="uk-button btn-cancelar">{{__('Remover')}}</button>
+                    <button type="submit" class="uk-button uk-width-1-1 btn-cancelar">{{__('Remover')}}</button>
                   </form>
                 </div>
               </td>

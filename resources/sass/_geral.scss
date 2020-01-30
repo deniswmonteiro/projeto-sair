@@ -138,6 +138,10 @@ body {
 
             &.btn-solicitacao {
                 background: $dark-orange;
+
+                @include device(xs) {
+                    display: block;
+                }
             }
 
             &.link-voltar-login {
@@ -192,22 +196,28 @@ body {
                 }
             }
         }
-    }
 
-    button {
-        display: inline-block;
-        transition: 0.4s;
-        font-weight: 700;
-        color: $light-grey;
-        border-radius: 4px;
+        .form-btn-submit {
+            @include device(xs) {
+                display: block !important;
+            }
 
-        &:hover {
-            color: $dark-grey;
-            box-shadow: 0px 0px 0px 3px $dark-grey;
-        }
+            button {
+                display: inline-block;
+                transition: 0.4s;
+                font-weight: 700;
+                color: $light-grey;
+                border-radius: 4px;
 
-        &.btn-cancelar {
-            background: $red;
+                &:hover {
+                    color: $dark-grey;
+                    box-shadow: 0px 0px 0px 3px $dark-grey;
+                }
+
+                &.btn-cancelar {
+                    background: $dark-red;
+                }
+            }
         }
     }
 }
