@@ -7,6 +7,21 @@
 
         .btn {
             margin-top: 0;
+
+            i {
+                vertical-align: middle;
+            }
+
+            @include device(xs) {
+                display: flex !important;
+            }
+
+            .btn-acao {
+                @include device(xs) {
+                    margin-bottom: 0;
+                    margin-right: 20px !important;
+                }
+            }
         }
     }
 

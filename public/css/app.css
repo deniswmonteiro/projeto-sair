@@ -692,6 +692,19 @@ body .btn .form-btn-submit button.btn-cancelar {
   vertical-align: middle;
 }
 
+@media screen and (max-width: 639px) {
+  .usuarios table .btn {
+    display: flex !important;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .usuarios table .btn .btn-acao {
+    margin-bottom: 0;
+    margin-right: 20px !important;
+  }
+}
+
 .usuarios .btn.btn-usuarios-acao {
   margin-top: 0;
 }
@@ -716,6 +729,23 @@ body .btn .form-btn-submit button.btn-cancelar {
 
 .solicitacao table .btn {
   margin-top: 0;
+}
+
+.solicitacao table .btn i {
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 639px) {
+  .solicitacao table .btn {
+    display: flex !important;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .solicitacao table .btn .btn-acao {
+    margin-bottom: 0;
+    margin-right: 20px !important;
+  }
 }
 
 .solicitacao .btn.btn-usuarios-acao {

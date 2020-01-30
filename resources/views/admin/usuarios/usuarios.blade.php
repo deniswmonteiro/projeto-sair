@@ -37,14 +37,12 @@
               <td>
                 <div class="uk-flex-button btn">
                   <a href="{{route('usuarios.editar', ['usuario' => $usuario->id])}}" class="uk-button uk-margin-right btn-acao">
-                    
                     <i class="material-icons-round">update</i>
                   </a>
                   <form action="{{route('usuarios.destroy', ['usuario' => $usuario->id])}}" method="post" class="uk-display-inline-block form-btn-submit">
                     @csrf
                     @method("delete")
                     <button type="submit" class="uk-button uk-width-1-1 btn-cancelar">
-                      
                       <i class="material-icons-round">delete</i>
                     </button>
                   </form>
