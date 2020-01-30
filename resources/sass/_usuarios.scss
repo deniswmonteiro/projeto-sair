@@ -7,6 +7,21 @@
 
         .btn {
             margin-top: 0;
+
+            .btn-acao,
+            .btn-cancelar {
+                @include device(xs) {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+            }
+
+            i {
+                position: relative;
+                top: 7px;
+                right: 11px;
+            }
         }
     }
 

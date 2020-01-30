@@ -688,6 +688,21 @@ body .btn .form-btn-submit button.btn-cancelar {
   margin-top: 0;
 }
 
+@media screen and (max-width: 639px) {
+  .usuarios table .btn .btn-acao,
+  .usuarios table .btn .btn-cancelar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+.usuarios table .btn i {
+  position: relative;
+  top: 7px;
+  right: 11px;
+}
+
 .usuarios .btn.btn-usuarios-acao {
   margin-top: 0;
 }
