@@ -53,7 +53,7 @@
 								<select class="uk-select uk-border-rounded" id="form-cadastro-sala-lab" @error('laboratorio') is-invalid @enderror" name="laboratorio" value="{{old('laboratorio')}}" required autocomplete="laboratorio">
 									<option value="" disabled selected>Escolha uma opção</option>
 									<option value="LabMotriz">LabMotriz</option>
-									<option value="LCAD">LCAD</option>
+									<option value="LCADE">LCADE</option>
 									<option value="LabQuali">LabQuali</option>
 								</select>
 								@error('laboratorio')

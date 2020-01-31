@@ -35,14 +35,6 @@ return [
 
     'connections' => [
         'mongodb' => [
-            // 'driver'   => 'mongodb',
-            // 'host'     => env('MONGO_DB_HOST', 'mongodb://denismonteiro:ep10806702@ds151202.mlab.com:51202/heroku_06wk9pfg'),
-            // 'port'     => env('MONGO_DB_PORT', 27017),
-            // 'database' => env('MONGO_DB_DATABASE', 'projetoautomacao'),
-            // 'username' => env('MONGO_DB_USERNAME', 'denismonteiro'),
-            // 'password' => env('MONGO_DB_PASSWORD', 'ep10806702'),
-            // 'options'  => []
-
             'driver' => 'mongodb',
             'dsn' => 'mongodb+srv://denismonteiro:ep10806702@clusterprojetoautomacao-5yayv.mongodb.net/projetoautomacao?retryWrites=true&w=majority',
             'database' => 'projetoautomacao',

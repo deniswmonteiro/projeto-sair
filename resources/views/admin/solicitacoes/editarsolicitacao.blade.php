@@ -55,8 +55,8 @@
 									<option value="LabMotriz" @if($solicitacoes->laboratorio === 'LabMotriz') selected @endif>
 										LabMotriz
 									</option>
-									<option value="LCAD" @if($solicitacoes->laboratorio === 'LCAD') selected @endif>
-										LCAD
+									<option value="LCADE" @if($solicitacoes->laboratorio === 'LCADE') selected @endif>
+										LCADE
 									</option>
 									<option value="LabQuali" @if($solicitacoes->laboratorio === 'LabQuali') selected @endif>
 										LabQuali
