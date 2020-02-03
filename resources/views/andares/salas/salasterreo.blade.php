@@ -24,7 +24,7 @@
       <div>
         <div class="uk-inline">
           @include("layouts.addcoord", [
-            "andar" => "terreo", "local" => "lcad", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
+            "andar" => "terreo", "local" => "lcade", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
       </div>
