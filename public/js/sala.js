@@ -34,12 +34,15 @@ check.forEach(item => {
         dataDispositivo.forEach(dispositivo => {
             if (item.id == dispositivo.dataset.dispositivo && item.checked) {
                 $(dispositivo).css("background", "#193");
-            } else {
+            }
+
+            else if (item.id == dispositivo.dataset.dispositivo && !item.checked) {
                 $(dispositivo).css("background", "#e21");
             }
         });
     });
 });
+
 
 /* mostra os ícones de acordo com o tipo (lâmpada ou ar-condicionado) */
 const allClick = document.querySelectorAll("[data-click]");
