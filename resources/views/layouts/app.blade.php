@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="{{secure_asset('css/uikit.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
+    <link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
+    <script src="{{secure_asset('js/jquery-3.4.1.min.js')}}"></script>
   </head>
   <body>
     <div class="uk-text-center notificacao-alerta">
@@ -60,8 +60,8 @@
       </div>
     </footer>
 
-    <script src="{{asset('js/uikit.js')}}"></script>
-    <script src="{{asset('js/uikit-icons.js')}}"></script>
-    <script src="{{asset('js/script.js')}}"></script>
+    <script src="{{secure_asset('js/uikit.js')}}"></script>
+    <script src="{{secure_asset('js/uikit-icons.js')}}"></script>
+    <script src="{{secure_asset('js/script.js')}}"></script>
   </body>
 </html>
