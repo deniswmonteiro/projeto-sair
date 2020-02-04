@@ -248,7 +248,7 @@ class SalasTerreoCollectionSeeder extends Seeder
             'id_sala' => 18,
             'sala_nome' => 'Auditório',
             'sala_localizacao' => [18, 80],
-            'qtd_circ_lampada' => 6,
+            'qtd_circ_lampada' => 4,
             'qtd_arcondicionado' => 5,
             'coord_circ_lampadas' => [
                 'lampadas1' => [86, 29, 86, 40, 86, 52, 86, 63, 86, 74, 74, 17,
@@ -257,8 +257,6 @@ class SalasTerreoCollectionSeeder extends Seeder
                                 49, 29, 49, 40, 49, 52, 49, 63, 49, 74,],
                 'lampadas3' => [27, 40, 27, 49, 27, 58],
                 'lampadas4' => [36, 40, 36, 49, 36, 58],
-                'lampadas5' => [12, 49],
-                'lampadas6' => [19, 31, 26, 27, 22, 36]
             ],
             'coord_arcondicionado' => [
                 'arcondicionado1' => [57, 14],

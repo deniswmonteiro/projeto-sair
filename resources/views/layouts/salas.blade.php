@@ -30,7 +30,7 @@
                 <h5>Lâmpadas {{$i}}</h5>
                 <label class="switch" for="lampadas{{$i}}">
                   <input type="checkbox" id="lampadas{{$i}}" class="check">
-                  <div class="switch-slider switch-on-off round"></div>
+                  <div class="switch-slider switch-on-off lampadas{{$i}}"></div>
                 </label>
               @endfor
             </li>
@@ -39,7 +39,7 @@
                 <h5>Ar-condicionado {{$i}}</h5>
                 <label class="switch" for="arcondicionado{{$i}}">
                   <input type="checkbox" id="arcondicionado{{$i}}" class="check">
-                  <div class="switch-slider switch-on-off round"></div>
+                  <div class="switch-slider switch-on-off"></div>
                 </label>
               @endfor
             </li>
@@ -49,5 +49,5 @@
     </div>
   </section>
 
-  <script src="{{asset('/js/sala.js')}}"></script>
+  <script src="{{asset('js/sala.js')}}"></script>
 @endsection
