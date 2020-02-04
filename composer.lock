@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c1cc6ad9dbcfa4146c96c4c3e5e9e09",
+    "content-hash": "0e657337ac871cbd4ba88850c5b9fa8b",
     "packages": [
         {
             "name": "andrey-helldar/laravel-app",
@@ -1873,6 +1873,76 @@
                 "uuid"
             ],
             "time": "2019-12-17T08:18:51+00:00"
+        },
+        {
+            "name": "salmanzafar/laravel-mqtt",
+            "version": "v1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/salmanzafar949/MQTT-Laravel.git",
+                "reference": "a77022e20ef35fdcde175b5fbbba050d8ec74198"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/salmanzafar949/MQTT-Laravel/zipball/a77022e20ef35fdcde175b5fbbba050d8ec74198",
+                "reference": "a77022e20ef35fdcde175b5fbbba050d8ec74198",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "laravel/framework": ">=5.8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Salman\\Mqtt\\MqttServiceProvider"
+                    ],
+                    "aliases": {
+                        "Mqtt": "Salman\\Mqtt\\Facades\\Mqtt"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Salman\\Mqtt\\": "src/"
+                },
+                "files": [
+                    "src/Helper/Helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Salman Zafar",
+                    "email": "salmanzafar949@gmail.com"
+                }
+            ],
+            "description": "A simple Laravel 5 and 6 Library to connect/publish/subscribe to MQTT broker",
+            "keywords": [
+                "PHP 5.4",
+                "laravel",
+                "laravel mqtt",
+                "laravel mqtt library",
+                "laravel-mqtt",
+                "laravel5",
+                "mqtt laravel",
+                "mqtt-laravel",
+                "mqtt-laravel-publisher",
+                "mqtt-laravel-subscriber",
+                "php",
+                "php 7.0",
+                "php 7.1",
+                "php 7.2",
+                "php 7.3",
+                "php 7.4"
+            ],
+            "time": "2020-01-16T10:04:41+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3802,12 +3872,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "0750e81ae47e53a59e1ca2a7139a72b1f2e7ed49"
+                "reference": "e87b635929a8b51c6f2d459cde1a241e478d3d04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/0750e81ae47e53a59e1ca2a7139a72b1f2e7ed49",
-                "reference": "0750e81ae47e53a59e1ca2a7139a72b1f2e7ed49",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/e87b635929a8b51c6f2d459cde1a241e478d3d04",
+                "reference": "e87b635929a8b51c6f2d459cde1a241e478d3d04",
                 "shasum": ""
             },
             "bin": [
@@ -3838,7 +3908,7 @@
                 "nginx",
                 "php"
             ],
-            "time": "2020-01-23T22:12:30+00:00"
+            "time": "2020-01-26T11:19:01+00:00"
         },
         {
             "name": "mockery/mockery",
