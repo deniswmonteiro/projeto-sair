@@ -1,8 +1,8 @@
-@extends("layouts.app", ["paginaAtual" => "Gerenciar Solicitações"])
+@extends("layouts.app", ["paginaAtual" => "Solicitações de Cadastro"])
 
 @section("conteudo")
   @include("layouts.menu", ["menu" => "gerenciar-solicitacoes"])
-  @include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "gerencie solicitações de cadastro", "paginaAtual" => "Solicitação de Cadastro"])
+  @include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "gerencie solicitações", "paginaAtual" => "Solicitação de Cadastro"])
   
   <section class="uk-section solicitacao">
     <div class="uk-container">
@@ -11,9 +11,6 @@
           <a href="" class="uk-search-icon-flip" uk-search-icon></a>
           <input class="uk-search-input uk-border-rounded" type="search" placeholder="Procurar usuário">
         </form>
-        <div class="uk-display-inline-block btn btn-usuarios-acao">
-          <a href="{{route('usuarios.index')}}" class="uk-button btn-cancelar">{{__('Voltar')}}</a>
-        </div>
       </div>
       <div class="uk-overflow-auto">
         <table class="uk-table uk-table-hover uk-table-responsive uk-table-middle uk-table-striped">
