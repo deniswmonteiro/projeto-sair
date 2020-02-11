@@ -66,12 +66,12 @@
             </a>
           </li>
           @if(Auth::user()->categoria === 'ADMINISTRADOR')
-            <li class=" @if(request()->is('usuarios') || request()->is('usuarios/gerenciarsolicitacoes')) active @endif">
+            <li class="@if(request()->is('usuarios')) active @endif">
               <a href="{{route('usuarios.index')}}">
                 <i class="material-icons-round">supervised_user_circle</i>
                 Usuários</a>
             </li>
-            <li class=" @if(request()->is('usuarios') || request()->is('usuarios/gerenciarsolicitacoes')) active @endif">
+            <li class="@if(request()->is('usuarios/gerenciarsolicitacoes')) active @endif">
               <a href="{{route('gerenciarsolicitacoes.index')}}">
                 <i class="material-icons-round">supervised_user_circle</i>
                 Solicitações</a>
