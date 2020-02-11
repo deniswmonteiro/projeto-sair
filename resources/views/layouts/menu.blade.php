@@ -71,6 +71,11 @@
                 <i class="material-icons-round">supervised_user_circle</i>
                 Usuários</a>
             </li>
+            <li class=" @if(request()->is('usuarios') || request()->is('usuarios/gerenciarsolicitacoes')) active @endif">
+              <a href="{{route('gerenciarsolicitacoes.index')}}">
+                <i class="material-icons-round">supervised_user_circle</i>
+                Solicitações</a>
+            </li>
           @endif
           <li>
             <a href="#modal-sair" uk-toggle>

@@ -56,7 +56,6 @@ class TerreoController extends Controller
 	public function show($id)
 	{
 		$salas = $this->terreo->all();
-		// dd($salas);	
 		return view('andares/salas/salasterreo', [
 			'andar' => 'terreo',
 			'sala_id' => $id,
@@ -67,8 +66,6 @@ class TerreoController extends Controller
 			'coord_circ_lampadas2' => collect($salas[$id]->coord_circ_lampadas)->get('lampadas2'),
 			'coord_circ_lampadas3' => collect($salas[$id]->coord_circ_lampadas)->get('lampadas3'),
 			'coord_circ_lampadas4' => collect($salas[$id]->coord_circ_lampadas)->get('lampadas4'),
-			'coord_circ_lampadas5' => collect($salas[$id]->coord_circ_lampadas)->get('lampadas5'),
-			'coord_circ_lampadas6' => collect($salas[$id]->coord_circ_lampadas)->get('lampadas6'),
 			'coord_arcondicionado1' => collect($salas[$id]->coord_arcondicionado)->get('arcondicionado1'),
 			'coord_arcondicionado2' => collect($salas[$id]->coord_arcondicionado)->get('arcondicionado2'),
 			'coord_arcondicionado3' => collect($salas[$id]->coord_arcondicionado)->get('arcondicionado3'),
