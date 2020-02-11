@@ -71,10 +71,10 @@
                 <i class="material-icons-round">supervised_user_circle</i>
                 Usuários</a>
             </li>
-            <li class="@if(request()->is('usuarios/gerenciarsolicitacoes')) active @endif">
-              <a href="{{route('gerenciarsolicitacoes.index')}}">
+            <li class="@if(request()->is('usuarios')) active @endif">
+              <a href="{{route('usuarios.index')}}">
                 <i class="material-icons-round">supervised_user_circle</i>
-                Solicitações</a>
+                Usuários</a>
             </li>
           @endif
           <li>
