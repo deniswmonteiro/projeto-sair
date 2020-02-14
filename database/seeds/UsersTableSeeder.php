@@ -12,7 +12,6 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         \projetoautomacao\User::create([
-            'id_usuario' => 1,
             'nome' => 'Administrador',
             'cpf' => '99999999999',
             'email' => 'administrador@admin',
