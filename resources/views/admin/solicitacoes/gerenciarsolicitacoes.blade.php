@@ -6,7 +6,7 @@
   
   <section class="uk-section solicitacao">
     <div class="uk-container">
-      <div class="uk-margin-large-bottom">
+      <div class="uk-margin-medium-bottom">
         <form class="uk-search uk-search-default uk-width-medium uk-margin-medium-right form">
           <a href="" class="uk-search-icon-flip" uk-search-icon></a>
           <input class="uk-search-input uk-border-rounded" type="search" placeholder="Procurar usuário">
