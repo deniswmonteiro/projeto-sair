@@ -176,6 +176,7 @@ return [
         projetoautomacao\Providers\RouteServiceProvider::class,
         
         Jenssegers\Mongodb\MongodbServiceProvider::class,
+        Salman\Mqtt\MqttServiceProvider::class,
     ],
 
     /*
@@ -227,6 +228,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Mqtt' => \Salman\Mqtt\Facades\Mqtt::class,
     ],
 
 ];
