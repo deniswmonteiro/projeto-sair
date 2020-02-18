@@ -18,8 +18,5 @@
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0"
     },
-    "dependencies": {
-        "mqtt": "^3.0.0",
-        "mqtt-connection": "^4.0.0"
-    }
+    "dependencies": {}
 }
