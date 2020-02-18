@@ -60,7 +60,6 @@
       </div>
     </footer>
 
-    <script type="module" src="{{asset('js/mqtt_conn.js')}}"></script>
     <script src="{{asset('js/uikit.js')}}"></script>
     <script src="{{asset('js/uikit-icons.js')}}"></script>
     <script src="{{asset('js/script.js')}}"></script>
