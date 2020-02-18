@@ -1,6 +1,6 @@
-var net = require("net");
-var mqttCon = require("mqtt-connection");
-var stream = net.createConnection(1883, "localhost");
+import { createConnection } from "net";
+import mqttCon from "mqtt-connection";
+var stream = createConnection(1883, "localhost");
 var conn = mqttCon(stream);
 
 // import mqtt from "mqtt";
