@@ -33,26 +33,13 @@ check.forEach(item => {
     item.addEventListener("click", () => {
         dataDispositivo.forEach(dispositivo => {
             if (item.id == dispositivo.dataset.dispositivo && item.checked) {
-                localStorage.setItem(item.id, dispositivo.dataset.dispositivo);
                 $(dispositivo).css("background", "#193");
             }
 
             else if (item.id == dispositivo.dataset.dispositivo && !item.checked) {
-                localStorage.removeItem(item.id, dispositivo.dataset.dispositivo);
                 $(dispositivo).css("background", "#e21");
             }
         });
-    });
-});
-
-
-/** obtem a cor do circuito do local storage */
-check.forEach(item => {
-    const getLocalStorage = localStorage.getItem(item.id);
-    dataDispositivo.forEach(dispositivo => {
-        if(getLocalStorage == dispositivo.dataset.dispositivo) {
-            $(dispositivo).css("background", "#193");
-        }
     });
 });
 
@@ -75,4 +62,17 @@ allClick.forEach(click => {
             $(avisoArcondicionado).css("display", "block");
         }
     });
+});
+
+
+const lampadas1 = document.querySelector('#lampadas1');
+lampadas1.addEventListener("click", () => {
+    if(lampadas1.checked) {
+        const lamp1Status = true;
+        $.ajax({
+            method: "POST",
+            url: "server.php",
+            data: { lampadas1: lamp1Status }
+        });
+    }
 });
