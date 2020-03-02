@@ -1,10 +1,10 @@
 const led0 = document.querySelector('.led0');
 
-import { Board, Led } from "../node_modules/johnny-five";
-var board = new Board();
+var five = require("johnny-five");
+var board = new five.Board();
 
 board.on("ready", function() {
-  var led = new Led(2);
+  var led = new five.Led(2);
  
   led0.addEventListener('click', () => {
     alert();
