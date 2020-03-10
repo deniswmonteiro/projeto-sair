@@ -6,10 +6,11 @@
     <div class="uk-container">
       <h1>Andares</h1>
       <div>
-      <label for="teste">LIGA/DESLIGA</label>
-      <input type="checkbox" class="teste" id="teste">
-        <button class="liga1">LIGAR/DESLIGAR</button>
-        <button class="liga2">LIGAR/DESLIGAR</button>
+        <label for="pino12">LIGA/DESLIGA (Pino 12)</label>
+        <input type="checkbox" class="pino12" id="pino12">
+        <br>
+        <label for="pino13">LIGA/DESLIGA (Pino 13)</label>
+        <input type="checkbox" class="pino13" id="pino13">
       </div>
 
 

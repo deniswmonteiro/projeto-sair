@@ -26,20 +26,13 @@
           </ul>
           <ul class="uk-switcher uk-margin">
             <li>
-              {{-- @for($i = 1; $i <= $qtd_circ_lampada; $i++)
+              @for($i = 1; $i <= $qtd_circ_lampada; $i++)
                 <h5>Lâmpadas {{$i}}</h5>
                 <label class="switch" for="lampadas{{$i}}">
                   <input type="checkbox" id="lampadas{{$i}}" name="lampadas{{$i}}" class="check">
                   <div class="switch-slider switch-on-off lampadas{{$i}}"></div>
                 </label>
-              @endfor --}}
-
-              
-                <button class="uk-button uk-button-primary led0">Ligar/Desligar</button>
-              
-              
-                <button class="uk-button uk-button-primary led1">Ligar/Desligar</button>
-              
+              @endfor
             </li>
             <li>
               @for($i = 1; $i <= $qtd_arcondicionado; $i++)
@@ -57,5 +50,4 @@
   </section>
 
   <script src="{{asset('js/sala.js')}}"></script>
-  <script type="module" src="{{asset('js/acionamento.js')}}"></script>
 @endsection
