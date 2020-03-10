@@ -5,6 +5,14 @@
   <section class="uk-section andares">
     <div class="uk-container">
       <h1>Andares</h1>
+      <div>
+      <label for="teste">LIGA/DESLIGA</label>
+      <input type="checkbox" class="teste" id="teste">
+        <button class="liga1">LIGAR/DESLIGAR</button>
+        <button class="liga2">LIGAR/DESLIGAR</button>
+      </div>
+
+
       <div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slider="center: true">
         <ul class="uk-slider-items uk-grid-small uk-grid-match" uk-grid>
           <li class="uk-width-1-2@m">
