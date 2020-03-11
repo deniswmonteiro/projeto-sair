@@ -25,42 +25,9 @@ function onConnect() {
   // message.destinationName = "ceamazon/biblioteca";
   // client.send(message);
 
-  /** salva estado no banco de dados e selecionar do banco para mudar checkbox correspondente */
-
-  const pino12 = document.querySelector('.pino12');
-  const pino13 = document.querySelector('.pino13');
+  /** salvar estado no banco de dados e selecionar do banco para mudar checkbox correspondente */
   
-  $(pino12).change(function() {
-    if($(this).is(':checked')) {
-      client.subscribe("ceamazon/biblioteca");
-      message = new Paho.MQTT.Message("on2");
-      message.destinationName = "ceamazon/biblioteca";
-      client.send(message);
-    }
-
-    else {
-      client.subscribe("ceamazon/biblioteca");
-      message = new Paho.MQTT.Message("off2");
-      message.destinationName = "ceamazon/biblioteca";
-      client.send(message);
-    }
-  });
-
-  $(pino13).change(function() {
-    if($(this).is(':checked')) {
-      client.subscribe("ceamazon/biblioteca");
-      message = new Paho.MQTT.Message("on3");
-      message.destinationName = "ceamazon/biblioteca";
-      client.send(message);
-    }
-
-    else {
-      client.subscribe("ceamazon/biblioteca");
-      message = new Paho.MQTT.Message("off3");
-      message.destinationName = "ceamazon/biblioteca";
-      client.send(message);
-    }
-  });
+  acionaLampadas();
 }
 
 function doFail(e){
@@ -77,4 +44,75 @@ function onConnectionLost(responseObject) {
 // called when a message arrives
 function onMessageArrived(message) {
   console.log("onMessageArrived:" + message.payloadString);
+}
+
+function acionaLampadas() {
+  const lampadas1 = document.querySelector('.interruptor #lampadas1');
+  const lampadas2 = document.querySelector('.interruptor #lampadas2');
+  const lampadas3 = document.querySelector('.interruptor #lampadas3');
+  const lampadas4 = document.querySelector('.interruptor #lampadas4');
+  
+  $(lampadas1).change(function() {
+    if($(this).is(':checked')) {
+      client.subscribe("ceamazon/biblioteca");
+      message = new Paho.MQTT.Message("on1");
+      message.destinationName = "ceamazon/biblioteca";
+      client.send(message);
+    }
+
+    else {
+      client.subscribe("ceamazon/biblioteca");
+      message = new Paho.MQTT.Message("off1");
+      message.destinationName = "ceamazon/biblioteca";
+      client.send(message);
+    }
+  });
+
+  $(lampadas2).change(function() {
+    if($(this).is(':checked')) {
+      client.subscribe("ceamazon/biblioteca");
+      message = new Paho.MQTT.Message("on2");
+      message.destinationName = "ceamazon/biblioteca";
+      client.send(message);
+    }
+
+    else {
+      client.subscribe("ceamazon/biblioteca");
+      message = new Paho.MQTT.Message("off2");
+      message.destinationName = "ceamazon/biblioteca";
+      client.send(message);
+    }
+  });
+
+  $(lampadas3).change(function() {
+    if($(this).is(':checked')) {
+      client.subscribe("ceamazon/biblioteca");
+      message = new Paho.MQTT.Message("on3");
+      message.destinationName = "ceamazon/biblioteca";
+      client.send(message);
+    }
+
+    else {
+      client.subscribe("ceamazon/biblioteca");
+      message = new Paho.MQTT.Message("off3");
+      message.destinationName = "ceamazon/biblioteca";
+      client.send(message);
+    }
+  });
+
+  $(lampadas4).change(function() {
+    if($(this).is(':checked')) {
+      client.subscribe("ceamazon/biblioteca");
+      message = new Paho.MQTT.Message("on4");
+      message.destinationName = "ceamazon/biblioteca";
+      client.send(message);
+    }
+
+    else {
+      client.subscribe("ceamazon/biblioteca");
+      message = new Paho.MQTT.Message("off4");
+      message.destinationName = "ceamazon/biblioteca";
+      client.send(message);
+    }
+  });
 }
