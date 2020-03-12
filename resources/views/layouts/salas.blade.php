@@ -12,7 +12,7 @@
         </a>
       </div>
       <div class="uk-child-width-expand@m" uk-grid>
-        <h1 class="uk-width-1-1">{{$sala_nome}}</h1>
+        <h1 class="uk-width-1-1 sala-nome">{{$sala_nome}}</h1>
         <div class="img-sala">
           @if(is_null($qtd_arcondicionado))
             <h3 class="aviso-arcondicionado img-arcondicionado">Não possui ar-condicionado</h3>
@@ -29,7 +29,7 @@
               @for($i = 1; $i <= $qtd_circ_lampada; $i++)
                 <h5>Lâmpadas {{$i}}</h5>
                 <label class="switch" for="lampadas{{$i}}">
-                  <input type="checkbox" id="lampadas{{$i}}" class="check">
+                  <input type="checkbox" id="lampadas{{$i}}" class="check interruptor-lampada">
                   <div class="switch-slider switch-on-off lampadas{{$i}}"></div>
                 </label>
               @endfor
@@ -38,7 +38,7 @@
               @for($i = 1; $i <= $qtd_arcondicionado; $i++)
                 <h5>Ar-condicionado {{$i}}</h5>
                 <label class="switch" for="arcondicionado{{$i}}">
-                  <input type="checkbox" id="arcondicionado{{$i}}" class="check">
+                  <input type="checkbox" id="arcondicionado{{$i}}" class="check interruptor-arcondicionado">
                   <div class="switch-slider switch-on-off"></div>
                 </label>
               @endfor
@@ -50,4 +50,5 @@
   </section>
 
   <script src="{{asset('js/sala.js')}}"></script>
+  <script src="{{asset('js/ws-conn.js')}}"></script>
 @endsection
