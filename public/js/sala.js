@@ -63,16 +63,3 @@ allClick.forEach(click => {
         }
     });
 });
-
-
-const lampadas1 = document.querySelector('#lampadas1');
-lampadas1.addEventListener("click", () => {
-    if(lampadas1.checked) {
-        const lamp1Status = true;
-        $.ajax({
-            method: "POST",
-            url: "server.php",
-            data: { lampadas1: lamp1Status }
-        });
-    }
-});
