@@ -9,8 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+    <script src="{{asset('js/jquery-3.4.1.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/jquery.mask.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/mqttws31.min.js')}}" type="text/javascript"></script>
   </head>
   <body>
     <div class="uk-text-center notificacao-alerta">
@@ -61,8 +62,8 @@
       </div>
     </footer>
 
-    <script src="{{asset('js/uikit.js')}}"></script>
-    <script src="{{asset('js/uikit-icons.js')}}"></script>
-    <script src="{{asset('js/script.js')}}"></script>
+    <script src="{{asset('js/uikit.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/uikit-icons.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/script.js')}}" type="text/javascript"></script>
   </body>
 </html>

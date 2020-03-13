@@ -116,4 +116,6 @@
 			</div>
 		</div>
 	</section>
+
+	<script src="{{asset('js/editarusuario.js')}}"></script>
 @endsection

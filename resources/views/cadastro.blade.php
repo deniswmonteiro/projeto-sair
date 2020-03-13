@@ -88,7 +88,6 @@
 			</div>
 		</div>
 	</section>
-
-	<script src="js/jquery.mask.js"></script>
-	<script src="js/solicita-cadastro.js"></script>
+	
+	<script src="{{asset('js/solicita-cadastro.js')}}"></script>
 @endsection

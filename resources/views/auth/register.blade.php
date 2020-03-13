@@ -77,7 +77,7 @@
 						<div>
 							<label class="uk-form-label" for="form-cadastro-senha">{{__('Senha *')}}</label>
 							<div class="uk-form-controls uk-inline uk-display-block">
-								<input id="form-cadastro-senha" type="password" class="uk-input uk-border-rounded @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Mínimo de 8 caracteres" uk-tooltip="title:Pelo menos uma letra maiuscula<br>Pelo menos um caractere especial (@#$%); pos:bottom-left">
+								<input id="form-cadastro-senha" type="password" class="uk-input uk-border-rounded @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Mínimo de 8 caracteres">
 								@error('password')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -116,4 +116,6 @@
 			</div>
 		</div>
 	</section>
+
+	<script src="{{asset('js/registrausuario.js')}}"></script>
 @endsection

@@ -171,7 +171,6 @@ return [
             'required' => 'A senha é obrigatória!',
             'min' => 'O mínimo permitido são :min caracteres.',
             'max' => 'O máximo permitido são :max caracteres.',
-            'regex' => 'O formato de :attribute é inválido.',
         ],
     ],
 
