@@ -54,7 +54,7 @@ function acionaLampadas() {
         client.subscribe("ceamazon/" + subtopico);
         message = new Paho.MQTT.Message("on" + interruptor);
         message.destinationName = "ceamazon/" + subtopico;
-        //message.qos = 1;
+        message.qos = 1;
         client.send(message);
 
         // localStorage.setItem('lampada', 'on');
@@ -64,10 +64,10 @@ function acionaLampadas() {
         client.subscribe("ceamazon/" + subtopico);
         message = new Paho.MQTT.Message("off" + interruptor);
         message.destinationName = "ceamazon/"  + subtopico;
-        //message.qos = 1;
+        message.qos = 1;
         client.send(message);
 
-        localStorage.setItem('lampada', 'off');
+        // localStorage.setItem('lampada', 'off');
       }
     });
   });
