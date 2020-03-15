@@ -57,7 +57,7 @@ function acionaLampadas() {
         message.qos = 1;
         client.send(message);
 
-        // localStorage.setItem('lampada', 'on');
+        localStorage.setItem('lampada', 'on');
       }
 
       else {
@@ -67,26 +67,26 @@ function acionaLampadas() {
         message.qos = 1;
         client.send(message);
 
-        // localStorage.setItem('lampada', 'off');
+        localStorage.setItem('lampada', 'off');
       }
     });
   });
 
-  // function getLocalStorage() {
-  //   const lampadas1 = document.querySelector('.lampadas1');
+  function getLocalStorage() {
+    const lampadas1 = document.querySelector('.lampadas1');
 
-  //   const valorLampada = localStorage.getItem('lampada');
-  //   console.log(valorLampada);
+    const valorLampada = localStorage.getItem('lampada');
+    console.log(valorLampada);
 
-  //       if(valorLampada == "on") {          
-  //         $(lampadas1).css('background', 'green');
-  //       }
+        if(valorLampada == "on") {          
+          $(lampadas1).css('background', 'green');
+        }
 
-  //       else {
-  //         $(lampadas1).css('background', 'red');
-  //       }
+        else {
+          $(lampadas1).css('background', 'red');
+        }
 
-  // }
+  }
   
-  // getLocalStorage();
+  getLocalStorage();
 }
