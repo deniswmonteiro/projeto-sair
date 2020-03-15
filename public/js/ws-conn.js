@@ -82,7 +82,7 @@ function acionaLampadas() {
           $(lampadas1).css('background', 'green');
         }
 
-        else {
+        else if(valorLampada == "off"){
           $(lampadas1).css('background', 'red');
         }
 
