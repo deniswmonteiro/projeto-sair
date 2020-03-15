@@ -39,6 +39,7 @@ function onConnectionLost(responseObject) {
 // called when a message arrives
 function onMessageArrived(message) {
   console.log("onMessageArrived:" + message.payloadString);
+  localStorage.setItem('lampada', message.payloadString);
 }
 
 // função de envio de mensagens via websockets
@@ -57,7 +58,7 @@ function acionaLampadas() {
         message.qos = 1;
         client.send(message);
 
-        localStorage.setItem('lampada', 'on');
+        // localStorage.setItem('lampada', 'on');
       }
 
       else {
@@ -67,27 +68,23 @@ function acionaLampadas() {
         message.qos = 1;
         client.send(message);
 
-        localStorage.setItem('lampada', 'off');
+        // localStorage.setItem('lampada', 'off');
       }
-
-
-      function getLocalStorage() {
-        const lampadas1 = document.querySelector('.lampadas1');
-  
-        const valorLampada = localStorage.getItem('lampada');
-        console.log(valorLampada);
-  
-            if(valorLampada == "on") {          
-              $(lampadas1).css('background', 'green');
-            }
-  
-            else {
-              $(lampadas1).css('background', 'red');
-            }
-  
-      }
-      
-      getLocalStorage();
     });
   });
 }
+
+$(document).ready(function() {
+    const valorLampada = localStorage.getItem('lampada');
+    const interruptores = document.querySelector('.interruptor .interruptor-lampada');
+    
+    $(interruptores).each(function(interruptor) {
+      if(valorLampada == "on1") {
+        interruptores.checked = true;
+      }
+      
+      else if(valorLampada == "off1") {
+        interruptores.checked = false;
+      }
+    });
+});
