@@ -73,21 +73,3 @@ function acionaLampadas() {
     });
   });
 }
-
-$(document).ready(function() {
-    const valorLampada = localStorage.getItem('lampada');
-    const interruptores = document.querySelector('.interruptor .interruptor-lampada');
-    
-    $(interruptores).each(function(interruptor) {
-      if(valorLampada == "on1") {
-        if(localStorage){
-          alert(localStorage.getItem('lampada'));
-        }
-        interruptores.checked = true;
-      }
-      
-      else if(valorLampada == "off1") {
-        interruptores.checked = false;
-      }
-    });
-});
