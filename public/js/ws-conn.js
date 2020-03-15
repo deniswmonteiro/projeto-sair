@@ -72,7 +72,6 @@ function acionaLampadas() {
     });
   });
 
-  $(document).ready(function() {
     function getLocalStorage() {
       const lampadas1 = document.querySelector('.lampadas1');
 
@@ -83,12 +82,11 @@ function acionaLampadas() {
             $(lampadas1).css('background', 'green');
           }
 
-          else if(valorLampada == "off"){
+          else {
             $(lampadas1).css('background', 'red');
           }
 
     }
     
     getLocalStorage();
-  });
 }
