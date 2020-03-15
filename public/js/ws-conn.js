@@ -80,6 +80,9 @@ $(document).ready(function() {
     
     $(interruptores).each(function(interruptor) {
       if(valorLampada == "on1") {
+        if(localStorage){
+          alert(localStorage.getItem('lampada'));
+        }
         interruptores.checked = true;
       }
       
