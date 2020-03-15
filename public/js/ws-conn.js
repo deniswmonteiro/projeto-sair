@@ -56,6 +56,8 @@ function acionaLampadas() {
         message.destinationName = "ceamazon/" + subtopico;
         message.qos = 1;
         client.send(message);
+
+        localStorage.setItem('lampada', 'on');
       }
 
       else {
@@ -64,7 +66,27 @@ function acionaLampadas() {
         message.destinationName = "ceamazon/"  + subtopico;
         message.qos = 1;
         client.send(message);
+
+        localStorage.setItem('lampada', 'off');
       }
     });
   });
+
+  function getLocalStorage() {
+    const lampadas1 = document.querySelector('.lampadas1');
+
+    const valorLampada = localStorage.getItem('lampada');
+    console.log(valorLampada);
+
+        if(valorLampada == "on") {          
+          $(lampadas1).css('background', 'green');
+        }
+
+        else {
+          $(lampadas1).css('background', 'red');
+        }
+
+  }
+  
+  getLocalStorage();
 }
