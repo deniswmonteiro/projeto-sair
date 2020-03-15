@@ -72,21 +72,23 @@ function acionaLampadas() {
     });
   });
 
-  function getLocalStorage() {
-    const lampadas1 = document.querySelector('.lampadas1');
+  $(document).ready(function() {
+    function getLocalStorage() {
+      const lampadas1 = document.querySelector('.lampadas1');
 
-    const valorLampada = localStorage.getItem('lampada');
-    console.log(valorLampada);
+      const valorLampada = localStorage.getItem('lampada');
+      console.log(valorLampada);
 
-        if(valorLampada == "on") {          
-          $(lampadas1).css('background', 'green');
-        }
+          if(valorLampada == "on") {          
+            $(lampadas1).css('background', 'green');
+          }
 
-        else if(valorLampada == "off"){
-          $(lampadas1).css('background', 'red');
-        }
+          else if(valorLampada == "off"){
+            $(lampadas1).css('background', 'red');
+          }
 
-  }
-  
-  getLocalStorage();
+    }
+    
+    getLocalStorage();
+  });
 }
