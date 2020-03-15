@@ -69,24 +69,25 @@ function acionaLampadas() {
 
         localStorage.setItem('lampada', 'off');
       }
+
+
+      function getLocalStorage() {
+        const lampadas1 = document.querySelector('.lampadas1');
+  
+        const valorLampada = localStorage.getItem('lampada');
+        console.log(valorLampada);
+  
+            if(valorLampada == "on") {          
+              $(lampadas1).css('background', 'green');
+            }
+  
+            else {
+              $(lampadas1).css('background', 'red');
+            }
+  
+      }
+      
+      getLocalStorage();
     });
   });
-
-    function getLocalStorage() {
-      const lampadas1 = document.querySelector('.lampadas1');
-
-      const valorLampada = localStorage.getItem('lampada');
-      console.log(valorLampada);
-
-          if(valorLampada == "on") {          
-            $(lampadas1).css('background', 'green');
-          }
-
-          else {
-            $(lampadas1).css('background', 'red');
-          }
-
-    }
-    
-    getLocalStorage();
 }
