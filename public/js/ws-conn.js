@@ -1,5 +1,5 @@
 // Create a client instance
-client = new Paho.MQTT.Client("hairdresser.cloudmqtt.com", 37615, "CEAMAZON");
+client = new Paho.MQTT.Client("hairdresser.cloudmqtt.com", 37615, "web_" + parseInt(Math.random() * 100, 10));
 //Example client = new Paho.MQTT.Client("m11.cloudmqtt.com", 32903, "web_" + parseInt(Math.random() * 100, 10));
 
 // set callback handlers
