@@ -21,6 +21,7 @@ Route::group(['middleware' => ['auth']], function() {
         Route::resource('terreo', 'TerreoController');
         Route::resource('primeiroandar', 'PrimeiroAndarController');
         Route::resource('segundoandar', 'SegundoAndarController');
+        Route::resource('estadolampada', 'EstadoLampadaController');
     });
 
     Route::prefix('usuarios')->namespace('Auth')->name('usuarios.')->group(function() {
