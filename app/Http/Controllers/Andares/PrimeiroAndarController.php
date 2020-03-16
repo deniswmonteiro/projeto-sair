@@ -44,7 +44,7 @@ class PrimeiroAndarController extends Controller
 	 */
 	public function store(Request $request)
 	{
-			//
+		//
 	}
 
 	/**

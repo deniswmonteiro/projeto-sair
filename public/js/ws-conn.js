@@ -39,7 +39,7 @@ function onConnectionLost(responseObject) {
 // called when a message arrives
 function onMessageArrived(message) {
   console.log("onMessageArrived:" + message.payloadString);
-  localStorage.setItem('lampada', message.payloadString);
+  //localStorage.setItem('lampada', message.payloadString);
 }
 
 // função de envio de mensagens via websockets
@@ -57,8 +57,6 @@ function acionaLampadas() {
         message.destinationName = "ceamazon/" + subtopico;
         message.qos = 1;
         client.send(message);
-
-        // localStorage.setItem('lampada', 'on');
       }
 
       else {
@@ -67,8 +65,6 @@ function acionaLampadas() {
         message.destinationName = "ceamazon/"  + subtopico;
         message.qos = 1;
         client.send(message);
-
-        // localStorage.setItem('lampada', 'off');
       }
     });
   });
