@@ -74,7 +74,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 5,
             'sala_nome' => 'Sala Prof. 4',
-            'sala_localizacao' => [53, 14],
+            'sala_localizacao' => [54, 14],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 1,
             'coord_circ_lampadas' => [
@@ -89,7 +89,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 6,
             'sala_nome' => 'Sala Prof. 5',
-            'sala_localizacao' => [63, 14],
+            'sala_localizacao' => [64, 14],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 1,
             'coord_circ_lampadas' => [
@@ -104,7 +104,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 7,
             'sala_nome' => 'Sala Prof. 6',
-            'sala_localizacao' => [73, 14],
+            'sala_localizacao' => [74, 14],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [
@@ -116,7 +116,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 8,
             'sala_nome' => 'Lab. de Aferição',
-            'sala_localizacao' => [87, 14],
+            'sala_localizacao' => [90, 14],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 1,
             'coord_circ_lampadas' => [
@@ -188,7 +188,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
         \projetoautomacao\SalasSegundoAndar::create([
             'id_sala' => 14,
             'sala_nome' => 'Escada',
-            'sala_localizacao' => [35, 87],
+            'sala_localizacao' => [35, 86.5],
             'qtd_circ_lampada' => 1,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [
