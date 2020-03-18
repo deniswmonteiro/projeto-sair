@@ -38,34 +38,7 @@ function onConnectionLost(responseObject) {
 
 // called when a message arrives
 function onMessageArrived(message) {
-  console.log(message.destinationName + " : " + message.payloadString);
-  
-  const interruptor1 = document.querySelector('.interruptor #lampadas1');
-  const interruptor2 = document.querySelector('.interruptor #lampadas2');
-
-  $(interruptor1).click(function() {
-    $(this).attr('name', message.destinationName + '/c1');
-    $(this).attr('value', message.payloadString);
-  });
-
-  $(interruptor2).click(function() {
-    $(this).attr('name', message.destinationName + '/c2');
-    $(this).attr('value', message.payloadString);
-  });
-  
-  // $(interruptores).each(function(interruptor) {
-  //   if($(this).attr('id') == "lampadas1") {
-  //     $(this).attr('name', message.destinationName + '/c1');
-  //     $(this).attr('value', message.payloadString);
-  //   }
-
-  //   else if($(this).attr('id') == "lampadas2") {
-  //     $(this).attr('name', message.destinationName + '/c2');
-  //     $(this).attr('value', message.payloadString);
-  //   }
-  // });
-  
-  //localStorage.setItem('lampada', message.payloadString);
+  console.log(message.destinationName + ": " + message.payloadString);
 }
 
 // função de envio de mensagens via websockets
@@ -93,5 +66,21 @@ function acionaLampadas() {
         client.send(message);
       }
     });
+  });
+
+  const interruptor1 = document.querySelector('.interruptor #lampadas1');
+  const interruptor2 = document.querySelector('.interruptor #lampadas2');
+
+  $(interruptor1).change(function() {
+    $(this).attr('name', message.destinationName + '/c1');
+    $(this).attr('value', message.payloadString);
+
+    let circuito1Nome = $(this).attr('name');
+    let circuito1Valor = $(this).attr('value');
+  });
+
+  $(interruptor2).change(function() {
+    $(this).attr('name', message.destinationName + '/c2');
+    $(this).attr('value', message.payloadString);
   });
 }

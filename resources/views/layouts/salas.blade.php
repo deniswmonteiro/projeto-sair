@@ -28,14 +28,10 @@
             <li>
               @for($i = 1; $i <= $qtd_circ_lampada; $i++)
                 <h5>Lâmpadas {{$i}}</h5>
-                <!-- <form action="{{route('terreo.update', ['terreo' => $sala_id])}}" method="post" class="form-teste"> -->
-                  @csrf
-                  @method("PUT")
-                  <label class="switch" for="lampadas{{$i}}">
-                    <input type="checkbox" id="lampadas{{$i}}" class="check interruptor-lampada" name="" value="">
-                    <div class="switch-slider switch-on-off lampadas{{$i}}"></div>
-                  </label>
-                <!-- </form> -->
+                <label class="switch" for="lampadas{{$i}}">
+                  <input type="checkbox" id="lampadas{{$i}}" class="check interruptor-lampada" name="" value="">
+                  <div class="switch-slider switch-on-off lampadas{{$i}}"></div>
+                </label>
               @endfor
             </li>
             <li>

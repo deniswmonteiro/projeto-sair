@@ -100,7 +100,7 @@ class TerreoController extends Controller
 	{
 			$salas = $this->terreo->all();
 			$data = $request->all();
-			dd($data);
+			
 			// $id = $this->terreo::find($id);
 			// $id->update($data);
 	}
