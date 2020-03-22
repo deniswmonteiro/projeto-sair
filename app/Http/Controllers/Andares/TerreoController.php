@@ -44,11 +44,7 @@ class TerreoController extends Controller
 	 */
 	public function store(Request $request)
 	{
-			// $salas = $this->terreo->all();
-			// dd(collect($salas[0]->estado_lampada)->get('c1'));
-			
-			// $data = $request->all();
-			// SalasTerreo::create($data);
+			//
 	}
 
 	/**
@@ -98,11 +94,8 @@ class TerreoController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
-			$data = $request->all();
-			dd($data);
-			
-			// $id = $this->terreo::find($id);
-			// $id->update($data);
+			// $data = $request->all();
+			// dd($data);
 	}
 
 	/**
