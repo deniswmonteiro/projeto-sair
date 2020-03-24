@@ -33,7 +33,7 @@ class GerenciarSolicitacoesController extends Controller
 	 */
 	public function create()
 	{
-		return redirect()->route('usuarios.cadastro');
+		return redirect()->route('usuarios.store');
 	}
 
 	/**
