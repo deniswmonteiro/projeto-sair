@@ -1,95 +1,107 @@
-// Create a client instance
-client = new Paho.MQTT.Client("hairdresser.cloudmqtt.com", 37615, "ceamazon_" + parseInt(Math.random() * 100, 10));
-//Example client = new Paho.MQTT.Client("m11.cloudmqtt.com", 32903, "web_" + parseInt(Math.random() * 100, 10));
+(function() {
+  // retorno visual de carregamento
+  $("div.alert").append("<span class='uk-margin-small-left' uk-spinner></span>");
 
-// set callback handlers
-client.onConnectionLost = onConnectionLost;
-client.onMessageArrived = onMessageArrived;
+  // variáveis para criar uma conexão
+  const host = "hairdresser.cloudmqtt.com";
+  const port = 37615;
+  const id = "ceamazon_" + parseInt(Math.random() * 100, 10);
 
-function doFail(e){
-  console.log(e);
-}
+  // Create a client instance
+  client = new Paho.MQTT.Client(host, port, id);
+  //Example client = new Paho.MQTT.Client("m11.cloudmqtt.com", 32903, "web_" + parseInt(Math.random() * 100, 10));
 
-// called when the client loses its connection
-function onConnectionLost(responseObject) {
-  if (responseObject.errorCode !== 0) {
-    console.log("onConnectionLost:"+responseObject.errorMessage);
+  // set callback handlers
+  client.onConnectionLost = onConnectionLost;
+  client.onMessageArrived = onMessageArrived;
+
+  // called when connection fails
+  function doFail(e){
+    console.log(e);
   }
-}
 
-// called when a message arrives
-function onMessageArrived(message) {
-  console.log(message.destinationName + ": " + message.payloadString);
-  // document.write(message.payloadString);
-}
+  // called when the client loses its connection
+  function onConnectionLost(responseObject) {
+    if (responseObject.errorCode !== 0) {
+      console.log("onConnectionLost:" + responseObject.errorMessage);
+    }
+  }
 
-// connect the client
-var options = {
-  useSSL: true,
-  userName: "xldvnagx",
-  password: "hD23-LNVOrD8",
-  useSSL: true,
-  onSuccess:onConnect,
-  onFailure:doFail
-}
+  // called when a message arrives
+  function onMessageArrived(message) {
+    // console.log(message.destinationName + ": " + message.payloadString);
 
-client.connect(options);
+    const circuito = message.payloadString;
+    const interruptores = document.querySelectorAll('.interruptor .interruptor-lampada');
 
-// called when the client connects
-function onConnect() {
-  // Once a connection has been made, make a subscription and send a message.
-  console.log("onConnect");
-  
-  // tópico subscrito
-  client.subscribe("ceamazon/biblioteca");
-
-  // chama a função responsável por fazer o envio de mensagens para a cloud
-  acionaLampadas();
-}
-
-// função de envio de mensagens via websockets
-function acionaLampadas() {
-  const localNome = document.querySelector(".salas .sala-nome");
-  const interruptores = document.querySelectorAll('.interruptor .interruptor-lampada');
-  const subtopico = (localNome.innerText).toLowerCase().replace(/[ç]/g, "c").replace(/[ã]/g, "a").replace(/[õ]/g, "o").replace(/[á]/g, "a").replace(/[é]/g, "e").replace(/[ó]/g, "o").match(/[a-z]/g).join("");
-
-  $(interruptores).each(function(interruptor) {
-    interruptor += 1;
-    $(this).change(function() {
-      if($(this).is(':checked')) {
-        message = new Paho.MQTT.Message("on" + interruptor);
-        message.destinationName = "ceamazon/" + subtopico;
-        message.qos = 1;
-        message.retained = true;
-        client.send(message);
-      }
-
-      else {
-        client.subscribe("ceamazon/" + subtopico);
-        message = new Paho.MQTT.Message("off" + interruptor);
-        message.destinationName = "ceamazon/"  + subtopico;
-        message.qos = 1;
-        message.retained = true;
-        client.send(message);
+    $(interruptores).each(function() {
+      switch(circuito) {
+        case "on1":
+          lampadas1.checked = true;
+          break;
+        case "on2":
+          lampadas2.checked = true;
+          break;
+        case "on3":
+          lampadas3.checked = true;
+          break;
+        case "on4":
+          lampadas4.checked = true;
+          break;
       }
     });
-  });
+  }
 
-  const interruptor1 = document.querySelector('.interruptor #lampadas1');
-  const interruptor2 = document.querySelector('.interruptor #lampadas2');
+  // connect the client
+  const options = {
+    userName: "xldvnagx",
+    password: "hD23-LNVOrD8",
+    useSSL: true,
+    onSuccess: onConnect,
+    onFailure: doFail
+  }
+  client.connect(options);
 
-  $(interruptor1).change(function() {
-    $(this).attr('name', message.destinationName + '/c1');
-    $(this).attr('value', message.payloadString);
-
-    let circuito1Nome = $(this).attr('name');
-    let circuito1Valor = $(this).attr('value');
-
+  // called when the client connects
+  function onConnect() {
+    const interruptores = document.querySelectorAll('.interruptor .interruptor-lampada');
+    const localNome = document.querySelector(".salas .sala-nome");
+    const subtopico = (localNome.innerText).toLowerCase().replace(/[ç]/g, "c").replace(/[ã]/g, "a").replace(/[õ]/g, "o").replace(/[á]/g, "a").replace(/[é]/g, "e").replace(/[ó]/g, "o").match(/[a-z]/g).join("");
+    const notificacaoConectado = document.querySelector('div.alert');
     
-  });
+    // Mostra uma notificação quando se conecta ao sistema.
+    notificacaoConectado.innerText = "Conectado!";
+    
+    // tópico subscrito
+    for(let i = 1; i < interruptores.length + 1; i++) {
+      client.subscribe("ceamazon/" + subtopico + "/c" + i);
+    }
 
-  $(interruptor2).change(function() {
-    $(this).attr('name', message.destinationName + '/c2');
-    $(this).attr('value', message.payloadString);
-  });
-}
+    // chama a função responsável por fazer o envio de mensagens para a cloud
+    acionaLampadas(subtopico, interruptores);
+  }
+
+  // função de envio de mensagens via websockets
+  function acionaLampadas(subtopico, interruptores) {  
+    $(interruptores).each(function(interruptor) {
+      interruptor += 1;
+      $(this).change(function() {
+        if($(this).is(':checked')) {
+          message = new Paho.MQTT.Message("on" + interruptor);
+          message.destinationName = "ceamazon/" + subtopico + "/c" + interruptor;
+          message.qos = 1;
+          message.retained = true;
+          client.send(message);
+        }
+
+        else {
+          message = new Paho.MQTT.Message("off" + interruptor);
+          message.destinationName = "ceamazon/" + subtopico + "/c" + interruptor;
+          message.qos = 1;
+          message.retained = true;
+          client.send(message);
+        }
+      });
+    });
+  }
+})();

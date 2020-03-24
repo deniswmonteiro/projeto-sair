@@ -54,7 +54,7 @@ senhaModal.forEach(btn => {
 /** notificações */
 $("div.alert")
     .not(".alert-important")
-    .delay(3000)
+    .delay(4000)
     .fadeOut(350);
 
 /** adicionar evento de click aos links */

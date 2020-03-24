@@ -23,7 +23,6 @@ class CreateCollectionSalasTerreo extends Migration
             $table->integer('qtd_arcondicionado')->nullable();
             $table->bjson('coord_circ_lampadas');
             $table->bjson('coord_arcondicionado')->nullable();
-            $table->bjson('estado_lampada');
 
             $table->timestamps();
         });

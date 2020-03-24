@@ -29,7 +29,7 @@
               @for($i = 1; $i <= $qtd_circ_lampada; $i++)
                 <h5>Lâmpadas {{$i}}</h5>
                 <label class="switch" for="lampadas{{$i}}">
-                  <input type="checkbox" id="lampadas{{$i}}" class="check interruptor-lampada" name="" value="">
+                  <input type="checkbox" id="lampadas{{$i}}" class="check interruptor-lampada">
                   <div class="switch-slider switch-on-off lampadas{{$i}}"></div>
                 </label>
               @endfor

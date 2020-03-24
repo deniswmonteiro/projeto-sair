@@ -27,10 +27,6 @@ class SalasTerreoCollectionSeeder extends Seeder
                 'arcondicionado1' => [1, 17],
                 'arcondicionado2' => [1, 57],
                 'arcondicionado3' => [95.5, 28]
-            ],
-            'estado_lampada' => [
-                'c1' => 'off1',
-                'c2' => 'off2'
             ]
         ]);
         

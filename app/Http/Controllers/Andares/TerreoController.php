@@ -56,6 +56,7 @@ class TerreoController extends Controller
 	public function show($id)
 	{
 		$salas = $this->terreo->all();
+		flash('Conectando-se ao sistema')->success();
 		return view('andares/salas/salasterreo', [
 			'andar' => 'terreo',
 			'sala_id' => $id,
@@ -94,8 +95,7 @@ class TerreoController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
-			// $data = $request->all();
-			// dd($data);
+			//
 	}
 
 	/**
