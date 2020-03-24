@@ -33,7 +33,7 @@ class GerenciarSolicitacoesController extends Controller
 	 */
 	public function create()
 	{
-		return redirect()->route('usuarios.store');
+		//
 	}
 
 	/**
@@ -44,7 +44,7 @@ class GerenciarSolicitacoesController extends Controller
 	 */
 	public function store(Request $request)
 	{
-		//
+		return redirect()->route('usuarios.cadastro');
 	}
 
 	/**
