@@ -44,7 +44,7 @@ class GerenciarSolicitacoesController extends Controller
 	 */
 	public function store(Request $request)
 	{
-		return redirect()->route('usuarios.cadastro');
+		return redirect()->route('usuarios.create');
 	}
 
 	/**
