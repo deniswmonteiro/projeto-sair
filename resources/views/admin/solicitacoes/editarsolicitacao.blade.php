@@ -7,7 +7,7 @@
 	<section class="uk-section solicitacao">
 		<div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body bg-card-form">
-				<form class="uk-form-stacked form" action="{{route('usuarios.cadastro')}}" method="post">
+				<form class="uk-form-stacked form" action="{{route('gerenciarsolicitacoes.create')}}" method="post">
 					@csrf
 					<div class="uk-child-width-1-3@s uk-margin" uk-grid>
 						<div>
@@ -60,6 +60,27 @@
 									</option>
 									<option value="LabQuali" @if($solicitacoes->laboratorio === 'LabQuali') selected @endif>
 										LabQuali
+									</option>
+									<option value="LabSIMA" @if($solicitacoes->laboratorio === 'LabSIMA') selected @endif>
+										LabSIMA
+									</option>
+									<option value="Biblioteca" @if($solicitacoes->laboratorio === 'Biblioteca') selected @endif>
+										Biblioteca
+									</option>
+									<option value="Secretaria" @if($solicitacoes->laboratorio === 'Secretaria') selected @endif>
+										Secretaria
+									</option>
+									<option value="Diretoria" @if($solicitacoes->laboratorio === 'Diretoria') selected @endif>
+										Diretoria
+									</option>
+									<option value="LabQuali" @if($solicitacoes->laboratorio === 'LabQuali') selected @endif>
+										LabQuali
+									</option>
+									<option value="LabInstEletricas" @if($solicitacoes->laboratorio === 'LabInstEletricas') selected @endif>
+										Lab. de Instalações Elétricas
+									</option>
+									<option value="LabModelagem" @if($solicitacoes->laboratorio === 'LabModelagem') selected @endif>
+										Lab. de Modelagem
 									</option>
 								</select>
 								@error('laboratorio')

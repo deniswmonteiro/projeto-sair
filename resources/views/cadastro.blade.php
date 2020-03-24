@@ -70,8 +70,8 @@
 									<option value="Biblioteca">Biblioteca</option>
 									<option value="Secretaria">Secretaria</option>
 									<option value="Diretoria">Diretoria</option>
-									<option value="Lab. de Inst. Elétricas">Lab. de Instalações Elétricas</option>
-									<option value="Lab. de Modelagem">Lab. de Modelagem</option>
+									<option value="LabInstEletricas">Lab. de Instalações Elétricas</option>
+									<option value="LabModelagem">Lab. de Modelagem</option>
 								</select>
 								@error('laboratorio')
 									<span class="uk-text-danger" role="alert">
