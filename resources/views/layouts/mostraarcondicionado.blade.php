@@ -1,6 +1,7 @@
 @switch($arcondicionado)
   @case("arcondicionado1")
-    @for($i = 0; $i <= count($coord_arcondicionado1) - 1; $i++)
+    {{ $coord_arcondicionado1 = count($coord_arcondicionado1) }}
+    @for($i = 0; $i <= $coord_arcondicionado1 - 1; $i++)
       <i class="uk-position-absolute icones-arcondicionado" style="left: {{$coord_arcondicionado1[$i]}}%; top: {{$coord_arcondicionado1[++$i]}}%" data-dispositivo="arcondicionado1">1</i>
     @endfor
     @break
