@@ -123,5 +123,5 @@
 		</div>
 	</section>
 
-	<script src="{{asset('js/cadastro.js')}}"></script>
+	<script src="{{secure_asset('js/cadastro.js')}}"></script>
 @endsection

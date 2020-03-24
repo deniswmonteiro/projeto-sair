@@ -117,5 +117,5 @@
 		</div>
 	</section>
 
-	<script src="{{asset('js/registrausuario.js')}}"></script>
+	<script src="{{secure_asset('js/registrausuario.js')}}"></script>
 @endsection

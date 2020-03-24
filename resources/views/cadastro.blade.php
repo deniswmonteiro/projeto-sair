@@ -95,5 +95,5 @@
 		</div>
 	</section>
 	
-	<script src="{{asset('js/solicita-cadastro.js')}}"></script>
+	<script src="{{secure_asset('js/solicita-cadastro.js')}}"></script>
 @endsection
