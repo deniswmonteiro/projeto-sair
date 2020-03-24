@@ -41,7 +41,7 @@ class SolicitarCadastroController extends Controller
 			'nome' => 'required|string|max:255',
 			'cpf' => 'required|cpf|unique:solicitar_cadastro',
 			'email' => 'required|string|max:255|regex:/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i|unique:solicitar_cadastro',
-			'usuario' => 'required|string|min:6|max:6|regex:/^[a-z0-9_-]{6,15}$/|unique:solicitar_cadastro',
+			'usuario' => 'required|string|min:6|max:20|regex:/^[a-z0-9_-]{6,20}$/|unique:solicitar_cadastro',
 			'laboratorio' => 'required|string'
 		]);
 		SolicitarCadastro::create($data);
