@@ -1,12 +1,12 @@
 (function() {
-  // retorno visual de carregamento
+  // retorno visual de carregamento da conexão
   $("div.alert").append("<span class='uk-margin-small-left' uk-spinner></span>");
 
   // variáveis para criar uma conexão
   const host = "hairdresser.cloudmqtt.com";
   const port = 37615;
-  const id = "ceamazon_" + parseInt(Math.random() * 100, 10);
-
+  const id = "ceamazon_" + new Date().getUTCMilliseconds();;
+  
   // Create a client instance
   client = new Paho.MQTT.Client(host, port, id);
   //Example client = new Paho.MQTT.Client("m11.cloudmqtt.com", 32903, "web_" + parseInt(Math.random() * 100, 10));
@@ -29,7 +29,7 @@
 
   // called when a message arrives
   function onMessageArrived(message) {
-    // console.log(message.destinationName + ": " + message.payloadString);
+    //console.log(message.destinationName + ": " + message.payloadString);
 
     const circuito = message.payloadString;
     const interruptores = document.querySelectorAll('.interruptor .interruptor-lampada');
