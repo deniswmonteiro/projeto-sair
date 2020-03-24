@@ -39,14 +39,26 @@
         case "on1":
           lampadas1.checked = true;
           break;
+        case "off1":
+          lampadas1.checked = false;
+          break;
         case "on2":
           lampadas2.checked = true;
+          break;
+        case "off2":
+          lampadas2.checked = false;
           break;
         case "on3":
           lampadas3.checked = true;
           break;
+        case "off3":
+          lampadas3.checked = false;
+          break;
         case "on4":
           lampadas4.checked = true;
+          break;
+        case "off4":
+          lampadas4.checked = false;
           break;
       }
     });
