@@ -10,7 +10,7 @@ class SegundoAndarController extends Controller
 {
 	private $segundoAndar;
 
-	public function __construct(SalasSegundoAndar $segundoAndar) 
+	public function __construct(SalasSegundoAndar $segundoAndar)
 	{
 		$this->segundoAndar = $segundoAndar;
 	}
@@ -33,7 +33,7 @@ class SegundoAndarController extends Controller
 	 */
 	public function create()
 	{
-			//
+		//
 	}
 
 	/**
@@ -44,7 +44,7 @@ class SegundoAndarController extends Controller
 	 */
 	public function store(Request $request)
 	{
-			//
+		//
 	}
 
 	/**
@@ -56,6 +56,7 @@ class SegundoAndarController extends Controller
 	public function show($id)
 	{
 		$sala = $this->segundoAndar->all();
+		flash('Conectando-se ao sistema')->success();
 		return view('andares/salas/salassegundoandar', [
 			'andar' => 'segundoandar',
 			'sala_id' => $id,
@@ -77,7 +78,7 @@ class SegundoAndarController extends Controller
 	 */
 	public function edit($id)
 	{
-			//
+		//
 	}
 
 	/**
@@ -89,7 +90,7 @@ class SegundoAndarController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
-			//
+		//
 	}
 
 	/**
@@ -100,6 +101,6 @@ class SegundoAndarController extends Controller
 	 */
 	public function destroy($id)
 	{
-			//
+		//
 	}
 }

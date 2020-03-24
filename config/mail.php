@@ -137,14 +137,14 @@
 
 
 return [
-    "driver" => "smtp",
-    "host" => "smtp.mailtrap.io",
-    "port" => 2525,
-    "from" => array(
-        "address" => "from@example.com",
-        "name" => "Example"
-    ),
-    "username" => "825974a40e2435",
-    "password" => "14931a9c2f1934",
-    "sendmail" => "/usr/sbin/sendmail -bs"
-  ];
+	"driver" => "smtp",
+	"host" => "smtp.mailtrap.io",
+	"port" => 2525,
+	"from" => array(
+		"address" => "from@example.com",
+		"name" => "Example"
+	),
+	"username" => "825974a40e2435",
+	"password" => "14931a9c2f1934",
+	"sendmail" => "/usr/sbin/sendmail -bs"
+];

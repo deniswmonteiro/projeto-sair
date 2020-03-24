@@ -8,95 +8,95 @@ use projetoautomacao\User;
 
 class UsuarioController extends Controller
 {
-    private $usuario;
+	private $usuario;
 
-	public function __construct(User $usuario) 
+	public function __construct(User $usuario)
 	{
 		$this->usuario = $usuario;
-    }
-    
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $usuarios = $this->usuario->all(['nome', 'email', 'categoria', 'laboratorio']);
-        return view('admin/usuarios/usuarios', compact('usuarios'));
-    }
+	}
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function index()
+	{
+		$usuarios = $this->usuario->all(['nome', 'email', 'categoria', 'laboratorio']);
+		return view('admin/usuarios/usuarios', compact('usuarios'));
+	}
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+	/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function create()
+	{
+		//
+	}
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @return \Illuminate\Http\Response
+	 */
+	public function store(Request $request)
+	{
+		//
+	}
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $usuario
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($usuario)
-    {
-        $usuarios = $this->usuario->findOrFail($usuario);
-        return view('admin/usuarios/editarusuario', compact('usuarios'));
-    }
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function show($id)
+	{
+		//
+	}
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $usuario
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $usuario)
-    {
-        $data = $request->all();
-        $usuario = $this->usuario::findOrFail($usuario);
-        $usuario->update($data);
-        flash('Dados atualizados com sucesso!')->success();
-        return redirect()->route('usuarios.index');
-    }
+	/**
+	 * Show the form for editing the specified resource.
+	 *
+	 * @param  int  $usuario
+	 * @return \Illuminate\Http\Response
+	 */
+	public function edit($usuario)
+	{
+		$usuarios = $this->usuario->findOrFail($usuario);
+		return view('admin/usuarios/editarusuario', compact('usuarios'));
+	}
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $usuario
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($usuario)
-    {
-        $usuario = $this->usuario::find($usuario);
-        $usuario->delete();
-        flash('Usuário(a) removido do sistema')->success();
-        return redirect()->route('usuarios.index');
-    }
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @param  int  $usuario
+	 * @return \Illuminate\Http\Response
+	 */
+	public function update(Request $request, $usuario)
+	{
+		$data = $request->all();
+		$usuario = $this->usuario::findOrFail($usuario);
+		$usuario->update($data);
+		flash('Dados atualizados com sucesso!')->success();
+		return redirect()->route('usuarios.index');
+	}
+
+	/**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $usuario
+	 * @return \Illuminate\Http\Response
+	 */
+	public function destroy($usuario)
+	{
+		$usuario = $this->usuario::find($usuario);
+		$usuario->delete();
+		flash('Usuário(a) removido do sistema')->success();
+		return redirect()->route('usuarios.index');
+	}
 }

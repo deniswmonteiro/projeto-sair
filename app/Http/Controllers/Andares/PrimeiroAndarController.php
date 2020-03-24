@@ -33,7 +33,7 @@ class PrimeiroAndarController extends Controller
 	 */
 	public function create()
 	{
-			//
+		//
 	}
 
 	/**
@@ -56,6 +56,7 @@ class PrimeiroAndarController extends Controller
 	public function show($id)
 	{
 		$sala = $this->primeiroAndar->all();
+		flash('Conectando-se ao sistema')->success();
 		return view('andares/salas/salasprimeiroandar', [
 			'andar' => 'primeiroandar',
 			'sala_id' => $id,
@@ -79,7 +80,7 @@ class PrimeiroAndarController extends Controller
 	 */
 	public function edit($id)
 	{
-			//
+		//
 	}
 
 	/**
@@ -91,7 +92,7 @@ class PrimeiroAndarController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
-			//
+		//
 	}
 
 	/**
@@ -102,6 +103,6 @@ class PrimeiroAndarController extends Controller
 	 */
 	public function destroy($id)
 	{
-			//
+		//
 	}
 }

@@ -6,7 +6,7 @@
       <div>
         <div class="uk-inline">
           @include("layouts.addcoord", [
-            "andar" => "primeiro_andar", "local" => "lab-conforto-ambiental", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
+            "andar" => "primeiro_andar", "local" => "lab-sima", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
       </div>
@@ -15,7 +15,7 @@
       <div>
         <div class="uk-inline">
           @include("layouts.addcoord", [
-            "andar" => "primeiro_andar", "local" => "lab-computacao", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
+            "andar" => "primeiro_andar", "local" => "lab-modelagem", "qtd_imgs" => 2, "qtd_lampadas" => $qtd_circ_lampada, "qtd_arcondicionados" => $qtd_arcondicionado
           ])
         </div>
       </div>

@@ -6,33 +6,33 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateCollectionSolicitarCadastro extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('solicitar_cadastro', function (Blueprint $table) {
-            $table->bigIncrements('id');
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('solicitar_cadastro', function (Blueprint $table) {
+			$table->bigIncrements('id');
 
-            $table->string('nome')->unique();
-            $table->string('cpf')->unique();
-            $table->string('email')->unique();
-            $table->string('usuario')->unique();
-            $table->string('laboratorio');
+			$table->string('nome')->unique();
+			$table->string('cpf')->unique();
+			$table->string('email')->unique();
+			$table->string('usuario')->unique();
+			$table->string('laboratorio');
 
-            $table->timestamps();
-        });
-    }
+			$table->timestamps();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('solicitar_cadastro');
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::dropIfExists('solicitar_cadastro');
+	}
 }

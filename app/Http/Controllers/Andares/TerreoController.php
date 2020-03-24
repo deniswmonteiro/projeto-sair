@@ -10,7 +10,7 @@ class TerreoController extends Controller
 {
 	private $terreo;
 
-	public function __construct(SalasTerreo $terreo) 
+	public function __construct(SalasTerreo $terreo)
 	{
 		$this->terreo = $terreo;
 	}
@@ -33,7 +33,7 @@ class TerreoController extends Controller
 	 */
 	public function create()
 	{
-			//
+		//
 	}
 
 	/**
@@ -44,7 +44,7 @@ class TerreoController extends Controller
 	 */
 	public function store(Request $request)
 	{
-			//
+		//
 	}
 
 	/**
@@ -83,7 +83,7 @@ class TerreoController extends Controller
 	 */
 	public function edit($id)
 	{
-			//
+		//
 	}
 
 	/**
@@ -95,7 +95,7 @@ class TerreoController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
-			//
+		//
 	}
 
 	/**
@@ -106,6 +106,6 @@ class TerreoController extends Controller
 	 */
 	public function destroy($id)
 	{
-			//
+		//
 	}
 }
