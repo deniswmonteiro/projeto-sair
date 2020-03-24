@@ -55,6 +55,12 @@
 									<option value="LabMotriz">LabMotriz</option>
 									<option value="LCADE">LCADE</option>
 									<option value="LabQuali">LabQuali</option>
+									<option value="LabSIMA">LabSIMA</option>
+									<option value="Biblioteca">Biblioteca</option>
+									<option value="Secretaria">Secretaria</option>
+									<option value="Diretoria">Diretoria</option>
+									<option value="LabInstEletricas">Lab. de Instalações Elétricas</option>
+									<option value="LabModelagem">Lab. de Modelagem</option>
 								</select>
 								@error('laboratorio')
 									<span class="uk-text-danger" role="alert">
