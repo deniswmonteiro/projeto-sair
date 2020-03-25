@@ -33,6 +33,10 @@ li h3 {
   font-weight: 500;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 body img {
   display: block;
   margin: 0 auto;
@@ -473,7 +477,6 @@ body .btn .form-btn-submit button.btn-cancelar {
   font-size: 1em;
   line-height: 1.4;
   font-weight: 500;
-  text-decoration: none;
   color: #193;
   transition: 0.4s;
   text-transform: initial;
@@ -559,7 +562,6 @@ body .btn .form-btn-submit button.btn-cancelar {
   font-size: 0.875em;
   line-height: 1.4;
   font-weight: 500;
-  text-decoration: none;
 }
 
 .andar .legenda li a:hover {

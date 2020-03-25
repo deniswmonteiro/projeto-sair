@@ -1,79 +1,79 @@
 .navbar {
-    @include device(s) {
-        padding: 10px 15px 10px 0;
+  @include device(s) {
+    padding: 10px 15px 10px 0;
+  }
+
+  @include device(m) {
+    padding: 10px 30px 10px 15px;
+  }
+
+  @include device(l) {
+    padding: 10px 40px 10px 25px;
+  }
+
+  @include device(xl) {
+    padding: 10px 80px 10px 65px;
+  }
+
+  &.navbar-interno {
+    background: $grey !important;
+
+    .logo-cabecalho {
+      @include device(xs) {
+        margin: 0 auto;
+      }
     }
 
-    @include device(m) {
-        padding: 10px 30px 10px 15px;
+    .ativo {
+      display: none;
     }
 
-    @include device(l) {
-        padding: 10px 40px 10px 25px;
-    }
+    .menu {
+      li {
+        margin-left: 15px;
 
-    @include device(xl) {
-        padding: 10px 80px 10px 65px;
-    }
+        a {
+          @include font(16);
+          padding: 8px 13px;
+          min-height: 1px;
+          display: block;
 
-    &.navbar-interno {
-        background: $grey !important;
+          &::after {
+            content: "";
+            display: block;
+            background: $orange;
+            height: 2px;
+            width: 0;
+            transition: 0.4s;
+          }
 
-        .logo-cabecalho {
-            @include device(xs) {
-                margin: 0 auto;
-            }
+          &:hover::after {
+            width: 100%;
+          }
+
+          /* 'after' do link ativo */
+          &.active::after {
+            width: 100%;
+          }
         }
 
-        .ativo {
-            display: none;
+        .btn-login {
+          margin-left: 10px;
+          background: $orange;
+          color: $light-grey;
+          transition: 0.4s;
+          display: flex;
+
+          &:hover {
+            color: $dark-grey;
+            box-shadow: 0px 0px 0px 3px $dark-grey;
+          }
+
+          i {
+            margin-left: 10px;
+          }
         }
-
-        .menu {
-            li {
-                margin-left: 15px;
-
-                a {
-                    @include font(16);
-                    padding: 8px 13px;
-                    min-height: 1px;
-                    display: block;
-
-                    &::after {
-                        content: "";
-                        display: block;
-                        background: $orange;
-                        height: 2px;
-                        width: 0;
-                        transition: 0.4s;
-                    }
-
-                    &:hover::after {
-                        width: 100%;
-                    }
-
-                    /* 'after' do link ativo */
-                    &.active::after {
-                        width: 100%;
-                    }
-                }
-
-                .btn-login {
-                    margin-left: 10px;
-                    background: $orange;
-                    color: $light-grey;
-                    transition: 0.4s;
-                    display: flex;
-
-                    &:hover {
-                        color: $dark-grey;
-                        box-shadow: 0px 0px 0px 3px $dark-grey;
-                    }
-
-                    i {
-                        margin-left: 10px;
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 }

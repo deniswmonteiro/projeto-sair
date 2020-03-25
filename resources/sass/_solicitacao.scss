@@ -1,44 +1,44 @@
 .solicitacao {
-    table {
-        th {
-            color: $dark-grey;
-            font-weight: bold;
-        }
-
-        .btn {
-            margin-top: 0;
-
-            i {
-                vertical-align: middle;
-            }
-
-            @include device(xs) {
-                display: flex !important;
-            }
-
-            .btn-acao {
-                @include device(xs) {
-                    margin-bottom: 0;
-                    margin-right: 20px !important;
-                }
-            }
-        }
+  table {
+    th {
+      color: $dark-grey;
+      font-weight: bold;
     }
 
     .btn {
-        &.btn-usuarios-acao {
-            margin-top: 0;
+      margin-top: 0;
 
-            @media screen and (max-width: 868px) {
-                margin-top: 20px;
-            }
-        }
+      i {
+        vertical-align: middle;
+      }
 
-        @media screen and (max-width: 990px) {
-            .btn-acao,
-            .btn-cancelar {
-                padding: 0 20px;
-            }
+      @include device(xs) {
+        display: flex !important;
+      }
+
+      .btn-acao {
+        @include device(xs) {
+          margin-bottom: 0;
+          margin-right: 20px !important;
         }
+      }
     }
+  }
+
+  .btn {
+    &.btn-usuarios-acao {
+      margin-top: 0;
+
+      @media screen and (max-width: 868px) {
+        margin-top: 20px;
+      }
+    }
+
+    @media screen and (max-width: 990px) {
+      .btn-acao,
+      .btn-cancelar {
+        padding: 0 20px;
+      }
+    }
+  }
 }

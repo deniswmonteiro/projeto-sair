@@ -1,34 +1,33 @@
 .login {
-    .bg-card-form {
-        max-width: 500px;
+  .bg-card-form {
+    max-width: 500px;
 
-        span.acoes-login {
-            &:first-of-type::after {
-                content: "";
-                width: 5px;
-                height: 5px;
-                border-radius: 5px;
-                background: $light-orange;
-                display: inline-block;
-                margin: 0 5px 2px 10px;
-            }
+    span.acoes-login {
+      &:first-of-type::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        background: $light-orange;
+        display: inline-block;
+        margin: 0 5px 2px 10px;
+      }
 
-            a {
-                @include font(16);
-                text-decoration: none;
-                color: $dark-green;
-                transition: 0.4s;
-                text-transform: initial;
-                padding: 0;
+      a {
+        @include font(16);
+        color: $dark-green;
+        transition: 0.4s;
+        text-transform: initial;
+        padding: 0;
 
-                &:hover {
-                    color: $green;
-                }
-            }
+        &:hover {
+          color: $green;
         }
-
-        .check-lembrar-senha {
-            border-radius: 4px;
-        }
+      }
     }
+
+    .check-lembrar-senha {
+      border-radius: 4px;
+    }
+  }
 }

@@ -1,45 +1,45 @@
 .btn-menu-mobile {
-    a,
-    span {
-        color: $dark-grey;
-    }
+  a,
+  span {
+    color: $dark-grey;
+  }
 
-    a {
-        padding: 0 10px 0 0;
-    }
+  a {
+    padding: 0 10px 0 0;
+  }
 }
 
 .menu-mobile {
-    background: $light-grey;
+  background: $light-grey;
 
-    .divisor {
-        border-top: 1px solid rgba(17, 153, 51, 0.1);
+  .divisor {
+    border-top: 1px solid rgba(17, 153, 51, 0.1);
+  }
+
+  li {
+    width: 260px;
+    margin-left: -20px;
+    padding: 6px 0;
+
+    &.active {
+      background: rgba(17, 153, 51, 0.1);
+      color: $dark-green;
+      border-radius: 0 10px 10px 0;
     }
 
-    li {
-        width: 260px;
-        margin-left: -20px;
-        padding: 6px 0;
+    a {
+      color: $dark-grey;
+      display: flex;
+      padding: 5px 100px 5px 20px;
 
-        &.active {
-            background: rgba(17, 153, 51, 0.1);
-            color: $dark-green;
-            border-radius: 0 10px 10px 0;
-        }
+      &:visited,
+      &:active {
+        color: inherit;
+      }
 
-        a {
-            color: $dark-grey;
-            display: flex;
-            padding: 5px 100px 5px 20px;
-
-            &:visited,
-            &:active {
-                color: inherit;
-            }
-
-            i {
-                margin-right: 10px;
-            }
-        }
+      i {
+        margin-right: 10px;
+      }
     }
+  }
 }

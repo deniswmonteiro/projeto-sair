@@ -2,222 +2,226 @@ body,
 p,
 a,
 li {
-    @include font(16);
-    color: $dark-grey;
+  @include font(16);
+  color: $dark-grey;
 
-    h1 {
-        @include font(36);
-    }
+  h1 {
+    @include font(36);
+  }
 
-    h3 {
-        @include font(24);
-    }
+  h3 {
+    @include font(24);
+  }
+}
+
+a {
+  text-decoration: none !important;
 }
 
 body {
-    img {
-        display: block;
-        margin: 0 auto;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .notificacao-alerta {
+    .alert {
+      padding: 15px;
+      color: $light-grey;
+      font-size: 1.125em;
+
+      &.alert-success {
+        background-color: $dark-green;
+        border-color: $light-green;
+      }
+
+      &.alert-warning {
+        background-color: $dark-orange;
+        border-color: $light-orange;
+      }
+    }
+  }
+
+  .bg-card-form {
+    background: $light-grey;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 30px;
+
+    @include device(xs) {
+      padding: 20px;
     }
 
-    .notificacao-alerta {
-        .alert {
-            padding: 15px;
-            color: $light-grey;
-            font-size: 1.125em;
+    form {
+      label,
+      input,
+      input:focus,
+      select {
+        color: $dark-grey !important;
+      }
 
-            &.alert-success {
-                background-color: $dark-green;
-                border-color: $light-green;
-            }
+      input,
+      select,
+      .uk-search-input {
+        outline: none;
+        border-color: $grey;
 
-            &.alert-warning {
-                background-color: $dark-orange;
-                border-color: $light-orange;
-            }
+        &:focus {
+          border-color: $green !important;
         }
+      }
+
+      .uk-text-danger {
+        @include font(14);
+      }
+
+      .aviso {
+        color: $dark-red;
+      }
     }
 
-    .bg-card-form {
-        background: $light-grey;
-        max-width: 990px;
-        margin: 0 auto;
-        padding: 30px;
+    /* icone de mostrar/esconder senha */
+    .btn-form-senha-modal {
+      height: 40px;
+      background: $green;
+      border: none;
+      cursor: pointer;
+      border-radius: 0 5px 5px 0;
+      outline: none;
+      color: $dark-grey;
+    }
+
+    i {
+      color: $dark-grey;
+    }
+  }
+
+  .btn {
+    margin-top: 40px;
+
+    @include device(xs) {
+      display: block !important;
+    }
+
+    a {
+      display: inline-block;
+      transition: 0.4s;
+      font-weight: 700;
+      color: $light-grey;
+      border-radius: 4px;
+
+      @include device(xs) {
+        padding: 0 20px;
+      }
+
+      &:hover {
+        color: $dark-grey;
+        box-shadow: 0px 0px 0px 3px $dark-grey;
+      }
+
+      &.btn-confirmar,
+      &.btn-modal-confirmar,
+      &.btn-acao {
+        background: $dark-green;
 
         @include device(xs) {
-            padding: 20px;
+          display: block;
+          margin-bottom: 20px;
+          margin-right: 0 !important;
+        }
+      }
+
+      &.btn-cancelar {
+        background: $red;
+
+        @include device(xs) {
+          display: block;
+          margin-right: 0 !important;
+        }
+      }
+
+      &.btn-solicitacao {
+        background: $dark-orange;
+
+        @include device(xs) {
+          display: block;
+        }
+      }
+
+      &.link-voltar-login {
+        @include font(16);
+        color: $dark-orange !important;
+        padding: 8px 13px;
+
+        @include device(xs) {
+          padding: 10px 0;
+
+          &:hover {
+            box-shadow: none;
+          }
+
+          &::before {
+            content: "⟵";
+            color: $dark-orange;
+            animation: seta 0.5s ease-in 0s infinite alternate;
+            position: relative;
+            margin-left: 30px;
+            margin-right: -20px;
+          }
+
+          @keyframes seta {
+            from {
+              right: 30px;
+            }
+
+            to {
+              right: 20px;
+            }
+          }
         }
 
-        form {
-            label,
-            input,
-            input:focus,
-            select {
-                color: $dark-grey !important;
-            }
-
-            input,
-            select,
-            .uk-search-input {
-                outline: none;
-                border-color: $grey;
-
-                &:focus {
-                    border-color: $green !important;
-                }
-            }
-
-            .uk-text-danger {
-                @include font(14);
-            }
-
-            .aviso {
-                color: $dark-red;
-            }
+        &.inicial {
+          text-transform: initial;
         }
+      }
 
-        /* icone de mostrar/esconder senha */
-        .btn-form-senha-modal {
-            height: 40px;
-            background: $green;
-            border: none;
-            cursor: pointer;
-            border-radius: 0 5px 5px 0;
-            outline: none;
-            color: $dark-grey;
+      &.link-voltar {
+        position: absolute;
+        top: 272px;
+        padding: 10px;
+        border-radius: 50%;
+
+        @include device(xs) {
+          top: 258px;
         }
 
         i {
-            color: $dark-grey;
+          vertical-align: middle;
         }
+      }
     }
 
-    .btn {
-        margin-top: 40px;
+    .form-btn-submit {
+      @include device(xs) {
+        display: block !important;
+      }
 
-        @include device(xs) {
-            display: block !important;
+      button {
+        display: inline-block;
+        transition: 0.4s;
+        font-weight: 700;
+        color: $light-grey;
+        border-radius: 4px;
+
+        &:hover {
+          color: $dark-grey;
+          box-shadow: 0px 0px 0px 3px $dark-grey;
         }
 
-        a {
-            display: inline-block;
-            transition: 0.4s;
-            font-weight: 700;
-            color: $light-grey;
-            border-radius: 4px;
-
-            @include device(xs) {
-                padding: 0 20px;
-            }
-
-            &:hover {
-                color: $dark-grey;
-                box-shadow: 0px 0px 0px 3px $dark-grey;
-            }
-
-            &.btn-confirmar,
-            &.btn-modal-confirmar,
-            &.btn-acao {
-                background: $dark-green;
-
-                @include device(xs) {
-                    display: block;
-                    margin-bottom: 20px;
-                    margin-right: 0 !important;
-                }
-            }
-
-            &.btn-cancelar {
-                background: $red;
-
-                @include device(xs) {
-                    display: block;
-                    margin-right: 0 !important;
-                }
-            }
-
-            &.btn-solicitacao {
-                background: $dark-orange;
-
-                @include device(xs) {
-                    display: block;
-                }
-            }
-
-            &.link-voltar-login {
-                @include font(16);
-                color: $dark-orange !important;
-                padding: 8px 13px;
-
-                @include device(xs) {
-                    padding: 10px 0;
-
-                    &:hover {
-                        box-shadow: none;
-                    }
-
-                    &::before {
-                        content: "⟵";
-                        color: $dark-orange;
-                        animation: seta 0.5s ease-in 0s infinite alternate;
-                        position: relative;
-                        margin-left: 30px;
-                        margin-right: -20px;
-                    }
-
-                    @keyframes seta {
-                        from {
-                            right: 30px;
-                        }
-
-                        to {
-                            right: 20px;
-                        }
-                    }
-                }
-
-                &.inicial {
-                    text-transform: initial;
-                }
-            }
-
-            &.link-voltar {
-                position: absolute;
-                top: 272px;
-                padding: 10px;
-                border-radius: 50%;
-
-                @include device(xs) {
-                    top: 258px;
-                }
-
-                i {
-                    vertical-align: middle;
-                }
-            }
+        &.btn-cancelar {
+          background: $dark-red;
         }
-
-        .form-btn-submit {
-            @include device(xs) {
-                display: block !important;
-            }
-
-            button {
-                display: inline-block;
-                transition: 0.4s;
-                font-weight: 700;
-                color: $light-grey;
-                border-radius: 4px;
-
-                &:hover {
-                    color: $dark-grey;
-                    box-shadow: 0px 0px 0px 3px $dark-grey;
-                }
-
-                &.btn-cancelar {
-                    background: $dark-red;
-                }
-            }
-        }
+      }
     }
+  }
 }

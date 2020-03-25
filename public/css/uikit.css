@@ -6078,6 +6078,12 @@ ul.uk-nav-sub {
 .uk-tooltip.uk-active {
   display: block;
 }
+
+@media screen and (max-width: 640px) {
+  .uk-tooltip.uk-active {
+    display: none;
+  }
+}
 /* Direction / Alignment modifiers
  ========================================================================== */
 /* Direction */

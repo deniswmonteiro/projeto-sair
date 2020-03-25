@@ -1,52 +1,52 @@
 .andares {
-    h1 {
-        margin-bottom: 30px;
+  h1 {
+    margin-bottom: 30px;
 
-        &::after {
-            content: "";
-            display: block;
-            width: 90px;
-            height: 3px;
-            background: $light-orange;
-            margin-top: 10px;
-            border-radius: 5px;
-        }
+    &::after {
+      content: "";
+      display: block;
+      width: 90px;
+      height: 3px;
+      background: $light-orange;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+  }
+
+  a {
+    display: block;
+  }
+
+  .card-andar {
+    background: $light-grey no-repeat;
+    border: 1px solid $light-green;
+    padding: 30px;
+
+    &:hover {
+      background-color: $light-grey;
     }
 
-    a {
-        display: block;
+    h3 {
+      font-weight: 700;
     }
 
-    .card-andar {
-        background: $light-grey no-repeat;
-        border: 1px solid $light-green;
-        padding: 30px;
+    .img-bg-andar {
+      margin: 40px auto;
 
-        &:hover {
-            background-color: $light-grey;
-        }
-
-        h3 {
-            font-weight: 700;
-        }
-
-        .img-bg-andar {
-            margin: 40px auto;
-
-            &:last-of-type {
-                height: 290px;
-            }
-        }
+      &:last-of-type {
+        height: 290px;
+      }
     }
+  }
 
-    ul li:not(.uk-active) {
-        @include device(xl) {
-            opacity: 40%;
-            transition: 0.4s;
-        }
+  ul li:not(.uk-active) {
+    @include device(xl) {
+      opacity: 40%;
+      transition: 0.4s;
     }
+  }
 
-    .controle-slide {
-        color: $orange;
-    }
+  .controle-slide {
+    color: $orange;
+  }
 }

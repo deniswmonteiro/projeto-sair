@@ -15,40 +15,40 @@ $default-font: Quicksand, Arial, Helvetica, sans-serif;
 
 // conversão de px para em
 @function em($size, $context: 16) {
-    @return $size / $context + em;
+  @return $size / $context + em;
 }
 
 @mixin font($size) {
-    font-family: $default-font;
-    color: $dark-grey;
+  font-family: $default-font;
+  color: $dark-grey;
 
-    @if $size == 14 {
-        font-size: em(14);
-        line-height: 1.4;
-        font-weight: 500;
-    }
+  @if $size == 14 {
+    font-size: em(14);
+    line-height: 1.4;
+    font-weight: 500;
+  }
 
-    @if $size == 16 {
-        font-size: em(16);
-        line-height: 1.4;
-        font-weight: 500;
-    }
+  @if $size == 16 {
+    font-size: em(16);
+    line-height: 1.4;
+    font-weight: 500;
+  }
 
-    @if $size == 24 {
-        font-size: em(24);
-        line-height: 1.4;
-        font-weight: 500;
-    }
+  @if $size == 24 {
+    font-size: em(24);
+    line-height: 1.4;
+    font-weight: 500;
+  }
 
-    @if $size == 36 {
-        font-size: em(36);
-        line-height: 1.2;
-        font-weight: 500;
-    }
+  @if $size == 36 {
+    font-size: em(36);
+    line-height: 1.2;
+    font-weight: 500;
+  }
 
-    @if $size == 48 {
-        font-size: em(48);
-        line-height: 1.2;
-        font-weight: 500;
-    }
+  @if $size == 48 {
+    font-size: em(48);
+    line-height: 1.2;
+    font-weight: 500;
+  }
 }
