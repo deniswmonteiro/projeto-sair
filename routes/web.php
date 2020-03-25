@@ -24,7 +24,7 @@ Route::group(['middleware' => ['auth']], function () {
 	});
 
 	Route::prefix('usuarios')->namespace('Auth')->name('usuarios.')->group(function () {
-		Route::get('cadastro', 'RegisterController@showRegistrationForm')->name('form');
+		Route::get('cadastrar', 'RegisterController@showRegistrationForm')->name('form');
 		Route::post('cadastro', 'RegisterController@register')->name('cadastro');
 	});
 
