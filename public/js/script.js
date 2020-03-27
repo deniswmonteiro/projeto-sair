@@ -1,5 +1,5 @@
 navigator.serviceWorker.register('sw.js', {
-  scope: './'
+  scope: '/'
 });
 
 /* oculta/mostra logo do site ao clicar no menu mobile */
