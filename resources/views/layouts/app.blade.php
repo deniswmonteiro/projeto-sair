@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Projeto Automação &bull; {{$paginaAtual}}</title>
-    <link rel="stylesheet" href="{{secure_asset('css/uikit.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/uikit.css')}}" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-    <link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/app.css')}}" type="text/css">
     <link rel="shortcut icon" href="{{secure_asset('logo.ico')}}" type="image/x-icon">
     <script src="{{secure_asset('js/jquery-3.4.1.min.js')}}" type="text/javascript"></script>
     <script src="{{secure_asset('js/jquery.mask.js')}}" type="text/javascript"></script>

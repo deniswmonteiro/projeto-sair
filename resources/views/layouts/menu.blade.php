@@ -21,7 +21,6 @@
       <ul class="uk-navbar-nav menu">
         @if(Route::has('login'))
           @auth
-            <li><a href="#">Sobre</a></li>
             @if(Auth::user()->categoria === 'ADMINISTRADOR')
               <li>
                 <a href="{{route('usuarios.index')}}" class="@if(request()->is('usuarios')) active @endif">Usuários</a>
@@ -42,7 +41,9 @@
 
             @if(Route::has('register'))
               <li>
-                <a class="uk-button uk-border-rounded" href="{{route('cadastro.index')}}">Cadastrar-se</a>
+                <a class="uk-button uk-border-rounded" href="{{route('cadastro.index')}}">
+                  Cadastrar-se
+                </a>
               </li>
             @endif
           @endauth
@@ -52,7 +53,7 @@
   @endif
 </nav>
 
-<!-- MENU MOBILE    -->
+<!-- MENU MOBILE -->
 <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" data-menu-mobile>
   <div class="uk-offcanvas-bar menu-mobile">
     <a class="uk-navbar-item uk-logo uk-width-1-2 uk-align-center uk-margin-small" href="{{route('home')}}">
@@ -62,12 +63,6 @@
     <ul uk-nav>
       @if(Route::has('login'))
         @auth
-          <li>
-            <a href="#">
-              <i class="material-icons-round">info</i>
-              Sobre
-            </a>
-          </li>
           @if(Auth::user()->categoria === 'ADMINISTRADOR')
             <li class="@if(request()->is('usuarios')) active @endif">
               <a href="{{route('usuarios.index')}}">
