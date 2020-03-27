@@ -76,6 +76,6 @@ inputForm.forEach(input => {
   });
 });
 
-navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
+navigator.serviceWorker && navigator.serviceWorker.register('sw.js').then(function(registration) {
   console.log('SW funcionando, registrado com o escopo: ', registration.scope);
 });
