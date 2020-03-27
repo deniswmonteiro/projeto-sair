@@ -14,6 +14,7 @@
     <script src="{{secure_asset('js/jquery-3.4.1.min.js')}}" type="text/javascript"></script>
     <script src="{{secure_asset('js/jquery.mask.js')}}" type="text/javascript"></script>
     <script src="{{secure_asset('js/mqttws31.min.js')}}" type="text/javascript"></script>
+    @laravelPWA
   </head>
   <body>
     <div class="uk-text-center notificacao-alerta">
