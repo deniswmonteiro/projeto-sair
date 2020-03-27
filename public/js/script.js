@@ -1,7 +1,5 @@
-navigator.serviceWorker.register('./sw.js').then(function(registration) {
-  console.log('Service worker  registrado com sucesso:', registration);
-}).catch(function(error) {
-  console.log('Falha ao Registrar o Service Worker:', error);
+navigator.serviceWorker && navigator.serviceWorker.register('./sw.js').then(function(registration) {
+  console.log('SW funcionando, registrado com o escopo: ', registration.scope);
 });
 
 /* oculta/mostra logo do site ao clicar no menu mobile */
