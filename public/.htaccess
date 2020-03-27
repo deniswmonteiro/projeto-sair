@@ -18,10 +18,4 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
-
-    RewriteCond %{REQUEST_METHOD} POST
-	RewriteCond %{REQUEST_URI} simple-ajax-chat-core.php
-	RewriteCond %{HTTP_REFERER} !^https://wp-mix.com [NC,OR]
-	RewriteCond %{HTTP_USER_AGENT} ^$
-	RewriteRule .* - [F,L]
 </IfModule>
