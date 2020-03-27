@@ -66,6 +66,6 @@
 
     <script src="{{secure_asset('js/uikit.js')}}" type="text/javascript"></script>
     <script src="{{secure_asset('js/uikit-icons.js')}}" type="text/javascript"></script>
-    <script defer src="{{secure_asset('js/script.js')}}" type="text/javascript"></script>
+    <script src="{{secure_asset('js/script.js')}}" type="text/javascript"></script>
   </body>
 </html>
