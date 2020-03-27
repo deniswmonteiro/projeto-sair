@@ -2,7 +2,7 @@
   "name": "Iluminação predial automatizada",
   "short_name": "Projeto CEAMAZON",
   "display": "minimal-ui",
-  "start_url": "http://projetoceamazon.herokuapp.com/",
+  "start_url": "http://projetoceamazon.herokuapp.com/manifest.json",
   "theme_color": "#193",
   "background_color": "#d60",
   "icons": [
