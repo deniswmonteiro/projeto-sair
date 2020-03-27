@@ -1,3 +1,7 @@
+navigator.serviceWorker.register('sw.js', {
+  scope: './'
+});
+
 /* oculta/mostra logo do site ao clicar no menu mobile */
 (function btnMenuMobile() {
   const btnMenuMobile = document.querySelector("[data-btn-mobile]");
@@ -75,9 +79,3 @@ inputForm.forEach(input => {
     }
   });
 });
-
-  navigator.serviceWorker.register('./sw.js').then(function(registration) {
-    console.log('Service worker  registrado com sucesso:', registration);
-  }).catch(function(error) {
-    console.log('Falha ao Registrar o Service Worker:', error);
-  });
