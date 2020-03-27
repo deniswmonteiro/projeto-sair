@@ -76,6 +76,12 @@ inputForm.forEach(input => {
   });
 });
 
-navigator.serviceWorker && navigator.serviceWorker.register('sw.js').then(function(registration) {
-  console.log('SW funcionando, registrado com o escopo: ', registration.scope);
-});
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    console.log('Service worker  registrado com sucesso:', registration.scope);
+  }).catch(function(error) {
+    console.log('Falha ao Registrar o Service Worker:', error);
+  });
+} else {
+  console.log('Service workers não suportado!');
+}
