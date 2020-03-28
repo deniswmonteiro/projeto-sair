@@ -8,8 +8,8 @@ return [
         'start_url' => 'http://projetoceamazon.herokuapp.com/',
         'background_color' => '#d60',
         'theme_color' => '#193',
-        'display' => 'standalone',
-        'orientation'=> 'any',
+        'display' => 'minimal-ui',
+        'orientation'=> 'natural',
         'icons' => [
             '72x72' => '/img/icons/icon-72x72.png',
             '96x96' => '/img/icons/icon-96x96.png',
