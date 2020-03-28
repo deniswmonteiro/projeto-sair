@@ -44,7 +44,7 @@
     //     });
     // }
 
-    navigator.serviceWorker && navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
+    navigator.serviceWorker && navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
   console.log('SW funcionando, registrado com o escopo: ', registration.scope);
 });
 </script>
