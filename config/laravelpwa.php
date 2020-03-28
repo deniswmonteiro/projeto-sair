@@ -5,7 +5,7 @@ return [
     'manifest' => [
         'name' => env('APP_NAME', 'Projeto Automação'),
         'short_name' => 'Projeto Automação',
-        'start_url' => 'http://projetoceamazon.herokuapp.com/',
+        'start_url' => '/',
         'background_color' => '#d60',
         'theme_color' => '#193',
         'display' => 'standalone',
