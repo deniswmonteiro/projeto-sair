@@ -1,7 +1,3 @@
-// navigator.serviceWorker && navigator.serviceWorker.register('/public/serviceworker.js').then(function(registration) {
-//   console.log('SW funcionando, registrado com o escopo: ', registration.scope);
-// });
-
 /* oculta/mostra logo do site ao clicar no menu mobile */
 (function btnMenuMobile() {
   const btnMenuMobile = document.querySelector("[data-btn-mobile]");
