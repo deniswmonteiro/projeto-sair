@@ -117,5 +117,5 @@
 		</div>
 	</section>
 
-	<script src="{{secure_asset('js/editarusuario.js')}}"></script>
+	<script src="{{asset('js/editarusuario.js')}}"></script>
 @endsection

@@ -29,7 +29,6 @@
 
   // called when a message arrives
   function onMessageArrived(message) {
-    // console.log(message.destinationName + ": " + message.payloadString);
     mudaIconesInterruptores(message.payloadString);
     mudaIconesLampadas(message.payloadString);
   }
