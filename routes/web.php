@@ -32,6 +32,7 @@ Route::group(['middleware' => ['auth']], function () {
 		Route::group(['middleware' => ['checar.categoria']], function () {
 			Route::get('usuarios/gerenciarsolicitacoes/visualizar/{gerenciarsolicitacao}', 'GerenciarSolicitacoesController@edit')->name('gerenciarsolicitacoes.visualizar');
 			Route::resource('usuarios/gerenciarsolicitacoes', 'GerenciarSolicitacoesController');
+
 			Route::get('usuarios/atualizar/{usuario}', 'UsuarioController@edit')->name('usuarios.editar');
 			Route::resource('usuarios', 'UsuarioController');
 		});

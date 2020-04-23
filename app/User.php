@@ -23,7 +23,7 @@ class User extends \Jenssegers\Mongodb\Eloquent\Model implements
 	 * @var array
 	 */
 	protected $fillable = [
-		'nome', 'cpf', 'email', 'laboratorio', 'categoria', 'usuario', 'password',
+		'usuario_id', 'nome', 'cpf', 'email', 'laboratorio', 'categoria', 'usuario', 'password',
 	];
 
 	/**
@@ -36,4 +36,11 @@ class User extends \Jenssegers\Mongodb\Eloquent\Model implements
 	];
 
 	protected $guarded = ['id'];
+
+	// protected $primaryKey = 'usuario_id';
+
+	// public function getRouteKeyName()
+	// {
+	// 	return 'usuario_id';
+	// }
 }

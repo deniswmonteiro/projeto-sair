@@ -1,3 +1,5 @@
+{{-- @inject('hashids', 'Hashids\Hashids') --}}
+
 @extends("layouts.app", ["paginaAtual" => "Usuários"])
 
 @section("conteudo")
