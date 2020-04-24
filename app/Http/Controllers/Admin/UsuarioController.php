@@ -5,7 +5,6 @@ namespace projetoautomacao\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use projetoautomacao\Http\Controllers\Controller;
 use projetoautomacao\User;
-use Hashids\Hashids;
 
 class UsuarioController extends Controller
 {
@@ -23,7 +22,7 @@ class UsuarioController extends Controller
 	 */
 	public function index()
 	{
-		$usuarios = $this->usuario->all(['nome', 'email', 'categoria', 'laboratorio']);
+		$usuarios = $this->usuario->all(['nome', 'email', 'categoria', 'laboratorio', 'slug']);
 		return view('admin/usuarios/usuarios', compact('usuarios'));
 	}
 
@@ -67,10 +66,7 @@ class UsuarioController extends Controller
 	 */
 	public function edit($usuario)
 	{
-		//$hashids = new Hashids();
-		
-		$usuarios = $this->usuario->findOrFail($usuario);
-		//dd($hashids->encode($usuarios->nome));
+		$usuarios = $this->usuario->whereSlug($usuario)->first();
 		return view('admin/usuarios/editarusuario', compact('usuarios'));
 	}
 

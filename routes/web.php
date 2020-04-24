@@ -33,7 +33,7 @@ Route::group(['middleware' => ['auth']], function () {
 			Route::get('usuarios/gerenciarsolicitacoes/visualizar/{gerenciarsolicitacao}', 'GerenciarSolicitacoesController@edit')->name('gerenciarsolicitacoes.visualizar');
 			Route::resource('usuarios/gerenciarsolicitacoes', 'GerenciarSolicitacoesController');
 
-			Route::get('usuarios/atualizar/{usuario}', 'UsuarioController@edit')->name('usuarios.editar');
+			Route::get('usuarios/atualizar/{slug?}', 'UsuarioController@edit')->name('usuarios.editar');
 			Route::resource('usuarios', 'UsuarioController');
 		});
 	});

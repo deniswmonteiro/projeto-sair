@@ -18,7 +18,8 @@ class UsersTableSeeder extends Seeder
 			'laboratorio' => 'LabMotriz',
 			'categoria' => 'ADMINISTRADOR',
 			'usuario' => 'administrador',
-			'password' => Hash::make('99999999999')
+			'password' => Hash::make('99999999999'),
+			'slug' => 'administrador'
 		]);
 	}
 }

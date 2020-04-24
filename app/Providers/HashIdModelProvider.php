@@ -27,7 +27,7 @@ class HashIdModelProvider extends ServiceProvider
     {
         User::created(function($user) {
             $generator = new Hashids(User::class, 10);
-            $user->usuario_id = $generator->encode($user->id);
+            $user->usuario_id = $generator->encode($user->slug);
             $user->save();
           });
     }
