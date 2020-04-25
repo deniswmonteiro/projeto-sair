@@ -176,7 +176,6 @@ return [
 		projetoautomacao\Providers\RouteServiceProvider::class,
 
         Jenssegers\Mongodb\MongodbServiceProvider::class,
-        projetoautomacao\Providers\HashIdModelProvider::class,
 	],
 
 	/*
