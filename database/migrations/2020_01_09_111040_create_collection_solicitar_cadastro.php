@@ -21,6 +21,7 @@ class CreateCollectionSolicitarCadastro extends Migration
 			$table->string('email')->unique();
 			$table->string('usuario')->unique();
 			$table->string('laboratorio');
+			$table->string('slug');
 
 			$table->timestamps();
 		});

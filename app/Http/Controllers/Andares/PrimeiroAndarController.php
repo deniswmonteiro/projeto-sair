@@ -5,9 +5,11 @@ namespace projetoautomacao\Http\Controllers\Andares;
 use Illuminate\Http\Request;
 use projetoautomacao\Http\Controllers\Controller;
 use projetoautomacao\SalasPrimeiroAndar;
+use projetoautomacao\Traits\LocalTrait;
 
 class PrimeiroAndarController extends Controller
 {
+	use LocalTrait;
 	private $primeiroAndar;
 
 	public function __construct(SalasPrimeiroAndar $primeiroAndar)
@@ -55,21 +57,22 @@ class PrimeiroAndarController extends Controller
 	 */
 	public function show($id)
 	{
-		$sala = $this->primeiroAndar->all();
+		$salas = $this->primeiroAndar->all();
 		flash('Conectando-se ao sistema')->success();
+		$data = $this->dadosLocal($salas, $id);
 		return view('andares/salas/salasprimeiroandar', [
 			'andar' => 'primeiroandar',
-			'sala_id' => $id,
-			'sala_nome' => $sala[--$id]->sala_nome,
-			'qtd_circ_lampada' => $sala[$id]->qtd_circ_lampada,
-			'qtd_arcondicionado' => $sala[$id]->qtd_arcondicionado,
-			'coord_circ_lampadas1' => collect($sala[$id]->coord_circ_lampadas)->get('lampadas1'),
-			'coord_circ_lampadas2' => collect($sala[$id]->coord_circ_lampadas)->get('lampadas2'),
-			'coord_circ_lampadas3' => collect($sala[$id]->coord_circ_lampadas)->get('lampadas3'),
-			'coord_circ_lampadas4' => collect($sala[$id]->coord_circ_lampadas)->get('lampadas4'),
-			'coord_arcondicionado1' => collect($sala[$id]->coord_arcondicionado)->get('arcondicionado1'),
-			'coord_arcondicionado2' => collect($sala[$id]->coord_arcondicionado)->get('arcondicionado2')
-		]);
+			'sala_nome' => $data['sala_nome'],
+			'sala_id' => $data['sala_id'],
+			'qtd_circ_lampada' => $data['qtd_circ_lampada'],
+			'qtd_arcondicionado' => $data['qtd_arcondicionado'],
+			'coord_circ_lampadas1' => $data['coord_circ_lampadas1'],
+			'coord_circ_lampadas2' => $data['coord_circ_lampadas2'],
+			'coord_circ_lampadas3' => $data['coord_circ_lampadas3'],
+			'coord_circ_lampadas4' => $data['coord_circ_lampadas4'],
+			'coord_arcondicionado1' => $data['coord_arcondicionado1'],
+			'coord_arcondicionado2' => $data['coord_arcondicionado2']
+		], compact($salas));
 	}
 
 	/**

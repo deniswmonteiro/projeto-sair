@@ -32,7 +32,7 @@
                 <td>{{$solicitacao->laboratorio}}</td>
                 <td>
                   <div class="uk-flex-button btn">
-                    <a href="{{route('gerenciarsolicitacoes.visualizar', ['gerenciarsolicitacao' => $solicitacao->id])}}" class="uk-button uk-margin-right btn-acao">
+                    <a href="{{route('solicitacao.editar', ['slug' => $solicitacao->slug])}}" class="uk-button uk-margin-right btn-acao">
                       <i class="material-icons-round">edit</i>
                     </a>
                     <form action="{{route('gerenciarsolicitacoes.destroy', ['gerenciarsolicitaco' => $solicitacao->id])}}" method="post" class="uk-display-inline-block form-btn-submit">

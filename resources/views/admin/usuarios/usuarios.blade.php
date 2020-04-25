@@ -37,7 +37,7 @@
               <td>{{$usuario->laboratorio}}</td>
               <td>
                 <div class="uk-flex-button btn">
-                  <a href="{{route('usuarios.editar', ['slug' => $usuario->slug])}}" class="uk-button uk-margin-right btn-acao">
+                  <a href="{{route('usuario.editar', ['slug' => $usuario->slug])}}" class="uk-button uk-margin-right btn-acao">
                     <i class="material-icons-round">update</i>
                   </a>
                   <form action="{{route('usuarios.destroy', ['usuario' => $usuario->id])}}" method="post" class="uk-display-inline-block form-btn-submit">

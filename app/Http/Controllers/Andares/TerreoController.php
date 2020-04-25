@@ -5,9 +5,11 @@ namespace projetoautomacao\Http\Controllers\Andares;
 use Illuminate\Http\Request;
 use projetoautomacao\Http\Controllers\Controller;
 use projetoautomacao\SalasTerreo;
+use projetoautomacao\Traits\LocalTrait;
 
 class TerreoController extends Controller
 {
+	use LocalTrait;
 	private $terreo;
 
 	public function __construct(SalasTerreo $terreo)
@@ -57,22 +59,23 @@ class TerreoController extends Controller
 	{
 		$salas = $this->terreo->all();
 		flash('Conectando-se ao sistema')->success();
+		$data = $this->dadosLocal($salas, $id);
 		return view('andares/salas/salasterreo', [
 			'andar' => 'terreo',
-			'sala_id' => $id,
-			'sala_nome' => $salas[--$id]->sala_nome,
-			'qtd_circ_lampada' => $salas[$id]->qtd_circ_lampada,
-			'qtd_arcondicionado' => $salas[$id]->qtd_arcondicionado,
-			'coord_circ_lampadas1' => collect($salas[$id]->coord_circ_lampadas)->get('lampadas1'),
-			'coord_circ_lampadas2' => collect($salas[$id]->coord_circ_lampadas)->get('lampadas2'),
-			'coord_circ_lampadas3' => collect($salas[$id]->coord_circ_lampadas)->get('lampadas3'),
-			'coord_circ_lampadas4' => collect($salas[$id]->coord_circ_lampadas)->get('lampadas4'),
-			'coord_arcondicionado1' => collect($salas[$id]->coord_arcondicionado)->get('arcondicionado1'),
-			'coord_arcondicionado2' => collect($salas[$id]->coord_arcondicionado)->get('arcondicionado2'),
-			'coord_arcondicionado3' => collect($salas[$id]->coord_arcondicionado)->get('arcondicionado3'),
-			'coord_arcondicionado4' => collect($salas[$id]->coord_arcondicionado)->get('arcondicionado4'),
-			'coord_arcondicionado5' => collect($salas[$id]->coord_arcondicionado)->get('arcondicionado5')
-		], compact('salas'));
+			'sala_nome' => $data['sala_nome'],
+			'sala_id' => $data['sala_id'],
+			'qtd_circ_lampada' => $data['qtd_circ_lampada'],
+			'qtd_arcondicionado' => $data['qtd_arcondicionado'],
+			'coord_circ_lampadas1' => $data['coord_circ_lampadas1'],
+			'coord_circ_lampadas2' => $data['coord_circ_lampadas2'],
+			'coord_circ_lampadas3' => $data['coord_circ_lampadas3'],
+			'coord_circ_lampadas4' => $data['coord_circ_lampadas4'],
+			'coord_arcondicionado1' => $data['coord_arcondicionado1'],
+			'coord_arcondicionado2' => $data['coord_arcondicionado2'],
+			'coord_arcondicionado3' => $data['coord_arcondicionado3'],
+			'coord_arcondicionado4' => $data['coord_arcondicionado4'],
+			'coord_arcondicionado5' => $data['coord_arcondicionado5'],
+		], compact($salas));
 	}
 
 	/**

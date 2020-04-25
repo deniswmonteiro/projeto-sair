@@ -66,7 +66,7 @@ class GerenciarSolicitacoesController extends Controller
 	 */
 	public function edit($solicitacao)
 	{
-		$solicitacoes = $this->solicitacao->findOrFail($solicitacao);
+		$solicitacoes = $this->solicitacao->whereSlug($solicitacao)->first();
 		return view('admin/solicitacoes/editarsolicitacao', compact('solicitacoes'));
 	}
 

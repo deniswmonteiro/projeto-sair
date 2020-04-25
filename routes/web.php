@@ -30,11 +30,12 @@ Route::group(['middleware' => ['auth']], function () {
 
 	Route::namespace('Admin')->group(function () {
 		Route::group(['middleware' => ['checar.categoria']], function () {
-			Route::get('usuarios/gerenciarsolicitacoes/visualizar/{gerenciarsolicitacao}', 'GerenciarSolicitacoesController@edit')->name('gerenciarsolicitacoes.visualizar');
-			Route::resource('usuarios/gerenciarsolicitacoes', 'GerenciarSolicitacoesController');
+			Route::resource('gerenciarsolicitacoes', 'GerenciarSolicitacoesController');
+			Route::get('gerenciarsolicitacoes/editar/{slug?}', 
+			'GerenciarSolicitacoesController@edit')->name('solicitacao.editar');
 
-			Route::get('usuarios/atualizar/{slug?}', 'UsuarioController@edit')->name('usuarios.editar');
 			Route::resource('usuarios', 'UsuarioController');
+			Route::get('usuarios/editar/{slug?}', 'UsuarioController@edit')->name('usuario.editar');
 		});
 	});
 });

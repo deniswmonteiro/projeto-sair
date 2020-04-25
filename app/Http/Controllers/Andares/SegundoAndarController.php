@@ -5,9 +5,11 @@ namespace projetoautomacao\Http\Controllers\Andares;
 use Illuminate\Http\Request;
 use projetoautomacao\Http\Controllers\Controller;
 use projetoautomacao\SalasSegundoAndar;
+use projetoautomacao\Traits\LocalTrait;
 
 class SegundoAndarController extends Controller
 {
+	use LocalTrait;
 	private $segundoAndar;
 
 	public function __construct(SalasSegundoAndar $segundoAndar)
@@ -55,19 +57,19 @@ class SegundoAndarController extends Controller
 	 */
 	public function show($id)
 	{
-		$sala = $this->segundoAndar->all();
+		$salas = $this->segundoAndar->all();
 		flash('Conectando-se ao sistema')->success();
+		$data = $this->dadosLocal($salas, $id);
 		return view('andares/salas/salassegundoandar', [
 			'andar' => 'segundoandar',
-			'sala_id' => $id,
-			'sala_nome' => $sala[--$id]->sala_nome,
-			'qtd_circ_lampada' => $sala[$id]->qtd_circ_lampada,
-			'qtd_arcondicionado' => $sala[$id]->qtd_arcondicionado,
-			'coord_circ_lampadas1' => collect($sala[$id]->coord_circ_lampadas)->get('lampadas1'),
-			'coord_circ_lampadas2' => collect($sala[$id]->coord_circ_lampadas)->get('lampadas2'),
-			'coord_circ_lampadas3' => collect($sala[$id]->coord_circ_lampadas)->get('lampadas3'),
-			'coord_arcondicionado1' => collect($sala[$id]->coord_arcondicionado)->get('arcondicionado1')
-		]);
+			'sala_nome' => $data['sala_nome'],
+			'sala_id' => $data['sala_id'],
+			'qtd_circ_lampada' => $data['qtd_circ_lampada'],
+			'qtd_arcondicionado' => $data['qtd_arcondicionado'],
+			'coord_circ_lampadas1' => $data['coord_circ_lampadas1'],
+			'coord_circ_lampadas2' => $data['coord_circ_lampadas2'],
+			'coord_arcondicionado1' => $data['coord_arcondicionado1']
+		], compact($salas));
 	}
 
 	/**

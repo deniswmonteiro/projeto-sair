@@ -23,10 +23,10 @@
           @auth
             @if(Auth::user()->categoria === 'ADMINISTRADOR')
               <li>
-                <a href="{{route('usuarios.index')}}" class="@if(request()->is('usuarios')) active @endif">Usuários</a>
+                <a href="{{route('usuarios.index')}}" class="@if(request()->is('usuarios*')) active @endif">Usuários</a>
               </li>
               <li>
-                <a href="{{route('gerenciarsolicitacoes.index')}}" class="@if(request()->is('usuarios/gerenciarsolicitacoes')) active @endif">Solicitações</a>
+                <a href="{{route('gerenciarsolicitacoes.index')}}" class="@if(request()->is('gerenciarsolicitacoes*')) active @endif">Solicitações</a>
               </li>
             @endif
             <li>
@@ -64,12 +64,12 @@
       @if(Route::has('login'))
         @auth
           @if(Auth::user()->categoria === 'ADMINISTRADOR')
-            <li class="@if(request()->is('usuarios')) active @endif">
+            <li class="@if(request()->is('usuarios*')) active @endif">
               <a href="{{route('usuarios.index')}}">
                 <i class="material-icons-round">supervised_user_circle</i>
                 Usuários</a>
             </li>
-            <li class="@if(request()->is('usuarios/gerenciarsolicitacoes')) active @endif">
+            <li class="@if(request()->is('gerenciarsolicitacoes*')) active @endif">
               <a href="{{route('gerenciarsolicitacoes.index')}}">
                 <i class="material-icons-round">supervised_user_circle</i>
                 Solicitações</a>
