@@ -35,19 +35,19 @@ return [
 
 	'connections' => [
 		'mongodb' => [
-			'driver'   => 'mongodb',
-			'host'     => env('MONGO_DB_HOST', 'localhost'),
-			'port'     => env('MONGO_DB_PORT', 27017),
-			'database' => env('MONGO_DB_DATABASE', 'projetoautomacao'),
-			'username' => env('MONGO_DB_USERNAME', ''),
-			'password' => env('MONGO_DB_PASSWORD', ''),
-			'options'  => [],
+			// 'driver'   => 'mongodb',
+			// 'host'     => env('MONGO_DB_HOST', 'localhost'),
+			// 'port'     => env('MONGO_DB_PORT', 27017),
+			// 'database' => env('MONGO_DB_DATABASE', 'projetoautomacao'),
+			// 'username' => env('MONGO_DB_USERNAME', ''),
+			// 'password' => env('MONGO_DB_PASSWORD', ''),
+			// 'options'  => [],
 
 			/** mudar asset para secure_asset */
 
-			// 'driver' => 'mongodb',
-			// 'dsn' => 'mongodb+srv://denismonteiro:ep10806702@clusterprojetoautomacao-5yayv.mongodb.net/projetoautomacao?retryWrites=true&w=majority',
-			// 'database' => 'projetoautomacao',
+			'driver' => 'mongodb',
+			'dsn' => 'mongodb+srv://ceamazon:gestao2019@clusterceamazon-yxbtu.mongodb.net/db_ceamazon?retryWrites=true&w=majority',
+			'database' => 'db_ceamazon',
 		],
 
 		'sqlite' => [
