@@ -6,7 +6,7 @@
     <div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body bg-card-form">
 				<h1>Fazer Login</h1>
-				<form method="post" action="{{route('login')}}" class="uk-form-stacked login">
+				<form method="post" action="{{route('login')}}" class="uk-form-stacked form-login">
 					@csrf
 					<div class="uk-margin">
 						<label class="uk-form-label" for="form-login-email">{{__("Email")}}</label>
@@ -50,7 +50,7 @@
 						</span>
 					</div>
 					<div class="uk-flex btn">
-						<a href="#" class="uk-button uk-flex-last@s btn-confirmar" onclick="event.preventDefault(); document.querySelector('form.login').submit()">{{__('Entrar')}}</a>
+						<a href="#" class="uk-button uk-flex-last@s btn-confirmar" onclick="event.preventDefault(); document.querySelector('form.form-login').submit()">{{__('Entrar')}}</a>
 						<a href="{{route('home')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>

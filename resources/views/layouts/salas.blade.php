@@ -49,6 +49,6 @@
     </div>
   </section>
 
-  <script src="{{asset('js/sala.js')}}"></script>
-  <script src="{{asset('js/ws-conn.js')}}"></script>
+  <script src="{{secure_asset('js/sala.js')}}"></script>
+  <script src="{{secure_asset('js/ws-conn.js')}}"></script>
 @endsection

@@ -7,7 +7,7 @@
 	<section class="uk-section solicitacao">
 		<div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body bg-card-form">
-				<form class="uk-form-stacked form" action="{{route('usuarios.cadastro')}}" method="post">
+				<form class="uk-form-stacked form-solicitacao" action="{{route('usuarios.cadastro')}}" method="post">
 					@csrf
 					<div class="uk-child-width-1-3@s uk-margin" uk-grid>
 						<div>
@@ -134,7 +134,7 @@
 					</div>
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
 					<div class="uk-flex btn">
-						<a href="#" class="uk-button uk-flex-last@s btn-confirmar">{{__('Cadastrar')}}</a>
+						<a href="#" class="uk-button uk-flex-last@s btn-confirmar" onclick="event.preventDefault(); document.querySelector('form.form-solicitacao').submit()">{{__('Cadastrar')}}</a>
 						<a href="{{route('gerenciarsolicitacoes.index')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>
@@ -144,5 +144,5 @@
 		</div>
 	</section>
 
-	<script src="{{asset('js/cadastro.js')}}"></script>
+	<script src="{{secure_asset('js/cadastro.js')}}"></script>
 @endsection

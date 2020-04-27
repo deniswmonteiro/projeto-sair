@@ -24,6 +24,11 @@ body {
     margin: 0 auto;
   }
 
+  .uk-subnav-pill > .uk-active > a {
+    background-color: $green;
+    color: $light-grey;
+  }
+
   .notificacao-alerta {
     .alert {
       padding: 15px;

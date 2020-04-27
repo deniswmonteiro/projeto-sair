@@ -20,7 +20,7 @@
 
 				@guest
 					<h1>Recuperar Senha</h1>
-					<form class="uk-form-stacked form" method="post" action="{{route('email.store')}}">
+					<form class="uk-form-stacked form-recuperar-senha" method="post" action="{{route('email.store')}}">
 						@csrf
 						<div class="uk-margin">
 							<label class="uk-form-label" for="form-recuperar-email">
@@ -36,7 +36,7 @@
 							</div>
 						</div>
 						<div class="uk-text-left modal-footer btn">
-							<a href="#" class="uk-button uk-margin-small-right btn-confirmar">
+							<a href="#" class="uk-button uk-margin-small-right btn-confirmar" onclick="event.preventDefault(); document.querySelector('form.form-recuperar-senha').submit()">
 								{{__('Enviar solicitação')}}
 							</a>
 							<a href="{{route('login')}}" class="uk-button uk-link-reset link-voltar-login inicial">
