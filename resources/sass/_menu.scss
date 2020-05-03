@@ -1,22 +1,22 @@
 .navbar {
   @include device(s) {
-    padding: 10px 15px 10px 0;
+    padding: 5px 15px 5px 0;
   }
 
   @include device(m) {
-    padding: 10px 30px 10px 15px;
+    padding: 5px 30px 5px 15px;
   }
 
   @include device(l) {
-    padding: 10px 40px 10px 25px;
+    padding: 5px 40px 5px 25px;
   }
 
   @include device(xl) {
-    padding: 10px 80px 10px 65px;
+    padding: 5px 80px 5px 65px;
   }
 
   &.navbar-interno {
-    background: $grey !important;
+    background: $green !important;
 
     .logo-cabecalho {
       @include device(xs) {
@@ -32,11 +32,19 @@
       li {
         margin-left: 15px;
 
+        .uk-navbar-dropdown {
+          width: 150px;
+          padding: 20px;
+          color: $dark-grey;
+          background: $light-grey;
+          border-radius: 4px;
+        }
+
         a {
           @include font(16);
           padding: 8px 13px;
           min-height: 1px;
-          display: block;
+          display: inline-block;
 
           &::after {
             content: "";

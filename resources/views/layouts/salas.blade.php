@@ -4,9 +4,9 @@
   @include("layouts.menu", ["menu" => "salas"])
   @include("layouts.introducao")
   
-  <section class="uk-section salas" data-group>
+  <section class="uk-section uk-section-xsmall uk-margin-medium-bottom salas" data-group>
     <div class="uk-container">
-      <div class="btn">
+      <div>
         <a href="{{route($andar.'.index')}}" class="btn-cancelar link-voltar">
           <i class="material-icons-round">arrow_back</i>
         </a>
@@ -49,6 +49,6 @@
     </div>
   </section>
 
-  <script src="{{secure_asset('js/sala.js')}}"></script>
-  <script src="{{secure_asset('js/ws-conn.js')}}"></script>
+  <script src="{{asset('js/sala.js')}}"></script>
+  <script src="{{asset('js/ws-conn.js')}}"></script>
 @endsection

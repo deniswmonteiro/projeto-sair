@@ -69,8 +69,7 @@ body {
       select,
       .uk-search-input {
         outline: none;
-        border-color: $grey;
-
+        
         &:focus {
           border-color: $green !important;
         }
@@ -81,7 +80,7 @@ body {
       }
 
       .aviso {
-        color: $dark-red;
+        color: $red;
       }
     }
 
@@ -189,21 +188,6 @@ body {
           text-transform: initial;
         }
       }
-
-      &.link-voltar {
-        position: absolute;
-        top: 272px;
-        padding: 10px;
-        border-radius: 50%;
-
-        @include device(xs) {
-          top: 258px;
-        }
-
-        i {
-          vertical-align: middle;
-        }
-      }
     }
 
     .form-btn-submit {
@@ -224,9 +208,30 @@ body {
         }
 
         &.btn-cancelar {
-          background: $dark-red;
+          background: $red;
         }
       }
+    }
+  }
+
+  .link-voltar {
+    display: inline-block;
+    transition: 0.4s;
+    font-weight: 700;
+    color: $light-grey;
+    position: relative;
+    top: -45px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 24px;
+    background: $red;
+
+    @include device(s) {
+      top: -45px;
+    }
+
+    i {
+      vertical-align: middle;
     }
   }
 }

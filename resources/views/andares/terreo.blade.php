@@ -4,16 +4,16 @@
   @include("layouts.menu", ["menu" => "terreo"])
   @include("layouts.introducao", ["iconeIntroducao" => "ico-local", "textoIntroducao" => "térreo", "paginaAtual" => "Salas"])
   
-  <section class="uk-section andar">
+  <section class="uk-section uk-section-xsmall uk-margin-medium-bottom andar">
     <div class="uk-container">
-      <div class="btn">
+      <div>
         <a href="{{route('home')}}" class="btn-cancelar link-voltar">
           <i class="material-icons-round">arrow_back</i>
         </a>
       </div>
       <div class="uk-text-center mapa-andar">
         <div class="uk-inline">
-          <img src="{{secure_asset('img/terreo.svg')}}">
+          <img src="{{asset('img/terreo.svg')}}">
           @foreach($salas as $sala)
             <a class="uk-position-absolute uk-transform-center" style="left: {{$sala->sala_localizacao[0]}}%; top: {{$sala->sala_localizacao[1]}}%" href="{{route('terreo.show', ['terreo'=>$sala->id_sala])}}">
               <span class="uk-badge bg-badge" uk-tooltip="{{$sala->sala_nome}}">{{$sala->id_sala}}</span>
