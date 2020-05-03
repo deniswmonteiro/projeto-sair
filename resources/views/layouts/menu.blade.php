@@ -7,14 +7,14 @@
   @if($menu == "login" || $menu == "cadastro" || $menu == "recuperar-senha")
     <div class="uk-navbar uk-margin-auto logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{asset('img/logo.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo.svg')}}" alt="Logo do site">
       </a>
     </div>
 
   @else
     <div class="uk-navbar-left logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{asset('img/logo.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo.svg')}}" alt="Logo do site">
       </a>
     </div>
     <div class="uk-navbar-right uk-visible@s">
@@ -73,22 +73,42 @@
 <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" data-menu-mobile>
   <div class="uk-offcanvas-bar menu-mobile">
     <a class="uk-navbar-item uk-logo uk-width-1-2 uk-align-center uk-margin-small" href="{{route('home')}}">
-      <img src="{{asset('img/logo.svg')}}" alt="Logo do site">
+      <img src="{{secure_asset('img/logo.svg')}}" alt="Logo do site">
     </a>
     <hr class="divisor">
     <ul uk-nav>
       @if(Route::has('login'))
         @auth
           @if(Auth::user()->categoria === 'ADMINISTRADOR')
+            <li class="@if(request()->is('terreo*')) active @endif">
+              <a href="{{route('terreo.index')}}">
+                <i class="material-icons-round">domain</i>
+                Térreo
+              </a>
+            </li>
+            <li class="@if(request()->is('primeiroandar*')) active @endif">
+              <a href="{{route('primeiroandar.index')}}">
+                <i class="material-icons-round">domain</i>
+                1º Andar
+              </a>
+            </li>
+            <li class="@if(request()->is('segundoandar*')) active @endif">
+              <a href="{{route('segundoandar.index')}}">
+                <i class="material-icons-round">domain</i>
+                2º Andar
+              </a>
+            </li>
             <li class="@if(request()->is('usuarios*')) active @endif">
               <a href="{{route('usuarios.index')}}">
                 <i class="material-icons-round">supervised_user_circle</i>
-                Usuários</a>
+                Usuários
+              </a>
             </li>
             <li class="@if(request()->is('gerenciarsolicitacoes*')) active @endif">
               <a href="{{route('gerenciarsolicitacoes.index')}}">
-                <i class="material-icons-round">supervised_user_circle</i>
-                Solicitações</a>
+                <i class="material-icons-round">assignment</i>
+                Solicitações
+              </a>
             </li>
           @endif
           <li>

@@ -122,6 +122,4 @@
 			</div>
 		</div>
 	</section>
-
-	<script src="{{asset('js/registrausuario.js')}}"></script>
 @endsection
