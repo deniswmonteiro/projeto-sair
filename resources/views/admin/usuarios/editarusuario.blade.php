@@ -2,7 +2,7 @@
 
 @section("conteudo")
   @include("layouts.menu", ["menu" => "editar-usuario"])
-  @include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "atualize os dados de usuário", "paginaAtual" => "Usuários"])
+  @include("layouts.introducao", ["iconeIntroducao" => "ico-usuarios", "textoIntroducao" => "atualize os dados de usuário", "paginaAtual" => "Usuários"])
 
   <section class="uk-section usuarios">
 		<div class="uk-container">

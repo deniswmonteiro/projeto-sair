@@ -4,7 +4,7 @@
 
 @section("conteudo")
   @include("layouts.menu", ["menu" => "usuarios"])
-  @include("layouts.introducao", ["iconeIntroducao" => "ico-cadastro", "textoIntroducao" => "gerencie usuários", "paginaAtual" => "Usuários"])
+  @include("layouts.introducao", ["iconeIntroducao" => "ico-usuarios", "textoIntroducao" => "gerencie usuários", "paginaAtual" => "Usuários"])
   
   <section class="uk-section usuarios">
     <div class="uk-container">

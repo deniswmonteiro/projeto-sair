@@ -2,7 +2,6 @@
 
 namespace projetoautomacao;
 
-use Illuminate\Database\Eloquent\Model;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
 class SalasTerreo extends Eloquent
