@@ -21,23 +21,24 @@
       <ul class="uk-navbar-nav menu">
         @if(Route::has('login'))
           @auth
+            <li>
+              <a href="#" class="@if((request()->is('terreo*')) || (request()->is('primeiroandar*')) || (request()->is('segundoandar*'))) active @endif">Andares</a>
+              <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <li>
+                    <a href="{{route('terreo.index')}}" class="@if(request()->is('terreo*')) active @endif">Térreo</a>
+                  </li>
+                  <li>
+                    <a href="{{route('primeiroandar.index')}}" class="@if(request()->is('primeiroandar*')) active @endif">1º Andar</a>
+                  </li>
+                  <li>
+                    <a href="{{route('segundoandar.index')}}" class="@if(request()->is('segundoandar*')) active @endif">2º Andar</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
             @if(Auth::user()->categoria === 'ADMINISTRADOR')
-              <li>
-                <a href="#" class="@if((request()->is('terreo*')) || (request()->is('primeiroandar*')) || (request()->is('segundoandar*'))) active @endif">Andares</a>
-                <div class="uk-navbar-dropdown">
-                  <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li>
-                      <a href="{{route('terreo.index')}}" class="@if(request()->is('terreo*')) active @endif">Térreo</a>
-                    </li>
-                    <li>
-                      <a href="{{route('primeiroandar.index')}}" class="@if(request()->is('primeiroandar*')) active @endif">1º Andar</a>
-                    </li>
-                    <li>
-                      <a href="{{route('segundoandar.index')}}" class="@if(request()->is('segundoandar*')) active @endif">2º Andar</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
               <li>
                 <a href="{{route('usuarios.index')}}" class="@if(request()->is('usuarios*')) active @endif">Usuários</a>
               </li>
@@ -45,11 +46,12 @@
                 <a href="{{route('gerenciarsolicitacoes.index')}}" class="@if(request()->is('gerenciarsolicitacoes*')) active @endif">Solicitações</a>
               </li>
             @endif
+
             <li>
               <a href="#modal-sair" uk-toggle>Sair</a>
               @include('components.modal', ['id' => 'modal-sair', 'texto' => 'Deseja realmente sair?'])                    
             </li>
-
+            
           @else
             <li>
               <a class="uk-button uk-border-rounded btn-login" href="{{route('login')}}">Login</a>
