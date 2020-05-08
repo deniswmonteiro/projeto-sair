@@ -10,9 +10,12 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Registered;
+use projetoautomacao\SolicitarCadastro;
 
 class RegisterController extends Controller
 {
+	private $solicitacao;
+
 	/*
     |--------------------------------------------------------------------------
     | Register Controller
@@ -38,9 +41,10 @@ class RegisterController extends Controller
 	 *
 	 * @return void
 	 */
-	public function __construct()
+	public function __construct(SolicitarCadastro $solicitacao)
 	{
 		$this->middleware('auth');
+		$this->solicitacao = $solicitacao;
 	}
 
 	/**
@@ -91,6 +95,12 @@ class RegisterController extends Controller
 	public function register(Request $request)
 	{
 		$data = $request->all();
+		$solicitacoes = $this->solicitacao::all();
+		foreach($solicitacoes as $solicitacao) {
+			if($data['usuario'] == $solicitacao->usuario){
+				$solicitacao->delete();
+			}
+		}
 		$this->validator($data)->validate();
 		event(new Registered($user = $this->create($data)));
 		return $this->registered($request, $user) ?: redirect($this->redirectPath());

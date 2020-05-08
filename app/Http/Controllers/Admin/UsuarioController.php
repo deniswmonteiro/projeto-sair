@@ -2,7 +2,7 @@
 
 namespace projetoautomacao\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
 use projetoautomacao\Http\Controllers\Controller;
 use projetoautomacao\User;
 
@@ -79,11 +79,11 @@ class UsuarioController extends Controller
 	 */
 	public function update(Request $request, $usuario)
 	{
-		$data = $request->all();
+		$data = Request::all();
 		$usuario = $this->usuario::findOrFail($usuario);
 		$usuario->update($data);
 		flash('Dados atualizados com sucesso!')->success();
-		return redirect()->route('usuarios.index');
+		return redirect()->route('usuario.index');
 	}
 
 	/**
@@ -97,6 +97,19 @@ class UsuarioController extends Controller
 		$usuario = $this->usuario::find($usuario);
 		$usuario->delete();
 		flash('Usuário(a) removido do sistema')->success();
-		return redirect()->route('usuarios.index');
+		return redirect()->route('usuario.index');
+	}
+
+	public function pesquisar(Request $request)
+	{
+		$usuarios = $this->usuario::where('nome', 'like', '%' . $request::input('buscar') . '%')->get();
+		foreach($usuarios as $usuario) {
+			if($usuario->nome) {
+				return view('admin/usuarios/usuarios', compact('usuarios'));
+			}
+		}
+		$usuarios = $this->usuario->all(['nome', 'email', 'categoria', 'laboratorio', 'slug']);
+		flash('Usuário(a) não encontrado!')->warning();
+		return view('admin/usuarios/usuarios', compact('usuarios'));
 	}
 }

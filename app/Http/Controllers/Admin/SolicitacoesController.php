@@ -2,11 +2,11 @@
 
 namespace projetoautomacao\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
 use projetoautomacao\Http\Controllers\Controller;
 use projetoautomacao\SolicitarCadastro;
 
-class GerenciarSolicitacoesController extends Controller
+class SolicitacoesController extends Controller
 {
 	private $solicitacao;
 
@@ -22,8 +22,8 @@ class GerenciarSolicitacoesController extends Controller
 	 */
 	public function index()
 	{
-		$solicitacoes = $this->solicitacao->all();
-		return view('admin/solicitacoes/gerenciarsolicitacoes', compact('solicitacoes'));
+		$usuarios = $this->solicitacao->all();
+		return view('admin/solicitacoes/gerenciarsolicitacoes', compact('usuarios'));
 	}
 
 	/**
@@ -93,6 +93,6 @@ class GerenciarSolicitacoesController extends Controller
 		$solicitacao = $this->solicitacao::find($solicitacao);
 		$solicitacao->delete();
 		flash('Solicitação removida com sucesso')->success();
-		return redirect()->route('gerenciarsolicitacoes.index');
+		return redirect()->route('solicitar.index');
 	}
 }

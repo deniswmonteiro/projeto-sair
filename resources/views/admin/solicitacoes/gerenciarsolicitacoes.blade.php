@@ -12,43 +12,8 @@
           <input class="uk-search-input uk-border-rounded" type="search" placeholder="Procurar usuário">
         </form>
       </div>
-      <div class="uk-overflow-auto">
-        <table class="uk-table uk-table-hover uk-table-responsive uk-table-middle uk-table-striped">
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Email</th>
-              <th>Usuário</th>
-              <th>Laboratório</th>
-              <th>Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach($solicitacoes as $solicitacao)
-              <tr>
-                <td>{{$solicitacao->nome}}</td>
-                <td>{{$solicitacao->email}}</td>
-                <td>{{$solicitacao->usuario}}</td>
-                <td>{{$solicitacao->laboratorio}}</td>
-                <td>
-                  <div class="uk-flex-button btn">
-                    <a href="{{route('solicitacao.editar', ['slug' => $solicitacao->slug])}}" class="uk-button uk-margin-right btn-acao">
-                      <i class="material-icons-round">edit</i>
-                    </a>
-                    <form action="{{route('gerenciarsolicitacoes.destroy', ['gerenciarsolicitaco' => $solicitacao->id])}}" method="post" class="uk-display-inline-block form-btn-submit">
-                      @csrf
-                      @method("delete")
-                      <button type="submit" class="uk-button uk-width-1-1 btn-cancelar">
-                        <i class="material-icons-round">delete</i>
-                      </button>
-                  </form>
-                  </div>
-                </td>
-              </tr>
-            @endforeach
-          </tbody>
-        </table>
-      </div>
+      
+      @include("components.tabela", ["pagina" => 'solicitar'])
     </div>
   </section>
 @endsection

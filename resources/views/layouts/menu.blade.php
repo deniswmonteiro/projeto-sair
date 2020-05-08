@@ -40,10 +40,10 @@
 
             @if(Auth::user()->categoria === 'ADMINISTRADOR')
               <li>
-                <a href="{{route('usuarios.index')}}" class="@if(request()->is('usuarios*')) active @endif">Usuários</a>
+                <a href="{{route('usuario.index')}}" class="@if(request()->is('usuario*')) active @endif">Usuários</a>
               </li>
               <li>
-                <a href="{{route('gerenciarsolicitacoes.index')}}" class="@if(request()->is('gerenciarsolicitacoes*')) active @endif">Solicitações</a>
+                <a href="{{route('solicitar.index')}}" class="@if(request()->is('solicitar*')) active @endif">Solicitações</a>
               </li>
             @endif
 
@@ -100,14 +100,14 @@
                 2º Andar
               </a>
             </li>
-            <li class="@if(request()->is('usuarios*')) active @endif">
-              <a href="{{route('usuarios.index')}}">
+            <li class="@if(request()->is('usuario*')) active @endif">
+              <a href="{{route('usuario.index')}}">
                 <i class="material-icons-round">supervised_user_circle</i>
                 Usuários
               </a>
             </li>
-            <li class="@if(request()->is('gerenciarsolicitacoes*')) active @endif">
-              <a href="{{route('gerenciarsolicitacoes.index')}}">
+            <li class="@if(request()->is('solicitar*')) active @endif">
+              <a href="{{route('solicitar.index')}}">
                 <i class="material-icons-round">assignment</i>
                 Solicitações
               </a>

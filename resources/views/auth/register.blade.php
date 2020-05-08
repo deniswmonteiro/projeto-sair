@@ -114,7 +114,7 @@
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
 					<div class="uk-flex btn">
 						<a href="#" class="uk-button uk-flex-last@s btn-confirmar" onclick="event.preventDefault(); document.querySelector('form.form-registrar').submit()">{{__('Cadastrar')}}</a>
-						<a href="{{route('usuarios.index')}}" class="uk-button uk-margin-right btn-cancelar">
+						<a href="{{route('usuario.index')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>
 					</div>

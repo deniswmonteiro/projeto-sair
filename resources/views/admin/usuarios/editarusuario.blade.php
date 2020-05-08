@@ -7,7 +7,7 @@
   <section class="uk-section usuarios">
 		<div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body bg-card-form">
-				<form class="uk-form-stacked form-usuario-editar" action="{{route('usuarios.update', ["usuario" => $usuarios->id])}}" method="post">
+				<form class="uk-form-stacked form-usuario-editar" action="{{route('usuario.update', ["usuario" => $usuarios->id])}}" method="post">
           @csrf
           @method("put")
 					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
@@ -108,7 +108,7 @@
 					<p class="aviso">Campos marcados com * são obrigatórios.</p>
 					<div class="uk-flex btn">
 						<a href="#" class="uk-button uk-flex-last@s btn-confirmar" onclick="event.preventDefault(); document.querySelector('form.form-usuario-editar').submit()">{{__('Atualizar')}}</a>
-						<a href="{{route('usuarios.index')}}" class="uk-button uk-margin-right btn-cancelar">
+						<a href="{{route('usuario.index')}}" class="uk-button uk-margin-right btn-cancelar">
 							{{__('Cancelar')}}
 						</a>
 					</div>
