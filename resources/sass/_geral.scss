@@ -37,6 +37,10 @@ body {
     background: $light-grey;
   }
 
+  .noUi-target, .noUi-target * {
+    touch-action: pan-x;
+  }
+
   .noUi-connect {
     background: $dark-green;
   }

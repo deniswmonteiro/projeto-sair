@@ -44,10 +44,10 @@
     &.active {
       opacity: 1;
       visibility: visible;
-      transition: 0.3s;
+      transition: 0.4s;
       position: relative;
       top: auto;
-      transform: translate3d(0px, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
