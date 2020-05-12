@@ -30,7 +30,7 @@ class SalasTerreoCollectionSeeder extends Seeder
 			'coord_arcondicionado' => [
 				'arcondicionado1' => [1, 17],
 				'arcondicionado2' => [1, 57],
-				'arcondicionado3' => [95, 28]
+				'arcondicionado3' => [94.5, 28]
 			]
 		]);
 
