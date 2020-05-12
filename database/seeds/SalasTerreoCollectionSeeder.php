@@ -30,7 +30,7 @@ class SalasTerreoCollectionSeeder extends Seeder
 			'coord_arcondicionado' => [
 				'arcondicionado1' => [1, 17],
 				'arcondicionado2' => [1, 57],
-				'arcondicionado3' => [95.5, 28]
+				'arcondicionado3' => [95, 28]
 			]
 		]);
 
@@ -46,9 +46,9 @@ class SalasTerreoCollectionSeeder extends Seeder
 				'lampadas3' => [80, 20]
 			],
 			'coord_arcondicionado' => [
-				'arcondicionado1' => [38, 5],
+				'arcondicionado1' => [38, 1],
 				'arcondicionado2' => [95, 67],
-				'arcondicionado3' => [82, 5]
+				'arcondicionado3' => [82, 1]
 			]
 		]);
 
@@ -63,7 +63,7 @@ class SalasTerreoCollectionSeeder extends Seeder
 				'lampadas2' => [48, 20, 48, 50, 48, 80]
 			],
 			'coord_arcondicionado' => [
-				'arcondicionado1' => [15, 6]
+				'arcondicionado1' => [15, 1]
 			]
 		]);
 
@@ -78,7 +78,7 @@ class SalasTerreoCollectionSeeder extends Seeder
 				'lampadas2' => [48, 13, 48, 32, 48, 50, 48, 69]
 			],
 			'coord_arcondicionado' => [
-				'arcondicionado1' => [95, 40]
+				'arcondicionado1' => [92, 40]
 			]
 		]);
 
@@ -89,8 +89,8 @@ class SalasTerreoCollectionSeeder extends Seeder
 			'qtd_circ_lampada' => 2,
 			'qtd_arcondicionado' => null,
 			'coord_circ_lampadas' => [
-				'lampadas1' => [7, 30, 40, 30, 73, 30],
-				'lampadas2' => [24, 30, 56, 30, 90, 30]
+				'lampadas1' => [7, 15, 40, 15, 73, 15],
+				'lampadas2' => [24, 15, 56, 15, 90, 15]
 			]
 		]);
 
@@ -112,10 +112,10 @@ class SalasTerreoCollectionSeeder extends Seeder
 			'qtd_circ_lampada' => 4,
 			'qtd_arcondicionado' => null,
 			'coord_circ_lampadas' => [
-				'lampadas1' => [25, 70, 45, 70],
-				'lampadas2' => [25, 50, 45, 50, 25, 90, 45, 90],
-				'lampadas3' => [8, 8, 45, 10, 81, 10, 8, 36, 45, 30, 81, 30],
-				'lampadas4' => [25, 10, 63, 10, 25, 30, 63, 30]
+				'lampadas1' => [25, 68, 45, 68],
+				'lampadas2' => [25, 48, 45, 48, 25, 88, 45, 88],
+				'lampadas3' => [8, 8, 45, 8, 81, 8, 8, 33, 45, 28, 81, 28],
+				'lampadas4' => [25, 8, 63, 8, 25, 28, 63, 28]
 			]
 		]);
 
@@ -126,8 +126,8 @@ class SalasTerreoCollectionSeeder extends Seeder
 			'qtd_circ_lampada' => 2,
 			'qtd_arcondicionado' => null,
 			'coord_circ_lampadas' => [
-				'lampadas1' => [40, 25, 80, 70],
-				'lampadas2' => [40, 70]
+				'lampadas1' => [45, 25, 80, 70],
+				'lampadas2' => [45, 70]
 			]
 		]);
 
@@ -138,8 +138,8 @@ class SalasTerreoCollectionSeeder extends Seeder
 			'qtd_circ_lampada' => 2,
 			'qtd_arcondicionado' => null,
 			'coord_circ_lampadas' => [
-				'lampadas1' => [40, 70, 80, 25],
-				'lampadas2' => [40, 25],
+				'lampadas1' => [45, 70, 85, 25],
+				'lampadas2' => [45, 25],
 			]
 		]);
 
@@ -187,7 +187,7 @@ class SalasTerreoCollectionSeeder extends Seeder
 			'qtd_circ_lampada' => 1,
 			'qtd_arcondicionado' => null,
 			'coord_circ_lampadas' => [
-				'lampadas1' => [92, 16, 92, 82]
+				'lampadas1' => [90, 16, 90, 82]
 			]
 		]);
 
@@ -202,7 +202,7 @@ class SalasTerreoCollectionSeeder extends Seeder
 				'lampadas2' => [72, 49]
 			],
 			'coord_arcondicionado' => [
-				'arcondicionado1' => [50, 93]
+				'arcondicionado1' => [50, 92]
 			]
 		]);
 
@@ -217,7 +217,7 @@ class SalasTerreoCollectionSeeder extends Seeder
 				'lampadas2' => [72, 49]
 			],
 			'coord_arcondicionado' => [
-				'arcondicionado1' => [50, 6]
+				'arcondicionado1' => [50, 1]
 			]
 		]);
 
@@ -258,22 +258,22 @@ class SalasTerreoCollectionSeeder extends Seeder
 			'qtd_arcondicionado' => 5,
 			'coord_circ_lampadas' => [
 				'lampadas1' => [
-					86, 29, 86, 40, 86, 52, 86, 63, 86, 74, 74, 17,
-					74, 29, 74, 40, 74, 52, 74, 63, 74, 74, 74, 85
+					85, 28, 85, 39, 85, 51, 85, 62, 85, 73, 74, 16,
+					74, 28, 74, 39, 74, 51, 74, 62, 74, 73, 74, 84
 				],
 				'lampadas2' => [
-					62, 17, 62, 29, 62, 40, 62, 52, 62, 63, 62, 74,
-					49, 29, 49, 40, 49, 52, 49, 63, 49, 74,
+					62, 16, 62, 28, 62, 39, 62, 51, 62, 62, 62, 73,
+					49, 28, 49, 39, 49, 51, 49, 62, 49, 73,
 				],
-				'lampadas3' => [27, 40, 27, 49, 27, 58],
-				'lampadas4' => [36, 40, 36, 49, 36, 58],
+				'lampadas3' => [27, 39, 27, 48, 27, 57],
+				'lampadas4' => [36, 39, 36, 48, 36, 57],
 			],
 			'coord_arcondicionado' => [
-				'arcondicionado1' => [57, 14],
-				'arcondicionado2' => [29, 34],
-				'arcondicionado3' => [7, 45],
-				'arcondicionado4' => [28, 64],
-				'arcondicionado5' => [54, 83]
+				'arcondicionado1' => [54, 14],
+				'arcondicionado2' => [29, 33],
+				'arcondicionado3' => [6, 45],
+				'arcondicionado4' => [29, 63],
+				'arcondicionado5' => [55, 83]
 			]
 		]);
 	}

@@ -92,7 +92,7 @@ class SolicitacoesController extends Controller
 	{
 		$solicitacao = $this->solicitacao::find($solicitacao);
 		$solicitacao->delete();
-		flash('Solicitação removida com sucesso')->success();
+		flash('Solicitação removida com sucesso!')->success();
 		return redirect()->route('solicitar.index');
 	}
 }

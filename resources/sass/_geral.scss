@@ -29,6 +29,50 @@ body {
     color: $light-grey;
   }
 
+  .uk-tooltip {
+    background: $dark-orange;
+  }
+
+  .noUi-target {
+    background: $light-grey;
+  }
+
+  .noUi-connect {
+    background: $dark-green;
+  }
+
+  .noUi-handle {
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 4px;
+
+    &::before,
+    &::after {
+      background: #ddd;
+    }
+
+    &.enabled {
+      border: 1px solid $orange;
+
+      &::before,
+      &::after {
+        background: $orange;
+      }
+    }
+  }
+
+  .noUi-tooltip {
+    font-size: 14;
+    color: #ddd;
+    font-weight: 700;
+    padding: 3px;
+
+    &.enabled {
+      border: 2px solid $green;
+      color: $dark-grey;
+    }
+  }
+
   .notificacao-alerta {
     .alert {
       padding: 15px;
@@ -131,7 +175,6 @@ body {
         @include device(xs) {
           display: block;
           margin-bottom: 20px;
-          margin-right: 0 !important;
         }
       }
 

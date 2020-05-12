@@ -37,10 +37,11 @@
             <li>
               @for($i = 1; $i <= $qtd_arcondicionado; $i++)
                 <h5>Ar-condicionado {{$i}}</h5>               
-                <label class="switch" for="arcondicionado{{$i}}">
+                <label class="uk-margin-medium-top uk-margin-small-bottom switch" for="arcondicionado{{$i}}">
                   <input type="checkbox" id="arcondicionado{{$i}}" class="check interruptor-arcondicionado">
                   <div class="switch-slider switch-on-off"></div>
                 </label>
+                <div class="uk-width-1-2 uk-display-inline-block uk-margin-medium-left" data-slider="arcondicionado{{$i}}"></div>
               @endfor
             </li>
           </ul>  

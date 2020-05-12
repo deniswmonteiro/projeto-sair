@@ -2,28 +2,22 @@
   background: $light-green;
   padding: 15px 30px;
 
-  .bg-pattern {
-    // background: url("../img/bg-pattern.svg") no-repeat right,
-    //             url("../img/bg-pattern.svg") no-repeat left;
-    // padding: 21px 0;
+  .introducao-titulo {
+    padding-top: 10px;
 
-    .introducao-titulo {
-      padding-top: 10px;
+    img {
+      margin: 0 auto;
+    }
 
-      img {
-        margin: 0 auto;
-      }
+    span {
+      margin-top: 15px;
+    }
 
-      span {
-        margin-top: 15px;
-      }
+    h1 {
+      @include font(48);
 
-      h1 {
-        @include font(48);
-
-        @include device(xs) {
-          @include font(36);
-        }
+      @include device(xs) {
+        @include font(36);
       }
     }
   }

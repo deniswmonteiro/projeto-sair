@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Projeto Automação &bull; {{$paginaAtual}}</title>
-    <link rel="stylesheet" href="{{secure_asset('css/uikit.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{secure_asset('css/uikit.min.css')}}" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{secure_asset('css/nouislider.min.css')}}">
     <link rel="stylesheet" href="{{secure_asset('css/app.css')}}" type="text/css">
     <link rel="shortcut icon" href="{{secure_asset('logo.ico')}}" type="image/x-icon">
-    <script src="{{secure_asset('js/jquery-3.4.1.min.js')}}" type="text/javascript"></script>
-    <script src="{{secure_asset('js/jquery.mask.js')}}" type="text/javascript"></script>
-    <script src="{{secure_asset('js/mqttws31.min.js')}}" type="text/javascript"></script>
+    <script src="{{secure_asset('js/plugins.min.js')}}" type="text/javascript"></script>
     @laravelPWA
   </head>
   <body>
@@ -64,8 +63,8 @@
       </div>
     </footer>
 
-    <script src="{{secure_asset('js/uikit.js')}}" type="text/javascript"></script>
-    <script src="{{secure_asset('js/uikit-icons.js')}}" type="text/javascript"></script>
+    <script src="{{secure_asset('js/uikit.min.js')}}" type="text/javascript"></script>
+    <script src="{{secure_asset('js/uikit-icons.min.js')}}" type="text/javascript"></script>
     <script src="{{secure_asset('js/app.js')}}" type="text/javascript"></script>
   </body>
 </html>

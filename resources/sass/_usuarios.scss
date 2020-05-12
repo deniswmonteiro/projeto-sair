@@ -14,61 +14,19 @@
 
         @include device(xs) {
           display: inline-block;
+          margin-top: 20px;
         }
 
         i {
           vertical-align: middle;
         }
 
-        &.btn-confirmar {
+        &.btn-cancelar {
           @include device(xs) {
-            margin-top: 20px;
-            margin-right: 10px !important;
+            margin-right: 20px !important;
+            margin-top: 0 !important;
           }
         }
-      }
-    }
-  }
-
-  table {
-    th {
-      color: $dark-grey;
-      font-weight: bold;
-    }
-
-    .btn {
-      margin-top: 0;
-
-      i {
-        vertical-align: middle;
-      }
-
-      @include device(xs) {
-        display: flex !important;
-      }
-
-      .btn-acao {
-        @include device(xs) {
-          margin-bottom: 0;
-          margin-right: 20px !important;
-        }
-      }
-    }
-  }
-
-  .btn {
-    &.btn-usuarios-acao {
-      margin-top: 0;
-
-      @media screen and (max-width: 959px) {
-        margin-top: 30px;
-      }
-    }
-
-    @media screen and (max-width: 990px) {
-      .btn-acao,
-      .btn-cancelar {
-        padding: 0 20px;
       }
     }
   }
