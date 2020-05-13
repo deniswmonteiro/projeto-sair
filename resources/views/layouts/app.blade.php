@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="{{secure_asset('css/nouislider.min.css')}}">
     <link rel="stylesheet" href="{{secure_asset('css/app.css')}}" type="text/css">
     <link rel="shortcut icon" href="{{secure_asset('logo.ico')}}" type="image/x-icon">
-    <script src="{{secure_asset('js/app.js')}}" type="text/javascript"></script>
     <script src="{{secure_asset('js/plugins.min.js')}}" type="text/javascript"></script>
     @laravelPWA
   </head>
@@ -64,6 +63,7 @@
       </div>
     </footer>
 
+    <script src="{{secure_asset('js/app.js')}}" type="text/javascript"></script>
     <script src="{{secure_asset('js/uikit.min.js')}}" type="text/javascript"></script>
     <script src="{{secure_asset('js/uikit-icons.min.js')}}" type="text/javascript"></script>
   </body>
