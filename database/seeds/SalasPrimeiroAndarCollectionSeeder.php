@@ -38,7 +38,7 @@ class SalasPrimeiroAndarCollectionSeeder extends Seeder
             ],
             'coord_arcondicionado' => [
                 'arcondicionado1' => [1, 45],
-                'arcondicionado2' => [95, 45]
+                'arcondicionado2' => [93.5, 45]
             ]
         ]);
         
@@ -54,7 +54,7 @@ class SalasPrimeiroAndarCollectionSeeder extends Seeder
             ],
             'coord_arcondicionado' => [
                 'arcondicionado1' => [1, 45],
-                'arcondicionado2' => [94.5, 45]
+                'arcondicionado2' => [93.5, 45]
             ]  
         ]);
         
@@ -83,8 +83,8 @@ class SalasPrimeiroAndarCollectionSeeder extends Seeder
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [
-                'lampadas1' => [11, 78, 7, 7, 40, 7, 73, 7],
-                'lampadas2' => [11, 42, 24, 7, 56, 7, 90, 7]
+                'lampadas1' => [10, 78, 7, 4, 40, 4, 73, 4],
+                'lampadas2' => [10, 42, 24, 4, 56, 4, 90, 4]
             ]
         ]);
         
@@ -144,8 +144,8 @@ class SalasPrimeiroAndarCollectionSeeder extends Seeder
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => null,
             'coord_circ_lampadas' => [
-                'lampadas1' => [90, 82],
-                'lampadas2' => [90, 16]
+                'lampadas1' => [91, 82],
+                'lampadas2' => [91, 16]
             ]
         ]);
         
@@ -160,7 +160,7 @@ class SalasPrimeiroAndarCollectionSeeder extends Seeder
                 'lampadas2' => [48, 51]      
             ],
             'coord_arcondicionado' => [
-                'arcondicionado1' => [50, 90]
+                'arcondicionado1' => [50, 87]
             ]
         ]);
         
@@ -192,8 +192,8 @@ class SalasPrimeiroAndarCollectionSeeder extends Seeder
                 'lampadas2' => [13, 69, 36, 69, 59, 69, 82, 69]
             ],
             'coord_arcondicionado' => [
-                'arcondicionado1' => [30, 92],
-                'arcondicionado2' => [70, 92]
+                'arcondicionado1' => [30, 90],
+                'arcondicionado2' => [70, 90]
             ]
         ]);
     }

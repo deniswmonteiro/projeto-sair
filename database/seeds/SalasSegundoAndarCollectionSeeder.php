@@ -22,7 +22,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
 				'lampadas2' => [72, 50]
 			],
 			'coord_arcondicionado' => [
-				'arcondicionado1' => [95, 50]
+				'arcondicionado1' => [93.5, 50]
 			]
 		]);
 
@@ -135,8 +135,8 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
 			'qtd_circ_lampada' => 2,
 			'qtd_arcondicionado' => null,
 			'coord_circ_lampadas' => [
-				'lampadas1' => [8, 8, 40, 8, 72, 8, 11, 77],
-				'lampadas2' => [24, 8, 56, 8, 89, 8, 11, 42]
+				'lampadas1' => [8, 4, 40, 4, 72, 4, 10, 77],
+				'lampadas2' => [24, 4, 56, 4, 89, 4, 10, 42]
 			]
 		]);
 
@@ -192,7 +192,7 @@ class SalasSegundoAndarCollectionSeeder extends Seeder
 			'qtd_circ_lampada' => 1,
 			'qtd_arcondicionado' => null,
 			'coord_circ_lampadas' => [
-				'lampadas1' => [90, 18, 90, 82]
+				'lampadas1' => [91, 18, 91, 82]
 			]
 		]);
 	}
