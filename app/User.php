@@ -43,10 +43,4 @@ class User extends \Jenssegers\Mongodb\Eloquent\Model implements
 	{
 		return SlugOptions::create()->generateSlugsFrom('usuario')->saveSlugsTo('slug');
 	}
-
-	// protected $primaryKey = 'usuario_id';
-	// public function getRouteKeyName()
-	// {
-	// 	return 'slug';
-	// }
 }

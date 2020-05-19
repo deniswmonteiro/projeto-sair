@@ -7,9 +7,9 @@
 	<section class="uk-section solicitacao">
 		<div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body bg-card-form">
-				<form class="uk-form-stacked form-solicitacao" action="{{route('usuarios.cadastro')}}" method="post">
+				<form class="uk-form-stacked form-solicitacao" action="{{route('solicitar.store')}}" method="post">
 					@csrf
-					<div class="uk-child-width-1-3@s uk-margin" uk-grid>
+					<div class="uk-child-width-1-3@s" uk-grid>
 						<div>
 							<label class="uk-form-label form" for="form-cadastro-nome">{{__('Nome Completo *')}}</label>
 							<div class="uk-form-controls">
@@ -102,27 +102,18 @@
 							</div>
 						</div>
 						<div>
-							<label class="uk-form-label" for="form-cadastro-senha">{{__('Senha *')}}</label>
-							<div class="uk-form-controls uk-inline uk-display-block">
-								<input id="form-cadastro-senha" type="password" class="uk-input uk-border-rounded @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Utilizar CPF">
-								@error('password')
-									<span class="uk-text-danger" role="alert">
-										<strong>{{$message}}</strong>
-									</span>
-								@enderror
-							</div>
-						</div>
-					</div>
-					<div class="uk-child-width-1-3@s uk-margin" uk-grid>
-						<div>
 							<label class="uk-form-label" for="form-atualizar-usuario">
 								{{__('Categoria *')}}
 							</label>
 							<div class="uk-form-controls">
 								<select class="uk-select uk-border-rounded" id="form-atualizar-usuario" @error('categoria') is-invalid @enderror" name="categoria" value="{{old('categoria')}}" required autocomplete="categoria">
 									<option value="" selected disabled>Escolha uma opção</option>
-									<option value="CEAMAZON">CEAMAZON</option>
-									<option value="ADMINISTRADOR">ADMINISTRADOR</option>
+									<option value="CEAMAZON" @if(old("categoria") === "CEAMAZON") selected @endif>
+										CEAMAZON
+									</option>
+									<option value="ADMINISTRADOR" @if(old("categoria") === "ADMINISTRADOR") selected @endif>
+										ADMINISTRADOR
+									</option>
 								</select>
 								@error('categoria')
 									<span class="uk-text-danger" role="alert">

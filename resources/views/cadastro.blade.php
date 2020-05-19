@@ -9,9 +9,9 @@
 			<div class="uk-card uk-card-default uk-card-body bg-card-form">
 				<form class="uk-form-stacked form-cadastro" action="{{route('cadastro.store')}}" method="post">
 					@csrf
-					<div class="uk-child-width-1-3@s uk-margin" uk-grid>
+					<div class="uk-child-width-1-2@s" uk-grid>
 						<div>
-							<label class="uk-form-label form" for="form-cadastro-nome">{{__('Nome Completo *')}}</label>
+							<label class="uk-form-label form" for="form-cadastro-nome">{{__('Nome completo *')}}</label>
 							<div class="uk-form-controls">
 								<input id="form-cadastro-nome" type="text" class="uk-input uk-border-rounded @error('nome') is-invalid @enderror" name="nome" value="{{old('nome')}}" required autocomplete="nome" autofocus>
 								@error('nome')
@@ -32,11 +32,55 @@
 								@enderror
 							</div>
 						</div>
+					</div>
+					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
 						<div>
 							<label class="uk-form-label" for="form-cadastro-email">{{__('Email *')}}</label>
 							<div class="uk-form-controls">
 								<input id="form-cadastro-email" type="email" class="uk-input uk-border-rounded @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autocomplete="email">
 								@error('email')
+									<span class="uk-text-danger" role="alert">
+										<strong>{{$message}}</strong>
+									</span>
+								@enderror
+							</div>
+						</div>
+						<div>
+							<label class="uk-form-label" for="form-cadastro-sala-lab">
+								{{__('Laboratório *')}}
+							</label>
+							<div class="uk-form-controls">
+								<select id="form-cadastro-sala-lab" class="uk-select uk-border-rounded @error('laboratorio') is-invalid @enderror" name="laboratorio" required autocomplete="laboratorio">
+									<option value="" disabled selected>Escolha uma opção</option>
+									<option value="LabMotriz" @if(old("laboratorio") == "LabMotriz") selected @endif>
+										LabMotriz
+									</option>
+									<option value="LCADE" @if(old("laboratorio") == "LCADE") selected @endif>
+										LCADE
+									</option>
+									<option value="LabQuali" @if(old("laboratorio") == "LabQuali") selected @endif>
+										LabQuali
+									</option>
+									<option value="LabSIMA" @if(old("laboratorio") == "LabSIMA") selected @endif>
+										LabSIMA
+									</option>
+									<option value="Biblioteca" @if(old("laboratorio") == "Biblioteca") selected @endif>
+										Biblioteca
+									</option>
+									<option value="Secretaria" @if(old("laboratorio") == "Secretaria") selected @endif>
+										Secretaria
+									</option>
+									<option value="Diretoria" @if(old("laboratorio") == "Diretoria") selected @endif>
+										Diretoria
+									</option>
+									<option value="LabInstEletricas" @if(old("laboratorio") == "LabInstEletricas") selected @endif>
+										Lab. de Instalações Elétricas
+									</option>
+									<option value="LabModelagem" @if(old("laboratorio") == "LabModelagem") selected @endif>
+										Lab. de Modelagem
+									</option>
+								</select>
+								@error('laboratorio')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>
@@ -57,23 +101,23 @@
 							</div>
 						</div>
 						<div>
-							<label class="uk-form-label" for="form-cadastro-sala-lab">
-								{{__('Laboratório *')}}
+							<label class="uk-form-label" for="form-cadastro-senha">{{__('Senha *')}}</label>
+							<div class="uk-form-controls">
+								<input id="form-cadastro-senha" type="password" class="uk-input uk-border-rounded @error('password') is-invalid @enderror" name="password" value="{{old('password')}}" required autocomplete="password" placeholder="Mínimo de 8 caracteres">
+								@error('password')
+									<span class="uk-text-danger" role="alert">
+										<strong>{{$message}}</strong>
+									</span>
+								@enderror
+							</div>
+						</div>
+						<div>
+							<label class="uk-form-label" for="form-cadastro-senha-confirmar">
+								{{__('Confirmar senha *')}}
 							</label>
 							<div class="uk-form-controls">
-								<select id="form-cadastro-sala-lab" class="uk-select uk-border-rounded @error('laboratorio') is-invalid @enderror" name="laboratorio" value="{{old('laboratorio')}}" required autocomplete="laboratorio">
-									<option value="" disabled selected>Escolha uma opção</option>
-									<option value="LabMotriz">LabMotriz</option>
-									<option value="LCADE">LCADE</option>
-									<option value="LabQuali">LabQuali</option>
-									<option value="LabSIMA">LabSIMA</option>
-									<option value="Biblioteca">Biblioteca</option>
-									<option value="Secretaria">Secretaria</option>
-									<option value="Diretoria">Diretoria</option>
-									<option value="LabInstEletricas">Lab. de Instalações Elétricas</option>
-									<option value="LabModelagem">Lab. de Modelagem</option>
-								</select>
-								@error('laboratorio')
+								<input id="form-cadastro-senha-confirmar" type="password" class="uk-input uk-border-rounded @error('password_confirmation') is-invalid @enderror" name="password_confirmation" value="{{old('password_confirmation')}}" required autocomplete="password_confirmation" placeholder="Mínimo de 8 caracteres">
+								@error('password_confirmation')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
 									</span>

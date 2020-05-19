@@ -10,7 +10,7 @@
 				<form class="uk-form-stacked form-usuario-editar" action="{{route('usuario.update', ["usuario" => $usuarios->id])}}" method="post">
           @csrf
           @method("put")
-					<div class="uk-child-width-1-2@s uk-margin" uk-grid>
+					<div class="uk-child-width-1-2@s" uk-grid>
 						<div>
 							<label class="uk-form-label form" for="form-atualizar-nome">{{__('Nome Completo *')}}</label>
 							<div class="uk-form-controls">
@@ -61,7 +61,25 @@
                   </option>
 									<option value="LabQuali" @if($usuarios->laboratorio === 'LabQuali') selected @endif>
                     LabQuali
-                  </option>
+									</option>
+									<option value="LabSIMA" @if($usuarios->laboratorio === 'LabSIMA') selected @endif>
+                    LabSIMA
+									</option>
+									<option value="Biblioteca" @if($usuarios->laboratorio === 'Biblioteca') selected @endif>
+                    Biblioteca
+									</option>
+									<option value="Secretaria" @if($usuarios->laboratorio === 'Secretaria') selected @endif>
+                    Secretaria
+									</option>
+									<option value="Diretoria" @if($usuarios->laboratorio === 'Diretoria') selected @endif>
+                    Diretoria
+									</option>
+									<option value="LabInstEletricas" @if($usuarios->laboratorio === 'LabInstEletricas') selected @endif>
+                    Lab. de Instalações Elétricas
+									</option>
+									<option value="LabModelagem" @if($usuarios->laboratorio === 'LabModelagem') selected @endif>
+                    Lab. de Modelagem
+									</option>
 								</select>
 								@error('laboratorio')
 									<span class="uk-text-danger" role="alert">
@@ -75,7 +93,7 @@
 						<div>
 							<label class="uk-form-label" for="form-atualizar-usuario">{{__('Usuário *')}}</label>
 							<div class="uk-form-controls">
-								<input class="uk-input @error('usuario') is-invalid @enderror" name="usuario" value="{{$usuarios->usuario}}" id="form-atualizar-usuario" type="text" placeholder="Mínimo de 6 caracteres" required autocomplete="usuario">
+								<input class="uk-input uk-border-rounded @error('usuario') is-invalid @enderror" name="usuario" value="{{$usuarios->usuario}}" id="form-atualizar-usuario" type="text" placeholder="Mínimo de 6 caracteres" required autocomplete="usuario">
 								@error('usuario')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>

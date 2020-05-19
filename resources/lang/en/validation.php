@@ -167,11 +167,19 @@ return [
 		],
 
 		'password' => [
-			'password' => 'A senha está incorreta.',
-			'required' => 'A senha é obrigatória!',
+			'required' => 'A :attribute é obrigatória!',
 			'min' => 'O mínimo permitido são :min caracteres.',
 			'max' => 'O máximo permitido são :max caracteres.',
+			'regex' => 'Formato de :attribute inválido.',
 		],
+
+		'password_confirmation' => [
+			'required' => 'A :attribute é obrigatória!',
+			'same' => 'As senhas informadas não conferem.',
+			'min' => 'O mínimo permitido são :min caracteres.',
+			'max' => 'O máximo permitido são :max caracteres.',
+			'regex' => 'Formato de senha inválido.',
+		]
 	],
 
 	/*
@@ -186,7 +194,10 @@ return [
     */
 
 	'attributes' => [
-		'cpf' => 'CPF'
+		'cpf' => 'CPF',
+		'usuario' => 'usuário',
+		'password' => 'senha',
+		'password_confirmation' => 'confirmação de senha'
 	],
 
 ];

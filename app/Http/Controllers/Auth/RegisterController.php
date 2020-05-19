@@ -10,12 +10,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Registered;
-use projetoautomacao\SolicitarCadastro;
 
 class RegisterController extends Controller
 {
-	private $solicitacao;
-
 	/*
     |--------------------------------------------------------------------------
     | Register Controller
@@ -41,10 +38,9 @@ class RegisterController extends Controller
 	 *
 	 * @return void
 	 */
-	public function __construct(SolicitarCadastro $solicitacao)
+	public function __construct()
 	{
 		$this->middleware('auth');
-		$this->solicitacao = $solicitacao;
 	}
 
 	/**
@@ -62,7 +58,8 @@ class RegisterController extends Controller
 			'laboratorio' => ['required', 'string'],
 			'categoria' => ['required', 'string'],
 			'usuario' => ['required', 'string', 'min:6', 'max:15', 'regex:/^[a-z0-9_-]{6,15}$/', 'unique:users'],
-			'password' => ['required', 'string', 'min:8', 'max:20'],
+			'password' => ['required', 'required_with:password_confirmation', 'string', 'min:8', 'max:20', 'regex:/^[a-zA-Z0-9#$]{6,20}$/'],
+			'password_confirmation' => ['required', 'string', 'min:8', 'max:20', 'regex:/^[a-zA-Z0-9#$]{6,20}$/', 'same:password'],
 		]);
 	}
 
@@ -95,12 +92,6 @@ class RegisterController extends Controller
 	public function register(Request $request)
 	{
 		$data = $request->all();
-		$solicitacoes = $this->solicitacao::all();
-		foreach($solicitacoes as $solicitacao) {
-			if($data['usuario'] == $solicitacao->usuario){
-				$solicitacao->delete();
-			}
-		}
 		$this->validator($data)->validate();
 		event(new Registered($user = $this->create($data)));
 		return $this->registered($request, $user) ?: redirect($this->redirectPath());

@@ -99,7 +99,6 @@ body {
     background: $light-grey;
     max-width: 990px;
     margin: 0 auto;
-    padding: 30px;
 
     @include device(xs) {
       padding: 20px;
