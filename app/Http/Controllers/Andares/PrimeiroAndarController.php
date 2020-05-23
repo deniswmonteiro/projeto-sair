@@ -37,7 +37,6 @@ class PrimeiroAndarController extends Controller
 			'coord_circ_lampadas1' => $data['coord_circ_lampadas1'],
 			'coord_circ_lampadas2' => $data['coord_circ_lampadas2'],
 			'coord_circ_lampadas3' => $data['coord_circ_lampadas3'],
-			'coord_circ_lampadas4' => $data['coord_circ_lampadas4'],
 			'coord_arcondicionado1' => $data['coord_arcondicionado1'],
 			'coord_arcondicionado2' => $data['coord_arcondicionado2']
 		], compact($salas));

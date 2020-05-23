@@ -62,13 +62,12 @@ class SalasPrimeiroAndarCollectionSeeder extends Seeder
             'id_sala' => 4,
             'sala_nome' => 'Lab. de Sistemas Motrizes',
             'sala_localizacao' => [91, 11],
-            'qtd_circ_lampada' => 4,
+            'qtd_circ_lampada' => 3,
             'qtd_arcondicionado' => 2,
             'coord_circ_lampadas' => [
-                'lampadas1' => [19, 29],
-                'lampadas2' => [19, 10],
-                'lampadas3' => [52, 31, 84, 39, 19, 69, 51, 69, 84, 69],
-                'lampadas4' => [51, 12, 84, 12, 19, 50, 51, 50]
+                'lampadas1' => [51, 12, 84, 12, 19, 50, 51, 50]
+                'lampadas2' => [52, 31, 84, 39, 19, 69, 51, 69, 84, 69],
+                'lampadas3' => [19, 18],
             ],
             'coord_arcondicionado' => [
                 'arcondicionado1' => [93, 40],
