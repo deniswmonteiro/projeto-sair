@@ -17,44 +17,12 @@ class PrimeiroAndarController extends Controller
 		$this->primeiroAndar = $primeiroAndar;
 	}
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
 	public function index()
 	{
 		$salas = $this->primeiroAndar->all(['sala_nome', 'id_sala', 'sala_localizacao']);
 		return view('andares/primeiroandar', compact('salas'));
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @param  \Illuminate\Http\Request  $request
-	 * @return \Illuminate\Http\Response
-	 */
-	public function store(Request $request)
-	{
-		//
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
 	public function show($id)
 	{
 		$salas = $this->primeiroAndar->all();
@@ -73,39 +41,5 @@ class PrimeiroAndarController extends Controller
 			'coord_arcondicionado1' => $data['coord_arcondicionado1'],
 			'coord_arcondicionado2' => $data['coord_arcondicionado2']
 		], compact($salas));
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  \Illuminate\Http\Request  $request
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function update(Request $request, $id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function destroy($id)
-	{
-		//
 	}
 }

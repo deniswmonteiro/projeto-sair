@@ -1,6 +1,31 @@
 (function() {
-  'use strict';
-  window.addEventListener('load', function() {
+	'use strict';
+	
+  window.addEventListener("load", function() {
+		const inputErro = document.querySelectorAll("input.uk-form-danger");
+		$(inputErro).each(function(input) {
+			$(this).keypress(function() {
+				$(this).removeClass("uk-form-danger");
+				$(this).next().remove();
+			})
+		});
+
+		const alterarSenha = document.querySelector("[data-perfil='chk_alterar_senha']");
+		const inputsSenha = document.querySelectorAll("[data-perfil='form_senha'] input");
+		const btnAtualizar = document.querySelector(".btn-confirmar");
+
+		$(alterarSenha).click(function() {
+			$(inputsSenha).each(function() {
+				if(alterarSenha.checked) {
+					$(this).attr("disabled", false).css("cursor", "text");
+				}
+
+				else {
+					$(this).attr("disabled", true).css("cursor", "not-allowed");
+				}
+			});
+		});
+
 	const cpfs = document.querySelectorAll("input[id$='cpf']");
 	cpfs.forEach((cpf) => {
 		$(cpf).mask("000.000.000-00");
@@ -81,7 +106,7 @@
 				$(avisoArcondicionado).css("display", "block");
 			}
 		});
-  });
+	});
 });
 })();
 function mostraSenha() {
