@@ -104,9 +104,17 @@
         & + .switch-slider:before {
           transform: translateX(20px);
         }
+      }
 
+      input.interruptor-lampada:checked {
         & + .switch-slider.switch-on-off {
           background-color: $green !important;
+        }
+      }
+
+      input.interruptor-arcondicionado:checked {
+        & + .switch-slider.switch-on-off {
+          background-color: $blue !important;
         }
       }
     }

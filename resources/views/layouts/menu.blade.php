@@ -7,14 +7,14 @@
   @if($menu == "login" || $menu == "cadastro" || $menu == "recuperar-senha")
     <div class="uk-navbar uk-margin-auto logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{asset('img/logo.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo.svg')}}" alt="Logo do site">
       </a>
     </div>
 
   @else
     <div class="uk-navbar-left logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{asset('img/logo.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo.svg')}}" alt="Logo do site">
       </a>
     </div>
     <div class="uk-navbar-right uk-visible@s">
@@ -78,31 +78,38 @@
 <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" data-menu-mobile>
   <div class="uk-offcanvas-bar menu-mobile">
     <a class="uk-navbar-item uk-logo uk-width-1-2 uk-align-center uk-margin-small" href="{{route('home')}}">
-      <img src="{{asset('img/logo.svg')}}" alt="Logo do site">
+      <img src="{{secure_asset('img/logo.svg')}}" alt="Logo do site">
     </a>
     <hr class="divisor">
     <ul uk-nav>
       @if(Route::has('login'))
         @auth
+          <li class="@if(request()->is('perfil*')) active @endif">
+            <a href="{{route('perfil.index')}}">
+              <i class="material-icons-round">person</i>
+              Perfil
+            </a>
+          </li>
+          <li class="@if(request()->is('terreo*')) active @endif">
+            <a href="{{route('terreo.index')}}">
+              <i class="material-icons-round">domain</i>
+              Térreo
+            </a>
+          </li>
+          <li class="@if(request()->is('primeiroandar*')) active @endif">
+            <a href="{{route('primeiroandar.index')}}">
+              <i class="material-icons-round">domain</i>
+              1º Andar
+            </a>
+          </li>
+          <li class="@if(request()->is('segundoandar*')) active @endif">
+            <a href="{{route('segundoandar.index')}}">
+              <i class="material-icons-round">domain</i>
+              2º Andar
+            </a>
+          </li>
+
           @if(Auth::user()->categoria === 'ADMINISTRADOR')
-            <li class="@if(request()->is('terreo*')) active @endif">
-              <a href="{{route('terreo.index')}}">
-                <i class="material-icons-round">domain</i>
-                Térreo
-              </a>
-            </li>
-            <li class="@if(request()->is('primeiroandar*')) active @endif">
-              <a href="{{route('primeiroandar.index')}}">
-                <i class="material-icons-round">domain</i>
-                1º Andar
-              </a>
-            </li>
-            <li class="@if(request()->is('segundoandar*')) active @endif">
-              <a href="{{route('segundoandar.index')}}">
-                <i class="material-icons-round">domain</i>
-                2º Andar
-              </a>
-            </li>
             <li class="@if(request()->is('usuario*')) active @endif">
               <a href="{{route('usuario.index')}}">
                 <i class="material-icons-round">supervised_user_circle</i>

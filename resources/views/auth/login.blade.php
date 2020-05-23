@@ -33,19 +33,13 @@
 								@enderror
 							</div>
 					</div>
-					<div class="uk-margin">
-						<label for="form-login-lembrar-senha" class="">
-							<input class="uk-checkbox uk-border-rounded" type="checkbox" name="remember" id="form-login-lembrar-senha" {{old('remember') ? 'checked' : ''}}>
-							{{__('Lembrar senha')}}
-						</label>
-					</div>
-					<div class="uk-margin-medium">
-						<span class="acoes-login">
+					<div class="uk-margin acoes-login">
+						<span>
 							@if(Route::has('password.request'))
 								<a class="uk-button" href="{{route('password.request')}}">Esqueceu a senha?</a>
 							@endif
 						</span>
-						<span class="acoes-login">
+						<span>
 							<a class="uk-button" href="{{route('cadastro.index')}}">Cadastrar-se</a>
 						</span>
 					</div>

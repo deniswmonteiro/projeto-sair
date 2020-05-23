@@ -65,7 +65,7 @@ class SalasPrimeiroAndarCollectionSeeder extends Seeder
             'qtd_circ_lampada' => 3,
             'qtd_arcondicionado' => 2,
             'coord_circ_lampadas' => [
-                'lampadas1' => [51, 12, 84, 12, 19, 50, 51, 50]
+                'lampadas1' => [51, 12, 84, 12, 19, 50, 51, 50],
                 'lampadas2' => [52, 31, 84, 39, 19, 69, 51, 69, 84, 69],
                 'lampadas3' => [19, 18],
             ],
