@@ -13,7 +13,7 @@
 						<div>
 							<label class="uk-form-label form" for="form-cadastro-nome">{{__('Nome completo *')}}</label>
 							<div class="uk-form-controls">
-								<input id="form-cadastro-nome" type="text" class="uk-input uk-border-rounded @error('nome') is-invalid @enderror" name="nome" value="{{old('nome')}}" required autocomplete="nome" autofocus>
+								<input id="form-cadastro-nome" type="text" class="uk-input uk-border-rounded @error('nome') uk-form-danger @enderror" name="nome" value="{{old('nome')}}" required autocomplete="nome" autofocus>
 								@error('nome')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -24,7 +24,7 @@
 						<div>
 							<label class="uk-form-label" for="form-cadastro-cpf">{{__('CPF *')}}</label>
 							<div class="uk-form-controls">
-								<input class="uk-input uk-border-rounded @error('cpf') is-invalid @enderror" name="cpf" value="{{old('cpf')}}" id="form-cadastro-cpf" type="text" placeholder="Somente os números" required autocomplete="cpf">
+								<input class="uk-input uk-border-rounded @error('cpf') uk-form-danger @enderror" name="cpf" value="{{old('cpf')}}" id="form-cadastro-cpf" type="text" placeholder="Somente os números" required autocomplete="cpf">
 								@error('cpf')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -37,7 +37,7 @@
 						<div>
 							<label class="uk-form-label" for="form-cadastro-email">{{__('Email *')}}</label>
 							<div class="uk-form-controls">
-								<input id="form-cadastro-email" type="email" class="uk-input uk-border-rounded @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autocomplete="email">
+								<input id="form-cadastro-email" type="email" class="uk-input uk-border-rounded @error('email') uk-form-danger @enderror" name="email" value="{{old('email')}}" required autocomplete="email">
 								@error('email')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -50,7 +50,7 @@
 								{{__('Laboratório *')}}
 							</label>
 							<div class="uk-form-controls">
-								<select id="form-cadastro-sala-lab" class="uk-select uk-border-rounded @error('laboratorio') is-invalid @enderror" name="laboratorio" required autocomplete="laboratorio">
+								<select id="form-cadastro-sala-lab" class="uk-select uk-border-rounded @error('laboratorio') uk-form-danger @enderror" name="laboratorio" required autocomplete="laboratorio">
 									<option value="" disabled selected>Escolha uma opção</option>
 									<option value="LabMotriz" @if(old("laboratorio") == "LabMotriz") selected @endif>
 										LabMotriz
@@ -92,7 +92,7 @@
 						<div>
 							<label class="uk-form-label" for="form-cadastro-usuario">{{__('Usuário *')}}</label>
 							<div class="uk-form-controls">
-								<input id="form-cadastro-usuario" type="text" class="uk-input uk-border-rounded @error('usuario') is-invalid @enderror" name="usuario" value="{{old('usuario')}}" required autocomplete="usuario" placeholder="Mínimo de 6 caracteres">
+								<input id="form-cadastro-usuario" type="text" class="uk-input uk-border-rounded @error('usuario') uk-form-danger @enderror" name="usuario" value="{{old('usuario')}}" required autocomplete="usuario" placeholder="Mínimo de 6 caracteres">
 								@error('usuario')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -103,7 +103,7 @@
 						<div>
 							<label class="uk-form-label" for="form-cadastro-senha">{{__('Senha *')}}</label>
 							<div class="uk-form-controls">
-								<input id="form-cadastro-senha" type="password" class="uk-input uk-border-rounded @error('password') is-invalid @enderror" name="password" value="{{old('password')}}" required autocomplete="password" placeholder="Mínimo de 8 caracteres">
+								<input id="form-cadastro-senha" type="password" class="uk-input uk-border-rounded @error('password') uk-form-danger @enderror" name="password" value="{{old('password')}}" required autocomplete="password" placeholder="Mínimo de 8 caracteres">
 								@error('password')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -116,7 +116,7 @@
 								{{__('Confirmar senha *')}}
 							</label>
 							<div class="uk-form-controls">
-								<input id="form-cadastro-senha-confirmar" type="password" class="uk-input uk-border-rounded @error('password_confirmation') is-invalid @enderror" name="password_confirmation" value="{{old('password_confirmation')}}" required autocomplete="password_confirmation" placeholder="Mínimo de 8 caracteres">
+								<input id="form-cadastro-senha-confirmar" type="password" class="uk-input uk-border-rounded @error('password_confirmation') uk-form-danger @enderror" name="password_confirmation" value="{{old('password_confirmation')}}" required autocomplete="password_confirmation" placeholder="Mínimo de 8 caracteres">
 								@error('password_confirmation')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>

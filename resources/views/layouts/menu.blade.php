@@ -7,14 +7,14 @@
   @if($menu == "login" || $menu == "cadastro" || $menu == "recuperar-senha")
     <div class="uk-navbar uk-margin-auto logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{secure_asset('img/logo.svg')}}" alt="Logo do site">
+        <img src="{{asset('img/logo.svg')}}" alt="Logo do site">
       </a>
     </div>
 
   @else
     <div class="uk-navbar-left logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{secure_asset('img/logo.svg')}}" alt="Logo do site">
+        <img src="{{asset('img/logo.svg')}}" alt="Logo do site">
       </a>
     </div>
     <div class="uk-navbar-right uk-visible@s">
@@ -52,7 +52,8 @@
 
             <li>
               <a href="#modal-sair" uk-toggle>Sair</a>
-              @include('components.modal', ['id' => 'modal-sair', 'texto' => 'Deseja realmente sair?'])                    
+              @include('components.modal',
+              ['id' => 'modal-sair', 'texto' => 'Deseja realmente sair?', 'rota' => 'logout'])
             </li>
             
           @else
@@ -78,7 +79,7 @@
 <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" data-menu-mobile>
   <div class="uk-offcanvas-bar menu-mobile">
     <a class="uk-navbar-item uk-logo uk-width-1-2 uk-align-center uk-margin-small" href="{{route('home')}}">
-      <img src="{{secure_asset('img/logo.svg')}}" alt="Logo do site">
+      <img src="{{asset('img/logo.svg')}}" alt="Logo do site">
     </a>
     <hr class="divisor">
     <ul uk-nav>
@@ -129,7 +130,7 @@
               Sair
             </a>
             @include('components.modal', 
-              ['id' => 'modal-sair', 'texto' => 'Deseja realmente sair?'])
+            ['id' => 'modal-sair', 'texto' => 'Deseja realmente sair?', 'rota' => 'logout'])
           </li>
 
           @else

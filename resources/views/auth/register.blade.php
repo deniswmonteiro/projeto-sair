@@ -13,7 +13,7 @@
 						<div>
 							<label class="uk-form-label form" for="form-registrar-nome">{{__('Nome completo *')}}</label>
 							<div class="uk-form-controls">
-								<input id="form-registrar-nome" type="text" class="uk-input uk-border-rounded @error('nome') is-invalid @enderror" name="nome" value="{{old('nome')}}" required autocomplete="nome" autofocus>
+								<input id="form-registrar-nome" type="text" class="uk-input uk-border-rounded @error('nome') uk-form-danger @enderror" name="nome" value="{{old('nome')}}" required autocomplete="nome" autofocus>
 								@error('nome')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -24,7 +24,7 @@
 						<div>
 							<label class="uk-form-label" for="form-registrar-cpf">{{__('CPF *')}}</label>
 							<div class="uk-form-controls">
-								<input class="uk-input uk-border-rounded @error('cpf') is-invalid @enderror" name="cpf" value="{{old('cpf')}}" id="form-registrar-cpf" type="text" placeholder="Somente os números" required autocomplete="cpf">
+								<input class="uk-input uk-border-rounded @error('cpf') uk-form-danger @enderror" name="cpf" value="{{old('cpf')}}" id="form-registrar-cpf" type="text" placeholder="Somente os números" required autocomplete="cpf">
 								@error('cpf')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -37,7 +37,7 @@
 						<div>
 							<label class="uk-form-label" for="form-registrar-email">{{__('Email *')}}</label>
 							<div class="uk-form-controls">
-								<input id="form-registrar-email" type="email" class="uk-input uk-border-rounded @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autocomplete="email">
+								<input id="form-registrar-email" type="email" class="uk-input uk-border-rounded @error('email') uk-form-danger @enderror" name="email" value="{{old('email')}}" required autocomplete="email">
 								@error('email')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -50,7 +50,7 @@
 								{{__('Laboratório *')}}
 							</label>
 							<div class="uk-form-controls">
-								<select class="uk-select uk-border-rounded" id="form-registrar-sala-lab" @error('laboratorio') is-invalid @enderror" name="laboratorio" required autocomplete="laboratorio">
+								<select class="uk-select uk-border-rounded @error('laboratorio') uk-form-danger @enderror" id="form-registrar-sala-lab" name="laboratorio" required autocomplete="laboratorio">
 									<option value="" disabled selected>Escolha uma opção</option>
 									<option value="LabMotriz" @if(old('laboratorio') === 'LabMotriz') selected @endif>
 										LabMotriz
@@ -92,7 +92,7 @@
 								{{__('Categoria *')}}
 							</label>
 							<div class="uk-form-controls">
-								<select class="uk-select uk-border-rounded" id="form-registrar-categoria" @error('categoria') is-invalid @enderror" name="categoria" value="{{old('categoria')}}" required autocomplete="categoria">
+								<select class="uk-select uk-border-rounded @error('categoria') uk-form-danger @enderror" id="form-registrar-categoria" name="categoria" value="{{old('categoria')}}" required autocomplete="categoria">
 									<option value="" selected disabled>Escolha uma opção</option>
 									<option value="CEAMAZON" @if(old("categoria") === "CEAMAZON") selected @endif>
 										CEAMAZON
@@ -113,7 +113,7 @@
 						<div>
 							<label class="uk-form-label" for="form-registrar-usuario">{{__('Usuário *')}}</label>
 							<div class="uk-form-controls">
-								<input class="uk-input uk-border-rounded @error('usuario') is-invalid @enderror" name="usuario" value="{{old('usuario')}}" id="form-registrar-usuario" type="text" placeholder="Mínimo de 6 caracteres" required autocomplete="usuario">
+								<input class="uk-input uk-border-rounded @error('usuario') uk-form-danger @enderror" name="usuario" value="{{old('usuario')}}" id="form-registrar-usuario" type="text" placeholder="Mínimo de 6 caracteres" required autocomplete="usuario">
 								@error('usuario')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -124,7 +124,7 @@
 						<div>
 							<label class="uk-form-label" for="form-registrar-senha">{{__('Senha *')}}</label>
 							<div class="uk-form-controls uk-inline uk-display-block">
-								<input id="form-registrar-senha" type="password" class="uk-input uk-border-rounded @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Mínimo de 8 caracteres">
+								<input id="form-registrar-senha" type="password" class="uk-input uk-border-rounded @error('password') uk-form-danger @enderror" name="password" required autocomplete="new-password" placeholder="Mínimo de 8 caracteres">
 								@error('password')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -137,7 +137,7 @@
 								{{__('Confirmar senha *')}}
 							</label>
 							<div class="uk-form-controls uk-inline uk-display-block">
-								<input id="form-registrar-senhaconfirmar" type="password" class="uk-input uk-border-rounded @error('password_conirmation') is-invalid @enderror" name="password_confirmation" required autocomplete="password_confirmation" placeholder="Mínimo de 8 caracteres">
+								<input id="form-registrar-senhaconfirmar" type="password" class="uk-input uk-border-rounded @error('password_confirmation') uk-form-danger @enderror" name="password_confirmation" required autocomplete="password_confirmation" placeholder="Mínimo de 8 caracteres">
 								@error('password_confirmation')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>

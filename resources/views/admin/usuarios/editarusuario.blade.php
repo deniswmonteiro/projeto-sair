@@ -7,7 +7,7 @@
   <section class="uk-section usuarios">
 		<div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body bg-card-form">
-				<form class="uk-form-stacked form-usuario-editar" action="{{route('usuario.update', ["usuario" => $usuarios->id])}}" method="post">
+				<form class="uk-form-stacked form-usuario-editar" action="{{route('usuario.update', ["usuario" => encrypt($usuarios->id)])}}" method="post">
           @csrf
           @method("put")
 					<div class="uk-child-width-1-2@s" uk-grid>

@@ -17,7 +17,7 @@
               <i class="material-icons-round">search</i>
             </a>
             <a href="{{route('usuario.index')}}" class="uk-button uk-margin-right btn-cancelar">
-              <i class="material-icons-round">clear</i>
+              <i class="material-icons-round">clear_all</i>
             </a>
             <a href="{{route('usuarios.form')}}" class="uk-button btn-confirmar">{{__('Adicionar usuário')}}</a>
           </div>

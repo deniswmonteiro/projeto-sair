@@ -9,14 +9,24 @@ table {
 
     a, button {
       padding: 0 20px;
-    }
+      height: 38px;
 
-    i {
-      vertical-align: middle;
+      i {
+        vertical-align: middle;
+      }
     }
 
     @include device(xs) {
       display: flex !important;
+    }
+  }
+
+  .bg-card-form {
+    border: 1px solid $red;
+    width: 250px;
+    
+    button.btn-confirmar {
+      margin-bottom: 0;
     }
   }
 }

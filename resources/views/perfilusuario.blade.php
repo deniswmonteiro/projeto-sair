@@ -4,10 +4,10 @@
   @include("layouts.menu", ["menu" => "editar-perfil"])
   @include("layouts.introducao", ["iconeIntroducao" => "ico-usuarios", "textoIntroducao" => "atualize seus dados", "paginaAtual" => "Perfil de Usuário"])
 
-  <section class="uk-section usuarios">
+  <section class="uk-section perfil">
 		<div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body bg-card-form">
-        <form class="uk-form-stacked form-usuario-editar" action="{{route('perfil.update', ["perfil" => $usuarioLogado->id])}}" method="post">
+        <form class="uk-form-stacked form-usuario-editar" action="{{route('perfil.update', ["perfil" => encrypt($usuarioLogado->id)])}}" method="post">
           @csrf
           @method("put")
 					<div class="uk-child-width-1-2@s" uk-grid>

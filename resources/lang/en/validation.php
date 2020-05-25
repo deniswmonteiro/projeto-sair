@@ -148,6 +148,7 @@ return [
 			'unique' => 'Este :attribute já está sendo utilizado.',
 			'required' => 'O :attribute é obrigatório!',
 			'regex' => 'O formato de :attribute é inválido.',
+			'email' => 'O :attribute não é válido.',
 		],
 
 		'laboratorio' => [

@@ -26,7 +26,7 @@ class PerfilUsuarioController extends Controller
 	public function update(Request $request, $usuario)
 	{
 		$data = $request->all();
-		$perfil = $this->usuario::findOrFail($usuario);
+		$perfil = $this->usuario::findOrFail(decrypt($usuario));
 		
 		$this->validate($request, [
 			'nome' => ['required', 'string', 'max:255'],

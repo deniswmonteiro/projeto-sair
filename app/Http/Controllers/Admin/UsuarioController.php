@@ -31,8 +31,8 @@ class UsuarioController extends Controller
 	public function update(Request $request, $usuario)
 	{
 		$data = $request->all();
-		$usuario = $this->usuario::findOrFail($usuario);
-
+		$usuario = $this->usuario::findOrFail(decrypt($usuario));
+		
 		$this->validate($request, [
 			'nome' => ['required', 'string', 'max:255'],
 			'cpf' => ['required', 'cpf', Rule::unique('users')->ignore($usuario)],
@@ -49,7 +49,7 @@ class UsuarioController extends Controller
 
 	public function destroy($usuario)
 	{
-		$usuario = $this->usuario::find($usuario);
+		$usuario = $this->usuario::find(decrypt($usuario));
 		$usuario->delete();
 		flash('Usuário(a) removido do sistema')->success();
 		return redirect()->route('usuario.index');

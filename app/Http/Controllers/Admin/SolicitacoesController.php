@@ -58,7 +58,7 @@ class SolicitacoesController extends Controller
 	
 	public function destroy($solicitacao)
 	{
-		$solicitacao = $this->solicitacao::find($solicitacao);
+		$solicitacao = $this->solicitacao::find(decrypt($solicitacao));
 		$solicitacao->delete();
 		flash('Solicitação removida com sucesso!')->success();
 		return redirect()->route('solicitar.index');

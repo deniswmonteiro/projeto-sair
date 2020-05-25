@@ -25,13 +25,21 @@
             <a href="{{route($pagina.'.editar', ['slug' => $usuario->slug])}}" class="uk-button uk-margin-right btn-acao">
               <i class="material-icons-round">edit</i>
             </a>
-              <form action="{{route($pagina.'.destroy', [$pagina => $usuario->id])}}" method="post" class="uk-display-inline-block form-btn-submit">
-              @csrf
-              @method("delete")
-              <button type="submit" class="uk-button uk-width-1-1 btn-cancelar">
-                <i class="material-icons-round">delete</i>
-              </button>
-            </form>
+            <a class="uk-button btn-cancelar" type="button">
+              <i class="material-icons-round">delete</i>
+            </a>
+            <div uk-drop="mode: click; pos: top-center">
+              <div class="uk-card uk-card-body uk-card-default uk-card-small uk-border-rounded bg-card-form">
+                <p>Confimar exclusão?</p>
+                <form action="{{route($pagina.'.destroy', [$pagina => encrypt($usuario->id)])}}" method="post" class="uk-display-inline-block form-btn-submit form-excluir">
+                  @csrf
+                  @method("delete")
+                  <button type="submit" class="uk-button btn-confirmar">
+                    Sim
+                  </a>
+                </form>
+              </div>
+            </div>
           </div>
         </td>
       </tr>
