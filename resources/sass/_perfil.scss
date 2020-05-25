@@ -1,0 +1,23 @@
+.perfil {
+  .form-senha {
+    opacity: .5;
+    cursor: not-allowed;
+
+    label, input{
+      cursor: not-allowed;
+    }
+
+    &.active {
+      opacity: 1;
+      cursor: default;
+
+      label {
+        cursor: default;
+      }
+
+      input {
+        cursor: text;
+      }
+    }
+  }
+}

@@ -102,11 +102,11 @@
           </div>
             <div class="uk-form-controls uk-margin-medium-top">
 							<label class="uk-form-label" for="form-perfil-mudarsenha">
-								<input class="uk-checkbox uk-border-rounded" name="chk_senha" id="form-perfil-mudarsenha" type="checkbox" data-perfil="chk_alterar_senha">
+								<input class="uk-checkbox uk-border-rounded" name="chk_senha" id="form-perfil-mudarsenha" type="checkbox" onchange="alterarSenhaPerfil()" data-perfil="chk_alterar_senha">
 								{{__('Alterar senha?')}}
 							</label>
 						</div>
-          <div class="uk-child-width-1-3@s uk-margin" uk-grid data-perfil="form_senha">
+          <div class="uk-child-width-1-3@s uk-margin form-senha" uk-grid data-perfil="form_senha">
             <div>
 							<label class="uk-form-label" for="form-perfil-senhaatual">
                 {{__('Senha atual *')}}

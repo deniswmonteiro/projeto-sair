@@ -138,8 +138,7 @@ body {
       }
     }
 
-    /* icone de mostrar/esconder senha */
-    .btn-form-senha-modal {
+    .btn-form-senha {
       height: 40px;
       background: $green;
       border: none;
@@ -286,9 +285,5 @@ body {
     i {
       vertical-align: middle;
     }
-  }
-
-  .alterar-senha input {
-    cursor: not-allowed;
   }
 }
