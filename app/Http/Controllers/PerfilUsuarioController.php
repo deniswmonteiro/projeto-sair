@@ -40,7 +40,7 @@ class PerfilUsuarioController extends Controller
 					if (!Hash::check($valor, $perfil->password)) {
 						return $mensagem(__('A senha está incorreta!'));
 					}
-				}, 'regex:/^[a-zA-Z0-9@#$-%!^&*]{6,20}$/', 'string', 'min:8', 'max:20'],
+				}, 'regex:/^[a-zA-Z0-9@#$%!^&*-]{6,20}$/', 'string', 'min:8', 'max:20'],
 			'new_password' => [Rule::requiredIf($request->request->has("password")), 'required_with:password', 'regex:/^[a-zA-Z0-9@#$%!^&*-]{6,20}$/', 'string', 'min:8', 'max:20'],
 			'password_confirmation' => [Rule::requiredIf($request->request->has("password")), 'required_with:new_password', 'regex:/^[a-zA-Z0-9@#$%!^&*-]{6,20}$/', 'string', 'min:8', 'max:20', 'same:new_password'],
 		]);
