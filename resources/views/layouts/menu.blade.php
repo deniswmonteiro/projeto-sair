@@ -7,8 +7,8 @@
   @if($menu == "login" || $menu == "cadastro" || $menu == "recuperar-senha")
     <div class="uk-navbar uk-margin-auto logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{secure_asset('img/logo-1.svg')}}" alt="Logo do site">
-        <img src="{{secure_asset('img/logo-3.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo-sair-1.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo-sair-3.svg')}}" alt="Logo do site">
       </a>
     </div>
 
