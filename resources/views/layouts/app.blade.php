@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Projeto Automação &bull; {{$paginaAtual}}</title>
-    <link rel="stylesheet" href="{{asset('css/uikit.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{secure_asset('css/uikit.min.css')}}" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/nouislider.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css">
-    <link rel="shortcut icon" href="{{asset('logo.ico')}}" type="image/x-icon">
-    <script src="{{asset('js/plugins.min.js')}}" type="text/javascript"></script>
+    <link rel="stylesheet" href="{{secure_asset('css/nouislider.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/app.css')}}" type="text/css">
+    <link rel="shortcut icon" href="{{secure_asset('logo.ico')}}" type="image/x-icon">
+    <script src="{{secure_asset('js/plugins.min.js')}}" type="text/javascript"></script>
     @laravelPWA
   </head>
   <body>
@@ -37,12 +37,12 @@
               <div class="uk-child-width-1-2@m uk-grid-column-small uk-flex-middle" uk-grid>
                 <div class="uk-text-right@m uk-text-center@s">
                   <a href="http://ceamazon.com.br">
-                    <img src="{{asset('img/logo-ceamazon.svg')}}" alt="Logo do CEAMAZON">
+                    <img src="{{secure_asset('img/logo-ceamazon.svg')}}" alt="Logo do CEAMAZON">
                   </a>
                 </div>
                 <div class="uk-text-center@s">
                   <a href="https://portal.ufpa.br/">
-                    <img src="{{asset('img/logo-ufpa.svg')}}" alt="Logo da UFPA">
+                    <img src="{{secure_asset('img/logo-ufpa.svg')}}" alt="Logo da UFPA">
                   </a>
                 </div>
               </div>
@@ -63,8 +63,8 @@
       </div>
     </footer>
 
-    <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
-    <script src="{{asset('js/uikit.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('js/uikit-icons.min.js')}}" type="text/javascript"></script>
+    <script src="{{secure_asset('js/app.js')}}" type="text/javascript"></script>
+    <script src="{{secure_asset('js/uikit.min.js')}}" type="text/javascript"></script>
+    <script src="{{secure_asset('js/uikit-icons.min.js')}}" type="text/javascript"></script>
   </body>
 </html>

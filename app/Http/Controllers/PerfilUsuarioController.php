@@ -31,7 +31,7 @@ class PerfilUsuarioController extends Controller
 		$this->validate($request, [
 			'nome' => ['required', 'string', 'max:255'],
 			'cpf' => ['required', 'cpf', Rule::unique('users')->ignore($perfil)],
-			'email' => ['required', 'string', 'email', 'max:255', 'regex:/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i', Rule::unique('users')->ignore($perfil)],
+			'email' => ['required', 'string', 'email', 'max:255', 'regex:/^[a-z0-9._-]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i', Rule::unique('users')->ignore($perfil)],
 			'laboratorio' => ['required', 'string'],
 			'usuario' => ['required', 'string', 'min:6', 'max:20', 'regex:/^[a-z0-9_-]{6,20}$/', Rule::unique('users')->ignore($perfil)],
 			'chk_senha' => [],
@@ -40,9 +40,9 @@ class PerfilUsuarioController extends Controller
 					if (!Hash::check($valor, $perfil->password)) {
 						return $mensagem(__('A senha está incorreta!'));
 					}
-				}, 'regex:/^[a-zA-Z0-9#$]{6,20}$/', 'string', 'min:8', 'max:20'],
-			'new_password' => [Rule::requiredIf($request->request->has("password")), 'required_with:password', 'regex:/^[a-zA-Z0-9#$]{6,20}$/', 'string', 'min:8', 'max:20'],
-			'password_confirmation' => [Rule::requiredIf($request->request->has("password")), 'required_with:new_password', 'regex:/^[a-zA-Z0-9#$]{6,20}$/', 'string', 'min:8', 'max:20', 'same:new_password'],
+				}, 'regex:/^[a-zA-Z0-9@#$%!^&*]{6,20}$/', 'string', 'min:8', 'max:20'],
+			'new_password' => [Rule::requiredIf($request->request->has("password")), 'required_with:password', 'regex:/^[a-zA-Z0-9@#$%!^&*]{6,20}$/', 'string', 'min:8', 'max:20'],
+			'password_confirmation' => [Rule::requiredIf($request->request->has("password")), 'required_with:new_password', 'regex:/^[a-zA-Z0-9@#$%!^&*]{6,20}$/', 'string', 'min:8', 'max:20', 'same:new_password'],
 		]);
 
 		if($request->request->has("new_password")) {

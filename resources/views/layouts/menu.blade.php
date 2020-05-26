@@ -7,14 +7,16 @@
   @if($menu == "login" || $menu == "cadastro" || $menu == "recuperar-senha")
     <div class="uk-navbar uk-margin-auto logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{asset('img/logo.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo-1.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo-3.svg')}}" alt="Logo do site">
       </a>
     </div>
 
   @else
     <div class="uk-navbar-left logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{asset('img/logo.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo-sair-2.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo-sair-4.svg')}}" alt="Logo do site">
       </a>
     </div>
     <div class="uk-navbar-right uk-visible@s">
@@ -79,7 +81,7 @@
 <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" data-menu-mobile>
   <div class="uk-offcanvas-bar menu-mobile">
     <a class="uk-navbar-item uk-logo uk-width-1-2 uk-align-center uk-margin-small" href="{{route('home')}}">
-      <img src="{{asset('img/logo.svg')}}" alt="Logo do site">
+      <img src="{{secure_asset('img/logo.svg')}}" alt="Logo do site">
     </a>
     <hr class="divisor">
     <ul uk-nav>

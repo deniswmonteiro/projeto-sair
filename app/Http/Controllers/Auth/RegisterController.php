@@ -54,12 +54,12 @@ class RegisterController extends Controller
 		return Validator::make($data, [
 			'nome' => ['required', 'string', 'max:255'],
 			'cpf' => ['required', 'cpf', 'unique:users'],
-			'email' => ['required', 'string', 'email', 'max:255', 'regex:/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i', 'unique:users'],
+			'email' => ['required', 'string', 'email', 'max:255', 'regex:/^[a-z0-9._-]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/', 'unique:users'],
 			'laboratorio' => ['required', 'string'],
 			'categoria' => ['required', 'string'],
 			'usuario' => ['required', 'string', 'min:6', 'max:15', 'regex:/^[a-z0-9_-]{6,15}$/', 'unique:users'],
-			'password' => ['required', 'required_with:password_confirmation', 'string', 'min:8', 'max:20', 'regex:/^[a-zA-Z0-9#$]{6,20}$/'],
-			'password_confirmation' => ['required', 'string', 'min:8', 'max:20', 'regex:/^[a-zA-Z0-9#$]{6,20}$/', 'same:password'],
+			'password' => ['required', 'required_with:password_confirmation', 'string', 'min:8', 'max:20', 'regex:/^[a-zA-Z0-9@#$%!^&*]{6,20}$/'],
+			'password_confirmation' => ['required', 'string', 'min:8', 'max:20', 'regex:/^[a-zA-Z0-9@#$%!^&*]{6,20}$/', 'same:password'],
 		]);
 	}
 
