@@ -19,7 +19,7 @@
     background: $green !important;
 
     .logo-cabecalho {
-      @include device(xs) {
+      @include device(s) {
         margin: 0 auto;
       }
     }

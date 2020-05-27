@@ -1,25 +1,33 @@
 <nav class="uk-navbar-container navbar navbar-interno" uk-navbar>
   <div class="uk-navbar-left btn-menu-mobile">
-    <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #offcanvas-push" uk-navbar-toggle-icon data-btn-mobile href="#"></a>
-    <span class="uk-text-small uk-hidden@s">MENU</span>
+    <a class="uk-navbar-toggle uk-hidden@m" uk-toggle="target: #offcanvas-push" uk-navbar-toggle-icon data-btn-mobile href="#"></a>
+    <span class="uk-text-small uk-hidden@m">MENU</span>
   </div>
   
   @if($menu == "login" || $menu == "cadastro" || $menu == "recuperar-senha")
-    <div class="uk-navbar uk-margin-auto logo-cabecalho">
+    <div class="uk-navbar uk-margin-auto uk-hidden@m logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{secure_asset('img/logo-sair-1.svg')}}" alt="Logo do site">
-        <img src="{{secure_asset('img/logo-sair-3.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo-sair-icone.svg')}}" alt="Logo do site">
+      </a>
+    </div>
+    <div class="uk-navbar uk-margin-auto uk-visible@m logo-cabecalho">
+      <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
+        <img src="{{secure_asset('img/logo-sair.svg')}}" alt="Logo do site">
       </a>
     </div>
 
   @else
-    <div class="uk-navbar-left logo-cabecalho">
+    <div class="uk-hidden@m logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{secure_asset('img/logo-sair-2.svg')}}" alt="Logo do site">
-        <img src="{{secure_asset('img/logo-sair-4.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo-sair-icone.svg')}}" alt="Logo do site">
       </a>
     </div>
-    <div class="uk-navbar-right uk-visible@s">
+    <div class="uk-visible@m uk-logo-cabecalho">
+      <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
+        <img src="{{secure_asset('img/logo-sair.svg')}}" alt="Logo do site">
+      </a>
+    </div>
+    <div class="uk-navbar-right uk-visible@m">
       <ul class="uk-navbar-nav menu">
         @if(Route::has('login'))
           @auth
@@ -80,8 +88,8 @@
 <!-- MENU MOBILE -->
 <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" data-menu-mobile>
   <div class="uk-offcanvas-bar menu-mobile">
-    <a class="uk-navbar-item uk-logo uk-width-1-2 uk-align-center uk-margin-small" href="{{route('home')}}">
-      <img src="{{secure_asset('img/logo.svg')}}" alt="Logo do site">
+    <a class="uk-navbar-item uk-logo" href="{{route('home')}}">
+      <img src="{{secure_asset('img/logo-sair.svg')}}" alt="Logo do site">
     </a>
     <hr class="divisor">
     <ul uk-nav>
