@@ -8,7 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use projetoautomacao\User;
 
-class SendMailUser extends Mailable
+class RecuperarSenha extends Mailable
 {
 	use Queueable, SerializesModels;
 
@@ -30,11 +30,11 @@ class SendMailUser extends Mailable
 	 */
 	public function build()
 	{
-		return $this->from('to@email.com')
-			->markdown('emails.test-markdown')
+		return $this->from('deniswmonteiro@gmail.com')
+			->markdown('emails.userregistered')
 			->with([
-				'user'     => $this->user,
-				'url'     => route('login'),
+				'user' => $this->user,
+				'url' => route('login'),
 			]);
 	}
 }

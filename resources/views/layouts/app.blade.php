@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Projeto Automação &bull; {{$paginaAtual}}</title>
+    <title>SAIR &bull; {{$paginaAtual}}</title>
     <link rel="stylesheet" href="{{asset('css/uikit.min.css')}}" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round&display=swap" rel="stylesheet">
@@ -28,8 +28,12 @@
               <div>
                 <h3>Contatos</h3>
                 <ul class="uk-list">
-                  <li><span>Endereço:</span> Parque de Ciência e Tecnologia do Guamá - Av. Perimetral, nº 2651, Prédio 01 - CEP: 66077-830 - Guamá - Belém/PA</li>
-                  <li><span>Email:</span> ceamazonufpa@gmail.com</li>
+                  <li>
+                    <span>Endereço:</span> Parque de Ciência e Tecnologia do Guamá - Av. Perimetral, nº 2651, Prédio 01 - CEP: 66077-830 - Guamá - Belém/PA
+                  </li>
+                  <li>
+                    <span>Email:</span> ceamazonufpa@gmail.com
+                  </li>
                 </ul>
               </div>
             </div>
@@ -55,7 +59,7 @@
           <div uk-grid>
             <div class="uk-margin-auto">
               <p>
-                CEAMAZON &copy; {{date('Y')}} &ndash; Todos os direitos reservados
+                SAIR &copy; {{date('Y')}} &ndash; Todos os direitos reservados.
               </p>
             </div>
           </div>

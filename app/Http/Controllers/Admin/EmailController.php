@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use projetoautomacao\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\Mail;
-use projetoautomacao\Mail\SendMailUser;
+use projetoautomacao\Mail\RecuperarSenha;
 use projetoautomacao\User;
 
 class EmailController extends Controller
@@ -40,9 +40,8 @@ class EmailController extends Controller
 	public function store(Request $request)
 	{
 		$data = $request->all('email');
-		$id = 1;
-		$user = User::where('id', $id)->first();
-		Mail::to($data)->send(new SendMailUser($user));
+		$user = User::where('email', $data['email'])->first();
+		Mail::to($data['email'])->send(new RecuperarSenha($user));
 		flash('Solicitação enviada! Aguarde retorno do administrador')->success();
 		return redirect()->route('home');
 	}
