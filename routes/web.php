@@ -46,4 +46,7 @@ Route::group(['middleware' => ['auth']], function () {
 	});
 });
 
-Route::resource('email', 'Admin\EmailController');
+Route::get('senha/redefinir', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('senha.request');
+Route::post('senha/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('senha.email');
+Route::get('senha/redefinir/{token}', 'Auth\ResetPasswordController@showResetForm')->name('senha.reset.token');
+Route::post('senha/redefinir', 'Auth\ResetPasswordController@reset')->name('senha.reset');

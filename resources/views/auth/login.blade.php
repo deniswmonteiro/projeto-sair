@@ -36,7 +36,7 @@
 					<div class="uk-margin acoes-login">
 						<span>
 							@if(Route::has('password.request'))
-								<a class="uk-button" href="{{route('password.request')}}">Esqueceu a senha?</a>
+								<a class="uk-button" href="{{route('senha.request')}}">Esqueceu a senha?</a>
 							@endif
 						</span>
 						<span>

@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use projetoautomacao\Notifications\PasswordResetNotification;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
@@ -18,7 +19,7 @@ class User extends \Jenssegers\Mongodb\Eloquent\Model implements
 	CanResetPasswordContract
 {
 	use Authenticatable, Authorizable, CanResetPassword, Notifiable, HasSlug;
-
+	
 	/**
 	 * The attributes that are mass assignable.
 	 *
@@ -42,5 +43,10 @@ class User extends \Jenssegers\Mongodb\Eloquent\Model implements
 	public function getSlugOptions(): SlugOptions
 	{
 		return SlugOptions::create()->generateSlugsFrom('usuario')->saveSlugsTo('slug');
+	}
+
+	public function sendPasswordResetNotification($token)
+	{
+		$this->notify(new PasswordResetNotification($token));
 	}
 }

@@ -5,6 +5,8 @@ namespace projetoautomacao\Http\Controllers\Auth;
 use projetoautomacao\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
+use Illuminate\Http\Request;
+
 class ForgotPasswordController extends Controller
 {
 	/*
@@ -18,5 +20,11 @@ class ForgotPasswordController extends Controller
     |
     */
 
-    use SendsPasswordResetEmails;
+	use SendsPasswordResetEmails;
+
+	protected function sendResetLinkResponse(Request $request, $response)
+	{
+		flash('O link de redefinição foi enviado por email.')->success();
+		return redirect()->route('home');
+	}
 }

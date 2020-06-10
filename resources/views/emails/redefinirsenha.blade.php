@@ -1,6 +1,6 @@
 @component('mail::message')
 @component('mail::panel')
-# Olá, {{ $user->usuario }}!
+# Olá!
  
 <p>
   Recebemos sua solicitação para recuperação de senha.<br>
@@ -8,16 +8,12 @@
 </p>
  
 @component('mail::button', ['url' => $url, 'color' => 'success'])
-  Criar nova senha
-@endcomponent 
- 
-Atenciosamente,<br>
-{{ config('app.name') }}
-@endcomponent
+  Redefinir Senha
 @endcomponent
 
-{{-- 
-<h1>Obrigado pelo contato!</h1>
-<p>Retornaremos assim que possível.</p>
-<hr>
-<p>Email enviado em {{date("d/m/Y H:i:s")}}</p> --}}
+<p>Desconsidere esse email se você não solicitou redefinição de senha.</p>
+ 
+Atenciosamente,<br>
+{{config('app.name')}}
+@endcomponent
+@endcomponent
