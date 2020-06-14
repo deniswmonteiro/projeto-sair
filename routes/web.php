@@ -16,6 +16,13 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::resource('cadastro', 'SolicitarCadastroController')->only(['index', 'store']);
 
+Route::namespace('Auth')->group(function () {
+	Route::get('senha/redefinir', 'ForgotPasswordController@showLinkRequestForm')->name('senha.request');
+	Route::post('senha/email', 'ForgotPasswordController@sendResetLinkEmail')->name('senha.email');
+	Route::get('senha/redefinir/{token}', 'ResetPasswordController@showResetForm')->name('senha.reset.token');
+	Route::post('senha/redefinir', 'ResetPasswordController@reset')->name('senha.reset');
+});
+
 Route::group(['middleware' => ['auth']], function () {
 	Route::namespace('Andares')->group(function () {
 		Route::resource('terreo', 'TerreoController')->only(['index', 'show']);
@@ -45,5 +52,3 @@ Route::group(['middleware' => ['auth']], function () {
 		});
 	});
 });
-
-Route::resource('email', 'Admin\EmailController');

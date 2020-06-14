@@ -5,14 +5,9 @@
   </div>
   
   @if($menu == "login" || $menu == "cadastro" || $menu == "recuperar-senha")
-    <div class="uk-navbar uk-margin-auto uk-hidden@m logo-cabecalho">
+    <div class="uk-navbar uk-margin-auto logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
         <img src="{{secure_asset('img/logo-sair-icone.svg')}}" alt="Logo do site">
-      </a>
-    </div>
-    <div class="uk-navbar uk-margin-auto uk-visible@m logo-cabecalho">
-      <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{secure_asset('img/logo-sair.svg')}}" alt="Logo do site">
       </a>
     </div>
 

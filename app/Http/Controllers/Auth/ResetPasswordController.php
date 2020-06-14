@@ -3,8 +3,7 @@
 namespace projetoautomacao\Http\Controllers\Auth;
 
 use projetoautomacao\Http\Controllers\Controller;
-use projetoautomacao\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\ResetsPasswords;
+use projetoautomacao\Traits\RedefinirSenhaTrait;
 
 class ResetPasswordController extends Controller
 {
@@ -19,12 +18,9 @@ class ResetPasswordController extends Controller
     |
     */
 
-	use ResetsPasswords;
-
-	/**
-	 * Where to redirect users after resetting their password.
-	 *
-	 * @var string
-	 */
-	protected $redirectTo = RouteServiceProvider::HOME;
+	/** Trait de origem 
+	 * use Illuminate\Foundation\Auth\ResetsPasswords;
+	 * use ResetsPasswords;
+	 **/
+	use RedefinirSenhaTrait;
 }

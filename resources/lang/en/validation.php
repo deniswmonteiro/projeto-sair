@@ -172,6 +172,7 @@ return [
 			'min' => 'O mínimo permitido são :min caracteres.',
 			'max' => 'O máximo permitido são :max caracteres.',
 			'regex' => 'Formato de :attribute inválido.',
+			'confirmed' => 'As senhas informadas não conferem.',
 		],
 
 		'new_password' => [

@@ -112,7 +112,7 @@
                 {{__('Senha atual *')}}
               </label>
 							<div class="uk-form-controls uk-inline uk-display-block">
-								<input id="form-perfil-senhaatual" type="password" class="uk-input uk-border-rounded @error('password') uk-form-danger @enderror" name="password" required disabled>
+								<input id="form-perfil-senhaatual" type="password" class="uk-input uk-border-rounded @error('password') uk-form-danger @enderror" name="password" placeholder="Mínimo de 8 caracteres" required disabled>
 								@error('password')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -125,7 +125,7 @@
                 {{__('Nova senha *')}}
               </label>
 							<div class="uk-form-controls uk-inline uk-display-block">
-								<input id="form-perfil-senhanova" type="password" class="uk-input uk-border-rounded @error('new_password') uk-form-danger @enderror" name="new_password" required disabled>
+								<input id="form-perfil-senhanova" type="password" class="uk-input uk-border-rounded @error('new_password') uk-form-danger @enderror" name="new_password" placeholder="Mínimo de 8 caracteres" required disabled>
 								@error('new_password')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
@@ -138,7 +138,7 @@
                 {{__('Confirmar nova senha *')}}
               </label>
 							<div class="uk-form-controls uk-inline uk-display-block">
-								<input id="form-perfil-senhaconfirmar" type="password" class="uk-input uk-border-rounded @error('password_confirmation') uk-form-danger @enderror" name="password_confirmation" required disabled>
+								<input id="form-perfil-senhaconfirmar" type="password" class="uk-input uk-border-rounded @error('password_confirmation') uk-form-danger @enderror" name="password_confirmation" placeholder="Mínimo de 8 caracteres" required disabled>
 								@error('password_confirmation')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>
