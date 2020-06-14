@@ -1,69 +1,62 @@
-@extends('layouts.app', ["paginaAtual" => "Redefinir Senha"])
+@extends('layouts.app', ["paginaAtual" => "Criar Nova Senha"])
 
 @section('conteudo')
-<div class="container">
-	<div class="row justify-content-center">
-		<div class="col-md-8">
-			<div class="card">
-				<div class="card-header">{{ __('Criar Nova Senha') }}</div>
-
+	@include("layouts.menu", ["menu" => "criar-nova-senha"])
+	<section class="uk-section login">
+		<div class="uk-container">
+			<div class="uk-card uk-card-default uk-card-body bg-card-form">
+				<h1>{{__('Criar Nova Senha')}}</h1>
 				<div class="card-body">
-					<form method="post" action="{{ route('senha.reset') }}">
+					<form class="uk-form-stacked form-redefinir-senha" method="post" action="{{route('senha.reset')}}">
 						@csrf
-
-						<input type="hidden" name="token" value="{{ $token }}">
-
-						<div class="form-group row">
-							<label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-							<div class="col-md-6">
-								<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
-									value="{{ $email ?? old('email') }}" autocomplete="email" autofocus>
-
+						<input type="hidden" name="token" value="{{$token}}">
+						<div class="uk-margin">
+							<label for="form-redefinir-email" class="uk-form-label">
+								{{__('Email')}}
+							</label>
+							<div class="uk-form-controls">
+								<input id="form-redefinir-email" type="email" class="uk-input uk-border-rounded @error('email') uk-form-danger @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
 								@error('email')
-								<span class="invalid-feedback" role="alert">
-									<strong>{{ $message }}</strong>
+								<span class="uk-text-danger" role="alert">
+									<strong>{{$message}}</strong>
 								</span>
 								@enderror
 							</div>
 						</div>
-
-						<div class="form-group row">
-							<label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-							<div class="col-md-6">
-								<input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-									name="password" required autocomplete="new-password">
-
+						<div class="uk-margin">
+							<label for="form-redefinir-nova-senha" class="uk-form-label">
+								{{ __('Nova senha') }}
+							</label>
+							<div class="uk-form-controls">
+								<input id="form-redefinir-nova-senha" type="password" class="uk-input uk-border-rounded @error('password') uk-form-danger @enderror" name="password" required autocomplete="new-password">
 								@error('password')
-								<span class="invalid-feedback" role="alert">
-									<strong>{{ $message }}</strong>
+								<span class="uk-text-danger" role="alert">
+									<strong>{{$message}}</strong>
 								</span>
 								@enderror
 							</div>
 						</div>
-
-						<div class="form-group row">
-							<label for="password-confirm"
-								class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-							<div class="col-md-6">
-								<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required
-									autocomplete="new-password">
+						<div class="uk-margin">
+							<label for="form-redefinir-senh-confirmar" class="uk-form-label">
+								{{__('Confirmar senha')}}
+							</label>
+							<div class="uk-form-controls">
+								<input id="form-redefinir-senh-confirmar" type="password" class="uk-input uk-border-rounded" name="password_confirmation" required autocomplete="new-password">
 							</div>
 						</div>
 
-						<div class="form-group row mb-0">
-							<div class="col-md-6 offset-md-4">
-								<button type="submit" class="btn btn-primary">
-									{{ __('Reset Password') }}
-								</button>
-							</div>
+						<div class="uk-text-left modal-footer btn">
+							<a href="#" class="uk-button uk-margin-small-right btn-confirmar"
+								onclick="event.preventDefault(); document.querySelector('form.form-redefinir-senha').submit()">
+								{{__('Redefinir senha')}}
+							</a>
+							<a href="{{route('login')}}" class="uk-button uk-link-reset link-voltar-login inicial">
+								{{__('Voltar para o login')}}
+							</a>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
+	</section>
 @endsection

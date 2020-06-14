@@ -1,7 +1,7 @@
 @extends("layouts.app", ["paginaAtual" => "Redefinir Senha"])
 
 @section("conteudo")
-	@include("layouts.menu", ["menu" => "recuperar-senha"])
+	@include("layouts.menu", ["menu" => "redefinir-senha"])
 	<section class="uk-section login">
   	<div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body bg-card-form">

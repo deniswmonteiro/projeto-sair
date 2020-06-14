@@ -7,19 +7,19 @@
   @if($menu == "login" || $menu == "cadastro" || $menu == "recuperar-senha")
     <div class="uk-navbar uk-margin-auto logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{asset('img/logo-sair-icone.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo-sair-icone.svg')}}" alt="Logo do site">
       </a>
     </div>
 
   @else
     <div class="uk-hidden@m logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{asset('img/logo-sair-icone.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo-sair-icone.svg')}}" alt="Logo do site">
       </a>
     </div>
     <div class="uk-visible@m uk-logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
-        <img src="{{asset('img/logo-sair.svg')}}" alt="Logo do site">
+        <img src="{{secure_asset('img/logo-sair.svg')}}" alt="Logo do site">
       </a>
     </div>
     <div class="uk-navbar-right uk-visible@m">
@@ -84,7 +84,7 @@
 <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" data-menu-mobile>
   <div class="uk-offcanvas-bar menu-mobile">
     <a class="uk-navbar-item uk-logo" href="{{route('home')}}">
-      <img src="{{asset('img/logo-sair.svg')}}" alt="Logo do site">
+      <img src="{{secure_asset('img/logo-sair.svg')}}" alt="Logo do site">
     </a>
     <hr class="divisor">
     <ul uk-nav>
