@@ -4,7 +4,7 @@
     <span class="uk-text-small uk-hidden@m">MENU</span>
   </div>
   
-  @if($menu == "login" || $menu == "cadastro" || $menu == "recuperar-senha" || $menu == "criar-nova-senha")
+  @if($menu == "login" || $menu == "cadastro" || $menu == "redefinir-senha" || $menu == "criar-nova-senha")
     <div class="uk-navbar uk-margin-auto logo-cabecalho">
       <a href="{{route('home')}}" class="uk-navbar-item uk-logo">
         <img src="{{secure_asset('img/logo-sair-icone.svg')}}" alt="Logo do site">
