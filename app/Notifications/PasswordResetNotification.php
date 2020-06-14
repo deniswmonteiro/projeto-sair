@@ -37,10 +37,10 @@ class PasswordResetNotification extends Notification
 	public function toMail($notifiable)
 	{
 		$url = url(route('senha.reset.token', ['token' => $this->token, 'email' => $notifiable->getEmailForPasswordReset()], false));
-		
+
 		return (new MailMessage)
 			->subject("SAIR - Redefinição de Senha")
-			->markdown("emails.redefinirsenha", ['url' => $url, ]);
+			->markdown("emails.redefinirsenha", ['url' => $url]);
 	}
 
 	/**

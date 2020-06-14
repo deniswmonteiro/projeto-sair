@@ -3,7 +3,7 @@
 # Olá!
  
 <p>
-  Recebemos sua solicitação para recuperação de senha.<br>
+  Recebemos sua solicitação para redefinição de senha.<br>
   Clique no botão para criar uma nova senha.
 </p>
  
