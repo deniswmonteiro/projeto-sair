@@ -139,8 +139,8 @@ return [
         'port' => env('MAIL_PORT', 465),
         'from' => ['address' => 'scmceamazon@gmail.com', 'name' => config('app.name')],
         'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
-        'username' => env('MAIL_USERNAME'),
-        'password' => env('MAIL_PASSWORD'),
+        'username' => env('MAIL_USERNAME', 'scmceamazon@gmail.com'),
+        'password' => env('MAIL_PASSWORD', 'gestao2019'),
         'sendmail' => '/usr/sbin/sendmail -bs',
         'pretend' => false,
 ];
