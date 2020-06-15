@@ -134,13 +134,13 @@ return [
     // 'log_channel' => env('MAIL_LOG_CHANNEL'),
 
     
-        'driver' => env('MAIL_DRIVER', 'smtp'),
-        'host' => env('MAIL_HOST', 'smtp.gmail.com'),
-        'port' => env('MAIL_PORT', 465),
+        'driver' => env('MAIL_DRIVER'),
+        'host' => env('MAIL_HOST'),
+        'port' => env('MAIL_PORT'),
         'from' => ['address' => 'scmceamazon@gmail.com', 'name' => config('app.name')],
-        'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
-        'username' => env('MAIL_USERNAME', 'scmceamazon@gmail.com'),
-        'password' => env('MAIL_PASSWORD', 'gestao2019'),
+        'encryption' => env('MAIL_ENCRYPTION'),
+        'username' => env('MAIL_USERNAME'),
+        'password' => env('MAIL_PASSWORD'),
         'sendmail' => '/usr/sbin/sendmail -bs',
         'pretend' => false,
 ];
