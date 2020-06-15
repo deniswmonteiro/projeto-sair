@@ -136,9 +136,9 @@ return [
     
         'driver' => env('MAIL_DRIVER', 'smtp'),
         'host' => env('MAIL_HOST', 'smtp.gmail.com'),
-        'port' => env('MAIL_PORT', 587),
+        'port' => env('MAIL_PORT', 465),
         'from' => ['address' => 'scmceamazon@gmail.com', 'name' => config('app.name')],
-        'encryption' => env('MAIL_ENCRYPTION', 'tsl'),
+        'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
         'username' => env('MAIL_USERNAME', 'deniswmonteiro@gmail.com'),
         'password' => env('MAIL_PASSWORD', 'gdwmm6194ep10806702'),
         'sendmail' => '/usr/sbin/sendmail -bs',
