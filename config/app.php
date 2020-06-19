@@ -13,7 +13,7 @@ return [
     |
     */
 
-	'name' => env('APP_NAME', 'SAIR - Sistema Automatizado de Iluminação e Refrigeração'),
+	'name' => env('APP_NAME', 'Laravel'),
 
 	/*
     |--------------------------------------------------------------------------
