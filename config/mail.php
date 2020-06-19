@@ -136,13 +136,13 @@
 // ];
 
 return [
-    'driver' => env('MAIL_DRIVER', 'smtp'),
-    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
-    'port' => env('MAIL_PORT', 587),
+    'driver' => env('MAIL_DRIVER'),
+    'host' => env('MAIL_HOST'),
+    'port' => env('MAIL_PORT'),
     'from' => ['address' => 'deniswmonteiro@gmail.com', 'name' => config('app.name')],
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-    'username' => config('mail.username'),
-    'password' => env('MAIL_PASSWORD', 'pcfbidvrauettpqe'),
+    'encryption' => env('MAIL_ENCRYPTION'),
+    'username' => env('MAIL_USERNAME'),
+    'password' => env('MAIL_PASSWORD'),
     'sendmail' => '/usr/sbin/sendmail -bs',
     'pretend' => false,
 
