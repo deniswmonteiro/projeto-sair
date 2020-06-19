@@ -141,7 +141,7 @@ return [
     'port' => env('MAIL_PORT', 587),
     'from' => ['address' => 'deniswmonteiro@gmail.com', 'name' => config('app.name')],
     'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-    'username' => config('MAIL_USERNAME'),
+    'username' => config('mail.username'),
     'password' => env('MAIL_PASSWORD', 'pcfbidvrauettpqe'),
     'sendmail' => '/usr/sbin/sendmail -bs',
     'pretend' => false,
