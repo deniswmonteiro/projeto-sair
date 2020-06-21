@@ -25,12 +25,12 @@ body {
   }
 
   .uk-subnav-pill > .uk-active > a {
-    color: $light-grey;  
-    
+    color: $light-grey;
+
     &[data-click="lampada"] {
       background-color: $green;
     }
-    
+
     &[data-click="arcondicionado"] {
       background-color: $blue;
     }
@@ -44,7 +44,8 @@ body {
     background: $light-grey;
   }
 
-  .noUi-target, .noUi-target * {
+  .noUi-target,
+  .noUi-target * {
     touch-action: pan-x;
   }
 
@@ -92,12 +93,14 @@ body {
 
       &.alert-success {
         background-color: $dark-green;
-        border-color: $light-green;
       }
 
       &.alert-warning {
         background-color: $dark-orange;
-        border-color: $light-orange;
+      }
+
+      &.alert-danger {
+        background-color: $red;
       }
     }
   }
@@ -123,7 +126,7 @@ body {
       select,
       .uk-search-input {
         outline: none;
-        
+
         &:focus {
           border-color: $green !important;
         }
@@ -160,7 +163,8 @@ body {
       display: block !important;
     }
 
-    a, button {
+    a,
+    button {
       display: inline-block;
       transition: 0.4s;
       font-weight: 700;

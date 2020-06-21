@@ -147,7 +147,7 @@ return [
     'username' => env('MAIL_USERNAME', 'deniswmonteiro'),
     'password' => env('MAIL_PASSWORD', 'pcfbidvrauettpqe'),
     'sendmail' => '/usr/sbin/sendmail -bs',
-    'pretend' => false,
+    //'pretend' => false,  // testar com true
     'markdown' => [
         'theme' => 'sair',
 

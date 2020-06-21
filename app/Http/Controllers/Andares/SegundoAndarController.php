@@ -26,7 +26,7 @@ class SegundoAndarController extends Controller
 	public function show($id)
 	{
 		$salas = $this->segundoAndar->all();
-		flash('Conectando-se ao sistema')->success();
+		flash('Conectando-se ao sistema')->warning();
 		$data = $this->dadosLocal($salas, $id);
 		return view('andares/salas/salassegundoandar', [
 			'andar' => 'segundoandar',
