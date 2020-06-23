@@ -26,7 +26,7 @@ class PrimeiroAndarController extends Controller
 	public function show($id)
 	{
 		$salas = $this->primeiroAndar->all();
-		flash('Conectando-se ao sistema')->success();
+		flash('Conectando-se ao sistema')->warning();
 		$data = $this->dadosLocal($salas, $id);
 		return view('andares/salas/salasprimeiroandar', [
 			'andar' => 'primeiroandar',

@@ -59,7 +59,7 @@
           <div uk-grid>
             <div class="uk-margin-auto">
               <p>
-                SAIR &copy; {{date('Y')}} &ndash; Todos os direitos reservados.
+                &copy; SAIR {{date('Y')}} &ndash; Todos os direitos reservados.
               </p>
             </div>
           </div>
