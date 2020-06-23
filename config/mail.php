@@ -147,7 +147,7 @@ return [
     'username' => env('MAIL_USERNAME', 'scmceamazon'),
     'password' => env('MAIL_PASSWORD', 'zkkxyesjeefcljpj'),
     'sendmail' => '/usr/sbin/sendmail -bs',
-    'pretend' => true,
+    'pretend' => false,
     'markdown' => [
         'theme' => 'sair',
 
