@@ -84,7 +84,7 @@
 <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" data-menu-mobile>
   <div class="uk-offcanvas-bar menu-mobile">
     <a class="uk-navbar-item uk-logo" href="{{route('home')}}">
-      <img src="{{secure_asset('img/logo-sair.svg')}}" alt="Logo do site">
+      <img src="{{secure_asset('img/logo-sair-mobile.svg')}}" alt="Logo do site">
     </a>
     <hr class="divisor">
     <ul uk-nav>
