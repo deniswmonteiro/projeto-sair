@@ -1,28 +1,43 @@
+/** 
+    Script baseado no projeto Eclipse Paho disponível no link 
+    https://www.eclipse.org/paho/clients/js/
+  **/
 (function () {
-  const notificacaoConectado = document.querySelector("div.alert");
-  $("div.alert").append(
+  "use strict";
+  const textoNotificacao = document.querySelector("div.alert");
+  $(textoNotificacao).append(
     "<span class='uk-margin-small-left' uk-spinner></span>"
   );
   const host = "hairdresser.cloudmqtt.com";
   const port = 37615;
   const id = "ceamazon_" + new Date().getUTCMilliseconds();
-  client = new Paho.MQTT.Client(host, port, id);
+  let client = new Paho.MQTT.Client(host, port, id);
   client.onConnectionLost = onConnectionLost;
   client.onMessageArrived = onMessageArrived;
+
   function doFail(e) {
-    console.log("erro! " + e);
-    $("div.alert").removeClass("alert-warning").addClass("alert-danger");
-    notificacaoConectado.innerText = "Falha na conexão!";
+    if (e) {
+      console.log(e);
+      $(textoNotificacao).removeClass("alert-warning").addClass("alert-danger");
+      textoNotificacao.innerText = "Falha na conexão com a nuvem!";
+      textoNotificacao.style.display = "block";
+    }
   }
+
   function onConnectionLost(responseObject) {
     if (responseObject.errorCode !== 0) {
       console.log("onConnectionLost:" + responseObject.errorMessage);
+      $(textoNotificacao).removeClass("alert-warning").addClass("alert-danger");
+      textoNotificacao.innerText = "A conexão com a nuvem foi perdida!";
+      textoNotificacao.style.display = "block";
     }
   }
+
   function onMessageArrived(message) {
-    mudaIconesInterruptores(message.payloadString);
+    mudaInterruptores(message.payloadString);
     mudaIconesLampadas(message.payloadString);
   }
+
   const options = {
     userName: "xldvnagx",
     password: "hD23-LNVOrD8",
@@ -30,52 +45,58 @@
     onSuccess: onConnect,
     onFailure: doFail,
   };
+
   client.connect(options);
+
   function onConnect() {
-    $("div.alert").removeClass("alert-warning").addClass("alert-success");
-    notificacaoConectado.innerText = "Conectado!";
+    $(textoNotificacao).removeClass("alert-warning").addClass("alert-success");
+    textoNotificacao.innerText = "Conectado!";
     const interruptores = document.querySelectorAll(
       ".interruptor .interruptor-lampada"
     );
     const localNome = document.querySelector(".salas .sala-nome");
     const subtopico = localNome.innerText
       .toLowerCase()
-      .replace(/[ç]/g, "c")
-      .replace(/[ã]/g, "a")
-      .replace(/[õ]/g, "o")
       .replace(/[á]/g, "a")
+      .replace(/[ã]/g, "a")
       .replace(/[é]/g, "e")
       .replace(/[ó]/g, "o")
+      .replace(/[õ]/g, "o")
+      .replace(/[ç]/g, "c")
       .match(/[a-z]/g)
       .join("");
     for (let i = 1; i < interruptores.length + 1; i++) {
       client.subscribe("ceamazon/" + subtopico + "/c" + i);
     }
-    acionaLampadas(subtopico, interruptores);
+
+    acionaLampadas(subtopico, interruptores, client);
   }
-  function acionaLampadas(subtopico, interruptores) {
+
+  function acionaLampadas(subtopico, interruptores, cliente) {
+    let messagem = "";
     $(interruptores).each(function (interruptor) {
       interruptor += 1;
       $(this).change(function () {
         if ($(this).is(":checked")) {
-          message = new Paho.MQTT.Message("on" + interruptor);
-          message.destinationName =
+          messagem = new Paho.MQTT.Message("on" + interruptor);
+          messagem.destinationName =
             "ceamazon/" + subtopico + "/c" + interruptor;
-          message.qos = 1;
-          message.retained = !0;
-          client.send(message);
+          messagem.qos = 1;
+          messagem.retained = !0;
+          cliente.send(messagem);
         } else {
-          message = new Paho.MQTT.Message("off" + interruptor);
-          message.destinationName =
+          messagem = new Paho.MQTT.Message("off" + interruptor);
+          messagem.destinationName =
             "ceamazon/" + subtopico + "/c" + interruptor;
-          message.qos = 1;
-          message.retained = !0;
-          client.send(message);
+          messagem.qos = 1;
+          messagem.retained = !0;
+          cliente.send(messagem);
         }
       });
     });
   }
-  function mudaIconesInterruptores(mensagem) {
+
+  function mudaInterruptores(mensagem) {
     const interruptores = document.querySelectorAll(
       ".interruptor .interruptor-lampada"
     );
@@ -112,6 +133,7 @@
       }
     });
   }
+
   function mudaIconesLampadas(mensagem) {
     const iconesLampadas1 = document.querySelectorAll(
       ".img-sala [data-dispositivo='lampadas1']"
