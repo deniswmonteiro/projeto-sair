@@ -144,8 +144,8 @@ return [
         'name' => 'SAIR – Sistema Automatizado de Iluminação e Refrigeração'
     ],
     'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
-    'username' => env('MAIL_USERNAME'),
-    'password' => env('MAIL_PASSWORD'),
+    'username' => env('MAIL_USERNAME', 'scmceamazon'),
+    'password' => env('MAIL_PASSWORD', 'zkkxyesjeefcljpj'),
     'sendmail' => '/usr/sbin/sendmail -bs',
     'markdown' => [
         'theme' => 'sair',
