@@ -40,7 +40,7 @@ $default-font: Quicksand, Arial, Helvetica, sans-serif;
   }
 
   @if $size == 36 {
-    font-size: em(36);
+    font-size: max(100px, 5vw);
     line-height: 1.2;
     font-weight: 500;
   }
