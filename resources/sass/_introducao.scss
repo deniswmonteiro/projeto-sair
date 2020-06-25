@@ -11,13 +11,18 @@
 
     span {
       margin-top: 15px;
+
+      @include device(xs) {
+        @include font(14);
+        font-weight: 700;
+      }
     }
 
     h1 {
       @include font(48);
 
       @include device(xs) {
-        @include font(36);
+        @include font(32);
       }
     }
   }

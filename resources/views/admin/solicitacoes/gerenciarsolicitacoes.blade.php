@@ -8,7 +8,7 @@
     <div class="uk-container">
       <div>
         @if($usuarios == '[]')
-          <h2>Não há solicitação de cadastro!</h2>
+          <h3>Não há solicitação de cadastro!</h3>
         @else
           @include("components.tabela", ["pagina" => 'solicitar'])
         @endif

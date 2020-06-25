@@ -9,8 +9,8 @@
         <ul class="uk-slider-items uk-grid uk-grid-match" uk-grid>
           <li class="uk-width-1-2@m">
             <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-card-hover uk-text-center uk-cover-container card-andar">
-              <h3 class="uk-card-title">Térreo</h3>
-              <img src="{{secure_asset('img/bg-terreo.svg')}}" class="img-bg-andar" alt="Planta do Térreo">
+              <h3>Térreo</h3>
+              <img src="{{asset('img/bg-terreo.svg')}}" class="img-bg-andar" alt="Planta do Térreo">
               <div class="btn">
                 <a href="{{route('terreo.index')}}" class="uk-button btn-acao">
                   {{__('Mostrar salas')}}
@@ -20,8 +20,8 @@
           </li>
           <li class="uk-width-1-2@m">
             <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-card-hover uk-text-center uk-cover-container card-andar">
-              <h3 class="uk-card-title">1º Andar</h3>
-              <img src="{{secure_asset('img/bg-primeiro-andar.svg')}}" class="img-bg-andar" alt="Planta do 1º Andar">
+              <h3>1º Andar</h3>
+              <img src="{{asset('img/bg-primeiro-andar.svg')}}" class="img-bg-andar" alt="Planta do 1º Andar">
               <div class="btn">
                 <a href="{{route('primeiroandar.index')}}" class="uk-button btn-acao">
                   {{__('Mostrar salas')}}
@@ -31,8 +31,8 @@
           </li>
           <li class="uk-width-1-2@m">
             <div class="uk-card uk-card-default uk-card-body uk-border-rounded uk-card-hover uk-text-center uk-cover-container card-andar">
-              <h3 class="uk-card-title">2º Andar</h3>
-              <img src="{{secure_asset('img/bg-segundo-andar.svg')}}" class="img-bg-andar" alt="Planta do 2º Andar">
+              <h3>2º Andar</h3>
+              <img src="{{asset('img/bg-segundo-andar.svg')}}" class="img-bg-andar" alt="Planta do 2º Andar">
               <div class="btn">
                 <a href="{{route('segundoandar.index')}}" class="uk-button btn-acao">
                   {{__('Mostrar salas')}}
