@@ -1,21 +1,34 @@
 .andar {
   h3 {
     margin-bottom: 0px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 3px;
+      background: $light-orange;
+      margin-top: 10px;
+      border-radius: 5px;
+
+      @include device(xs) {
+        width: 50px;
+        margin-top: 5px;
+      }
+    }
   }
 
   .mapa-andar {
     .bg-badge {
+      background: $dark-green;
+      font-weight: 700;
+
       @include device(s) {
         @include font(14);
         background: none;
         color: $orange;
       }
     }
-  }
-
-  .bg-badge {
-    background: $dark-green;
-    font-weight: 700;
   }
 
   .legenda {
@@ -27,14 +40,15 @@
 
       a {
         @include font(14);
-        
+
         &:hover {
           color: $orange;
           transition: 0.3s;
         }
 
         span {
-          margin-right: 0px;
+          background: $dark-green;
+          font-weight: 700;
         }
       }
     }

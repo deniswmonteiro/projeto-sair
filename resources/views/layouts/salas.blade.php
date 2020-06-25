@@ -7,7 +7,7 @@
   <section class="uk-section uk-section-xsmall uk-margin-medium-bottom salas" data-group>
     <div class="uk-container">
       <div>
-        <a href="{{route($andar.'.index')}}" class="btn-cancelar link-voltar">
+        <a href="{{route($andar.'.index')}}" class="btn-cancelar btn-voltar">
           <i class="material-icons-round">arrow_back</i>
         </a>
       </div>
@@ -51,4 +51,5 @@
   </section>
 
   <script src="{{asset('js/ws-conn.js')}}"></script>
+  <script src="{{asset('js/aciona-lampadas.js')}}"></script>
 @endsection

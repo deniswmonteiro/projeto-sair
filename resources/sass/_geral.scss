@@ -7,10 +7,18 @@ li {
 
   h1 {
     @include font(36);
+
+    @include device(xs) {
+      @include font(24);
+    }
   }
 
   h3 {
     @include font(24);
+
+    @include device(xs) {
+      @include font(18);
+    }
   }
 }
 
@@ -157,7 +165,7 @@ body {
   }
 
   .btn {
-    margin-top: 40px;
+    margin-top: 30px;
 
     @include device(xs) {
       display: block !important;
@@ -270,7 +278,7 @@ body {
     }
   }
 
-  .link-voltar {
+  .btn-voltar {
     display: inline-block;
     transition: 0.4s;
     font-weight: 700;
@@ -284,6 +292,11 @@ body {
 
     @include device(s) {
       top: -45px;
+    }
+
+    @include device(xs) {
+      padding: 5px;
+      top: -40px;
     }
 
     i {

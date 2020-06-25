@@ -7,7 +7,7 @@
   <section class="uk-section uk-section-xsmall uk-margin-medium-bottom andar">
     <div class="uk-container">
       <div>
-        <a href="{{route('home')}}" class="btn-cancelar link-voltar">
+        <a href="{{route('home')}}" class="btn-cancelar btn-voltar">
           <i class="material-icons-round">arrow_back</i>
         </a>
       </div>

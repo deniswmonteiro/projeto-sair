@@ -33,21 +33,33 @@ $default-font: Quicksand, Arial, Helvetica, sans-serif;
     font-weight: 500;
   }
 
+  @if $size == 18 {
+    font-size: em(18);
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
   @if $size == 24 {
     font-size: em(24);
     line-height: 1.4;
     font-weight: 500;
   }
 
+  @if $size == 32 {
+    font-size: em(32);
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
   @if $size == 36 {
-    font-size: max(100px, 5vw);
+    font-size: em(36);
     line-height: 1.2;
     font-weight: 500;
   }
 
   @if $size == 48 {
     font-size: em(48);
-    line-height: 1.2;
+    line-height: 1.4;
     font-weight: 500;
   }
 }
