@@ -46,8 +46,8 @@
 
   ul li:not(.uk-active) {
     @include device(xl) {
-      opacity: 40%;
       transition: 0.4s;
+      opacity: 40%;
     }
   }
 
