@@ -50,6 +50,5 @@
     </div>
   </section>
 
-  <script src="{{asset('js/ws-conn.js')}}"></script>
-  <script src="{{asset('js/aciona-lampadas.js')}}"></script>
+  <script src="{{asset('js/gerenciamento-luminarias.js')}}"></script>
 @endsection

@@ -15,11 +15,20 @@
     "laravel-mix": "^5.0.4",
     "lodash": "^4.17.13",
     "resolve-url-loader": "^3.1.0",
-    "sass": "^1.15.2",
+    "sass": "^1.26.9",
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.11"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "jquery-mask-plugin": "^1.14.16",
+    "material-components-web": "^7.0.0",
+    "nouislider": "^14.5.0",
+    "paho-mqtt": "^1.1.0",
+    "typeface-quicksand": "^1.1.4",
+    "uikit": "^3.5.4",
+    "wnumb": "^1.2.0"
+  },
   "name": "projeto-automacao",
   "description": "<p align=\"center\"><img src=\"https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg\" width=\"400\"></p>",
   "version": "1.0.0",
