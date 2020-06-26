@@ -11,12 +11,31 @@
   },
   "devDependencies": {
     "axios": "^0.19",
-    "cross-env": "^7.0",
-    "laravel-mix": "^5.0.1",
+    "cross-env": "^7.0.2",
+    "laravel-mix": "^5.0.4",
     "lodash": "^4.17.13",
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.15.2",
-    "sass-loader": "^8.0.0"
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.11"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "name": "projeto-automacao",
+  "description": "<p align=\"center\"><img src=\"https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg\" width=\"400\"></p>",
+  "version": "1.0.0",
+  "main": "webpack.mix.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/deniswmonteiro/projeto-automacao.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/deniswmonteiro/projeto-automacao/issues"
+  },
+  "homepage": "https://gitlab.com/deniswmonteiro/projeto-automacao#readme"
 }

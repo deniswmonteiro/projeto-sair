@@ -1,7 +1,8 @@
-/**
- * First, we will load all of this project's Javascript utilities and other
- * dependencies. Then, we will be ready to develop a robust and powerful
- * application frontend using useful Laravel and JavaScript libraries.
- */
-
-//require('./bootstrap');
+import "./_alterar-senha";
+import "./_evento-form-campo";
+import "./_mascara-campos";
+import "./_mostra-senha";
+import "./_notificacoes";
+import "./_remove-form-erro";
+import "./_sala-dispositivos";
+import "./_temperatura-ar-condicionado";
