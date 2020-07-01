@@ -1,10 +1,11 @@
-(function () {
+// Função chamada para acionar as luminárias quando o interruptor é clicado
+(function() {
   "use strict";
-  window.acionaLampadas = function (subtopico, interruptores, cliente) {
+  window.acionaLampadas = function(subtopico, interruptores, cliente) {
     let messagem = "";
-    $(interruptores).each(function (interruptor) {
+    $(interruptores).each(function(interruptor) {
       interruptor += 1;
-      $(this).change(function () {
+      $(this).change(function() {
         if ($(this).is(":checked")) {
           messagem = new Paho.MQTT.Message("on" + interruptor);
           messagem.destinationName =
@@ -24,7 +25,8 @@
     });
   };
 
-  window.mudaInterruptores = function (mensagem) {
+  // Função chamada para mudar o estado dos interruptores acionados
+  window.mudaInterruptores = function(mensagem) {
     const interruptores = document.querySelectorAll(
       ".interruptor .interruptor-lampada"
     );
@@ -62,7 +64,8 @@
     });
   };
 
-  window.mudaIconesLampadas = function (mensagem) {
+  // Função chamada para mudar a cor dos ícones das luminárias
+  window.mudaIconesLampadas = function(mensagem) {
     const iconesLampadas1 = document.querySelectorAll(
       ".img-sala [data-dispositivo='lampadas1']"
     );
@@ -77,28 +80,28 @@
     );
     const corIconeLigado = "#119933";
     const corIconeDesligado = "#ee2211";
-    iconesLampadas1.forEach((icone) => {
+    iconesLampadas1.forEach(icone => {
       if (mensagem == "on1") {
         icone.style.background = corIconeLigado;
       } else if (mensagem == "off1") {
         icone.style.background = corIconeDesligado;
       }
     });
-    iconesLampadas2.forEach((icone) => {
+    iconesLampadas2.forEach(icone => {
       if (mensagem == "on2") {
         icone.style.background = corIconeLigado;
       } else if (mensagem == "off2") {
         icone.style.background = corIconeDesligado;
       }
     });
-    iconesLampadas3.forEach((icone) => {
+    iconesLampadas3.forEach(icone => {
       if (mensagem == "on3") {
         icone.style.background = corIconeLigado;
       } else if (mensagem == "off3") {
         icone.style.background = corIconeDesligado;
       }
     });
-    iconesLampadas4.forEach((icone) => {
+    iconesLampadas4.forEach(icone => {
       if (mensagem == "on4") {
         icone.style.background = corIconeLigado;
       } else if (mensagem == "off4") {

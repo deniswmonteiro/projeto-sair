@@ -8,6 +8,8 @@
   $(textoNotificacao).append(
     "<span class='uk-margin-small-left' uk-spinner></span>"
   );
+
+  // Variáveis de conexão com serviço em nuvem
   const host = "hairdresser.cloudmqtt.com";
   const port = 37615;
   const id = "ceamazon_" + new Date().getUTCMilliseconds();
@@ -15,6 +17,7 @@
   client.onConnectionLost = onConnectionLost;
   client.onMessageArrived = onMessageArrived;
 
+  // Função chamada quando não há conexão entre aplicação e nuvem
   function doFail(e) {
     if (e) {
       console.log(e);
@@ -26,6 +29,7 @@
     }
   }
 
+  // Função chamada quando o cliente perde a conexão com a nuvem
   function onConnectionLost(responseObject) {
     if (responseObject.errorCode !== 0) {
       console.log("onConnectionLost:" + responseObject.errorMessage);
@@ -37,11 +41,13 @@
     }
   }
 
+  // Função chamada quando uma mensagem é recebida
   function onMessageArrived(message) {
     mudaInterruptores(message.payloadString);
     mudaIconesLampadas(message.payloadString);
   }
 
+  // Credenciais de conexão com serviço em nuvem
   const options = {
     userName: "xldvnagx",
     password: "hD23-LNVOrD8",
@@ -52,6 +58,7 @@
 
   client.connect(options);
 
+  // Função chamada quando a aplicação conecta com a nuvem
   function onConnect() {
     $(textoNotificacao)
       .removeClass("alert-warning")
