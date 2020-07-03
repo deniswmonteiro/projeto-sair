@@ -10102,7 +10102,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     }
   }, globals.watchInterval);
 }, window.jQuery, window.Zepto);
-/*! nouislider - 14.5.0 - 5/11/2020 */
+/*! nouislider - 14.6.0 - 6/27/2020 */
 
 
 (function (factory) {
@@ -10119,7 +10119,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 })(function () {
   "use strict";
 
-  var VERSION = "14.5.0"; //region Helper Methods
+  var VERSION = "14.6.0"; //region Helper Methods
 
   function isValidFormatter(entry) {
     return _typeof(entry) === "object" && typeof entry.to === "function" && typeof entry.from === "function";
@@ -10698,6 +10698,22 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     parsed.singleStep = entry;
   }
 
+  function testKeyboardPageMultiplier(parsed, entry) {
+    if (!isNumeric(entry)) {
+      throw new Error("noUiSlider (" + VERSION + "): 'keyboardPageMultiplier' is not numeric.");
+    }
+
+    parsed.keyboardPageMultiplier = entry;
+  }
+
+  function testKeyboardDefaultStep(parsed, entry) {
+    if (!isNumeric(entry)) {
+      throw new Error("noUiSlider (" + VERSION + "): 'keyboardDefaultStep' is not numeric.");
+    }
+
+    parsed.keyboardDefaultStep = entry;
+  }
+
   function testRange(parsed, entry) {
     // Filter incorrect input.
     if (_typeof(entry) !== "object" || Array.isArray(entry)) {
@@ -11018,6 +11034,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         r: false,
         t: testStep
       },
+      keyboardPageMultiplier: {
+        r: false,
+        t: testKeyboardPageMultiplier
+      },
+      keyboardDefaultStep: {
+        r: false,
+        t: testKeyboardDefaultStep
+      },
       start: {
         r: true,
         t: testStart
@@ -11102,7 +11126,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       orientation: "horizontal",
       keyboardSupport: true,
       cssPrefix: "noUi-",
-      cssClasses: cssClasses
+      cssClasses: cssClasses,
+      keyboardPageMultiplier: 5,
+      keyboardDefaultStep: 10
     }; // AriaFormat defaults to regular format, if any.
 
     if (options.format && !options.ariaFormat) {
@@ -11860,7 +11886,14 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
     function eventTap(event) {
-      // The tap event shouldn't propagate up
+      // Erroneous events seem to be passed in occasionally on iOS/iPadOS after user finishes interacting with
+      // the slider. They appear to be of type MouseEvent, yet they don't have usual properties set. Ignore tap
+      // events that have no touches or buttons associated with them.
+      if (!event.buttons && !event.touches) {
+        return false;
+      } // The tap event shouldn't propagate up
+
+
       event.stopPropagation();
       var proposal = calcPointToPercentage(event.calcPoint);
       var handleNumber = getClosestHandle(proposal); // Tackle the case that all handles are 'disabled'.
@@ -11941,7 +11974,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       var to;
 
       if (isUp || isDown) {
-        var multiplier = 5;
+        var multiplier = options.keyboardPageMultiplier;
         var direction = isDown ? 0 : 1;
         var steps = getNextStepsForHandle(handleNumber);
         var step = steps[direction]; // At the edge of a slider, do nothing
@@ -11952,7 +11985,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 
         if (step === false) {
-          step = scope_Spectrum.getDefaultStep(scope_Locations[handleNumber], isDown, 10);
+          step = scope_Spectrum.getDefaultStep(scope_Locations[handleNumber], isDown, options.keyboardDefaultStep);
         }
 
         if (isLargeUp || isLargeDown) {

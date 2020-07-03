@@ -50,5 +50,6 @@
     </div>
   </section>
 
-  <script src="{{asset('js/gerenciamento-luminarias.js')}}"></script>
+  <script src="{{asset('js/plugins.min.js')}}" type="text/javascript"></script>
+  <script src="{{asset('js/gerenciamento-nuvem.js')}}"></script>
 @endsection

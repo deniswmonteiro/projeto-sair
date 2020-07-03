@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SAIR &bull; {{$paginaAtual}}</title>
-    <link rel="stylesheet" href="{{asset('css/uikit.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/nouislider.css')}}">
+    <link rel="stylesheet" href="{{asset('css/plugins.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css">
     <link rel="shortcut icon" href="{{asset('logo.ico')}}" type="image/x-icon">
-    <script src="{{asset('js/plugins.js')}}" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+    <script src="{{asset('js/mqttws31.min.js')}}" type="text/javascript"></script>
     @laravelPWA
   </head>
   <body>
@@ -67,7 +66,7 @@
       </div>
     </footer>
 
-    <script src="{{asset('js/uikit.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/plugins.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
   </body>
 </html>

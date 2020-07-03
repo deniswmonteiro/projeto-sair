@@ -111,6 +111,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+// Função chamada para acionar as luminárias quando o interruptor é clicado
 (function () {
   "use strict";
 
@@ -134,7 +135,8 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     });
-  };
+  }; // Função chamada para mudar o estado dos interruptores acionados
+
 
   window.mudaInterruptores = function (mensagem) {
     var interruptores = document.querySelectorAll(".interruptor .interruptor-lampada");
@@ -177,7 +179,8 @@ __webpack_require__.r(__webpack_exports__);
           break;
       }
     });
-  };
+  }; // Função chamada para mudar a cor dos ícones das luminárias
+
 
   window.mudaIconesLampadas = function (mensagem) {
     var iconesLampadas1 = document.querySelectorAll(".img-sala [data-dispositivo='lampadas1']");
@@ -234,13 +237,14 @@ __webpack_require__.r(__webpack_exports__);
   "use strict";
 
   var textoNotificacao = document.querySelector("div.alert");
-  $(textoNotificacao).append("<span class='uk-margin-small-left' uk-spinner></span>");
+  $(textoNotificacao).append("<span class='uk-margin-small-left' uk-spinner></span>"); // Variáveis de conexão com serviço em nuvem
+
   var host = "hairdresser.cloudmqtt.com";
   var port = 37615;
   var id = "ceamazon_" + new Date().getUTCMilliseconds();
   var client = new Paho.MQTT.Client(host, port, id);
   client.onConnectionLost = onConnectionLost;
-  client.onMessageArrived = onMessageArrived;
+  client.onMessageArrived = onMessageArrived; // Função chamada quando não há conexão entre aplicação e nuvem
 
   function doFail(e) {
     if (e) {
@@ -249,7 +253,8 @@ __webpack_require__.r(__webpack_exports__);
       textoNotificacao.innerText = "Falha na conexão com a nuvem!";
       textoNotificacao.style.display = "block";
     }
-  }
+  } // Função chamada quando o cliente perde a conexão com a nuvem
+
 
   function onConnectionLost(responseObject) {
     if (responseObject.errorCode !== 0) {
@@ -258,12 +263,14 @@ __webpack_require__.r(__webpack_exports__);
       textoNotificacao.innerText = "A conexão com a nuvem foi perdida!";
       textoNotificacao.style.display = "block";
     }
-  }
+  } // Função chamada quando uma mensagem é recebida
+
 
   function onMessageArrived(message) {
     mudaInterruptores(message.payloadString);
     mudaIconesLampadas(message.payloadString);
-  }
+  } // Credenciais de conexão com serviço em nuvem
+
 
   var options = {
     userName: "xldvnagx",
@@ -272,7 +279,7 @@ __webpack_require__.r(__webpack_exports__);
     onSuccess: onConnect,
     onFailure: doFail
   };
-  client.connect(options);
+  client.connect(options); // Função chamada quando a aplicação conecta com a nuvem
 
   function onConnect() {
     $(textoNotificacao).removeClass("alert-warning").addClass("alert-success");
@@ -298,7 +305,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\projeto-automacao\resources\js\app-conexao-nuvem.js */"./resources/js/app-conexao-nuvem.js");
+module.exports = __webpack_require__(/*! /home/denismonteiro/projeto-automacao/resources/js/app-conexao-nuvem.js */"./resources/js/app-conexao-nuvem.js");
 
 
 /***/ })
