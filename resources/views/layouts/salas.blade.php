@@ -50,6 +50,6 @@
     </div>
   </section>
 
-  <script src="{{secure_asset('js/ws-conn.js')}}"></script>
-  <script src="{{secure_asset('js/aciona-lampadas.js')}}"></script>
+  <script src="{{asset('js/plugins.min.js')}}" type="text/javascript"></script>
+  <script src="{{asset('js/gerenciamento-nuvem.js')}}"></script>
 @endsection

@@ -102,7 +102,7 @@
           </div>
             <div class="uk-form-controls uk-margin-medium-top">
 							<label class="uk-form-label" for="form-perfil-mudarsenha">
-								<input class="uk-checkbox uk-border-rounded" name="chk_senha" id="form-perfil-mudarsenha" type="checkbox" onchange="alterarSenhaPerfil()" data-perfil="chk_alterar_senha">
+								<input class="uk-checkbox uk-border-rounded" name="chk_senha" id="form-perfil-mudarsenha" type="checkbox" data-perfil="chk_alterar_senha">
 								{{__('Alterar senha?')}}
 							</label>
 						</div>
@@ -112,7 +112,7 @@
                 {{__('Senha atual *')}}
               </label>
 							<div class="uk-form-controls uk-inline uk-display-block">
-								<input id="form-perfil-senhaatual" type="password" class="uk-input uk-border-rounded @error('password') uk-form-danger @enderror" name="password" placeholder="Mínimo de 8 caracteres" required disabled>
+								<input id="form-perfil-senhaatual" type="password" class="uk-input uk-border-rounded @error('password') uk-form-danger @enderror" name="password" required disabled>
 								@error('password')
 									<span class="uk-text-danger" role="alert">
 										<strong>{{$message}}</strong>

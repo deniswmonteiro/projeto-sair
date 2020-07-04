@@ -22,7 +22,7 @@
 					<div class="uk-margin">
 						<label class="uk-form-label" for="form-login-senha">{{__('Senha')}}</label>
 							<div class="uk-form-controls uk-inline uk-display-block">
-								<button class="uk-form-icon uk-form-icon-flip btn-form-senha btn-mostra-senha" type="button" onclick="mostraSenha()">
+								<button class="uk-form-icon uk-form-icon-flip btn-form-senha btn-mostra-senha" type="button">
 									<img src="" alt="Ícone da senha" data-icone-senha>
 								</button>
 								<input id="form-login-senha" type="password" class="uk-input uk-border-rounded @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" data-senha>
