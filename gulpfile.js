@@ -72,13 +72,8 @@ gulp.task("scriptsjs", compilaScriptsJS);
 /** função para compilar o plugin Paho MQTT */
 function compilaPahoMQTT() {
   return gulp
-    .src("resources/js/plugins/mqttws31.js")
-    .pipe(concat("mqttws31.min.js"))
-    .pipe(
-      babel({
-        presets: ["@babel/env"],
-      })
-    )
+    .src("node_modules/paho-mqtt/paho-mqtt.js")
+    .pipe(concat("paho-mqtt.min.js"))
     .pipe(obfuscator())
     .pipe(uglify())
     .pipe(gulp.dest("public/js/"));
