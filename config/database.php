@@ -36,8 +36,8 @@ return [
 	'connections' => [
 		'mongodb' => [
 			'driver' => 'mongodb',
-			'dsn' => env('DB_HOST', '127.0.0.1'),
-			'database' => env('DB_DATABASE', 'forge'),
+			'dsn' => 'mongodb+srv://ceamazon:gestao2019@clusterceamazon-yxbtu.mongodb.net/db_ceamazon?retryWrites=true&w=majority',
+			'database' => 'db_ceamazon',
 		],
 
 		'sqlite' => [
