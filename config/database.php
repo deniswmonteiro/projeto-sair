@@ -36,7 +36,7 @@ return [
 	'connections' => [
 		'mongodb' => [
 			'driver' => 'mongodb',
-			'dsn' => env('DB_HOST', ''),
+			'dsn' => env('DB_HOST'),
 			'database' => env('DB_DATABASE', 'forge'),
 		],
 
