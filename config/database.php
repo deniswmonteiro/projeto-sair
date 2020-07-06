@@ -36,13 +36,8 @@ return [
 	'connections' => [
 		'mongodb' => [
 			'driver' => 'mongodb',
-			'host' => env('DB_HOST', "mongodb://localhost:27017/db_ceamazon"),
-			'port' => env('DB_PORT'),
-			'database' => env('DB_DATABASE'),
-			'username' => env('DB_USERNAME'),
-			'password' => env('DB_PASSWORD'),
-			// 'dsn' => 'mongodb+srv://ceamazon:gestao2019@clusterceamazon-yxbtu.mongodb.net/db_ceamazon?retryWrites=true&w=majority',
-			// 'database' => 'db_ceamazon',
+			'dsn' => 'mongodb+srv://ceamazon:gestao2019@clusterceamazon-yxbtu.mongodb.net/db_ceamazon?retryWrites=true&w=majority',
+			'database' => 'db_ceamazon',
 		],
 
 		'sqlite' => [
