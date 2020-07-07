@@ -12,7 +12,12 @@
         </a>
       </div>
       <div class="uk-child-width-expand@m" uk-grid>
-        <h1 class="uk-width-1-1 sala-nome">{{$sala_nome}}</h1>
+        <h1 class="uk-width-1-1 sala-nome">
+          {{$sala_nome}}
+          <span class="uk-badge">
+            <a href="{{route($andar.'.edit', [$terreo->sala_nome])}}">editar dispositivos</a>
+          </span>
+        </h1>
         <div class="img-sala">
           @if(is_null($qtd_arcondicionado))
             <h3 class="aviso-arcondicionado img-arcondicionado">Não possui ar-condicionado</h3>
@@ -36,7 +41,7 @@
             </li>
             <li>
               @for($i = 1; $i <= $qtd_arcondicionado; $i++)
-                <h5>Ar-condicionado {{$i}}</h5>               
+                <h5>Ar-condicionado {{$i}}</h5>
                 <label class="uk-margin-medium-top uk-margin-small-bottom switch" for="arcondicionado{{$i}}">
                   <input type="checkbox" id="arcondicionado{{$i}}" class="check interruptor-arcondicionado">
                   <div class="switch-slider switch-on-off"></div>
@@ -44,12 +49,12 @@
                 <div class="uk-width-1-2 uk-display-inline-block uk-margin-medium-left" data-slider="arcondicionado{{$i}}"></div>
               @endfor
             </li>
-          </ul>  
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <script src="{{secure_asset('js/plugins.min.js')}}" type="text/javascript"></script>
-  <script src="{{secure_asset('js/gerenciamento-nuvem.js')}}"></script>
+  <script src="{{asset('js/plugins.min.js')}}" type="text/javascript"></script>
+  <script src="{{asset('js/gerenciamento-nuvem.js')}}"></script>
 @endsection
