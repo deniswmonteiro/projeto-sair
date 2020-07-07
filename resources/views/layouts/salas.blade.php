@@ -15,7 +15,7 @@
         <h1 class="uk-width-1-1 sala-nome">
           {{$sala_nome}}
           <span class="uk-badge">
-            <a href="{{route($andar.'.edit', [$terreo->sala_nome])}}">editar dispositivos</a>
+            <a href="">editar dispositivos</a>
           </span>
         </h1>
         <div class="img-sala">
