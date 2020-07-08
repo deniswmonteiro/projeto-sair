@@ -12,12 +12,7 @@
         </a>
       </div>
       <div class="uk-child-width-expand@m" uk-grid>
-        <h1 class="uk-width-1-1 sala-nome">
-          {{$sala_nome}}
-          <span class="uk-badge">
-            <a href="">editar dispositivos</a>
-          </span>
-        </h1>
+        <h1 class="uk-width-1-1 sala-nome">{{$sala_nome}}</h1>
         <div class="img-sala">
           @if(is_null($qtd_arcondicionado))
             <h3 class="aviso-arcondicionado img-arcondicionado">Não possui ar-condicionado</h3>
