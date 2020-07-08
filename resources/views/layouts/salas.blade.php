@@ -36,7 +36,7 @@
             </li>
             <li>
               @for($i = 1; $i <= $qtd_arcondicionado; $i++)
-                <h5>Ar-condicionado {{$i}}</h5>               
+                <h5>Ar-condicionado {{$i}}</h5>
                 <label class="uk-margin-medium-top uk-margin-small-bottom switch" for="arcondicionado{{$i}}">
                   <input type="checkbox" id="arcondicionado{{$i}}" class="check interruptor-arcondicionado">
                   <div class="switch-slider switch-on-off"></div>
@@ -44,12 +44,12 @@
                 <div class="uk-width-1-2 uk-display-inline-block uk-margin-medium-left" data-slider="arcondicionado{{$i}}"></div>
               @endfor
             </li>
-          </ul>  
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <script src="{{secure_asset('js/plugins.min.js')}}" type="text/javascript"></script>
-  <script src="{{secure_asset('js/gerenciamento-nuvem.js')}}"></script>
+  <script src="{{asset('js/plugins.min.js')}}" type="text/javascript"></script>
+  <script src="{{asset('js/gerenciamento-nuvem.js')}}"></script>
 @endsection
