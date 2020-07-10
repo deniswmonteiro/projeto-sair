@@ -100,6 +100,24 @@ function compilaConexaoNuvemJS() {
 /** tarefa para iniciar a função compilaScriptsJS */
 gulp.task("conexaonuvemjs", compilaConexaoNuvemJS);
 
+/** função para compilar os scripts JS de gerenciamento da refrigeração */
+function compilaGerenciamentoRefrigeracaoJS() {
+  return gulp
+    .src("resources/js/conexao-refrigeracao/*.js")
+    .pipe(concat("gerenciamento-refrigeracao.js"))
+    .pipe(
+      babel({
+        presets: ["@babel/env"],
+      })
+    )
+    .pipe(obfuscator())
+    .pipe(uglify())
+    .pipe(gulp.dest("public/js/"));
+}
+
+/** tarefa para iniciar a função compilaScriptsJS */
+gulp.task("conexaorefrigeracaojs", compilaGerenciamentoRefrigeracaoJS);
+
 /** função para compilar os plugins JS */
 function pluginsJS() {
   return gulp
@@ -134,6 +152,10 @@ function watch() {
   gulp.watch("resources/js/plugins/mqttws31.js", compilaPahoMQTT);
   gulp.watch("resources/js/conexao-nuvem/*.js", compilaConexaoNuvemJS);
   gulp.watch(
+    "resources/js/conexao-refrigeracao/*.js",
+    compilaGerenciamentoRefrigeracaoJS
+  );
+  gulp.watch(
     [
       "node_modules/jquery/dist/jquery.js",
       "node_modules/uikit/dist/js/uikit.js",
@@ -159,6 +181,7 @@ gulp.task(
     "scriptsjs",
     "pahomqtt",
     "conexaonuvemjs",
+    "conexaorefrigeracaojs",
     "pluginsjs"
   )
 );
