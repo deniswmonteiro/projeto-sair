@@ -59,8 +59,9 @@ function onConnect() {
   const interruptores = document.querySelectorAll(
     ".interruptor .interruptor-lampada"
   );
+
   const localNome = document.querySelector(".salas .sala-nome");
-  const subtopico = localNome.innerText
+  let subtopico = localNome.innerText
     .toLowerCase()
     .replace(/[á]/g, "a")
     .replace(/[ã]/g, "a")
@@ -68,8 +69,72 @@ function onConnect() {
     .replace(/[ó]/g, "o")
     .replace(/[õ]/g, "o")
     .replace(/[ç]/g, "c")
-    .match(/[a-z]/g)
+    .match(/[a-z0-9]/g)
     .join("");
+
+  switch (subtopico) {
+    case "labdeinstalacoeseletricas":
+      subtopico = "lie";
+      break;
+    case "labdesistemasmotrizesa":
+      subtopico = "labmotriz1";
+      break;
+    case "secretaria":
+      subtopico = "secretaria1";
+      break;
+    case "diretoria":
+      subtopico = "secretaria2";
+      break;
+    case "labdeconcepcaoeanalisededispositivoseletricos":
+      subtopico = "lcade";
+      break;
+    case "labsima":
+      subtopico = "sima";
+      break;
+    case "labdemodelagem":
+      subtopico = "modelagem";
+      break;
+    case "labdequalidadedeenergia":
+      subtopico = "qee";
+      break;
+    case "labdesistemasmotrizesb":
+      subtopico = "labmotriz2";
+      break;
+    case "saladereuniao":
+      subtopico = "salareuniao";
+      break;
+    case "saladeaula1":
+      subtopico = "sala1";
+      break;
+    case "saladeaula2":
+      subtopico = "sala2";
+      break;
+    case "labdeafericao":
+      subtopico = "sala3";
+      break;
+    case "salaprof1":
+      subtopico = "sala4";
+      break;
+    case "salaprof2":
+      subtopico = "sala5";
+      break;
+    case "salaprof3":
+      subtopico = "sala6";
+      break;
+    case "salaprof4":
+      subtopico = "sala7";
+      break;
+    case "salaprof5":
+      subtopico = "sala8";
+      break;
+    case "salaprof6":
+      subtopico = "sala9";
+      break;
+    case "oficina":
+      subtopico = "sala10";
+      break;
+  }
+
   for (let i = 1; i < interruptores.length + 1; i++) {
     client.subscribe("ceamazon/" + subtopico + "/c" + i);
   }

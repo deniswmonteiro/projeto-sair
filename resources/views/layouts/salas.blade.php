@@ -50,6 +50,7 @@
     </div>
   </section>
 
-  <script src="{{secure_asset('js/plugins.min.js')}}" type="text/javascript"></script>
-  <script src="{{secure_asset('js/gerenciamento-nuvem.js')}}"></script>
+  <script src="{{asset('js/plugins.min.js')}}" type="text/javascript"></script>
+  <script src="{{asset('js/gerenciamento-nuvem.js')}}"></script>
+  {{-- <script src="{{asset('js/gerenciamento-refrigeracao.js')}}"></script> --}}
 @endsection
