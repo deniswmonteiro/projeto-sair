@@ -136,11 +136,10 @@ interruptoresArcondicionado.forEach((btnInterruptor) => {
   btnInterruptor.addEventListener("click", () => {
     inputsValorTemperatura.forEach((input) => {
       btnInterruptor.id == input.dataset.temperatura && btnInterruptor.checked
-        ? (input.removeAttribute("disabled"), input.classList.add("active"))
+        ? input.removeAttribute("disabled")
         : btnInterruptor.id != input.dataset.temperatura ||
           btnInterruptor.checked ||
-          input.setAttribute("disabled", !0) ||
-          input.classList.remove("active");
+          input.setAttribute("disabled", !0);
     });
   });
 });
