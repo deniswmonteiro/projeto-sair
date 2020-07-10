@@ -133,5 +133,4 @@ function onConnect() {
   }
 
   acionaAC(subtopicoAC, interruptoresAC, clienteAC);
-  mudaTemperaturaAC();
 }

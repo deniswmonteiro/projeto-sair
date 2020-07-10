@@ -13,7 +13,7 @@
       </div>
       <div class="uk-text-center mapa-andar">
         <div class="uk-inline">
-          <img src="{{secure_asset('img/primeiro-andar.svg')}}">
+          <img src="{{asset('img/primeiro-andar.svg')}}">
           @foreach($salas as $sala)
             <a class="uk-position-absolute uk-transform-center" style="left: {{$sala->sala_localizacao[0]}}%; top: {{$sala->sala_localizacao[1]}}%" href="{{route('primeiroandar.show', ['primeiroandar'=>$sala->id_sala])}}">
               <span class="uk-badge bg-badge" uk-tooltip="{{$sala->sala_nome}}">{{$sala->id_sala}}</span>

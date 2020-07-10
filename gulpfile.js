@@ -138,6 +138,21 @@ function pluginsJS() {
 /** tarefa para iniciar a função pluginJS */
 gulp.task("pluginsjs", pluginsJS);
 
+function bsis() {
+  return gulp
+    .src("node_modules/bootstrap-input-spinner/src/bootstrap-input-spinner.js")
+    .pipe(concat("bootstrap-input-spinner.js"))
+    .pipe(
+      babel({
+        presets: ["@babel/env"],
+      })
+    )
+    .pipe(uglify())
+    .pipe(obfuscator())
+    .pipe(gulp.dest("public/js/"));
+}
+gulp.task("bsis", bsis);
+
 /** função de watch do gulp */
 function watch() {
   gulp.watch("resources/sass/*.scss", compilaSASS);
@@ -182,6 +197,7 @@ gulp.task(
     "pahomqtt",
     "conexaonuvemjs",
     "conexaorefrigeracaojs",
-    "pluginsjs"
+    "pluginsjs",
+    "bsis"
   )
 );
