@@ -39,12 +39,12 @@
               <div class="uk-child-width-1-2@m uk-grid-column-small uk-flex-middle" uk-grid>
                 <div class="uk-text-right@m uk-text-center@s">
                   <a href="http://ceamazon.com.br">
-                    <img src="{{asset('img/logo-ceamazon.svg')}}" alt="Logo do CEAMAZON">
+                    <img src="{{secure_asset('img/logo-ceamazon.svg')}}" alt="Logo do CEAMAZON">
                   </a>
                 </div>
                 <div class="uk-text-center@s">
                   <a href="https://portal.ufpa.br/">
-                    <img src="{{asset('img/logo-ufpa.svg')}}" alt="Logo da UFPA">
+                    <img src="{{secure_asset('img/logo-ufpa.svg')}}" alt="Logo da UFPA">
                   </a>
                 </div>
               </div>
@@ -65,7 +65,7 @@
       </div>
     </footer>
 
-    <script src="{{asset('js/plugins.min.js')}}" type="text/javascript"></script>
-    <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
+    <script src="{{secure_asset('js/plugins.min.js')}}" type="text/javascript"></script>
+    <script src="{{secure_asset('js/app.js')}}" type="text/javascript"></script>
   </body>
 </html>
