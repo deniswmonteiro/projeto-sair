@@ -7,11 +7,10 @@
     <title>SAIR &bull; {{$paginaAtual}}</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{secure_asset('css/plugins.min.css')}}">
-    <link rel="stylesheet" href="{{secure_asset('css/app.css')}}" type="text/css">
-    <link rel="shortcut icon" href="{{secure_asset('logo.ico')}}" type="image/x-icon">
-    <script src="{{secure_asset('js/paho-mqtt.min.js')}}" type="text/javascript"></script>
-    @laravelPWA
+    <link rel="stylesheet" href="{{asset('css/plugins.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css">
+    <link rel="shortcut icon" href="{{asset('logo.ico')}}" type="image/x-icon">
+    <script src="{{asset('js/paho-mqtt.min.js')}}" type="text/javascript"></script>
   </head>
   <body>
     <div class="uk-text-center notificacao-alerta">
