@@ -29,10 +29,7 @@ gulp.task("sass", compilaSASS);
 
 function pluginsCSS() {
   return gulp
-    .src([
-      "node_modules/uikit/dist/css/uikit.css",
-      "node_modules/nouislider/distribute/nouislider.css",
-    ])
+    .src(["node_modules/uikit/dist/css/uikit.css"])
     .pipe(concat("plugins.min.css"))
     .pipe(
       sass({
@@ -145,13 +142,7 @@ gulp.task("pluginsjs", pluginsJS);
 /** função de watch do gulp */
 function watch() {
   gulp.watch("resources/sass/*.scss", compilaSASS);
-  gulp.watch(
-    [
-      "node_modules/uikit/dist/uikit.css",
-      "node_modules/nouislider/distribute/nouislider.css",
-    ],
-    pluginsCSS
-  );
+  gulp.watch(["node_modules/uikit/dist/uikit.css"], pluginsCSS);
   gulp.watch("resources/js/scripts/*.js", compilaScriptsJS);
   gulp.watch("resources/js/plugins/mqttws31.js", compilaPahoMQTT);
   gulp.watch("resources/js/conexao-nuvem/*.js", compilaConexaoNuvemJS);
