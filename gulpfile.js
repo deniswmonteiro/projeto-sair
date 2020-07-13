@@ -126,22 +126,9 @@ function pluginsJS() {
       "node_modules/uikit/dist/js/uikit.js",
       "node_modules/uikit/dist/js/uikit-icons.js",
       "node_modules/jquery-mask-plugin/dist/jquery.mask.js",
-      "node_modules/nouislider/distribute/nouislider.js",
-      "node_modules/wnumb/wNumb.js",
+      "node_modules/bootstrap-input-spinner/src/bootstrap-input-spinner.js",
     ])
     .pipe(concat("plugins.min.js"))
-    .pipe(uglify())
-    .pipe(obfuscator())
-    .pipe(gulp.dest("public/js/"));
-}
-
-/** tarefa para iniciar a função pluginJS */
-gulp.task("pluginsjs", pluginsJS);
-
-function bsis() {
-  return gulp
-    .src("node_modules/bootstrap-input-spinner/src/bootstrap-input-spinner.js")
-    .pipe(concat("bootstrap-input-spinner.js"))
     .pipe(
       babel({
         presets: ["@babel/env"],
@@ -151,7 +138,9 @@ function bsis() {
     .pipe(obfuscator())
     .pipe(gulp.dest("public/js/"));
 }
-gulp.task("bsis", bsis);
+
+/** tarefa para iniciar a função pluginJS */
+gulp.task("pluginsjs", pluginsJS);
 
 /** função de watch do gulp */
 function watch() {
@@ -167,17 +156,12 @@ function watch() {
   gulp.watch("resources/js/plugins/mqttws31.js", compilaPahoMQTT);
   gulp.watch("resources/js/conexao-nuvem/*.js", compilaConexaoNuvemJS);
   gulp.watch(
-    "resources/js/conexao-refrigeracao/*.js",
-    compilaGerenciamentoRefrigeracaoJS
-  );
-  gulp.watch(
     [
       "node_modules/jquery/dist/jquery.js",
       "node_modules/uikit/dist/js/uikit.js",
       "node_modules/uikit/dist/js/uikit-icons.js",
       "node_modules/jquery-mask-plugin/dist/jquery.mask.js",
-      "node_modules/nouislider/distribute/nouislider.js",
-      "node_modules/wnumb/wNumb.js",
+      "node_modules/bootstrap-input-spinner/src/bootstrap-input-spinner.js",
     ],
     pluginsJS
   );
@@ -197,7 +181,6 @@ gulp.task(
     "pahomqtt",
     "conexaonuvemjs",
     "conexaorefrigeracaojs",
-    "pluginsjs",
-    "bsis"
+    "pluginsjs"
   )
 );
