@@ -126,10 +126,14 @@ function pluginsJS() {
       "node_modules/uikit/dist/js/uikit.js",
       "node_modules/uikit/dist/js/uikit-icons.js",
       "node_modules/jquery-mask-plugin/dist/jquery.mask.js",
-      "node_modules/nouislider/distribute/nouislider.js",
-      "node_modules/wnumb/wNumb.js",
+      "node_modules/bootstrap-input-spinner/src/bootstrap-input-spinner.js",
     ])
     .pipe(concat("plugins.min.js"))
+    .pipe(
+      babel({
+        presets: ["@babel/env"],
+      })
+    )
     .pipe(uglify())
     .pipe(obfuscator())
     .pipe(gulp.dest("public/js/"));
@@ -152,17 +156,12 @@ function watch() {
   gulp.watch("resources/js/plugins/mqttws31.js", compilaPahoMQTT);
   gulp.watch("resources/js/conexao-nuvem/*.js", compilaConexaoNuvemJS);
   gulp.watch(
-    "resources/js/conexao-refrigeracao/*.js",
-    compilaGerenciamentoRefrigeracaoJS
-  );
-  gulp.watch(
     [
       "node_modules/jquery/dist/jquery.js",
       "node_modules/uikit/dist/js/uikit.js",
       "node_modules/uikit/dist/js/uikit-icons.js",
       "node_modules/jquery-mask-plugin/dist/jquery.mask.js",
-      "node_modules/nouislider/distribute/nouislider.js",
-      "node_modules/wnumb/wNumb.js",
+      "node_modules/bootstrap-input-spinner/src/bootstrap-input-spinner.js",
     ],
     pluginsJS
   );

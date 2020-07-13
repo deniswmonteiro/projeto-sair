@@ -120,5 +120,61 @@
         }
       }
     }
+
+    .temperatura {
+      .input-group-prepend,
+      .input-group-append {
+        display: inline-block;
+
+        .btn-decrement,
+        .btn-increment {
+          @include font(16);
+          border: none;
+          border-radius: 4px;
+          margin-top: 0px;
+          padding: 6px 10px 9.7px 10px;
+
+          &:hover {
+            cursor: pointer;
+            color: $light-grey;
+            background-color: $blue;
+            transition: 0.4s;
+          }
+        }
+      }
+    }
+
+    .input-group-prepend {
+      .btn-decrement {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    .input-group-append {
+      span {
+        margin-top: 10px;
+        padding: 9px 20px 9px 0;
+        font-weight: 700;
+        position: relative;
+        top: 2px;
+        border: none;
+        background-color: $light-grey;
+      }
+
+      .btn-increment {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    input.form-control {
+      width: 40px;
+      color: $dark-grey;
+      font-weight: 700;
+      padding: 9px 0 9px 20px;
+      border: none;
+      background-color: $light-grey;
+    }
   }
 }
