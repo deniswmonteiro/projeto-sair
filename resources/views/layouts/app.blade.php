@@ -27,6 +27,7 @@
       const el = document.createElement("pwa-update");
       document.body.appendChild(el);
     </script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
   </head>
   <body>
     <div class="uk-text-center notificacao-alerta">
