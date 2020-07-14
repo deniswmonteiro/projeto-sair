@@ -10,7 +10,23 @@
     <link rel="stylesheet" href="{{asset('css/plugins.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}" type="text/css">
     <link rel="shortcut icon" href="{{asset('logo.ico')}}" type="image/x-icon">
+    <link rel="manifest" href={{asset('/manifest.json')}}>
     <script src="{{asset('js/paho-mqtt.min.js')}}" type="text/javascript"></script>
+    <script>
+      // This is the "Offline page" service worker
+      /*
+        Add this below content to your HTML page inside a <script type="module"> <script> tag, or add the js file to your page at the very top to register service worker--}}
+        If you get an error about not being able to import, double check that you have type="module" on your <script /> tag
+      */
+
+      /*
+        This code uses the pwa-update web component https://github.com/pwa-builder/pwa-update to register your service worker, tell the user when there is an update available and let the user know when your PWA is ready to use offline.
+      */
+      import "https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate";
+
+      const el = document.createElement("pwa-update");
+      document.body.appendChild(el);
+    </script>
   </head>
   <body>
     <div class="uk-text-center notificacao-alerta">
