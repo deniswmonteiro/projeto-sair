@@ -30,6 +30,7 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
   </head>
   <body>
+    <pwa-install>
     <div class="uk-text-center notificacao-alerta">
       @include('flash::message')
     </div>
@@ -84,5 +85,6 @@
 
     <script src="{{secure_asset('js/plugins.min.js')}}" type="text/javascript"></script>
     <script src="{{secure_asset('js/app.js')}}" type="text/javascript"></script>
+  </pwa-install> 
   </body>
 </html>
