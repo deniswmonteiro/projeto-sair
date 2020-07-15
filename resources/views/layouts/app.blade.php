@@ -71,13 +71,6 @@
 
   <script src="{{secure_asset('js/plugins.min.js')}}" type="text/javascript"></script>
   <script src="{{secure_asset('js/app.js')}}" type="text/javascript"></script>
-  <script type="module" src="{{secure_asset('js/pwabuilder-sw.js')}}"></script>
-  <script type="module">
-    import "https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate";
-
-    const el = document.createElement("pwa-update");
-    document.body.appendChild(el);
-  </script>
 </body>
 
 </html>
