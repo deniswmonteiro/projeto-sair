@@ -13,7 +13,6 @@
   <link rel="shortcut icon" href="{{secure_asset('logo.ico')}}" type="image/x-icon">
   <link rel="manifest" href={{secure_asset('/manifest.json')}}>
   <script src="{{secure_asset('js/paho-mqtt.min.js')}}" type="text/javascript"></script>
-  <script src="{{secure_asset("js/pwabuilder-sw.js")}}"></script>
 </head>
 
 <body>
@@ -78,6 +77,7 @@
     const el = document.createElement("pwa-update");
     document.body.appendChild(el);
   </script>
+  <script src="{{secure_asset("js/pwabuilder-sw.js")}}"></script>
 </body>
 
 </html>
