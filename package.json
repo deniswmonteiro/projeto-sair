@@ -27,7 +27,6 @@
     "gulp-babel": "^8.0.0"
   },
   "dependencies": {
-    "@pwabuilder/pwainstall": "^1.6.4",
     "bootstrap-input-spinner": "^1.13.9",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",

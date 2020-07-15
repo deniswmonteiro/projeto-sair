@@ -4,7 +4,7 @@
   "name": "SAIR",
   "short_name": "SAIR",
   "scope": "/",
-  "display": "standalone",
+  "display": "fullscreen",
   "start_url": "https://projetoceamazon.herokuapp.com/",
   "background_color": "#55DD77",
   "theme_color": "#55DD77",
@@ -20,26 +20,5 @@
     }
   ],
   "url": "https://projetoceamazon.herokuapp.com/",
-  "screenshots": [
-    {
-      "src": "[Embedded]",
-      "sizes": "1280x800",
-      "type": "image/png"
-    },
-    {
-      "src": "[Embedded]",
-      "sizes": "750x1334",
-      "type": "image/png"
-    },
-    {
-      "src": "[Embedded]",
-      "sizes": "1280x800",
-      "type": "image/png"
-    },
-    {
-      "src": "[Embedded]",
-      "sizes": "750x1334",
-      "type": "image/png"
-    }
-  ]
+  "screenshots": []
 }
