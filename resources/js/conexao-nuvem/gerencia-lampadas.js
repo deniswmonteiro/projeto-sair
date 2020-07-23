@@ -5,13 +5,13 @@ function acionaLampadas(subtopico, interruptores, cliente) {
     interruptor += 1;
     $(this).change(function () {
       if ($(this).is(":checked")) {
-        messagem = new Paho.Message("off" + interruptor);
+        messagem = new Paho.Message("on" + interruptor);
         messagem.destinationName = "ceamazon/" + subtopico + "/c" + interruptor;
         messagem.qos = 1;
         messagem.retained = !0;
         cliente.send(messagem);
       } else {
-        messagem = new Paho.Message("on" + interruptor);
+        messagem = new Paho.Message("off" + interruptor);
         messagem.destinationName = "ceamazon/" + subtopico + "/c" + interruptor;
         messagem.qos = 1;
         messagem.retained = !0;
