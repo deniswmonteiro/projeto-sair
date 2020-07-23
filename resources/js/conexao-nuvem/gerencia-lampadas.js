@@ -33,28 +33,28 @@ function mudaInterruptores(mensagem) {
   interruptores.forEach(() => {
     switch (mensagem) {
       case "on1":
-        lampadas1.checked = !0;
-        break;
-      case "off1":
         lampadas1.checked = !1;
         break;
-      case "on2":
-        lampadas2.checked = !0;
+      case "off1":
+        lampadas1.checked = !0;
         break;
-      case "off2":
+      case "on2":
         lampadas2.checked = !1;
         break;
-      case "on3":
-        lampadas3.checked = !0;
+      case "off2":
+        lampadas2.checked = !0;
         break;
-      case "off3":
+      case "on3":
         lampadas3.checked = !1;
         break;
+      case "off3":
+        lampadas3.checked = !0;
+        break;
       case "on4":
-        lampadas4.checked = !0;
+        lampadas4.checked = !1;
         break;
       case "off4":
-        lampadas4.checked = !1;
+        lampadas4.checked = !0;
         break;
     }
   });
