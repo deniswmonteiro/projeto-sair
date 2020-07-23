@@ -74,8 +74,8 @@ function mudaIconesLampadas(mensagem) {
   const iconesLampadas4 = document.querySelectorAll(
     ".img-sala [data-dispositivo='lampadas4']"
   );
-  const corIconeLigado = "#ee2211";
-  const corIconeDesligado = "#119933";
+  const corIconeLigado = "#119933";
+  const corIconeDesligado = "#ee2211";
   iconesLampadas1.forEach((icone) => {
     if (mensagem == "on1") {
       icone.style.background = corIconeLigado;
