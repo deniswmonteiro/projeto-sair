@@ -8,8 +8,8 @@ $(textoNotificacao).append(
 );
 
 // Variáveis de conexão com serviço em nuvem
-const host = "tailor.cloudmqtt.com";
-const port = 32564;
+const host = "hairdresser.cloudmqtt.com";
+const port = 37615;
 const id = "ceamazon_" + new Date().getUTCMilliseconds();
 let client = new Paho.Client(host, port, id);
 client.onConnectionLost = onConnectionLost;
@@ -43,8 +43,8 @@ function onMessageArrived(message) {
 
 // Credenciais de conexão com serviço em nuvem
 const options = {
-  userName: "ldwjwmao",
-  password: "SZmxi8fOtKC8",
+  userName: "xldvnagx",
+  password: "hD23-LNVOrD8",
   useSSL: !0,
   onSuccess: onConnect,
   onFailure: doFail,
