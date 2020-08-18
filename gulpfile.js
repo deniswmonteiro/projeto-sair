@@ -71,8 +71,6 @@ function compilaPahoMQTT() {
   return gulp
     .src("node_modules/paho-mqtt/paho-mqtt.js")
     .pipe(concat("paho-mqtt.min.js"))
-    .pipe(obfuscator())
-    .pipe(uglify())
     .pipe(gulp.dest("public/js/"));
 }
 

@@ -11,7 +11,7 @@ $(textoNotificacao).append(
 const host = "hairdresser.cloudmqtt.com";
 const port = 37615;
 const id = "ceamazon_" + new Date().getUTCMilliseconds();
-let client = new Paho.Client(host, port, id);
+let client = new Paho.MQTT.Client(host, port, id);
 client.onConnectionLost = onConnectionLost;
 client.onMessageArrived = onMessageArrived;
 
