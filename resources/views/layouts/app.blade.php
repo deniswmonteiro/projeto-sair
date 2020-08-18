@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="{{secure_asset('css/app.css')}}" type="text/css">
   <link rel="shortcut icon" href="{{secure_asset('logo.ico')}}" type="image/x-icon">
   <link rel="manifest" href={{secure_asset('/manifest.json')}}>
-  <script src="{{secure_asset('js/paho.js')}}" type="text/javascript"></script>
+  <script src="{{secure_asset('js/paho-mqtt.min.js')}}" type="text/javascript"></script>
 </head>
 
 <body>
