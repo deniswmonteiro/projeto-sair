@@ -66,18 +66,18 @@ function compilaScriptsJS() {
 /** tarefa para iniciar a função compilaScriptsJS */
 gulp.task("scriptsjs", compilaScriptsJS);
 
-// /** função para compilar o plugin Paho MQTT */
-// function compilaPahoMQTT() {
-//   return gulp
-//     .src("node_modules/paho-mqtt/paho-mqtt.js")
-//     .pipe(concat("paho-mqtt.min.js"))
-//     .pipe(obfuscator())
-//     .pipe(uglify())
-//     .pipe(gulp.dest("public/js/"));
-// }
+/** função para compilar o plugin Paho MQTT */
+function compilaPahoMQTT() {
+  return gulp
+    .src("node_modules/paho-mqtt/paho-mqtt.js")
+    .pipe(concat("paho-mqtt.min.js"))
+    .pipe(obfuscator())
+    .pipe(uglify())
+    .pipe(gulp.dest("public/js/"));
+}
 
-// /** tarefa para iniciar a função compilaPahoMQTT */
-// gulp.task("pahomqtt", compilaPahoMQTT);
+/** tarefa para iniciar a função compilaPahoMQTT */
+gulp.task("pahomqtt", compilaPahoMQTT);
 
 /** função para compilar os scripts JS de conexão com a nuvem */
 function compilaConexaoNuvemJS() {
@@ -144,7 +144,7 @@ function watch() {
   gulp.watch("resources/sass/*.scss", compilaSASS);
   gulp.watch(["node_modules/uikit/dist/uikit.css"], pluginsCSS);
   gulp.watch("resources/js/scripts/*.js", compilaScriptsJS);
-  // gulp.watch("resources/js/plugins/mqttws31.js", compilaPahoMQTT);
+  gulp.watch("node_modules/paho-mqtt/paho-mqtt.js", compilaPahoMQTT);
   gulp.watch("resources/js/conexao-nuvem/*.js", compilaConexaoNuvemJS);
   gulp.watch(
     [
@@ -169,7 +169,7 @@ gulp.task(
     "sass",
     "pluginscss",
     "scriptsjs",
-    // "pahomqtt",
+    "pahomqtt",
     "conexaonuvemjs",
     "conexaorefrigeracaojs",
     "pluginsjs"
