@@ -71,6 +71,8 @@ function compilaPahoMQTT() {
   return gulp
     .src("node_modules/paho-mqtt/paho-mqtt.js")
     .pipe(concat("paho-mqtt.min.js"))
+    .pipe(obfuscator())
+    .pipe(uglify())
     .pipe(gulp.dest("public/js/"));
 }
 
@@ -95,23 +97,23 @@ function compilaConexaoNuvemJS() {
 /** tarefa para iniciar a função compilaScriptsJS */
 gulp.task("conexaonuvemjs", compilaConexaoNuvemJS);
 
-// /** função para compilar os scripts JS de gerenciamento da refrigeração */
-// function compilaGerenciamentoRefrigeracaoJS() {
-//   return gulp
-//     .src("resources/js/conexao-refrigeracao/*.js")
-//     .pipe(concat("gerenciamento-refrigeracao.js"))
-//     .pipe(
-//       babel({
-//         presets: ["@babel/env"],
-//       })
-//     )
-//     .pipe(obfuscator())
-//     .pipe(uglify())
-//     .pipe(gulp.dest("public/js/"));
-// }
+/** função para compilar os scripts JS de gerenciamento da refrigeração */
+function compilaGerenciamentoRefrigeracaoJS() {
+  return gulp
+    .src("resources/js/conexao-refrigeracao/*.js")
+    .pipe(concat("gerenciamento-refrigeracao.js"))
+    .pipe(
+      babel({
+        presets: ["@babel/env"],
+      })
+    )
+    .pipe(obfuscator())
+    .pipe(uglify())
+    .pipe(gulp.dest("public/js/"));
+}
 
-// /** tarefa para iniciar a função compilaScriptsJS */
-// gulp.task("conexaorefrigeracaojs", compilaGerenciamentoRefrigeracaoJS);
+/** tarefa para iniciar a função compilaScriptsJS */
+gulp.task("conexaorefrigeracaojs", compilaGerenciamentoRefrigeracaoJS);
 
 /** função para compilar os plugins JS */
 function pluginsJS() {
@@ -169,7 +171,7 @@ gulp.task(
     "scriptsjs",
     "pahomqtt",
     "conexaonuvemjs",
-    // "conexaorefrigeracaojs",
+    "conexaorefrigeracaojs",
     "pluginsjs"
   )
 );
