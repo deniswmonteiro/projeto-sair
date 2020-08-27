@@ -1,23 +1,4 @@
 .andares {
-  h1 {
-    margin-bottom: 30px;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 90px;
-      height: 3px;
-      background: $light-orange;
-      margin-top: 10px;
-      border-radius: 5px;
-
-      @include device(xs) {
-        width: 60px;
-        margin-top: 5px;
-      }
-    }
-  }
-
   a {
     display: block;
   }
