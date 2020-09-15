@@ -1,16 +1,4 @@
 .salas {
-  h1 {
-    &::after {
-      content: "";
-      display: block;
-      width: 90px;
-      height: 3px;
-      background: $light-orange;
-      margin-top: 10px;
-      border-radius: 5px;
-    }
-  }
-
   .img-sala {
     text-align: center;
 

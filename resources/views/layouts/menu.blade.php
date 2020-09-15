@@ -35,17 +35,21 @@
           <ul class="uk-nav uk-navbar-dropdown-nav">
             <li>
               <a href="{{route('terreo.index')}}"
-                class="@if(request()->is('terreo*')) active @endif">Térreo</a>
+                class="@if(request()->is('terreo*')) active @endif">
+                Térreo
+              </a>
             </li>
             <li>
               <a href="{{route('primeiroandar.index')}}"
-                class="@if(request()->is('primeiroandar*')) active @endif">1º
-                Andar</a>
+                class="@if(request()->is('primeiroandar*')) active @endif">
+                1º Andar
+              </a>
             </li>
             <li>
               <a href="{{route('segundoandar.index')}}"
-                class="@if(request()->is('segundoandar*')) active @endif">2º
-                Andar</a>
+                class="@if(request()->is('segundoandar*')) active @endif">
+                2º Andar
+              </a>
             </li>
           </ul>
         </div>
@@ -58,25 +62,30 @@
       @if(Auth::user()->categoria === 'ADMINISTRADOR')
       <li>
         <a href="{{route('usuario.index')}}"
-          class="@if(request()->is('usuario*')) active @endif">Usuários</a>
+          class="@if(request()->is('usuario*')) active @endif">
+          Usuários
+        </a>
       </li>
       <li>
         <a href="{{route('solicitar.index')}}"
-          class="@if(request()->is('solicitar*')) active @endif">Solicitações</a>
+          class="@if(request()->is('solicitar*')) active @endif">
+          Solicitações
+        </a>
       </li>
       @endif
 
       <li>
         <a href="#modal-sair" uk-toggle>Sair</a>
-        @include('components.modal',
-        ['id' => 'modal-sair', 'texto' => 'Deseja realmente sair?', 'rota' =>
-        'logout'])
+        @include('components.modal', ['id'=> 'modal-sair', 'texto' => 'Deseja
+        realmente sair?', 'rota' => 'logout'])
       </li>
 
       @else
       <li>
         <a class="uk-button uk-border-rounded btn-login"
-          href="{{route('login')}}">Login</a>
+          href="{{route('login')}}">
+          Login
+        </a>
       </li>
 
       @if(Route::has('register'))
@@ -150,9 +159,8 @@
           <i class="material-icons-round">exit_to_app</i>
           Sair
         </a>
-        @include('components.modal',
-        ['id' => 'modal-sair', 'texto' => 'Deseja realmente sair?', 'rota' =>
-        'logout'])
+        @include('components.modal', ['id'=> 'modal-sair', 'texto' => 'Deseja
+        realmente sair?', 'rota' => 'logout'])
       </li>
 
       @else

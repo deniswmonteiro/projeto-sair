@@ -31,8 +31,11 @@
       <li>
         <a
           href="{{route('primeiroandar.show', ['primeiroandar'=>$sala->id_sala])}}">
-          <span class="uk-badge bg-badge">{{$sala->id_sala}}</span>
-          {{$sala->sala_nome}}
+          <a
+            href="{{route('primeiroandar.show', ['primeiroandar'=>$sala->id_sala])}}">
+            <span class="uk-badge bg-badge">{{$sala->id_sala}}</span>
+            {{$sala->sala_nome}}
+          </a>
         </a>
       </li>
       @endforeach
