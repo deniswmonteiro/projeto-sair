@@ -4,14 +4,14 @@
 @include("layouts.menu", ["menu" => "home"])
 <section class="uk-section andares">
   <div class="uk-container">
-    <h1 class="titulo">Andaressssss</h1>
+    <h1 class="titulo">Andares</h1>
     <div class="uk-position-relative uk-visible-toggle" tabindex="-1"
       uk-slider="center: true">
       <ul class="uk-slider-items uk-grid uk-grid-match" uk-grid>
         <li class="uk-width-1-2@m">
           <div
             class="uk-card uk-card-default uk-card-body uk-border-rounded uk-card-hover uk-text-center uk-cover-container card-andar">
-            <h3>Térreossssss</h3>
+            <h3>Térreo</h3>
             <img src="{{secure_asset('img/bg-terreo.svg')}}"
               class="img-bg-andar" alt="Planta do Térreo">
             <div class="btn">
