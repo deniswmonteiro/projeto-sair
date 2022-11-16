@@ -88,8 +88,8 @@ function onConnect() {
     case "labdeconcepcaoeanalisededispositivoseletricos":
       subtopico = "lcade";
       break;
-    case "labsima":
-      subtopico = "sima";
+    case "labmobilidadeeletrica":
+      subtopico = "lme";
       break;
     case "labdemodelagem":
       subtopico = "modelagem";
