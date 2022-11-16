@@ -13,7 +13,7 @@ class SalasPrimeiroAndarCollectionSeeder extends Seeder
     {
         \projetoautomacao\SalasPrimeiroAndar::create([
             'id_sala' => 1,
-            'sala_nome' => 'Lab. SIMA',
+            'sala_nome' => 'Lab. de Mobilidade Elétrica',
             'sala_localizacao' => [17, 10],
             'qtd_circ_lampada' => 2,
             'qtd_arcondicionado' => 1,
