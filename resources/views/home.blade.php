@@ -11,7 +11,7 @@
         <li class="uk-width-1-2@m">
           <div
             class="uk-card uk-card-default uk-card-body uk-border-rounded uk-card-hover uk-text-center uk-cover-container card-andar">
-            <h3>Térreo</h3>
+            <h3>Térreossssss</h3>
             <img src="{{secure_asset('img/bg-terreo.svg')}}"
               class="img-bg-andar" alt="Planta do Térreo">
             <div class="btn">
