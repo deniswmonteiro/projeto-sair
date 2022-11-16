@@ -4,7 +4,7 @@
 @include("layouts.menu", ["menu" => "home"])
 <section class="uk-section andares">
   <div class="uk-container">
-    <h1 class="titulo">Andares</h1>
+    <h1 class="titulo">Andaressssss</h1>
     <div class="uk-position-relative uk-visible-toggle" tabindex="-1"
       uk-slider="center: true">
       <ul class="uk-slider-items uk-grid uk-grid-match" uk-grid>
