@@ -14,7 +14,7 @@
     </div>
     <div class="uk-text-center mapa-andar">
       <div class="uk-inline">
-        <img src="{{secure_asset('img/terreo.svg')}}">
+        <img src="{{asset('img/terreo.svg')}}">
         @foreach($salas as $sala)
         <a class="uk-position-absolute uk-transform-center"
           style="left: {{$sala->sala_localizacao[0]}}%; top: {{$sala->sala_localizacao[1]}}%"

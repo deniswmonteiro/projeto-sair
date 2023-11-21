@@ -5,7 +5,7 @@
 	<section class="uk-section login">
     <div class="uk-container">
 			<div class="uk-card uk-card-default uk-card-body bg-card-form">
-				<h1>Fazer Loginssss</h1>
+				<h1>Fazer Login</h1>
 				<form method="post" action="{{route('login')}}" class="uk-form-stacked form-login">
 					@csrf
 					<div class="uk-margin">
